@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>M/J Civics &mdash; Lesson 1.2</title>
+<style>
+    body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #f4f6fa; }
+    .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+    /* ===== WIDGET CSS (byte-consistent across this site) ===== */
+    .optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+    .widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+    .widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+    .widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+    .widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+    .widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+    .widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+    .widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+    .widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+    .widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+    .widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+    .widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+    .widget-feedback.show { display: block; }
+    .row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+    .row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+    .row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+    .widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+    .widget-reset:hover { background: #FDF3E3; }
+    .ow-scale .widget-options { justify-content: space-between; }
+    .ow-scale .widget-options button { flex: 1; text-align: center; }
+    .ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+    .ow-flip .ow-flip-back { display: none; color: #1a2340; }
+    .ow-flip.flipped .ow-flip-front { display: none; }
+    .ow-flip.flipped .ow-flip-back { display: block; }
+</style>
+</head>
+<body>
+<div class="canvas-frame">
+
+<!-- ===== HEADER ===== -->
+<div style="background: #0E1C42; border-bottom: 5px solid #55C8E8; padding: 22px 34px;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 10px;">
+        <div style="width: 52px; height: 52px; border-radius: 50%; background: #FFFFFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0;"><img src="https://raw.githubusercontent.com/optimaondemand/optima-assets/eeb0b335630058906d52f478028361d352253a93/images/Optima%20Final%20Circle%20-%20Owl%20Only.png" alt="Optima Academy" style="width: 50px; height: 40px; object-fit: contain;" /></div>
+        <div>
+            <div style="font-size: 28px; color: #ffffff; line-height: 1.2;">Optima Academy Online</div>
+            <div style="font-size: 12px; color: #55c8e8;">An Education Experience Company</div>
+        </div>
+    </div>
+    <div style="font-size: 36px; color: #ffffff; margin-bottom: 6px;">M/J CIVICS</div>
+</div>
+
+<!-- ===== METADATA STRIP ===== -->
+<div style="background: #FFFFFF; border-bottom: 2px solid #D0D9E8; display: flex; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Quarter / Module</div>
+        <div style="font-size: 17px; color: #0e1c42;">Q1 &middot; Module 1</div>
+        <div style="font-size: 12px; color: #666;">Greco-Roman Foundations</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Lesson</div>
+        <div style="font-size: 17px; color: #0e1c42;">Lesson 1.2</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">The Machinery of Direct Democracy</div>
+    </div>
+    <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
+        <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Week</div>
+        <div style="font-size: 16px; color: #0e1c42;">Week 1 &middot; Discussion Focus: The Reforms of Cleisthenes</div>
+    </div>
+</div>
+
+<!-- ===== BODY WRAPPER ===== -->
+<div style="padding: 24px 34px;">
+
+    <!-- Lavender title strip -->
+    <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 1.2</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Cleisthenes and the Machinery of Direct Democracy</div>
+        <div style="font-size: 16px; color: #666;">Lesson</div>
+    </div>
+
+    <!-- Today's Focus -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
+        <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">If power is spread across a Council chosen partly by lot, an Assembly of thousands, and an exile vote with no formal charge, what actually holds a system like that together?</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Rebuilding the tribes was Cleisthenes's own distinctive move, but it built on a longer process already under way. It was Solon, back in 594 BC, who deserves the primary credit for breaking the aristocratic families' grip on Athenian politics in the first place: his property classes opened political office to any citizen with enough wealth, aristocrat or not, and by Solon's time plenty of commoners had grown wealthy enough to qualify. Pisistratus, for all that he seized power by force, continued this same work. He kept Solon's property requirements in place while elevating wealthy and middle-class commoners and steadily pushing the old aristocratic families further from power. Cleisthenes's reforms, coming after Pisistratus's line was driven out, had a different emphasis: not breaking the aristocracy's economic grip, which Solon and Pisistratus had already accomplished, but increasing the power of the Assembly itself and expanding who could be counted as a citizen in the first place. With that background in place, here are the institutions Cleisthenes built, and the ones later reformers would still need to finish.</div>
+    </div>
+
+    <!-- Objectives -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how the Council of Five Hundred was selected and why it, not the Assembly, controlled the practical agenda under Cleisthenes's system.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe how the Assembly practiced direct democracy, and why that is different from a representative system.</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 12px;">
+            <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain the purpose of ostracism, and how the Council, Assembly, and ostracism worked together to keep any one person or faction from holding power too long.</div>
+        </div>
+    </div>
+
+    <!-- Materials -->
+    <div style="background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128203; WHAT YOU NEED FOR THIS LESSON</div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">Lesson 1.1, since this lesson builds directly on Solon's and Pisistratus's reforms</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 10px; border-left: 3px solid #D0D9E8; padding-left: 14px;"><span style="color: #c7922c; font-size: 18px; flex-shrink: 0;">&#9654;</span>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.6;">This lesson page, read in full before Primary Source 2 (Plutarch's <em>Life of Solon</em>)</div>
+        </div>
+    </div>
+
+    <!-- PART 1 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE COUNCIL OF FIVE HUNDRED</div>
+
+        <div class="optima-widget ow-reflect">
+          <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
+          <div class="widget-question">Before you read on: do you think a body chosen partly by election and partly by random lot would tend to be more, or less, dominated by wealthy citizens than a body chosen by election alone? (No wrong answer, just check in with yourself.)</div>
+          <div class="widget-options">
+            <button data-response="Reasonable guess. Watch for exactly how the two-stage process the lesson describes plays out in practice.">&#129300; More dominated, since wealth still matters somewhere in the process</button>
+            <button data-response="Worth testing against the text below, since the lot itself is genuinely random.">&#129488; Less dominated, since the lot removes wealth from the final step</button>
+            <button data-response="Good instinct. The lesson is about to show you exactly where wealth still enters the process, even with a lottery involved.">&#128064; Somewhere in between, depending on how the process actually works</button>
+          </div>
+          <div class="widget-feedback"></div>
+          <button class="widget-reset">Reset</button>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The <strong>Council of Five Hundred</strong> (the <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Greek for 'council'; the 500-member body that set the Assembly's agenda">Boule</span>) replaced Solon's smaller Council of Four Hundred. Each year, fifty men were selected from each of the ten new tribes to serve, through a two-stage process: each deme, or local district, first held its own election to choose its candidates, an election that in practice favored wealthier and middle-class residents, since serving on the Council was time-consuming work a man who labored for wages could not easily afford to take on. Only after that internal election did the final selection happen by lot. The Council prepared the agenda for the full citizen Assembly, supervised magistrates, and handled day-to-day administration, and because it controlled that agenda, the Boule, not the Assembly, held the practical upper hand under Cleisthenes's system.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It would take another generation, and the reforms of Ephialtes and Pericles in the 460s and 450s BC, before this balance shifted: those later reformers introduced a stipend for serving on the Council, making it economically possible for the poorest citizens, the <em>thetes</em>, to serve at all, and only then did the Assembly truly gain the upper hand in setting its own agenda. Selection by lot, once it applied to a genuinely broad pool of citizens, is worth pausing on: the Athenians believed that rotating citizens through office by chance, rather than always electing the most persuasive or wealthy speakers, protected the system from being captured by a permanent political class.</p>
+    </div>
+
+    <!-- PART 2 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE ASSEMBLY AND OSTRACISM</div>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 0 0 8px 0;">The Assembly: Direct Democracy Itself</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The <strong>Assembly</strong> (<span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Greek for 'assembly'; where every adult male citizen could speak and vote directly">Ekklesia</span>) was where every adult male citizen, not a representative, the citizen himself, could speak and vote directly on war, peace, laws, and public spending. This is <em>direct democracy</em>: the citizens are not choosing someone to rule for them, they are ruling. Meeting on the Pnyx hill overlooking the city, thousands of Athenians would gather to debate and vote by show of hands.</p>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Ostracism: A Safety Valve</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The third institution, introduced a few years later, was <strong>ostracism</strong>: once a year, the Assembly could vote to exile any citizen for ten years, not as a criminal punishment, but as a safety valve against anyone accumulating too much personal power or popularity to threaten the democracy itself. No formal charge was needed, just enough votes.</p>
+    </div>
+
+    <!-- PART 3 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WHY THE COMBINATION MATTERED</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Together these institutions answer one of the oldest political questions there is: who rules, and what stops that rule from curdling into tyranny again? Cleisthenes's answer, completed only later by Ephialtes and Pericles, was to distribute power widely and rotate it constantly, so that no faction could hold it long enough to abuse it. Notice what this system does <em>not</em> have: no independent judiciary as we would recognize one, no separation of powers in the modern sense, no written bill of rights. Athenian democracy protected liberty through participation and rotation, not through structural limits on power. When you reach the American Constitutional Convention later this quarter, watch for how differently Madison and the framers chose to answer this same question.</p>
+
+        <div class="optima-widget ow-scale">
+          <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE INSTITUTION TO ITS JOB</div>
+          <div class="widget-question">For each description below, pick the institution that actually did that job.</div>
+
+          <div class="widget-row" data-correct="1" data-fb="Right. The Council of Five Hundred, not the Assembly, prepared the agenda and supervised magistrates, giving it the practical upper hand under Cleisthenes's system." data-hint="Reread Part 1: this body's control over the agenda is exactly what gave it the practical upper hand.">
+            <div class="widget-row-prompt">1. Prepared the Assembly's agenda and supervised the magistrates day to day</div>
+            <div class="widget-options">
+              <button data-choice="0">Ostracism vote</button>
+              <button data-choice="1">The Council of Five Hundred</button>
+              <button data-choice="2">The Assembly itself</button>
+              <button data-choice="3">The Areopagus</button>
+            </div>
+          </div>
+
+          <div class="widget-row" data-correct="3" data-fb="Right. The Ekklesia, the Assembly, is where every adult male citizen voted directly, without a representative standing in for him." data-hint="This is the body described as 'direct democracy' in Part 2, where citizens rule rather than choose someone to rule for them.">
+            <div class="widget-row-prompt">2. Let every adult male citizen speak and vote directly on war, peace, laws, and spending</div>
+            <div class="widget-options">
+              <button data-choice="0">The Council of Five Hundred</button>
+              <button data-choice="1">A stipend system</button>
+              <button data-choice="2">Selection by lot alone</button>
+              <button data-choice="3">The Assembly</button>
+            </div>
+          </div>
+
+          <div class="widget-row" data-correct="2" data-fb="Right. Ostracism let the Assembly exile a citizen for ten years with no formal charge, as a safety valve against anyone growing too powerful." data-hint="Part 2 calls this the institution that required 'no formal charge,' just enough votes." >
+            <div class="widget-row-prompt">3. Allowed the Assembly to exile a citizen for ten years with no formal charge required</div>
+            <div class="widget-options">
+              <button data-choice="0">The Council of Five Hundred</button>
+              <button data-choice="1">Election by deme</button>
+              <button data-choice="2">Ostracism</button>
+              <button data-choice="3">The stipend reform of Ephialtes and Pericles</button>
+            </div>
+          </div>
+
+          <button class="widget-reset">Reset</button>
+        </div>
+    </div>
+
+    <!-- What You'll Do Next -->
+    <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
+        <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 2</strong> (GitHub lesson page)</div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Plutarch's <em>Life of Solon</em>, ch. 18, on the four property classes and the popular courts.</div>
+            </div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 14px;">
+            <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source Report 1</strong> (Canvas, Tier 3)</div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">A short Word document drawing on both this week's primary sources, Aristotle and Plutarch.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Wrap-up -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Athenian democracy protected liberty through participation and rotation, spreading power across the Council, the Assembly, and ostracism, rather than through the structural limits on power you will see in later weeks. Next week, in Rome, you will meet a very different answer to the same question: instead of rotating everyone through office, the Romans split executive power between two rival Consuls and built a Senate and Assemblies around them.</p>
+    </div>
+
+</div>
+
+<!-- ===== FOOTER ===== -->
+<div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
+    <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; M/J CIVICS &middot; Quarter 1 &middot; Student Lesson Page</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.2 &middot; Cleisthenes and the Machinery of Direct Democracy</div>
+    <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
+</div>
+
+</div>
+
+<!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
+<script>
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
+</script>
+
+</body>
+</html>
