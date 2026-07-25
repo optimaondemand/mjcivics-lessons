@@ -33,6 +33,23 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .callout.glossary.foreign { background: #F3EEFB; border-left: 5px solid #7B3FA0; }
+    .callout.glossary.foreign .callout-kicker { color: #5B2E7E; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -120,8 +137,41 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; COLLECTIVIZATION AND A HIDDEN FAMINE</div>
 
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing two terms from Lesson 17.2, plus new terms for Soviet economic policy.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-collectivization">collectivization <span class="phonetic">(kuh-lek-tiv-ih-ZAY-shun)</span> <button class="audio-btn" data-term="collectivization" aria-label="Play pronunciation of collectivization">&#128266;</button></dt>
+                <dd>the forced merging of independent peasant farms into state-run collectives.</dd>
+                <dt id="gloss-five-year-plans">Five-Year Plans <span class="phonetic"></span> <button class="audio-btn" data-term="Five-Year Plans" aria-label="Play pronunciation of Five-Year Plans">&#128266;</button></dt>
+                <dd>Soviet economic plans meant to industrialize the country rapidly under government direction.</dd>
+                <dt id="gloss-new-world-order-181">new world order <span class="phonetic"></span> <button class="audio-btn" data-term="new world order" aria-label="Play pronunciation of new world order">&#128266;</button></dt>
+                <dd>Bush's vision of a world where nations act collectively through international law and institutions.</dd>
+                <dt id="gloss-united-nations-181">United Nations <span class="phonetic"></span> <button class="audio-btn" data-term="United Nations" aria-label="Play pronunciation of United Nations">&#128266;</button></dt>
+                <dd>the international body whose Security Council holds primary responsibility for international peace and security.</dd>
+            </dl>
+        </div>
+
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Agriculture was forcibly <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="The merging of independently owned farms into state-run collective farms, often enforced against the will of the farmers">collectivized</span>: independent peasant farms were merged into state-run collectives, often at gunpoint, over the fierce resistance of the peasants who owned them. The result, in 1932 and 1933, was a catastrophic famine across Ukraine and southern Russia that killed millions: a famine largely caused by state grain-requisition policy, not natural disaster, and one the Soviet government worked hard to deny and conceal from the outside world.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Some Western journalists stationed in Moscow, dependent on continued Soviet access for their careers, echoed the denial. A young Welsh journalist named <strong>Gareth Jones</strong> did not. Jones walked through Ukrainian villages himself, outside the official Soviet press tours, and reported what he actually saw.</p>
+
+        <div class="callout glossary foreign">
+            <div class="callout-kicker">&#127760; Foreign Language Vocabulary</div>
+            <dl class="glossary-list">
+                <dt id="gloss-holodomor"><em>Holodomor</em> <span class="phonetic">(hoh-loh-doh-MOR)</span> <button class="audio-btn" data-term="Holodomor" aria-label="Play pronunciation of Holodomor">&#128266;</button></dt>
+                <dd>Ukrainian for &ldquo;death by hunger&rdquo;; the 1932&ndash;33 famine across Ukraine and southern Russia, caused largely by state grain-requisition policy.</dd>
+                <dt id="gloss-kulaks"><em>kulaks</em> <span class="phonetic">(KOO-lahks)</span> <button class="audio-btn" data-term="kulaks" aria-label="Play pronunciation of kulaks">&#128266;</button></dt>
+                <dd>a term originally meaning a relatively prosperous farmer, used by Soviet authorities to label almost anyone who resisted collectivization.</dd>
+            </dl>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Ukrainians today call this famine the <strong><em class="gloss-term"><a href="#gloss-holodomor" title="Ukrainian for death by hunger; the 1932-33 famine across Ukraine and southern Russia">Holodomor</a></em></strong>, a word meaning roughly &ldquo;death by hunger,&rdquo; and many governments around the world have since formally recognized it as a genocide deliberately inflicted on the Ukrainian people, though the exact intent behind Soviet policy remains debated among historians. Gareth Jones did not live to see this recognition. He was killed in 1935 while reporting in Mongolia, under circumstances some historians suspect involved Soviet intelligence, though this has never been definitively proven. He was thirty years old.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Historians' estimates of the death toll vary, but most place deaths in Ukraine alone somewhere between three and five million people, with additional deaths across other famine-affected Soviet regions. One especially harsh policy made the famine deadlier than it might otherwise have been: the Soviet government restricted internal travel through an internal passport system, and specifically blocked starving peasants in the worst-hit famine regions from leaving to search for food elsewhere, even as grain continued to be exported abroad from the same country experiencing mass starvation.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It is worth distinguishing communism as a theory from communism as it was actually practiced in the Soviet Union. Karl Marx, the nineteenth-century philosopher whose writing inspired the movement, envisioned an eventual stateless, classless society where resources were shared according to need. In practice, every large-scale attempt to build a communist state, including the Soviet Union, instead produced a powerful, centralized state controlling the economy and much of daily life, not the stateless vision Marx had described. This gap between communist theory and its real-world implementation is itself worth remembering whenever comparing any political theory to the government actually built in its name.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The peasants who resisted collectivization most fiercely were often labeled <strong><em class="gloss-term"><a href="#gloss-kulaks" title="a term originally meaning a relatively prosperous farmer, used to label almost anyone who resisted collectivization">kulaks</a></em></strong>, a term originally meaning a relatively prosperous farmer but used by Soviet authorities to describe almost anyone who opposed handing over their land and livestock to state control. The government's campaign against kulaks, called dekulakization, involved seizing their property, exiling entire families to remote regions of the Soviet Union, and in many cases executing those identified as kulak &ldquo;class enemies.&rdquo; This targeting of a specific group, defined more by their resistance to state policy than by any objective measure of wealth, foreshadowed the same pattern of labeling and punishing perceived enemies that the Gulag system would later apply on an even larger scale.</p>
     </div>
 
     <!-- PART 2 -->

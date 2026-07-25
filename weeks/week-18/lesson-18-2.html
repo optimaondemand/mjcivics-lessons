@@ -33,6 +33,23 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .callout.glossary.foreign { background: #F3EEFB; border-left: 5px solid #7B3FA0; }
+    .callout.glossary.foreign .callout-kicker { color: #5B2E7E; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -117,6 +134,31 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A CAMP SYSTEM WITH NO CHECK ON IT</div>
 
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing two terms from Lesson 18.1. This week's reading introduces no new Subject Vocabulary terms.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-collectivization-182">collectivization <span class="phonetic">(kuh-lek-tiv-ih-ZAY-shun)</span> <button class="audio-btn" data-term="collectivization" aria-label="Play pronunciation of collectivization">&#128266;</button></dt>
+                <dd>the forced merging of independent peasant farms into state-run collectives.</dd>
+                <dt id="gloss-five-year-plans-182">Five-Year Plans <span class="phonetic"></span> <button class="audio-btn" data-term="Five-Year Plans" aria-label="Play pronunciation of Five-Year Plans">&#128266;</button></dt>
+                <dd>Soviet economic plans meant to industrialize the country rapidly under government direction.</dd>
+            </dl>
+        </div>
+        <div class="callout glossary foreign">
+            <div class="callout-kicker">&#127760; Foreign Language Vocabulary</div>
+            <p class="glossary-note">Reviewing two terms from Lesson 18.1, plus new terms for the Soviet camp system.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-gulag"><em>Gulag</em> <span class="phonetic">(GOO-lahg)</span> <button class="audio-btn" data-term="Gulag" aria-label="Play pronunciation of Gulag">&#128266;</button></dt>
+                <dd>the Soviet network of forced-labor camps that held millions of political prisoners and ordinary citizens on fabricated or minor charges.</dd>
+                <dt id="gloss-holodomor-182"><em>Holodomor</em> <span class="phonetic">(hoh-loh-doh-MOR)</span> <button class="audio-btn" data-term="Holodomor" aria-label="Play pronunciation of Holodomor">&#128266;</button></dt>
+                <dd>Ukrainian for &ldquo;death by hunger&rdquo;; the 1932&ndash;33 Soviet famine.</dd>
+                <dt id="gloss-kulaks-182"><em>kulaks</em> <span class="phonetic">(KOO-lahks)</span> <button class="audio-btn" data-term="kulaks" aria-label="Play pronunciation of kulaks">&#128266;</button></dt>
+                <dd>a term used by Soviet authorities to label almost anyone who resisted collectivization.</dd>
+                <dt id="gloss-solzhenitsyn"><em>Solzhenitsyn</em> <span class="phonetic">(sohl-zhuh-NEET-sin)</span> <button class="audio-btn" data-term="Solzhenitsyn" aria-label="Play pronunciation of Solzhenitsyn">&#128266;</button></dt>
+                <dd>a Soviet Army veteran and Gulag survivor whose book <em>The Gulag Archipelago</em> documented the camp system's scale and mechanics.</dd>
+            </dl>
+        </div>
+
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">No independent judiciary, of the kind you studied in Week 11, existed to check whether an arrest or a sentence had any real basis; the courts served the Communist Party's interests rather than functioning as a check on state power.</p>
 
         <div class="optima-widget ow-flip">
@@ -132,6 +174,10 @@
         </div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 10px 0 0 0;"><strong>Aleksandr Solzhenitsyn</strong>, a Soviet Army veteran arrested in 1945 for privately criticizing Stalin in a letter to a friend, spent eight years in the Gulag system himself. His multi-volume work <em>The Gulag Archipelago</em>, smuggled out of the Soviet Union and published in the West in 1973, was the first systematic account to document the camp system's scale and mechanics from the perspective of someone who had actually survived it, drawing on his own experience and testimony he gathered from hundreds of fellow former prisoners.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 10px 0 0 0;">Solzhenitsyn had already won the Nobel Prize in Literature in 1970, largely for earlier work describing camp life. The publication of <em>The Gulag Archipelago</em> in the West prompted the Soviet government to arrest him again, strip him of citizenship, and forcibly exile him from the country in 1974. He spent nearly two decades living abroad, much of it in the United States, before finally returning to Russia in 1994, after the Soviet Union's collapse, to see the country whose history he had documented at such personal cost.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 10px 0 0 0;">Historians estimate that some eighteen million people passed through the Gulag system between the 1930s and the 1950s, though many prisoners died from overwork, malnutrition, and brutal conditions before ever being released. The system did not run on secret police alone. Ordinary citizens frequently denounced neighbors, coworkers, and even family members to the authorities, sometimes out of genuine belief, sometimes out of fear of being denounced first, and sometimes for personal gain, such as an informer's chance to move into a denounced neighbor's now-vacant apartment. This is exactly the uncomfortable truth Solzhenitsyn's primary source excerpt names directly: the system's cruelty depended on ordinary people's participation, not solely on villains at the top.</p>
     </div>
 
     <!-- PART 2 -->
@@ -142,6 +188,8 @@
             <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; HELPFUL TO KNOW</div>
             <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">This course has not pretended the American system is perfect. Module 4 examined <em>Plessy v. Ferguson</em> as a genuine constitutional failure. What matters is whether a system has the tools to correct its own failures.</div>
         </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is the final lesson of the semester. Every institution you have studied, from Athens's Council of Five Hundred to Rome's dual executive, from Locke's natural rights to Madison's separated powers, from the Bill of Rights to the modern Supreme Court, exists in answer to the same handful of questions this course opened with in Week 1: who rules, on what authority, and what stops that rule from curdling into abuse? The Soviet Union answered those questions one way. The American Constitution answers them another. This week's readings ask you to hold both answers side by side and decide, with real evidence in hand, which one you find more convincing, and why. That decision, made with evidence rather than assumed by birth, is itself the final act of citizenship this course has been preparing you to practice.</p>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Solzhenitsyn's account matters for this course's closing comparison because it makes concrete what the Bill of Rights and judicial review from Modules 3 and 4 exist to prevent: arrest without meaningful due process, courts that serve the state rather than the law, and a press too controlled to report any of it honestly. The difference between a system capable of correcting its own failures through an independent judiciary and free press, and one with neither, is precisely the difference this week's two primary sources make visible.</p>
 
