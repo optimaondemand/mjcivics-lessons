@@ -33,6 +33,21 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -120,6 +135,21 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THREE AMENDMENTS, ONE GAP</div>
 
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing two terms from Lesson 13.2, plus new terms for the right to remain silent.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-exclusionary-rule">exclusionary rule <span class="phonetic"></span> <button class="audio-btn" data-term="exclusionary rule" aria-label="Play pronunciation of exclusionary rule">&#128266;</button></dt>
+                <dd>the rule that a confession obtained in violation of Miranda cannot normally be used as evidence against the suspect at trial.</dd>
+                <dt id="gloss-miranda-warnings">Miranda warnings <span class="phonetic">(muh-RAN-duh)</span> <button class="audio-btn" data-term="Miranda warnings" aria-label="Play pronunciation of Miranda warnings">&#128266;</button></dt>
+                <dd>the specific warnings police must give a suspect who is in custody, before any interrogation begins.</dd>
+                <dt id="gloss-sherbert-test-141">Sherbert test <span class="phonetic"></span> <button class="audio-btn" data-term="Sherbert test" aria-label="Play pronunciation of Sherbert test">&#128266;</button></dt>
+                <dd>the rule that once a law substantially burdens someone's free exercise of religion, government must show a &ldquo;compelling state interest.&rdquo;</dd>
+                <dt id="gloss-strict-scrutiny-141">strict scrutiny <span class="phonetic"></span> <button class="audio-btn" data-term="strict scrutiny" aria-label="Play pronunciation of strict scrutiny">&#128266;</button></dt>
+                <dd>the highest level of legal review American courts use, requiring a &ldquo;compelling state interest&rdquo; to justify a law.</dd>
+            </dl>
+        </div>
+
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Three amendments work together to protect someone accused of a crime: the Fourth (against unreasonable searches and seizures), the Fifth (against being compelled to be "a witness against himself," among other protections), and the Sixth (guaranteeing "the Assistance of Counsel for his defence"). None of these amendments explains exactly how police must behave once they take a suspect into custody, and in 1966, that gap produced one of the most famous rulings in the Court's history.</p>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Ernesto Miranda had confessed to a crime during police interrogation after being taken into custody, without ever being told he had a right to remain silent or a right to a lawyer. In <em>Miranda v. Arizona</em>, Chief Justice Earl Warren's majority opinion held that the Fifth Amendment's protection against <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Police questioning of a suspect who has been taken into custody, as opposed to a free-to-leave conversation">self-incrimination</span> could not function as intended inside the pressure of custodial interrogation unless suspects were clearly informed of their rights beforehand. The Court did not simply strike down Miranda's conviction; it wrote out the specific warning police must give once a suspect is in custody and before any interrogation begins: the "Miranda warnings" that have since become a fixture of American police procedure and popular culture alike.</p>
@@ -171,6 +201,12 @@
             <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; HELPFUL TO KNOW</div>
             <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Notice the structural move here, the same one you saw in <em>Lemon v. Kurtzman</em> last week: the Court is not adding new words to the Fifth or Sixth Amendments. It is building a specific, practical procedure that makes an existing constitutional guarantee actually effective in the real conditions of a police station, where an unrepresented suspect facing trained interrogators is in a far weaker position than the Constitution's text alone can protect.</div>
         </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It matters, too, what actually happens if police skip these warnings. A confession obtained in violation of Miranda cannot normally be used as evidence against the suspect at trial, a consequence called the <strong class="gloss-term"><a href="#gloss-exclusionary-rule" title="a confession obtained in violation of Miranda cannot normally be used as evidence at trial">exclusionary rule</a></strong>. Some critics have argued this lets obviously guilty people escape punishment on a technicality; supporters respond that the only way to make the Fifth Amendment's protection actually mean something is to remove the government's incentive to violate it in the first place. A right with no real consequence for its violation is barely a right at all.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Ernesto Miranda's own story did not end with the Supreme Court's ruling. Arizona retried him without using his original confession as evidence, and prosecutors convicted him anyway based on other evidence, including testimony from his girlfriend. After his release from prison years later, Miranda sometimes made money autographing police-issued Miranda warning cards. He was killed in a bar fight in 1976, and in a notable irony, the suspect arrested in connection with his death was read his Miranda rights and chose to remain silent; no one was ever convicted of Miranda's killing.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The promise that &ldquo;if he cannot afford an attorney one will be appointed for him&rdquo; did not come from thin air. Three years before <em>Miranda</em>, in <em>Gideon v. Wainwright</em> (1963), the Supreme Court had already ruled that the Sixth Amendment's right to counsel requires states to provide a free lawyer to any criminal defendant who cannot afford one, at least in serious cases. Clarence Earl Gideon, the defendant in that case, had been forced to represent himself in a Florida courtroom after a judge refused his request for a lawyer, and was convicted. Gideon's own handwritten appeal to the Supreme Court, written in pencil from his prison cell, helped establish a right that <em>Miranda</em>'s warnings would later require police to actually announce out loud. Read together, <em>Gideon</em> and <em>Miranda</em> show the Sixth and Fifth Amendments reinforcing each other: one guarantees a lawyer's help, the other guarantees a suspect actually learns that help is available.</p>
     </div>
 
     <!-- What You'll Do Next -->

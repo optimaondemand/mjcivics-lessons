@@ -33,6 +33,21 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -120,6 +135,23 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A PATTERN THE DETECTIVE RECOGNIZED</div>
 
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing two terms from Lesson 14.1, plus new terms for street-level policing.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-exclusionary-rule-142">exclusionary rule <span class="phonetic"></span> <button class="audio-btn" data-term="exclusionary rule" aria-label="Play pronunciation of exclusionary rule">&#128266;</button></dt>
+                <dd>the rule that a confession obtained in violation of Miranda cannot normally be used as evidence at trial.</dd>
+                <dt id="gloss-miranda-warnings-142">Miranda warnings <span class="phonetic">(muh-RAN-duh)</span> <button class="audio-btn" data-term="Miranda warnings" aria-label="Play pronunciation of Miranda warnings">&#128266;</button></dt>
+                <dd>the specific warnings police must give a suspect who is in custody, before any interrogation begins.</dd>
+                <dt id="gloss-probable-cause">probable cause <span class="phonetic"></span> <button class="audio-btn" data-term="probable cause" aria-label="Play pronunciation of probable cause">&#128266;</button></dt>
+                <dd>enough facts that a reasonable person would believe a crime has probably been committed; required for a full arrest or search warrant.</dd>
+                <dt id="gloss-reasonable-suspicion">reasonable suspicion <span class="phonetic"></span> <button class="audio-btn" data-term="reasonable suspicion" aria-label="Play pronunciation of reasonable suspicion">&#128266;</button></dt>
+                <dd>specific facts suggesting criminal activity might be happening; a lower standard than probable cause, enough only for a brief stop and pat-down.</dd>
+                <dt id="gloss-terry-stop">Terry stop <span class="phonetic"></span> <button class="audio-btn" data-term="Terry stop" aria-label="Play pronunciation of Terry stop">&#128266;</button></dt>
+                <dd>a brief investigative stop and pat-down for weapons, justified by reasonable suspicion rather than probable cause.</dd>
+            </dl>
+        </div>
+
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Detective Martin McFadden had watched John Terry and two companions repeatedly walk past and peer into a store window in a pattern he recognized, from years of experience, as the behavior of men casing a location for a robbery. McFadden approached, identified himself, and patted down the outside of Terry's clothing, discovering a concealed weapon. Terry argued this "stop and frisk" was an unconstitutional search conducted without probable cause.</p>
 
         <div class="optima-widget ow-flip">
@@ -143,7 +175,11 @@
             <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Read alongside <em>Miranda</em>, <em>Terry</em> shows the Fourth, Fifth, and Sixth Amendments operating on a sliding scale rather than as fixed on-off switches: a brief stop requires less justification than a full arrest, just as an informal, non-custodial conversation requires no Miranda warning while a custodial interrogation does. The Court's task, case after case, is calibrating exactly how much government intrusion is "reasonable" at each point along that scale, the same kind of line-drawing you saw the religion clauses require in Week 13.</div>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is why <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="A standard lower than probable cause; specific facts suggesting something may be wrong, enough to justify a brief stop but not a full arrest">reasonable suspicion</span> and probable cause are two different standards rather than one: the Constitution asks how much intrusion is happening, and matches the required justification to that amount.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It helps to see the two standards side by side. <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="A standard lower than probable cause; specific facts suggesting something may be wrong, enough to justify a brief stop but not a full arrest">Probable cause</span> requires enough facts that a reasonable person would believe a crime has probably been committed by the person in question; it justifies a full arrest or a search warrant. Reasonable suspicion requires less: specific facts suggesting criminal activity might be happening, enough to justify a brief stop and a pat-down for weapons, but not enough to justify a full arrest or a search of pockets and bags for evidence. An officer who wants to escalate from a Terry stop to a full arrest needs to develop probable cause first, usually by observing something during the stop itself, like a visible weapon or an admission.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Terry's reasonable-suspicion standard has remained controversial in practice, even though the legal rule itself is well settled. Critics have argued that large-scale stop-and-frisk programs, especially one run for years by the New York City Police Department, were applied in ways that disproportionately targeted young men in minority neighborhoods, often without genuinely individualized suspicion for each stop. A federal court found in <em>Floyd v. City of New York</em> (2013) that the city's specific program, as actually practiced, violated the Fourth Amendment and the Fourteenth Amendment's equal protection guarantee you will read about next week. A legal standard can be constitutionally sound in theory while still being misapplied, in ways courts can later correct, in actual practice.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Justice William O. Douglas was the lone dissenter in <em>Terry v. Ohio</em>. He worried that allowing searches based on suspicion lower than probable cause, even for a brief pat-down, handed police a new power the Fourth Amendment's text did not clearly authorize, and predicted the ruling would be read more broadly over time than the Court initially intended. Since 1968, the term &ldquo;Terry stop&rdquo; has indeed become a general legal term covering brief investigative stops well beyond the specific pedestrian encounter the original case involved, including brief stops of vehicles during traffic encounters. Douglas's dissent is worth remembering: even a ruling that seems settled and uncontroversial today was often decided by a divided Court, with genuinely serious arguments on more than one side.</p>
 
         <div class="optima-widget ow-scale">
           <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE POLICE ACTION TO ITS STANDARD</div>
@@ -183,7 +219,7 @@
     <!-- Wrap-up -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Notice that both of this week's cases build practical, calibrated procedures on top of short constitutional text. Next week closes Module 4 with a case where the Court's calibration went badly wrong for fifty-eight years before it was corrected.</p>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">This lesson closes the module's tour of specific amendments. Notice that both of this week's cases build practical, calibrated procedures on top of short constitutional text. Next week turns to the Fourteenth Amendment's guarantee of equal protection, and to the long, difficult history of how that guarantee was honored, ignored, and eventually enforced, a case where the Court's calibration went badly wrong for fifty-eight years before it was corrected.</p>
     </div>
 
 </div>
