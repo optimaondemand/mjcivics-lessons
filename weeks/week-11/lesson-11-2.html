@@ -33,6 +33,21 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -85,7 +100,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">If the Constitution never says courts can strike down a law, where does that power actually come from?</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Here is the branch's strangest fact: nowhere does Article III explicitly say that federal courts may strike down a law as unconstitutional. That power, called <strong>judicial review</strong>, would not be formally exercised by the Supreme Court until 1803, in a case your Module 4 studies will return to. But fifteen years earlier, arguing for ratification, Alexander Hamilton had already predicted and defended exactly this power in <strong>Federalist No. 78</strong>.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Here is the branch's strangest fact: nowhere does Article III explicitly say that federal courts may strike down a law as unconstitutional. That power, called <strong>judicial review</strong>, would not be formally exercised by the Supreme Court until 1803, in <em>Marbury v. Madison</em>. But fifteen years earlier, arguing for ratification, Alexander Hamilton had already predicted and defended exactly this power in <strong>Federalist No. 78</strong>.</div>
     </div>
 
     <!-- Objectives -->
@@ -120,6 +135,19 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A POWER THE TEXT NEVER NAMES</div>
 
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing two terms from Lesson 11.1, plus this week's key term.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-case-controversy-112">&ldquo;case or controversy&rdquo; requirement <span class="phonetic"></span> <button class="audio-btn" data-term="case or controversy requirement" aria-label="Play pronunciation of case or controversy requirement">&#128266;</button></dt>
+                <dd>the rule that federal courts may only decide real disputes between real parties who have actually been harmed.</dd>
+                <dt id="gloss-diversity-jurisdiction-112">diversity jurisdiction <span class="phonetic"></span> <button class="audio-btn" data-term="diversity jurisdiction" aria-label="Play pronunciation of diversity jurisdiction">&#128266;</button></dt>
+                <dd>letting a lawsuit between citizens of different states be heard in a neutral federal court instead of a state court that might favor its own resident.</dd>
+                <dt id="gloss-judicial-review">judicial review <span class="phonetic"></span> <button class="audio-btn" data-term="judicial review" aria-label="Play pronunciation of judicial review">&#128266;</button></dt>
+                <dd>the power of federal courts to strike down a law as unconstitutional, first exercised in 1803's <em>Marbury v. Madison</em>.</dd>
+            </dl>
+        </div>
+
         <div class="optima-widget ow-reflect">
           <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
           <div class="widget-question">Before you read further: does it surprise you that judicial review, one of the most famous powers of the Supreme Court, is not written explicitly anywhere in Article III? (No wrong answer, just check in with yourself.)</div>
@@ -132,7 +160,7 @@
           <button class="widget-reset">Reset</button>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Judicial review would not be formally exercised by the Supreme Court until 1803, in a case Module 4 will return to. Fifteen years earlier, Hamilton had already predicted and defended exactly this power, reasoning from the structure of the Constitution itself rather than from any single clause that names the power outright.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><em>Marbury v. Madison</em> arose when the outgoing President John Adams's last-minute judicial appointments became tangled up in a dispute the incoming Jefferson administration refused to honor. Chief Justice John Marshall's opinion in that case is where the Supreme Court first actually struck down an act of Congress as unconstitutional. The specific outcome is almost more interesting than the general principle it established: Marshall ruled that Marbury did have a right to his judicial commission, and that the executive branch had wrongly withheld it, but also ruled that the specific law Marbury relied on to bring his case directly to the Supreme Court was itself unconstitutional, since it expanded the Court's original jurisdiction beyond what Article III actually allows. The result was that Marbury lost his case, even though Marshall agreed he had been wronged, while the Supreme Court gained something far larger: an accepted power to declare an act of Congress void. Fifteen years earlier, Hamilton had already predicted and defended exactly this power, reasoning from the structure of the Constitution itself rather than from any single clause that names the power outright.</p>
     </div>
 
     <!-- PART 2 -->
@@ -185,7 +213,8 @@
     <!-- Wrap-up -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Module 3 has now traced all three branches: a Congress limited to enumerated powers, a single executive bound to need the other branches, and a judiciary whose narrowest power turned out to be its most consequential. Module 4 turns from structure to the rights those structures were built to protect.</p>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Module 3 has now traced all three branches: a Congress limited to enumerated powers, a single executive bound to need the other branches, and a judiciary whose narrowest power turned out to be its most consequential. Carry Hamilton's warning with you into Module 4: a right written down and defended by no independent institution is only a promise, and that module's four weeks are about how the Bill of Rights and the courts try to make that promise real.</p>
+        <p style="font-size: 15px; color: #666; font-style: italic; margin: 12px 0 0;">&#128203; Up next: the ungraded <strong>Module 3 Outro Wrapper</strong> in Canvas (~2 minutes) before moving into Module 4.</p>
     </div>
 
 </div>
