@@ -33,6 +33,21 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -85,7 +100,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">If Congress can only do what the Constitution actually lists, what exactly is on that list, and what happens at its edges?</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Structure is only half of Article I. The other half, laid out in Section 8, is a list: the framers' attempt to write down, clause by clause, exactly what Congress is and is not allowed to do.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Structure is only half of Article I. The other half, laid out in Section 8, is a list.</div>
     </div>
 
     <!-- Objectives -->
@@ -120,6 +135,23 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A LIST, NOT A BLANK CHECK</div>
 
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing two terms from Lesson 9.1, plus new terms for what Congress can and cannot do.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-enumerated-powers">enumerated powers <span class="phonetic">(ee-NOO-mer-ay-ted POW-erz)</span> <button class="audio-btn" data-term="enumerated powers" aria-label="Play pronunciation of enumerated powers">&#128266;</button></dt>
+                <dd>the doctrine that a national legislature may only exercise the powers specifically named for it in the text, not simply assumed.</dd>
+                <dt id="gloss-house-92">House of Representatives <span class="phonetic"></span> <button class="audio-btn" data-term="House of Representatives" aria-label="Play pronunciation of House of Representatives">&#128266;</button></dt>
+                <dd>the chamber of Congress apportioned by state population and elected every two years.</dd>
+                <dt id="gloss-necessary-proper">Necessary and Proper Clause <span class="phonetic"></span> <button class="audio-btn" data-term="Necessary and Proper Clause" aria-label="Play pronunciation of Necessary and Proper Clause">&#128266;</button></dt>
+                <dd>the clause letting Congress make laws needed to carry out its enumerated powers; critics call it the &ldquo;elastic clause.&rdquo;</dd>
+                <dt id="gloss-police-power">police power <span class="phonetic"></span> <button class="audio-btn" data-term="police power" aria-label="Play pronunciation of police power">&#128266;</button></dt>
+                <dd>the broad power to regulate for public health, safety, and morals, which the Constitution leaves to the states rather than granting to Congress.</dd>
+                <dt id="gloss-senate-congress-92">Senate <span class="phonetic">(SEH-nit)</span> <button class="audio-btn" data-term="Senate" aria-label="Play pronunciation of Senate">&#128266;</button></dt>
+                <dd>the chamber of Congress giving every state two Senators regardless of population.</dd>
+            </dl>
+        </div>
+
         <div class="optima-widget ow-reflect">
           <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
           <div class="widget-question">Before you read further: do you think Congress can pass any law it judges useful, or only laws that fall under specific powers named in the text? (No wrong answer, just check in with yourself.)</div>
@@ -132,18 +164,18 @@
           <button class="widget-reset">Reset</button>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is the doctrine of <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Powers specifically listed and granted in the Constitution's text, rather than assumed to exist">enumerated</span> powers: a national legislature may only exercise the powers specifically granted to it in the text, unlike a state legislature, which under its own constitution may generally do anything not specifically forbidden. Congress can lay and collect taxes, borrow money, regulate commerce between the states and with foreign nations, coin money, raise armies, and declare war, each power named individually, not assumed.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">This is the doctrine of <strong class="gloss-term"><a href="#gloss-enumerated-powers" title="the doctrine that a national legislature may only exercise the powers specifically named for it">enumerated powers</a></strong>. A national legislature may only exercise the powers specifically granted to it in the text. This is different from a state legislature, which under its own constitution may generally do anything not specifically forbidden. Congress can lay and collect taxes, borrow money, regulate commerce between the states and with foreign nations, coin money, raise armies, and declare war. Each power is named individually. None is simply assumed.</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE CLAUSE THAT WON'T STOP ARGUING</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The list closes with a clause that has generated more constitutional argument than almost any other sentence in the document: Congress may &ldquo;make all Laws which shall be necessary and proper for carrying into Execution the foregoing Powers.&rdquo; Called the <strong>Necessary and Proper Clause</strong> (and, by its critics, the &ldquo;elastic clause&rdquo;), it lets Congress choose the means for exercising its enumerated ends without the Constitution having to spell out every conceivable law in advance.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The list closes with a clause that has generated more constitutional argument than almost any other sentence in the document. Congress may &ldquo;make all Laws which shall be necessary and proper for carrying into Execution the foregoing Powers.&rdquo; This is called the <strong class="gloss-term"><a href="#gloss-necessary-proper" title="the clause letting Congress make laws needed to carry out its enumerated powers">Necessary and Proper Clause</a></strong>, and its critics sometimes call it the &ldquo;elastic clause.&rdquo; It lets Congress choose the specific means for exercising its enumerated ends, without the Constitution having to spell out every conceivable law in advance.</p>
 
         <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
             <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; HELPFUL TO KNOW</div>
-            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Read narrowly, the Necessary and Proper Clause is a modest housekeeping clause. Read broadly, it lets Congress reach into territory its critics say was never actually delegated to it. That gap between the two readings is a live argument, not a settled one.</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Read narrowly, the Necessary and Proper Clause is a modest housekeeping clause. Read broadly, it lets Congress reach into territory its critics say was never actually delegated to it in the first place. This is a live, ongoing argument about exactly how much elasticity the elastic clause was meant to have.</div>
         </div>
     </div>
 
@@ -151,7 +183,9 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WHAT SECTION 8 DOES NOT GRANT</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice what this section does <em>not</em> grant: a general <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="A state government's general authority to regulate for the health, safety, and morals of the public">police power</span> to regulate for the health, safety, and morals of the public, which the states retained for themselves. This is the same logic of limited, divided government you traced in Week 4 through Montesquieu and in the Preamble's structure in Week 6: a legislature that can point to a specific textual grant for everything it does is a legislature that can be checked, in principle, by anyone who can read the list.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice what this section does not grant. Congress has no general &ldquo;<strong class="gloss-term"><a href="#gloss-police-power" title="the broad power to regulate for public health, safety, and morals, left to the states">police power</a></strong>&rdquo; to regulate for the health, safety, and morals of the public. The states retained that broad power for themselves. This is the same logic of limited, divided government you traced in Week 4 through Montesquieu, and in the Preamble's structure in Week 6. A legislature that can point to a specific textual grant for everything it does is a legislature that can be checked, in principle, by anyone who can actually read the list.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Consider a concrete contrast. Congress can regulate interstate trucking, since that falls under its enumerated power to regulate commerce among the states. But Congress cannot, on its own authority, set the speed limit on a purely local city street, license hairdressers, or decide who may get married, since none of those powers appears anywhere in Article I, Section 8's list. States handle all of that under their own general police power instead. This is exactly the kind of sorting you will practice in this week's VR activity.</p>
 
         <div class="optima-widget ow-scale">
           <div class="widget-kicker">&#9889; TRY IT &middot; SORT THE POWER</div>
@@ -188,6 +222,17 @@
         </div>
     </div>
 
+    <!-- PART 4 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; WHY A LIST AT ALL, AND WHAT McCULLOCH v. MARYLAND SETTLED</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It is worth naming why the framers chose an enumerated list at all, rather than simply trusting Congress with general lawmaking authority the way Parliament had traditionally worked in Britain. A list can be checked against. If Congress passes a law and someone believes it has no basis anywhere in Article I, Section 8, that person has a specific, concrete argument to make in court, not just a vague complaint about overreach. This is part of what makes judicial review, which you will study in Week 11, possible at all: courts need an actual written standard to measure a law against, and the enumerated-powers list is exactly that standard for federal legislation.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The most famous real-world test of this clause came in 1819, when the Supreme Court decided <em>McCulloch v. Maryland</em>. The Court ruled that Congress had the power to charter a national bank, even though &ldquo;national bank&rdquo; appears nowhere in Article I's enumerated list, because a bank was a reasonable and appropriate means of carrying out powers Congress clearly did have, like collecting taxes and borrowing money. That case is not one of this week's assigned primary sources, but it is worth knowing as the classic illustration of just how much weight this single clause can carry. It is also a preview of a bigger question this course will return to directly in Week 11: who ultimately decides what the Constitution's own words mean, when reasonable people read the same list and disagree about how far it stretches?</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">This week's three Extension readings, on the rule of law, on what states owe each other, and on how hard the Constitution is to amend, all share a common thread with Section 8's enumerated list. Each one is a different piece of the same overall project: a government whose power is written down in advance, distributed on purpose, and changeable only through a deliberately demanding process, rather than a government whose power simply expands to fill whatever room is available.</p>
+    </div>
+
     <!-- What You'll Do Next -->
     <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
@@ -221,6 +266,15 @@
 <script>
 (function () {
   document.addEventListener('click', function (e) {
+    var audioBtn = e.target.closest('.audio-btn');
+    if (audioBtn) {
+      if ('speechSynthesis' in window) {
+        var utter = new SpeechSynthesisUtterance(audioBtn.dataset.term || '');
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utter);
+      }
+      return;
+    }
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');

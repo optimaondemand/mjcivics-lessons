@@ -33,6 +33,24 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .callout.glossary.foreign { background: #F3EEFB; border-left: 5px solid #7B3FA0; }
+    .callout.glossary.foreign .callout-kicker { color: #5B2E7E; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
+    .wrapper-pointer { font-size: 14px; color: #0E1C42; background: #EEF1F8; border-left: 4px solid #6b7a99; border-radius: 4px; padding: 10px 14px; margin: 0 0 18px; }
 </style>
 </head>
 <body>
@@ -81,11 +99,13 @@
         <div style="font-size: 16px; color: #666;">Lesson</div>
     </div>
 
+    <p class="wrapper-pointer">&#128203; Before this lesson: complete the <strong>Module 3 Intro Wrapper</strong> in Canvas (ungraded, ~2 minutes, no wrong answers).</p>
+
     <!-- Today's Focus -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Why split the lawmaking power into two chambers that have to agree before anything becomes law?</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Article I is the longest article in the Constitution, and it comes first for a reason: the framers who had just fought a revolution against a king still regarded the lawmaking power as the most naturally dangerous power in government, the one most likely to be seized by an ambitious faction if it were left undivided. Their solution, borrowed from the British Parliament and refined through months of debate at the Convention, was to split Congress into two chambers that would have to agree with each other before any law could exist at all.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Article I is the longest article in the Constitution, and it comes first for a reason. The framers had just fought a revolution against a king.</div>
     </div>
 
     <!-- Objectives -->
@@ -120,6 +140,17 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; ONE DANGEROUS POWER, DIVIDED IN TWO</div>
 
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">New terms for Congress's two chambers.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-house">House of Representatives <span class="phonetic"></span> <button class="audio-btn" data-term="House of Representatives" aria-label="Play pronunciation of House of Representatives">&#128266;</button></dt>
+                <dd>the chamber of Congress apportioned by state population and elected every two years, built to be responsive to shifts in public mood.</dd>
+                <dt id="gloss-senate-congress">Senate <span class="phonetic">(SEH-nit)</span> <button class="audio-btn" data-term="Senate" aria-label="Play pronunciation of Senate">&#128266;</button></dt>
+                <dd>the chamber of Congress giving every state two Senators regardless of population, serving staggered six-year terms to slow and cool the House's legislation.</dd>
+            </dl>
+        </div>
+
         <div class="optima-widget ow-reflect">
           <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
           <div class="widget-question">Before you read further: does it seem odd that a body created to make laws for the people would be built, on purpose, to slow itself down? (No wrong answer, just check in with yourself.)</div>
@@ -132,18 +163,27 @@
           <button class="widget-reset">Reset</button>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The framers had just fought a revolution against a king, and they still regarded the power to make laws as the most naturally dangerous power in government: the one most likely to be seized by an ambitious faction if it were left undivided. Their solution, borrowed from the British Parliament and refined through months of debate at the Convention, was a <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="A legislature made of two separate chambers that must both agree before a bill becomes law">bicameral</span> Congress: two chambers that would have to agree with each other before any law could exist at all.</p>
+        <div class="callout glossary foreign">
+            <div class="callout-kicker">&#127760; Foreign Language Vocabulary</div>
+            <p class="glossary-note">Reviewing Aristotle from Lesson 8.2. This week's reading introduces no new foreign-language terms.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-aristotle-91"><em>Aristotle</em> <span class="phonetic">(AIR-ih-stot-uhl)</span> <button class="audio-btn" data-term="Aristotle" aria-label="Play pronunciation of Aristotle">&#128266;</button></dt>
+                <dd>a Greek philosopher who catalogued and compared the constitutions of dozens of Greek city-states to study why regimes fall apart.</dd>
+            </dl>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">They still saw the lawmaking power as the most naturally dangerous power in government, the power most likely to be seized by an ambitious group if it were left undivided. Their solution borrowed from the British Parliament and was refined through months of debate at the Convention. They split Congress into two chambers. Both chambers would have to agree with each other before any law could exist at all.</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; TWO CHAMBERS, BUILT TO BE DIFFERENT</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The House of Representatives, apportioned by state population and elected every two years, was built to be the chamber closest to the people: responsive, numerous, and quick to reflect a shift in public mood. The Senate was built to be the opposite kind of body on purpose: two Senators per state regardless of population, originally chosen by state legislatures rather than by popular vote (a design changed by the 17th Amendment in 1913, which moved to direct election), and serving staggered six-year terms so that only about a third of the Senate turns over in any election.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The <strong class="gloss-term"><a href="#gloss-house" title="the chamber of Congress apportioned by state population, elected every two years">House of Representatives</a></strong> was apportioned by state population and elected every two years. It was built to be the chamber closest to the people: responsive, numerous, and quick to reflect a shift in public mood. The <strong class="gloss-term"><a href="#gloss-senate-congress" title="the chamber of Congress giving every state two Senators, serving staggered six-year terms">Senate</a></strong> was built to be the opposite kind of body, on purpose. Every state gets exactly two Senators, no matter its population. Senators were originally chosen by state legislatures rather than by popular vote. A later change, the 17th Amendment in 1913, moved Senate elections to direct popular vote instead. Senators also serve staggered six-year terms, so that only about a third of the Senate turns over in any single election. Madison compared the Senate's function to a saucer that cools a cup of tea too hot to drink. The Senate was designed to slow the House down, not to represent the same people in a slightly different shape.</p>
 
         <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
             <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; HELPFUL TO KNOW</div>
-            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Madison compared the Senate's function to a saucer that cools a cup of tea too hot to drink: a body designed to slow the House down, not to represent the same constituency in a different shape.</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">A well-known story explains Madison's saucer image, though historians note it may be more legend than verified fact. According to this story, Thomas Jefferson, newly returned from France, asked George Washington at breakfast why the Convention had created a Senate at all. Washington supposedly asked Jefferson why he had just poured his hot coffee into his saucer. &ldquo;To cool it,&rdquo; Jefferson replied. &ldquo;Even so,&rdquo; Washington said, &ldquo;we pour legislation into the senatorial saucer to cool it.&rdquo; Whether or not this exact conversation ever happened, the image stuck, and it captures something true about the Senate's intended role regardless of its exact origin.</div>
         </div>
     </div>
 
@@ -151,7 +191,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WHAT ONLY THE SENATE CAN DO</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">That structural difference gives the Senate a set of powers the House does not share. The Senate alone gives &ldquo;<span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="The Constitution's phrase for the Senate's role in approving treaties and presidential appointments">advice and consent</span>&rdquo; on treaties and on the President's nominations to federal office, and the Senate alone sits as the court that tries impeachments voted by the House. Where the House indicts, in effect, the Senate judges. Both duties assume a body insulated enough from immediate public pressure to deliberate seriously on questions, a foreign treaty, the fitness of a judge, the guilt of a sitting official, that a body facing reelection every two years might handle more impulsively.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">That structural difference is what gives the Senate a set of powers the House does not share. The Senate alone gives &ldquo;advice and consent&rdquo; on treaties and on the President's nominations to federal office. The Senate alone also sits as the court that tries impeachments voted by the House. Where the House indicts, meaning it formally accuses, the Senate judges. Both duties assume a body insulated enough from immediate public pressure to deliberate seriously on hard questions: a foreign treaty, the fitness of a judge, the guilt of a sitting official. A body facing reelection every two years might handle these same questions more impulsively, more swayed by whatever the public happened to be angry or excited about that week.</p>
 
         <div class="optima-widget ow-select">
           <div class="widget-kicker">&#9889; TRY IT &middot; HOUSE OR SENATE?</div>
@@ -186,6 +226,17 @@
 
           <button class="widget-reset">Reset</button>
         </div>
+    </div>
+
+    <!-- PART 4 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; SIZE, QUALIFICATIONS, AND WHY THE POWERS FOLLOW THE DESIGN</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The size difference between the two chambers matters just as much as the design difference. Today, the House has 435 voting members, a number fixed by federal law since 1929 and simply reapportioned among the states after each census. The Senate has exactly 100 members, two from each of the fifty states. A House member represents, on average, hundreds of thousands of constituents. A Senator from a small state and a Senator from a large state each represent their entire state equally, no matter how different those states' populations actually are. This is the same population-versus-equality tension the Great Compromise settled back in Week 6, still visible today in how differently the two chambers actually feel to serve in.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Constitution also sets different personal qualifications for each chamber, reflecting the same basic design difference. A Representative must be at least twenty-five years old, a citizen for seven years, and a resident of the state he represents. A Senator must be at least thirty years old, a citizen for nine years, and also a resident of his state. The higher age and longer citizenship requirement for Senators fits the chamber's intended role: a body meant for longer-term, more seasoned judgment, not quick responsiveness to the latest shift in public opinion.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Keep this week's discussion focus in view as you read: the Senate's powers over treaties, nominations, and impeachment trials are not random extras bolted onto an otherwise identical chamber. They follow directly from the design choices you just studied, the longer term, the insulation from immediate public pressure, the smaller and more deliberate body. A chamber built to cool hot legislation is also, for exactly the same reasons, a chamber the framers trusted with the government's slowest, weightiest, most consequential decisions.</p>
     </div>
 
     <!-- What You'll Do Next -->
@@ -228,6 +279,15 @@
 <script>
 (function () {
   document.addEventListener('click', function (e) {
+    var audioBtn = e.target.closest('.audio-btn');
+    if (audioBtn) {
+      if ('speechSynthesis' in window) {
+        var utter = new SpeechSynthesisUtterance(audioBtn.dataset.term || '');
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utter);
+      }
+      return;
+    }
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');
