@@ -33,6 +33,24 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .callout.glossary.foreign { background: #F3EEFB; border-left: 5px solid #7B3FA0; }
+    .callout.glossary.foreign .callout-kicker { color: #5B2E7E; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
+    .wrapper-pointer { font-size: 14px; color: #0E1C42; background: #EEF1F8; border-left: 4px solid #6b7a99; border-radius: 4px; padding: 10px 14px; margin: 16px 0 0; }
 </style>
 </head>
 <body>
@@ -120,6 +138,26 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A CASE BUILT ON PURPOSE</div>
 
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing two terms from Lesson 15.1, plus one new term for this week.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-equal-protection-152">equal protection <span class="phonetic"></span> <button class="audio-btn" data-term="equal protection" aria-label="Play pronunciation of equal protection">&#128266;</button></dt>
+                <dd>the 14th Amendment's guarantee, to every citizen, of &ldquo;the equal protection of the laws.&rdquo;</dd>
+                <dt id="gloss-jim-crow">Jim Crow laws <span class="phonetic"></span> <button class="audio-btn" data-term="Jim Crow laws" aria-label="Play pronunciation of Jim Crow laws">&#128266;</button></dt>
+                <dd>the system of state segregation laws, named after a racist minstrel show character, that <em>Plessy</em> gave constitutional cover to grow for decades.</dd>
+                <dt id="gloss-separate-but-equal-152">&ldquo;separate but equal&rdquo; <span class="phonetic"></span> <button class="audio-btn" data-term="separate but equal" aria-label="Play pronunciation of separate but equal">&#128266;</button></dt>
+                <dd>the doctrine that legally segregated public facilities satisfied equal protection, overturned by <em>Brown</em>.</dd>
+            </dl>
+        </div>
+        <div class="callout glossary foreign">
+            <div class="callout-kicker">&#127760; Foreign Language Vocabulary</div>
+            <dl class="glossary-list">
+                <dt id="gloss-comite"><strong>Citizens' Committee</strong> (<em>Comit&eacute; des Citoyens</em>) <span class="phonetic">(koh-mee-TAY day see-twah-YEN)</span> <button class="audio-btn" data-term="Comite des Citoyens" aria-label="Play pronunciation of Comite des Citoyens">&#128266;</button></dt>
+                <dd>a group of black and Creole activists in New Orleans who organized the staged legal test that became <em>Plessy v. Ferguson</em>.</dd>
+            </dl>
+        </div>
+
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">To understand what <em>Brown</em> corrected, you have to read the case it corrected, and you have to understand that <em>Plessy v. Ferguson</em> was not a spontaneous act of discrimination but a deliberately staged legal test. Homer Plessy, who was seven-eighths white and one-eighth black, was a member of the <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="French for 'Citizens' Committee': a group of black and Creole activists in New Orleans who organized the legal challenge that produced Plessy v. Ferguson">Comit&eacute; des Citoyens</span> (Citizens' Committee), a group of black and Creole activists in New Orleans organized specifically to challenge Louisiana's 1890 law requiring separate railway cars by race.</p>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The East Louisiana Railroad cooperated willingly: the law was also a financial burden on the company, which had to run extra, mostly empty cars to keep the races separated, so the railroad worked with the Comit&eacute; to arrange a test case in advance. Plessy was chosen partly because he could pass as white, but the train conductor had been told beforehand to identify him and order him into the car reserved for black passengers, and a private detective, hired for the occasion, stood ready to make the actual arrest once Plessy refused to move.</p>
@@ -168,6 +206,8 @@
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In <em>Plessy v. Ferguson</em>, the Supreme Court upheld the law anyway, ruling that "separate but equal" facilities satisfied the Fourteenth Amendment so long as the separate facilities were of comparable quality. The majority went further, dismissing the argument that forced separation itself branded black citizens as inferior, a claim, the Court wrote, that existed only "because the colored race chooses to put that construction upon it."</p>
 
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The vote in <em>Plessy</em> was seven to one, with one Justice not participating in the case at all. That lopsided majority is itself worth noting, since it shows how thoroughly the legal thinking of the era, not just one or two individual judges, accepted segregation as constitutionally permissible. <em>Plessy</em> did not create the system of segregation laws that came to be known as <strong class="gloss-term"><a href="#gloss-jim-crow" title="the system of state segregation laws that Plessy gave constitutional cover to grow for decades">Jim Crow laws</a></strong>, named after a racist minstrel show character; those laws were already spreading across Southern and border states in the years before 1896. What <em>Plessy</em> did was give that entire system the Supreme Court's constitutional blessing, removing what might otherwise have been a serious legal obstacle to its growth for the next several decades.</p>
+
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This week's second primary source is that majority opinion, and it should be read as this course reads the three-fifths compromise or Japanese internment: honestly, as a documented failure of the American constitutional order, not softened into "one reasonable view among several."</p>
 
         <div class="optima-widget ow-flip">
@@ -190,6 +230,8 @@
             <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; HELPFUL TO KNOW</div>
             <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">The sixty-year gap between <em>Plessy</em> and <em>Brown</em> is itself a civics lesson: the Supreme Court is not infallible, judicial review from Week 11 can entrench a serious wrong as readily as it can correct one, and the system's capacity for self-correction depends on later generations, later Justices, and often decades of civil-rights organizing willing to keep bringing the same fundamental question back to the Court until it is answered rightly.</div>
         </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The lawyer who argued <em>Brown</em> before the Supreme Court was Thurgood Marshall, working for the NAACP Legal Defense Fund, an organization built specifically to bring exactly this kind of carefully chosen test case through the courts, patiently, over many years. Marshall had already won a string of smaller victories chipping away at segregation in graduate schools and law schools before bringing the broader challenge to segregated primary education in <em>Brown</em>. Thirteen years later, in 1967, Marshall himself became the first black Justice appointed to the Supreme Court, the same institution whose earlier ruling in <em>Plessy</em> his own legal career had helped overturn.</p>
     </div>
 
     <!-- What You'll Do Next -->
@@ -215,6 +257,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">This closes Module 4. You have now traced how the Bill of Rights protects religion, the accused, and equal citizenship, and how the Court itself can both entrench and eventually correct a constitutional wrong. Module 5 turns from rights to civic participation, foreign policy, and comparative government.</p>
+        <p class="wrapper-pointer">&#128203; Up next: the ungraded <strong>Module 4 Outro Wrapper</strong> in Canvas (~2 minutes) before moving into Module 5.</p>
     </div>
 
 </div>
