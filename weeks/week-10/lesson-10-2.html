@@ -33,6 +33,21 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -85,7 +100,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Where is the veto actually written into the Constitution, and why did Hamilton think the President needed it?</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Here is a fact that surprises most students: the presidential veto is not found anywhere in Article II. It is written into Article I, Section 7, the section describing how a bill becomes law, a reminder that the Constitution's separation of powers is not three sealed compartments but one continuous process the branches pass back and forth.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Here is a fact that surprises most students. The presidential veto is not found anywhere in Article II.</div>
     </div>
 
     <!-- Objectives -->
@@ -120,6 +135,25 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE VETO'S ACTUAL ADDRESS</div>
 
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing three terms from Lesson 10.1, plus new terms for the veto.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-commander-in-chief-102">Commander in Chief <span class="phonetic">(kuh-MAN-der in CHEEF)</span> <button class="audio-btn" data-term="Commander in Chief" aria-label="Play pronunciation of Commander in Chief">&#128266;</button></dt>
+                <dd>the President's constitutional role as head of the armed forces.</dd>
+                <dt id="gloss-high-crimes-102">&ldquo;high Crimes and Misdemeanors&rdquo; <span class="phonetic"></span> <button class="audio-btn" data-term="high Crimes and Misdemeanors" aria-label="Play pronunciation of high Crimes and Misdemeanors">&#128266;</button></dt>
+                <dd>the Constitution's phrase for the grounds for impeachment, with no single fixed legal definition.</dd>
+                <dt id="gloss-line-item-veto">line-item veto <span class="phonetic">(LYNE-EYE-tem VEE-toh)</span> <button class="audio-btn" data-term="line-item veto" aria-label="Play pronunciation of line-item veto">&#128266;</button></dt>
+                <dd>the power, held by most state governors but not the President, to strike out specific spending provisions in a budget bill while signing the rest.</dd>
+                <dt id="gloss-pardon-102">pardon <span class="phonetic">(PAR-dun)</span> <button class="audio-btn" data-term="pardon" aria-label="Play pronunciation of pardon">&#128266;</button></dt>
+                <dd>the President's power to forgive a federal crime or delay its punishment.</dd>
+                <dt id="gloss-pocket-veto">pocket veto <span class="phonetic">(POK-et VEE-toh)</span> <button class="audio-btn" data-term="pocket veto" aria-label="Play pronunciation of pocket veto">&#128266;</button></dt>
+                <dd>when a President lets a bill die simply by not signing it before Congress adjourns, so it never becomes law.</dd>
+                <dt id="gloss-veto">veto <span class="phonetic">(VEE-toh)</span> <button class="audio-btn" data-term="veto" aria-label="Play pronunciation of veto">&#128266;</button></dt>
+                <dd>the President's power to reject a bill passed by Congress and return it with objections; Congress can override it with a two-thirds vote in both chambers.</dd>
+            </dl>
+        </div>
+
         <div class="optima-widget ow-reflect">
           <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
           <div class="widget-question">Before you read further: where would you guess the veto power is written in the Constitution, Article I or Article II? (No wrong answer, just check in with yourself.)</div>
@@ -132,14 +166,16 @@
           <button class="widget-reset">Reset</button>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Once both chambers of Congress pass a bill in identical form, it goes to the President, who may sign it, let it become law without a signature after ten days, or veto it and return it to Congress with his objections. Congress may then override that veto, but only with a two-thirds vote in <em>both</em> the House and the Senate, a deliberately difficult bar to clear.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It is written into Article I, Section 7, the section describing how a bill becomes law. This is a reminder that the Constitution's separation of powers is not three sealed compartments. It is one continuous process the branches pass back and forth. Once both chambers of Congress pass a bill in identical form, it goes to the President. He may sign it. He may let it become law without his signature after ten days. Or he may veto it and return it to Congress with his objections. Congress may then override that veto, but only with a two-thirds vote in both the House and the Senate, a deliberately difficult bar to clear.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The Constitution's ten-day rule actually creates two different kinds of veto in practice. If Congress remains in session, a President who takes no action at all lets the bill become law automatically after ten days, without his signature. But if Congress adjourns during those ten days, and the President has not signed the bill, it does not become law at all. This second outcome is nicknamed a &ldquo;<strong class="gloss-term"><a href="#gloss-pocket-veto" title="when a President lets a bill die simply by not signing it before Congress adjourns">pocket veto</a></strong>,&rdquo; since the President effectively lets the bill die simply by keeping it in his pocket and doing nothing. George Washington, the first President, used the ordinary veto only twice during his entire eight years in office, a striking contrast to how frequently the veto gets used by modern presidents facing a Congress controlled by the opposing political party.</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; HAMILTON'S TWO-PART DEFENSE</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Alexander Hamilton defended this &ldquo;<span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Hamilton's own term for the veto in Federalist No. 73">qualified negative</span>,&rdquo; as it was called at the time, in <strong>Federalist No. 73</strong>. His argument ran in two parts. First, self-defense: without some check on Congress, a President who displeased the legislature would have no way to protect the office's own constitutional authority from being slowly eroded by statute. Second, and more important for the community as a whole, the veto forces a second, more careful look at legislation passed in haste or under the sway of a passing faction, not a permanent block, since Congress can still override it, but a deliberate pause built into the process.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Alexander Hamilton defended this &ldquo;qualified negative,&rdquo; as it was called at the time, in <strong>Federalist No. 73</strong>. His argument ran in two parts. The first reason was self-defense. Without some check on Congress, a President who displeased the legislature would have no way to protect the office's own constitutional authority from being slowly worn away by ordinary statute. The second reason mattered more for the community as a whole. The veto forces a second, more careful look at legislation passed in haste or under the sway of a passing faction. It is not a permanent block, since Congress can still override it. It is a deliberate pause built into the process.</p>
     </div>
 
     <!-- PART 3 -->
@@ -148,10 +184,14 @@
 
         <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
             <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; HELPFUL TO KNOW</div>
-            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">The veto is not really an executive power at all in the way appointing ambassadors is. It is a legislative power lent to the executive, proof, as Montesquieu's theory predicted back in Week 4, that pure separation of powers was never really the framers' goal.</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Notice that the veto is not really an executive power at all, in the way appointing ambassadors is. It is a legislative power lent to the executive. This is proof, as Montesquieu's theory predicted back in Week 4, that pure separation of powers was never really the framers' goal.</div>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">What they built instead was a system in which each branch holds a partial check on the others' core function, so that no single branch's mistakes can become law, or stay unlaw, without another branch's participation.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">What they built instead was a system in which each branch holds a partial check on the others' core function. This way, no single branch's mistakes can become law, or stay unlaw, without another branch's participation.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Overrides are rare in practice, which is itself evidence for Hamilton's design working roughly as intended. Congress has overridden only a small fraction of presidential vetoes across all of American history, since gathering two-thirds of both chambers against a President usually requires a level of bipartisan agreement that is hard to reach except in unusual circumstances.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">It is worth knowing that the President's veto power is actually weaker in one specific way than the power many state governors hold. Most state constitutions give their governors a <strong class="gloss-term"><a href="#gloss-line-item-veto" title="the power to strike out specific spending provisions in a budget bill while signing the rest">line-item veto</a></strong>, the power to strike out and reject specific individual spending provisions within a larger budget bill while signing the rest of the bill into law. The President has no such power over federal spending bills. He must sign or veto an entire bill as written, in full, which sometimes forces him to accept spending he dislikes buried inside a bill he otherwise wants, or reject provisions he supports along with ones he opposes.</p>
 
         <div class="optima-widget ow-select">
           <div class="widget-kicker">&#9889; TRY IT &middot; THE VETO PROCESS</div>
@@ -186,6 +226,8 @@
 
           <button class="widget-reset">Reset</button>
         </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 14px 0 0 0;">Together, this week's two lessons show the same design principle you first met in Federalist No. 51 back in Week 7 applied concretely to a single branch. The executive is powerful enough to act, but bound tightly enough that no one part of government, not even the President alone, can simply do as it pleases. Next week, you meet the third branch, the judiciary, and the power that ties the whole system together: judicial review, the courts' own claim to have the final word on what the Constitution actually means. Keep asking the same question you have been asking all module: what specific structure enforces this check, and what happens if it fails?</p>
     </div>
 
     <!-- What You'll Do Next -->
@@ -221,6 +263,15 @@
 <script>
 (function () {
   document.addEventListener('click', function (e) {
+    var audioBtn = e.target.closest('.audio-btn');
+    if (audioBtn) {
+      if ('speechSynthesis' in window) {
+        var utter = new SpeechSynthesisUtterance(audioBtn.dataset.term || '');
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utter);
+      }
+      return;
+    }
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');
