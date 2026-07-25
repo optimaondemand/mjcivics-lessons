@@ -33,6 +33,23 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .callout.glossary.foreign { background: #F3EEFB; border-left: 5px solid #7B3FA0; }
+    .callout.glossary.foreign .callout-kicker { color: #5B2E7E; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -85,7 +102,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">What happens when a single persuasive speaker and a wave of popular enthusiasm meet no structural delay at all?</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Madison and his contemporaries were classically educated men who read Greek and Roman history not as dusty trivia but as a working archive of political case studies. One episode looms especially large behind the framers' distrust of <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Direct, with no representative body or institution standing between the people and the decision">unmediated</span>, direct democratic decision-making: the Athenian Assembly's vote, in 415 BC, to launch a massive invasion of Sicily during the middle of the ongoing Peloponnesian War against Sparta.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Madison and his contemporaries were classically educated men. They read Greek and Roman history not as dusty trivia, but as a working archive of real political case studies. One episode looms especially large behind the framers' distrust of direct, unfiltered democratic decision-making.</div>
     </div>
 
     <!-- Objectives -->
@@ -97,7 +114,7 @@
         </div>
         <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
-            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how the expedition's outcome illustrates the danger Madison and the Federalists worried a "pure" democracy could not avoid.</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain how the expedition's outcome illustrates the danger Madison and the Federalists worried a &ldquo;pure&rdquo; democracy could not avoid.</div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 12px;">
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
@@ -120,7 +137,37 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A VOTE SWEPT UP IN ENTHUSIASM</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The historian <strong>Thucydides</strong>, in his <em>History of the Peloponnesian War</em>, recorded how the charismatic and ambitious Athenian general <strong>Alcibiades</strong> persuaded the Assembly to approve the expedition against the cautious warnings of the older statesman Nicias, who argued the campaign was reckless and poorly justified. The Assembly, swept up in the promise of glory and wealth, voted for the largest and most expensive military expedition Athens had ever launched, and then, in a further complication, recalled Alcibiades on corruption charges partway through the campaign, leaving the invasion in the hands of the very general who had warned against it.</p>
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing three terms from Lesson 7.1, plus one new term for this week.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-anti-federalists-72">Anti-Federalists <span class="phonetic">(AN-ty-fed-er-uh-lists)</span> <button class="audio-btn" data-term="Anti-Federalists" aria-label="Play pronunciation of Anti-Federalists">&#128266;</button></dt>
+                <dd>critics of the proposed Constitution who warned the new government was too strong and too light on protections for individual rights.</dd>
+                <dt id="gloss-federalism">federalism <span class="phonetic">(FED-er-uh-liz-um)</span> <button class="audio-btn" data-term="federalism" aria-label="Play pronunciation of federalism">&#128266;</button></dt>
+                <dd>shared and divided authority between the people, the states, and the national government.</dd>
+                <dt id="gloss-federalist-papers-72">Federalist Papers <span class="phonetic">(FED-er-uh-list PAY-perz)</span> <button class="audio-btn" data-term="Federalist Papers" aria-label="Play pronunciation of Federalist Papers">&#128266;</button></dt>
+                <dd>85 essays written by Hamilton, Madison, and Jay under the shared name &ldquo;Publius,&rdquo; arguing for the Constitution's ratification.</dd>
+                <dt id="gloss-federalists-72">Federalists <span class="phonetic">(FED-er-uh-lists)</span> <button class="audio-btn" data-term="Federalists" aria-label="Play pronunciation of Federalists">&#128266;</button></dt>
+                <dd>supporters of the proposed Constitution who argued in public for its ratification.</dd>
+            </dl>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 415 BC, the Athenian Assembly voted to launch a massive invasion of Sicily, in the middle of the ongoing Peloponnesian War against Sparta.</p>
+
+        <div class="callout glossary foreign">
+            <div class="callout-kicker">&#127760; Foreign Language Vocabulary</div>
+            <p class="glossary-note">Reviewing Publius from Lesson 7.1, plus two Greek names for this week.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-alcibiades"><em>Alcibiades</em> <span class="phonetic">(al-suh-BY-uh-deez)</span> <button class="audio-btn" data-term="Alcibiades" aria-label="Play pronunciation of Alcibiades">&#128266;</button></dt>
+                <dd>the charismatic Athenian general who persuaded the Assembly to approve the disastrous Sicilian expedition.</dd>
+                <dt id="gloss-publius-72"><em>Publius</em> <span class="phonetic">(POO-blee-us)</span> <button class="audio-btn" data-term="Publius" aria-label="Play pronunciation of Publius">&#128266;</button></dt>
+                <dd>the shared pen name Hamilton, Madison, and Jay used to write the Federalist Papers.</dd>
+                <dt id="gloss-thucydides"><em>Thucydides</em> <span class="phonetic">(thoo-SID-ih-deez)</span> <button class="audio-btn" data-term="Thucydides" aria-label="Play pronunciation of Thucydides">&#128266;</button></dt>
+                <dd>the Greek historian who recorded the Athenian Assembly's disastrous vote to invade Sicily.</dd>
+            </dl>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The historian <strong class="gloss-term"><a href="#gloss-thucydides" title="the Greek historian who recorded the Athenian Assembly's disastrous vote to invade Sicily">Thucydides</a></strong>, in his <em>History of the Peloponnesian War</em>, recorded exactly how this vote unfolded. The charismatic and ambitious Athenian general <strong class="gloss-term"><a href="#gloss-alcibiades" title="the charismatic Athenian general who persuaded the Assembly to approve the Sicilian expedition">Alcibiades</a></strong> persuaded the Assembly to approve the expedition. He did this against the cautious warnings of an older statesman named Nicias, who argued the campaign was reckless and poorly justified. Nicias's specific warnings, which the Assembly ignored, are worth naming. He pointed out that Sicily lay a long distance from Athens, across open sea, making reinforcement and resupply difficult. He noted that Athens knew little about the actual strength of the Sicilian cities it planned to conquer. And he warned that committing so many ships and soldiers so far from home would leave Athens dangerously exposed at home, where Sparta and her allies remained a constant threat nearby. Every one of these specific warnings turned out to be justified by what actually happened.</p>
 
         <div class="optima-widget ow-reflect">
           <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
@@ -134,14 +181,16 @@
           <button class="widget-reset">Reset</button>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The expedition ended in catastrophe: the entire Athenian fleet and army were destroyed or captured, a blow from which Athens never fully recovered.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The Assembly, swept up in the promise of glory and wealth, voted for the largest and most expensive military expedition Athens had ever launched. Then, in a further complication, the Assembly recalled Alcibiades on corruption charges partway through the campaign, leaving the invasion in the hands of the very general, Nicias, who had warned against it in the first place. The expedition ended in complete catastrophe. The entire Athenian fleet and army were destroyed or captured, a blow from which Athens never fully recovered. The scale of the loss is worth pausing on. Modern historians estimate Athens lost roughly two hundred ships and tens of thousands of men, citizens, allies, and rowers alike, in the failed Sicilian campaign. This was a staggering blow for a city-state whose entire free adult male citizen population likely numbered only in the tens of thousands. Athens would fight on for years afterward, but many historians consider the Sicilian disaster the moment the war's momentum shifted decisively against Athens and toward Sparta, whose own final victory came a little over a decade later.</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON THE FRAMERS TOOK FROM IT</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is exactly the danger Madison and his fellow Federalists worried a "pure" democracy could not avoid: a single persuasive speaker, momentary popular enthusiasm, and no structural delay or check standing between an emotional majority and an irreversible decision. It is why the Constitution's design deliberately avoids direct popular votes on most matters, instead layering decisions through elected representatives, a bicameral Congress, and a separate executive: a <strong>federalism</strong> of shared and divided authority between the people, the states, and the national government, discussed further in the Federalist Papers you will read next week. Thucydides gave the framers a two-thousand-year-old case study in exactly what unchecked popular passion, unslowed by any structural delay, can do to a republic.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is exactly the danger Madison and his fellow Federalists worried a &ldquo;pure&rdquo; democracy could not avoid. A single persuasive speaker, a wave of momentary popular enthusiasm, and no structural delay or check standing between an emotional majority and an irreversible decision. This is why the Constitution's design deliberately avoids direct popular votes on most matters. Instead, it layers decisions through elected representatives, a two-chamber Congress, and a separate executive. This layered system is a form of <strong class="gloss-term"><a href="#gloss-federalism" title="shared and divided authority between the people, the states, and the national government">federalism</a></strong>: shared and divided authority between the people, the states, and the national government, a topic you will read more about in the Federalist Papers next week. Thucydides gave the framers a two-thousand-year-old case study in exactly what unchecked popular passion, unslowed by any structural delay, can do to a republic.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It helps to spell out exactly what &ldquo;unmediated&rdquo; democracy means in this comparison. In Athens, a single vote on a single afternoon, taken by whoever happened to be in the crowd that day, could commit the entire city to an irreversible war. There was no second body to review the decision, no cooling-off period, and no official whose job was to weigh the decision more slowly and carefully before it took effect. The American system builds in exactly these kinds of delays on purpose. A bill must pass both a House and a Senate elected in different ways, on different cycles, before it can even reach the President's desk, and the President can then veto it outright. None of these steps guarantees a wise decision. But together, they make an Athens-style stampede toward a single afternoon's enthusiasm far less likely.</p>
 
         <div class="optima-widget ow-scale">
           <div class="widget-kicker">&#9889; TRY IT &middot; WHO DID WHAT IN THE SICILIAN EXPEDITION?</div>
@@ -169,6 +218,8 @@
 
           <button class="widget-reset">Reset</button>
         </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 14px 0 0 0;">This is also a good moment to notice something about how this course itself works. Ancient history is not being taught here as background trivia to memorize and forget. It is being taught because the American founders themselves treated it as living evidence, arguments they could actually cite, about how political communities succeed and fail. When you read Thucydides this week, you are reading exactly the kind of text Madison and his contemporaries had already absorbed by the time they sat down in Philadelphia.</p>
     </div>
 
     <!-- What You'll Do Next -->
@@ -178,7 +229,7 @@
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
                 <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 2</strong> (GitHub lesson page)</div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Thucydides, <em>History of the Peloponnesian War</em>, Book VI, on the Assembly's "excessive enthusiasm."</div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Thucydides, <em>History of the Peloponnesian War</em>, Book VI, on the Assembly's &ldquo;excessive enthusiasm.&rdquo;</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
@@ -211,6 +262,15 @@
 <script>
 (function () {
   document.addEventListener('click', function (e) {
+    var audioBtn = e.target.closest('.audio-btn');
+    if (audioBtn) {
+      if ('speechSynthesis' in window) {
+        var utter = new SpeechSynthesisUtterance(audioBtn.dataset.term || '');
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utter);
+      }
+      return;
+    }
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');

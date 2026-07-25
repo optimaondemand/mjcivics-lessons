@@ -33,6 +33,23 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .callout.glossary.foreign { background: #F3EEFB; border-left: 5px solid #7B3FA0; }
+    .callout.glossary.foreign .callout-kicker { color: #5B2E7E; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -63,7 +80,7 @@
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px; border-right: 1px solid #D0D9E8;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Topic</div>
-        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">"If Men Were Angels"</div>
+        <div style="font-size: 17px; color: #0e1c42; font-style: italic;">&ldquo;If Men Were Angels&rdquo;</div>
     </div>
     <div style="flex: 1; min-width: 140px; padding: 12px 16px;">
         <div style="font-size: 11px; color: #6b7a99; margin-bottom: 4px;">Week</div>
@@ -77,7 +94,7 @@
     <!-- Lavender title strip -->
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 7.1</div>
-        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">"If Men Were Angels," Madison Defends the Design</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">&ldquo;If Men Were Angels,&rdquo; Madison Defends the Design</div>
         <div style="font-size: 16px; color: #666;">Lesson</div>
     </div>
 
@@ -85,7 +102,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Separating power on paper is easy. What actually keeps each branch in its own lane once the government is running?</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The Constitution the Philadelphia delegates signed in September 1787 was not automatically the law of the land. It still had to be ratified by conventions in at least nine of the thirteen states, and ratification was anything but guaranteed. Critics calling themselves <strong>Anti-Federalists</strong> warned that the new government was too strong, too distant from ordinary citizens, and dangerously light on explicit protections for individual rights, a fear that would eventually produce the Bill of Rights you will study in Module 4. Supporters, the <strong>Federalists</strong>, needed to answer these objections in public and in detail.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">The Constitution the Philadelphia delegates signed in September 1787 was not automatically the law of the land. It still had to be ratified, or formally approved, by conventions in at least nine of the thirteen states. Ratification was anything but guaranteed.</div>
     </div>
 
     <!-- Objectives -->
@@ -97,11 +114,11 @@
         </div>
         <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
-            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain the "harder follow-up question" Federalist No. 51 asks beyond Montesquieu's Week 4 argument.</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain the &ldquo;harder follow-up question&rdquo; Federalist No. 51 asks beyond Montesquieu's Week 4 argument.</div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 12px;">
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
-            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain Madison's design principle of making "ambition counteract ambition."</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain Madison's design principle of making &ldquo;ambition counteract ambition.&rdquo;</div>
         </div>
     </div>
 
@@ -120,30 +137,67 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; PUBLIUS ANSWERS THE ANTI-FEDERALISTS</div>
 
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing one term from Lesson 6.2, plus new terms for the ratification debate.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-anti-federalists">Anti-Federalists <span class="phonetic">(AN-ty-fed-er-uh-lists)</span> <button class="audio-btn" data-term="Anti-Federalists" aria-label="Play pronunciation of Anti-Federalists">&#128266;</button></dt>
+                <dd>critics of the proposed Constitution who warned the new government was too strong and too light on protections for individual rights.</dd>
+                <dt id="gloss-factions-71">factions <span class="phonetic">(FAK-shunz)</span> <button class="audio-btn" data-term="factions" aria-label="Play pronunciation of factions">&#128266;</button></dt>
+                <dd>groups of citizens with shared interests or opinions; Madison argued a good constitution should survive their conflict, not try to eliminate them.</dd>
+                <dt id="gloss-federalist-papers">Federalist Papers <span class="phonetic">(FED-er-uh-list PAY-perz)</span> <button class="audio-btn" data-term="Federalist Papers" aria-label="Play pronunciation of Federalist Papers">&#128266;</button></dt>
+                <dd>85 essays written by Hamilton, Madison, and Jay under the shared name &ldquo;Publius,&rdquo; arguing for the Constitution's ratification.</dd>
+                <dt id="gloss-federalists">Federalists <span class="phonetic">(FED-er-uh-lists)</span> <button class="audio-btn" data-term="Federalists" aria-label="Play pronunciation of Federalists">&#128266;</button></dt>
+                <dd>supporters of the proposed Constitution who argued in public for its ratification.</dd>
+            </dl>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Critics who called themselves <strong class="gloss-term"><a href="#gloss-anti-federalists" title="critics of the proposed Constitution who warned the new government was too strong">Anti-Federalists</a></strong> warned that the new government was too strong and too distant from ordinary citizens. They also worried it was dangerously light on explicit protections for individual rights, a fear that would eventually produce the Bill of Rights you will study in Module 4. Supporters of the new Constitution, called the <strong class="gloss-term"><a href="#gloss-federalists" title="supporters of the proposed Constitution who argued in public for its ratification">Federalists</a></strong>, needed to answer these objections in public, and in detail.</p>
+
         <div class="optima-widget">
           <div class="widget-kicker">&#9889; FLASHCARD &middot; CLICK TO FLIP</div>
           <div class="widget-question">Test yourself before reading on.</div>
           <div class="ow-flip">
             <div class="ow-flip-front">What shared pen name did Hamilton, Madison, and Jay publish the Federalist Papers under?</div>
-            <div class="ow-flip-back">"Publius." Between October 1787 and August 1788, they published 85 essays arguing state by state, clause by clause, for ratification.</div>
+            <div class="ow-flip-back">&ldquo;Publius.&rdquo; Between October 1787 and August 1788, they published 85 essays arguing state by state, clause by clause, for ratification.</div>
           </div>
           <button class="widget-reset">Reset</button>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Between October 1787 and August 1788, Alexander Hamilton, James Madison, and John Jay published 85 essays under the shared pen name "Publius," collected today as <strong>The Federalist Papers</strong>, arguing state by state, clause by clause, for ratification. Madison's contributions include some of the most searching defenses of the Constitution's structure ever written, and none is more famous than <strong>Federalist No. 51</strong>, which tackles the separation-of-powers problem you studied through Montesquieu in Week 4 and asks a harder follow-up question: separating power on paper is easy, but what actually <em>keeps</em> each branch in its own lane once the government is running?</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Between October 1787 and August 1788, Alexander Hamilton, James Madison, and John Jay published 85 essays under a single shared pen name, &ldquo;<strong><em class="gloss-term"><a href="#gloss-publius" title="the shared pen name Hamilton, Madison, and Jay used to write the Federalist Papers">Publius</a></em></strong>.&rdquo; These essays, collected today as <strong class="gloss-term"><a href="#gloss-federalist-papers" title="85 essays arguing for the Constitution's ratification">The Federalist Papers</a></strong>, argued state by state, clause by clause, for ratification. Madison's contributions include some of the most searching defenses of the Constitution's structure ever written. None is more famous than <strong>Federalist No. 51</strong>. This essay tackles the separation-of-powers problem you studied through Montesquieu back in Week 4, and it asks a harder follow-up question. Separating power on paper is easy enough to write down. But what actually keeps each branch in its own lane once the government is up and running, day after day, year after year?</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; AMBITION MUST COUNTERACT AMBITION</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; A NAME BORROWED FROM ROME</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Madison's answer rejected the comfortable assumption that good character alone would hold the system together. Instead, he argued the Constitution should give each branch the structural means and the personal motive to resist <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="A gradual intrusion on the rights, power, or territory of another">encroachment</span> by the others, famously summarized in his phrase "ambition must be made to counteract ambition." This is not cynicism for its own sake; it is a design principle. Rather than hoping officeholders will be virtuous, build a system where even self-interested officeholders, each jealously guarding their own branch's power, end up protecting the separation of powers as a side effect.</p>
+        <div class="callout glossary foreign">
+            <div class="callout-kicker">&#127760; Foreign Language Vocabulary</div>
+            <p class="glossary-note">Reviewing Machiavelli from Lesson 6.2, plus a new Latin pen name.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-machiavelli-71"><em>Machiavelli</em> <span class="phonetic">(mak-ee-uh-VEL-ee)</span> <button class="audio-btn" data-term="Machiavelli" aria-label="Play pronunciation of Machiavelli">&#128266;</button></dt>
+                <dd>an Italian Renaissance writer whose book on Rome argued that conflict between social classes could protect liberty.</dd>
+                <dt id="gloss-publius"><em>Publius</em> <span class="phonetic">(POO-blee-us)</span> <button class="audio-btn" data-term="Publius" aria-label="Play pronunciation of Publius">&#128266;</button></dt>
+                <dd>the shared pen name Hamilton, Madison, and Jay used to write the Federalist Papers, honoring a Roman consul who helped establish popular government after Rome's kings were overthrown.</dd>
+            </dl>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The pen name &ldquo;Publius&rdquo; was not chosen at random. It honored Publius Valerius Publicola, one of the Roman Republic's founding consuls, a man ancient writers praised for helping establish popular government after the overthrow of Rome's kings, the very history you studied back in Week 2. By writing under a shared Roman name instead of their own, Hamilton, Madison, and Jay presented a single unified voice to the public, rather than three individual men who might be attacked personally instead of on the merits of their arguments. The pace of their work was remarkable. At the height of the campaign, new essays appeared in New York newspapers two or three times a week, an enormous rate of output for arguments this carefully reasoned.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The stakes of this ratification campaign were not hypothetical. New York, the very state Hamilton, Madison, and Jay specifically aimed their essays at, ratified by a margin of just three votes, 30 to 27, in July 1788. Virginia's convention was similarly close. Without ratification by these two large, influential states, many historians believe the new Constitution could not have survived as a functioning national government, even if enough smaller states had already approved it to technically meet the nine-state threshold.</p>
+    </div>
+
+    <!-- PART 3 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; AMBITION MUST COUNTERACT AMBITION</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Madison's answer rejected the comfortable assumption that good character alone would hold the system together. Instead, he argued the Constitution should give each branch both the structural means and the personal motive to resist encroachment, or overreach, by the others. He summarized this in a now-famous phrase: &ldquo;ambition must be made to counteract ambition.&rdquo; This is not cynicism for its own sake. It is a design principle. Rather than hoping officeholders will always be virtuous, you build a system where even self-interested officeholders, each one jealously guarding his own branch's power, end up protecting the separation of powers as a side effect of protecting his own turf.</p>
 
         <div class="optima-widget ow-select">
           <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE CLAIM TO WHAT MADISON ACTUALLY ARGUES</div>
           <div class="widget-question">For each claim below, decide what Federalist No. 51 actually says.</div>
 
-          <div class="widget-row" data-correct="0" data-fb="Right. Madison explicitly rejects relying on good character alone; the system must be built to work even if officeholders are self-interested." data-hint="Reread the opening of Part 2: what does Madison reject as a 'comfortable assumption'?">
+          <div class="widget-row" data-correct="0" data-fb="Right. Madison explicitly rejects relying on good character alone; the system must be built to work even if officeholders are self-interested." data-hint="Reread the opening of Part 3: what does Madison reject as a 'comfortable assumption'?">
             <div class="widget-row-prompt">1. "The separation of powers holds together mainly because officeholders are honorable and self-restrained."</div>
             <div class="widget-options">
               <button data-choice="0">False, according to the lesson</button>
@@ -167,6 +221,13 @@
         </div>
     </div>
 
+    <!-- PART 4 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; AMBITION COUNTERACTING AMBITION IN PRACTICE</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Consider what &ldquo;ambition counteracting ambition&rdquo; looks like in practice. If Congress tried to pass a law giving itself the power to personally arrest and punish someone without a trial, the judicial branch would have both the motive and the constitutional standing to strike that law down as unconstitutional, since courts jealously guard their own role in judging guilt and innocence. If the President tried to spend money Congress had not appropriated, Congress would have both the motive and the power to refuse funding for that program going forward, since the legislature jealously guards its own control over the nation's purse. Neither branch needs to be especially virtuous for this system to work. Each branch simply needs to care about protecting its own authority, and that self-interest does the rest. You have not yet studied the specific powers of Congress, the President, and the federal courts in close detail; that comes in Module 3. But Federalist No. 51 gives you the theory behind that structure before you meet its details. Every specific check you will encounter there, the presidential veto, Senate confirmation of judges, judicial review, congressional oversight, exists because Madison and his fellow framers built &ldquo;ambition counteracting ambition&rdquo; into the Constitution's actual text, not just into their essays defending it.</p>
+    </div>
+
     <!-- What You'll Do Next -->
     <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
@@ -181,7 +242,7 @@
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
                 <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 1 &amp; Critical Questions 7.1</strong> (Canvas)</div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Madison's Federalist No. 51, the "if men were angels" passage in full.</div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Madison's Federalist No. 51, the &ldquo;if men were angels&rdquo; passage in full.</div>
             </div>
         </div>
     </div>
@@ -197,7 +258,7 @@
 <!-- ===== FOOTER ===== -->
 <div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
     <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; M/J CIVICS &middot; Quarter 1 &middot; Student Lesson Page</div>
-    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 7.1 &middot; "If Men Were Angels," Madison Defends the Design</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 7.1 &middot; &ldquo;If Men Were Angels,&rdquo; Madison Defends the Design</div>
     <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
 </div>
 
@@ -207,6 +268,15 @@
 <script>
 (function () {
   document.addEventListener('click', function (e) {
+    var audioBtn = e.target.closest('.audio-btn');
+    if (audioBtn) {
+      if ('speechSynthesis' in window) {
+        var utter = new SpeechSynthesisUtterance(audioBtn.dataset.term || '');
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utter);
+      }
+      return;
+    }
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');
