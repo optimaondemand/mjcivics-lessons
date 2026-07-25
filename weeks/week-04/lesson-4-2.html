@@ -34,6 +34,21 @@
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
     .ow-flip + .ow-flip { margin-top: 12px; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -86,7 +101,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Can any government at all, however it is structured, be reconciled with genuine freedom?</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">If Montesquieu asked how power should be structured, the <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="From Geneva, an independent city-state in what is now Switzerland">Genevan</span> philosopher <strong>Jean-Jacques Rousseau</strong>, writing his <em>On the Social Contract</em> in 1762, asked a more unsettling question: can any government at all be reconciled with genuine freedom? Rousseau opens his book with a famous line: "Man is born free, and everywhere he is in chains." His task is to explain how legitimate chains, legitimate political authority, could ever be compatible with the freedom people are born with.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">If Montesquieu asked how power should be structured, the Genevan philosopher <strong>Jean-Jacques Rousseau</strong> asked a more unsettling question. Writing his book <em>On the Social Contract</em> in 1762, Rousseau asked: can any government at all truly be reconciled with genuine freedom?</div>
     </div>
 
     <!-- Objectives -->
@@ -98,7 +113,7 @@
         </div>
         <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
-            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what Rousseau means when he says society may "force him to be free."</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> explain what Rousseau means when he says society may &ldquo;force him to be free.&rdquo;</div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 12px;">
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
@@ -121,9 +136,26 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A TROUBLING QUESTION</div>
 
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing the three branches from Lesson 4.1, plus Rousseau's own vocabulary.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-executive-42">executive <span class="phonetic">(eg-ZEK-yoo-tiv)</span> <button class="audio-btn" data-term="executive" aria-label="Play pronunciation of executive">&#128266;</button></dt>
+                <dd>the power to carry out and enforce laws.</dd>
+                <dt id="gloss-general-will">general will <span class="phonetic"></span> <button class="audio-btn" data-term="general will" aria-label="Play pronunciation of general will">&#128266;</button></dt>
+                <dd>Rousseau's term for the collective judgment of the whole community about the common good, which every citizen has a genuine share in forming.</dd>
+                <dt id="gloss-judicial-42">judicial <span class="phonetic">(joo-DISH-uhl)</span> <button class="audio-btn" data-term="judicial" aria-label="Play pronunciation of judicial">&#128266;</button></dt>
+                <dd>the power to judge disputes under the law.</dd>
+                <dt id="gloss-legislative-42">legislative <span class="phonetic">(LEJ-iss-lay-tiv)</span> <button class="audio-btn" data-term="legislative" aria-label="Play pronunciation of legislative">&#128266;</button></dt>
+                <dd>the power to make laws.</dd>
+                <dt id="gloss-state-sovereign-power">State, Sovereign, and Power <span class="phonetic"></span> <button class="audio-btn" data-term="State, Sovereign, and Power" aria-label="Play pronunciation of State, Sovereign, and Power">&#128266;</button></dt>
+                <dd>Rousseau's three names for the same &ldquo;moral and collective body&rdquo; formed by the social contract: State when it is simply being governed, Sovereign when it is actively making decisions, and Power when compared to other nations.</dd>
+            </dl>
+        </div>
+
         <div class="optima-widget ow-reflect">
           <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
-          <div class="widget-question">Rousseau opens with: "Man is born free, and everywhere he is in chains." Before reading his answer, what do you think he means by "chains"? (No wrong answer, just check in with yourself.)</div>
+          <div class="widget-question">Rousseau opens with: &ldquo;Man is born free, and everywhere he is in chains.&rdquo; Before reading his answer, what do you think he means by &ldquo;chains&rdquo;? (No wrong answer, just check in with yourself.)</div>
           <div class="widget-options">
             <button data-response="Worth testing against Rousseau's actual answer below: he is asking whether political authority itself, laws and rulers, can ever be compatible with the freedom people are born with.">Laws and government, restricting people's natural freedom</button>
             <button data-response="Also worth testing against the lesson: Rousseau's specific question is about political authority, not social pressure in general, though the two are related.">Social expectations and pressure to conform</button>
@@ -132,20 +164,24 @@
           <div class="widget-feedback"></div>
           <button class="widget-reset">Reset</button>
         </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Rousseau opens his book with a famous line: &ldquo;Man is born free, and everywhere he is in chains.&rdquo; His whole task in the book is to explain how legitimate chains, meaning legitimate political authority, could ever be compatible with the freedom people are born with in the first place. Rousseau was writing in Geneva, a small city-republic, and had spent years observing both grand monarchies and smaller self-governing communities across Europe. That mix of experiences shaped his conviction that a community really could govern itself well, if it organized itself the right way.</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE GENERAL WILL</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Rousseau's answer builds on the social contract tradition you have already studied in Locke, but pushes it in a distinctive direction. He argued that when individuals unite into a political community, they do not simply trade obedience for protection, as Locke's account might suggest. Instead, each person gives themselves entirely to the whole community and, in exchange, becomes a participating author of the laws that govern everyone, including themselves. The result, Rousseau claimed, is something he called the <strong>general will</strong>: not simply what most people happen to want at a given moment, but the collective judgment of the community about the common good, which every citizen has a share in forming.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Rousseau's answer builds on the social contract tradition you already studied with Locke, but it pushes that tradition in a very different direction. He argued that when individuals unite into a political community, they do not simply trade obedience for protection, the way Locke's account might suggest. Instead, each person gives himself entirely to the whole community. In exchange, he becomes a participating author of the laws that govern everyone, including himself. The result, Rousseau claimed, is something he called the <strong class="gloss-term"><a href="#gloss-general-will" title="the collective judgment of the whole community about the common good">general will</a></strong>. This is not simply whatever most people happen to want at any given moment. It is the collective judgment of the whole community about the common good, a judgment every citizen has a genuine share in forming.</p>
     </div>
 
     <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; FORCED TO BE FREE?</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is a genuinely radical idea, and not an entirely comfortable one. Because the general will represents the whole community's judgment about the common good, Rousseau argued that someone who disobeys a law made this way is not simply defying the majority; he is acting against his own truer, more rational self, the self that participates in the collective sovereign. Rousseau put this starkly: society may "force him to be free." Critics have long worried that this idea, taken too far, could justify a majority (or whoever claims to speak for it) overriding an individual's rights in the name of the "real" common good; this is a very different worry from Locke's, whose theory treats individual natural rights as a line no government, however popular, may cross. Keep both worries in mind as you continue through this course: the American framers were reading Rousseau's contemporaries, but their constitutional design leans decisively toward Locke's caution about power, not Rousseau's confidence in collective will.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is a genuinely radical idea, and not an entirely comfortable one. Because the general will represents the whole community's judgment about the common good, Rousseau argued that someone who disobeys a law made this way is not simply defying the majority. He is acting against his own truer, more rational self, the self that participates in the collective sovereign. Rousseau put this starkly: society may &ldquo;force him to be free.&rdquo; Picture a town where the community votes, after fair and open debate, to require every household to help maintain the town well that everyone depends on. Rousseau would say a person who refuses is not just breaking a rule. He is failing to live up to the shared judgment he himself helped form as a citizen, judgment aimed at everyone's real common good, including his own. That is what Rousseau means when he says such a person can be &ldquo;forced to be free&rdquo;: forced to act in line with the reasonable, public-minded self he already agreed to be part of.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Critics have long worried that this idea, taken too far, could justify a majority, or whoever claims to speak for it, overriding an individual's rights in the name of the &ldquo;real&rdquo; common good. This is a very different worry from Locke's. Locke's theory treats individual natural rights as a line no government may cross, no matter how popular that government is or how many people support crossing it. Keep both worries in mind as you continue through this course. The American framers were reading Rousseau's contemporaries and were aware of his ideas, but their constitutional design leans decisively toward Locke's caution about power, not toward Rousseau's confidence in the collective will. Rousseau trusted the community's shared judgment more than he feared any government that judgment might create; the American framers, having studied history's many examples of majorities and mobs behaving badly, trusted written limits and divided power more than they trusted any single will, however collective. This choice shows up again and again across the rest of this course, especially once you reach the Bill of Rights in Module 4, where individual rights are protected specifically against what a majority might want to do.</p>
 
         <div class="optima-widget ow-select">
           <div class="widget-kicker">&#9889; TRY IT &middot; LOCKE OR ROUSSEAU?</div>
@@ -183,6 +219,13 @@
 
           <button class="widget-reset">Reset</button>
         </div>
+    </div>
+
+    <!-- PART 4 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; STATE, SOVEREIGN, AND POWER</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">This week's primary source uses several technical terms for the new &ldquo;moral and collective body&rdquo; formed by the social contract. When passive, simply existing and being governed, Rousseau calls it the <strong class="gloss-term"><a href="#gloss-state-sovereign-power" title="Rousseau's three names for the same collective body: State, Sovereign, and Power">State</a></strong>. When active, actually making decisions and exercising power, he calls it the <strong class="gloss-term"><a href="#gloss-state-sovereign-power" title="Rousseau's three names for the same collective body: State, Sovereign, and Power">Sovereign</a></strong>. When compared to other similar bodies, other nations or communities, he calls it a <strong class="gloss-term"><a href="#gloss-state-sovereign-power" title="Rousseau's three names for the same collective body: State, Sovereign, and Power">Power</a></strong>. The individual members of this body are called the people when considered all together, and citizens when considered one at a time, since as citizens they each share in the sovereign power that governs them all. This vocabulary matters because it shows how thoroughly Rousseau's theory blurs the line between ruler and ruled. In his system, citizens are, at the very same time, the ones being governed and, collectively, the ones doing the governing. There is no separate ruling class standing above the citizens, the way a king or a council of nobles might stand above ordinary people in other systems. The whole community rules, and the whole community is ruled, at once.</p>
     </div>
 
     <!-- What You'll Do Next -->
@@ -225,6 +268,15 @@
 <script>
 (function () {
   document.addEventListener('click', function (e) {
+    var audioBtn = e.target.closest('.audio-btn');
+    if (audioBtn) {
+      if ('speechSynthesis' in window) {
+        var utter = new SpeechSynthesisUtterance(audioBtn.dataset.term || '');
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utter);
+      }
+      return;
+    }
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');

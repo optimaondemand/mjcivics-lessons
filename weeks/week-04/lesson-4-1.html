@@ -34,6 +34,21 @@
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
     .ow-flip + .ow-flip { margin-top: 12px; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -86,7 +101,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Even if a government is legitimate, could the way it is organized still make it dangerous?</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Locke and Hobbes asked whether government is legitimate at all, and on what terms. The French nobleman <strong>Baron de Montesquieu</strong>, writing in 1748, asked a narrower but equally consequential question: even a legitimate government can turn tyrannical if it is organized the wrong way. His answer would eventually give the American Constitution its most basic architecture.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Locke and Hobbes asked a big question: is government legitimate at all, and on what terms does it deserve our obedience? The French nobleman <strong>Baron de Montesquieu</strong> asked a narrower question in 1748, in his book <em>The Spirit of the Laws</em>, but it turned out to matter just as much.</div>
     </div>
 
     <!-- Objectives -->
@@ -102,7 +117,7 @@
         </div>
         <div style="display: flex; align-items: flex-start; gap: 12px;">
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
-            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> connect Montesquieu's theory to this course's "three branches of government" concept and to Madison's later defense of the Constitution.</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> connect Montesquieu's theory to this course's &ldquo;three branches of government&rdquo; concept and to Madison's later defense of the Constitution.</div>
         </div>
     </div>
 
@@ -121,7 +136,30 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A NOBLEMAN'S QUESTION</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Locke and Hobbes asked whether government is legitimate at all, and on what terms. The French nobleman, <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="A French title of nobility, ranking below a count; Montesquieu held this title">Baron</span> de Montesquieu, writing in 1748, asked a narrower but equally consequential question: even a legitimate government can turn tyrannical if it is organized the wrong way. His answer would eventually give the American Constitution its most basic architecture.</p>
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing five terms from Lesson 3.2, plus new terms for the three branches.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-dissolution-41">dissolve / dissolution <span class="phonetic">(dih-ZOLV / dis-uh-LOO-shun)</span> <button class="audio-btn" data-term="dissolution" aria-label="Play pronunciation of dissolution">&#128266;</button></dt>
+                <dd>when a government falls apart because it has broken the people's trust, not simply because a ruler is unpopular.</dd>
+                <dt id="gloss-executive">executive <span class="phonetic">(eg-ZEK-yoo-tiv)</span> <button class="audio-btn" data-term="executive" aria-label="Play pronunciation of executive">&#128266;</button></dt>
+                <dd>the power to carry out and enforce laws.</dd>
+                <dt id="gloss-judicial">judicial <span class="phonetic">(joo-DISH-uhl)</span> <button class="audio-btn" data-term="judicial" aria-label="Play pronunciation of judicial">&#128266;</button></dt>
+                <dd>the power to judge disputes under the law.</dd>
+                <dt id="gloss-legislative">legislative <span class="phonetic">(LEJ-iss-lay-tiv)</span> <button class="audio-btn" data-term="legislative" aria-label="Play pronunciation of legislative">&#128266;</button></dt>
+                <dd>the power to make laws.</dd>
+                <dt id="gloss-leviathan-41">Leviathan <span class="phonetic">(luh-VY-uh-thun)</span> <button class="audio-btn" data-term="Leviathan" aria-label="Play pronunciation of Leviathan">&#128266;</button></dt>
+                <dd>a giant sea monster described in the Bible; Hobbes's name for the single, overwhelming ruler he believed government needed.</dd>
+                <dt id="gloss-natural-rights-41">natural rights <span class="phonetic">(NACH-er-ul RYTS)</span> <button class="audio-btn" data-term="natural rights" aria-label="Play pronunciation of natural rights">&#128266;</button></dt>
+                <dd>rights people have simply by being human, before any government exists: life, liberty, and property, according to Locke.</dd>
+                <dt id="gloss-social-contract-41">social contract <span class="phonetic">(SOH-shul KON-trakt)</span> <button class="audio-btn" data-term="social contract" aria-label="Play pronunciation of social contract">&#128266;</button></dt>
+                <dd>the agreement people make to leave the state of nature and form a government, trading some independence for protection of their rights.</dd>
+                <dt id="gloss-state-of-nature-41">state of nature <span class="phonetic"></span> <button class="audio-btn" data-term="state of nature" aria-label="Play pronunciation of state of nature">&#128266;</button></dt>
+                <dd>a condition before or outside any organized government, where people are free but have no police, courts, or army to protect their rights.</dd>
+            </dl>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Locke and Hobbes asked a big question: is government legitimate at all, and on what terms does it deserve our obedience? The French nobleman <strong>Baron de Montesquieu</strong> asked a narrower question in 1748, in his book <em>The Spirit of the Laws</em>, but it turned out to matter just as much. His question was this: even if a government is considered legitimate, can it still turn into a tyranny depending on how it is organized? Montesquieu believed the answer was yes. His answer to this problem would eventually give the American Constitution its most basic architecture, the very shape of the government you live under today. Montesquieu was not a philosopher in the same sense as Locke, Hobbes, or Rousseau. He was a nobleman, a judge, and a careful observer of real governments across different countries and eras, and his book drew on that firsthand experience rather than on pure abstract reasoning alone.</p>
     </div>
 
     <!-- PART 2 -->
@@ -141,14 +179,23 @@
         </div>
 
         <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Studying England, Generalizing a Theory</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Montesquieu studied England's government, which by his time had developed a rough separation between the power to make laws (Parliament), the power to carry them out (the Crown and its ministers), and the power to judge disputes under the law (the courts). He generalized this into a theory: political liberty requires that <strong>legislative</strong>, <strong>executive</strong>, and <strong>judicial</strong> power be kept in separate hands. His reasoning was blunt: whoever writes the laws, enforces the laws, and judges the laws all at once has no reason to write laws that limit himself, and no independent check exists to stop him from abusing any of the three powers. Combine any two of the three, Montesquieu warned, and <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Rule exercised at a ruler's own discretion, without being bound by law or an independent check">arbitrary rule</span> becomes likely; combine all three, and it becomes almost certain.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Montesquieu studied England's government closely, since it offered him a real example rather than just a theory. By his time, England had developed a rough separation between three different kinds of power. There was the power to make laws, held mostly by Parliament. There was the power to carry out those laws, held by the Crown and its ministers. And there was the power to judge disputes under the law, held by independent courts. Montesquieu turned this observation into a general theory about all governments, not just England's. He argued that political liberty requires <strong class="gloss-term"><a href="#gloss-legislative" title="the power to make laws">legislative</a></strong>, <strong class="gloss-term"><a href="#gloss-executive" title="the power to carry out and enforce laws">executive</a></strong>, and <strong class="gloss-term"><a href="#gloss-judicial" title="the power to judge disputes under the law">judicial</a></strong> power to be kept in separate hands. His reasoning was direct. Whoever writes the laws, enforces the laws, and judges the laws all at the same time has no reason to write laws that limit himself. No independent check exists to stop that person from abusing any of the three powers. Montesquieu warned that combining any two of the three powers makes arbitrary, unfair rule likely. Combining all three makes it almost certain.</p>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A Familiar Insight</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This might remind you of Polybius's analysis of Rome from Module 1. Both thinkers believed that spreading power across different institutions, rather than concentrating it in one place, was the real secret to a lasting, stable government. Montesquieu's version organizes power by <em>function</em>, by what kind of power it is, while Polybius organized it more by <em>who</em> holds it, one man, a few men, or the many. Both approaches share the same core insight: unchecked power in any single place is dangerous, no matter how good the person or persons who hold it might seem at the time.</p>
+
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">What Unchecked Power Looks Like</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Consider what happens without this separation. Picture a ruler who could write any law he liked, then personally decide whether a person broke that law, and then personally hand down the punishment. Such a ruler would face no real limit at all. He could invent a new crime on the spot to punish a personal enemy, and no other branch of government could stop him, because there would be no other branch to appeal to. Splitting these three powers among different people or bodies does not guarantee a good outcome every single time. But it makes this kind of abuse far harder to pull off, since abusing power now takes agreement between separate authorities rather than just the will of one person acting alone.</p>
     </div>
 
     <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; FROM THEORY TO THE AMERICAN CONSTITUTION</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is the concept behind this week's discussion focus, "the three branches of government," and it will echo through the rest of this course. You have not yet studied the specific powers of the American Congress, President, or federal courts; that detailed study comes in Module 3. For now, hold onto the underlying principle Montesquieu is establishing: liberty is protected not by trusting good rulers to behave well, but by structurally separating power so that no single person or body can ever hold all of it. When Madison later defended the Constitution's design in the Federalist Papers, he was arguing, point by point, that the framers had built exactly the separation Montesquieu called for.</p>
+        <h3 style="font-size: 20px; color: #0e1c42; margin: 0 0 8px 0;">Cooperation, Not Isolation</h3>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It is worth noticing that Montesquieu did not think the three powers needed to be totally walled off from each other with no contact at all. Some overlap and cooperation between the branches can actually help each one check the others more effectively. What matters most is that no single branch can act completely alone, with no other branch able to slow it down, reject its decision, or hold it accountable. This distinction, between three branches acting in complete isolation and three branches that check each other while still working together, becomes important again when you study the American Constitution's own checks and balances in Module 3.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is the idea behind this week's discussion focus, &ldquo;the three branches of government.&rdquo; It will echo through the rest of this course. You have not yet studied the specific powers of the American Congress, the President, or the federal courts in close detail; that study comes later, in Module 3. For now, hold onto the underlying principle Montesquieu is establishing here. Liberty is not protected simply by trusting good rulers to behave well on their own. It is protected by structurally separating power, so that no single person or group can ever hold all of it at once. Think of it as a set of checks built directly into the design of government itself, rather than checks that depend only on the personal goodness of whoever happens to be in charge at the time. When James Madison later defended the Constitution's design in the Federalist Papers, he was arguing, point by point, that the American framers had built exactly the kind of separation Montesquieu called for.</p>
 
         <div class="optima-widget ow-scale">
           <div class="widget-kicker">&#9889; TRY IT &middot; HOW LIKELY IS ARBITRARY RULE?</div>
@@ -225,6 +272,15 @@
 <script>
 (function () {
   document.addEventListener('click', function (e) {
+    var audioBtn = e.target.closest('.audio-btn');
+    if (audioBtn) {
+      if ('speechSynthesis' in window) {
+        var utter = new SpeechSynthesisUtterance(audioBtn.dataset.term || '');
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utter);
+      }
+      return;
+    }
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');
