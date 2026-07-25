@@ -33,6 +33,21 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -120,6 +135,19 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; ONE SENTENCE, TWO READINGS</div>
 
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing two terms from Lesson 12.1, plus one new term for this week.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-bill-of-rights-122">Bill of Rights <span class="phonetic"></span> <button class="audio-btn" data-term="Bill of Rights" aria-label="Play pronunciation of Bill of Rights">&#128266;</button></dt>
+                <dd>the first ten amendments to the Constitution, ratified in 1791, restraining what the federal government may do to individual rights.</dd>
+                <dt id="gloss-incorporation-122">incorporation <span class="phonetic">(in-kor-por-AY-shun)</span> <button class="audio-btn" data-term="incorporation" aria-label="Play pronunciation of incorporation">&#128266;</button></dt>
+                <dd>the gradual process of applying most Bill of Rights protections against state governments too.</dd>
+                <dt id="gloss-militia">militia <span class="phonetic">(muh-LISH-uh)</span> <button class="audio-btn" data-term="militia" aria-label="Play pronunciation of militia">&#128266;</button></dt>
+                <dd>a body of ordinary citizens, trained and organized rather than professional soldiers, that the Second Amendment names as &ldquo;necessary to the security of a free State.&rdquo;</dd>
+            </dl>
+        </div>
+
         <div class="optima-widget ow-reflect">
           <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
           <div class="widget-question">Before you read Part 2 and 3: based on the amendment's text alone, "A well regulated Militia, being necessary to the security of a free State, the right of the people to keep and bear Arms, shall not be infringed," which reading feels more natural to you? (No wrong answer, just check in with yourself.)</div>
@@ -147,6 +175,12 @@
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; HELLER SETTLES THE QUESTION, FOR NOW</div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Supreme Court did not resolve the individual-versus-militia question definitively until <em>District of Columbia v. Heller</em> in 2008, which held the amendment protects an individual right to keep a firearm for lawful purposes such as self-defense, unconnected with militia service. This is a reminder that even amendments ratified in 1791 can remain live constitutional questions well into the twenty-first century, decided not by rewriting the text but by judges applying it, exactly as Hamilton described in last week's Federalist No. 78. A right that is not clearly <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Violated or trespassed upon; the Second Amendment's own word for what government may not do to this right">infringed</span> upon still had to wait over two centuries for a definitive Supreme Court ruling on what it actually covers.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It is worth knowing that <em>Heller</em> did not eliminate all gun regulation. The Court's opinion explicitly stated that the right is not unlimited, and that many longstanding regulations, such as bans on possession by felons or restrictions in sensitive places like schools and government buildings, remain presumptively lawful. Two years later, in <em>McDonald v. City of Chicago</em> (2010), the Court applied the Second Amendment against state and local governments too, using the same incorporation process from Lesson 12.1. Before <em>McDonald</em>, a state or city government was not directly bound by the Second Amendment at all.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The case itself began with Dick Heller, a licensed special police officer in Washington, D.C., who was permitted to carry a handgun on duty but was barred by district law from keeping one at his own home for self-defense. Heller sued, arguing the district's near-total ban on functional handguns violated his Second Amendment rights. The Supreme Court agreed, striking down the D.C. law by a narrow five-to-four vote, a margin worth noting: even after two centuries of the amendment sitting in the Constitution, the justices closest to actually deciding its meaning were sharply divided.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It is easy to assume the Supreme Court settles a constitutional question as soon as it comes up, but the Second Amendment shows how misleading that assumption can be. Between 1791 and 2008, the Court decided only a small handful of cases even touching the amendment's core meaning, and none resolved the individual-versus-militia debate directly. Many state constitutions, including Florida's, contain their own separate right-to-bear-arms language, often written in more explicitly individual terms than the federal amendment. This meant, for over two centuries, that the practical scope of gun rights in any given state often depended more on that state's own constitution and courts than on the federal Second Amendment, federalism at work again, the same layered system of national and state authority you have traced since Week 7.</p>
 
         <div class="optima-widget ow-select">
           <div class="widget-kicker">&#9889; TRY IT &middot; MILITIAS, TYRANNY, AND HELLER</div>
