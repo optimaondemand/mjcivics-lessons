@@ -33,6 +33,24 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .callout.glossary.foreign { background: #F3EEFB; border-left: 5px solid #7B3FA0; }
+    .callout.glossary.foreign .callout-kicker { color: #5B2E7E; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
+    .wrapper-pointer { font-size: 14px; color: #0E1C42; background: #EEF1F8; border-left: 4px solid #6b7a99; border-radius: 4px; padding: 10px 14px; margin: 0 0 18px; }
 </style>
 </head>
 <body>
@@ -81,6 +99,8 @@
         <div style="font-size: 16px; color: #666;">Lesson</div>
     </div>
 
+    <p class="wrapper-pointer">&#128203; Before this lesson: complete the <strong>Module 5 Intro Wrapper</strong> in Canvas (ungraded, ~2 minutes, no wrong answers).</p>
+
     <!-- Today's Focus -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
@@ -119,6 +139,27 @@
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; JURY DUTY, A GUARANTEE THAT NEEDS VOLUNTEERS</div>
+
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing one term from Lesson 15.2, plus this module's organizing concept.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-civic-obligation">civic obligation <span class="phonetic">(SIV-ik ob-lih-GAY-shun)</span> <button class="audio-btn" data-term="civic obligation" aria-label="Play pronunciation of civic obligation">&#128266;</button></dt>
+                <dd>a duty a citizen owes back to the political community that protects their rights, such as voting, jury duty, or military service.</dd>
+                <dt id="gloss-jim-crow-161">Jim Crow laws <span class="phonetic"></span> <button class="audio-btn" data-term="Jim Crow laws" aria-label="Play pronunciation of Jim Crow laws">&#128266;</button></dt>
+                <dd>the system of state segregation laws that <em>Plessy</em> gave constitutional cover to grow for decades.</dd>
+            </dl>
+        </div>
+        <div class="callout glossary foreign">
+            <div class="callout-kicker">&#127760; Foreign Language Vocabulary</div>
+            <p class="glossary-note">Reviewing Lesson 15.2's French term. This week's reading introduces no new foreign-language terms.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-comite-161"><strong>Citizens' Committee</strong> (<em>Comit&eacute; des Citoyens</em>) <span class="phonetic">(koh-mee-TAY day see-twah-YEN)</span> <button class="audio-btn" data-term="Comite des Citoyens" aria-label="Play pronunciation of Comite des Citoyens">&#128266;</button></dt>
+                <dd>a group of black and Creole activists in New Orleans who organized the staged legal test that became <em>Plessy v. Ferguson</em>.</dd>
+            </dl>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Voting itself has not always meant the same thing in American history. The original Constitution left voting qualifications almost entirely to the states, and most states initially limited the vote to white male property owners. Later amendments steadily widened this circle. The Fifteenth Amendment (1870) barred denying the vote based on race, though many states evaded it for decades through discriminatory practices later struck down by courts and Congress. The Nineteenth Amendment (1920) guaranteed women the vote nationwide. The Twenty-Sixth Amendment (1971) lowered the voting age to eighteen, driven substantially by the argument that a man old enough to be drafted to fight in Vietnam was old enough to vote on the policies sending him there. Each expansion answered the same underlying question this week's other two obligations raise: who, exactly, counts as a full member of the political community, obligated to serve it and entitled to a voice in it?</p>
 
         <div class="optima-widget ow-reflect">
           <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
@@ -170,6 +211,10 @@
 
           <button class="widget-reset">Reset</button>
         </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Jury service historically tracked the same exclusions as voting. For much of American history, only white men could serve on juries in many states. The Supreme Court struck down explicit racial exclusion from juries in <em>Strauder v. West Virginia</em> (1880), though in practice, discriminatory jury selection persisted for decades afterward through less explicit means. Women were not guaranteed the right to serve on federal juries nationwide until 1957, and some states continued to exempt women from jury service, often at their own request, well into the 1970s. The right to serve on a jury and the right to be judged by one's fellow citizens turn out to be two sides of the very same coin.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In practice, jury summons arrive through the mail, usually drawn from voter registration rolls or driver's license records. Ignoring a jury summons entirely is not simply impolite; it is against the law in most jurisdictions, and can result in a fine or even a contempt-of-court charge. Courts do excuse people from service for genuine hardship, illness, or an unavoidable conflict, but the underlying expectation remains: this is treated as a legal duty, not merely a polite request. Notice the shape of this whole lesson: every civic obligation it names, voting, jury service, and now military service, has both a formal legal requirement and a lived history of who was actually allowed, or forced, to fulfill it.</p>
     </div>
 
     <!-- PART 2 -->
@@ -206,7 +251,7 @@
     <!-- Wrap-up -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Roosevelt's speech is the moment military obligation became urgent for an entire generation. Lesson 16.2 zooms out to compare how the United States has compelled that obligation across three different wars, and asks whether the burden fell evenly each time.</p>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Roosevelt's speech is the moment military obligation became urgent for an entire generation. Lesson 16.2 zooms out to compare how the United States has compelled that obligation across three different wars, and asks whether the burden fell evenly each time. This module's three weeks trace an arc from these personal civic obligations, voting, juries, military service, outward to how the United States engages the wider world: Week 17 turns to foreign policy, and Week 18 closes the semester with a direct comparison between American constitutional government and a system built on entirely different premises, Soviet communism.</p>
     </div>
 
 </div>

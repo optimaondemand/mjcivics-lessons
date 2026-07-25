@@ -33,6 +33,21 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -117,7 +132,22 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE CIVIL WAR AND WORLD WAR II DRAFTS</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The 1863 Civil War draft allowed a drafted man to avoid service by paying a $300 <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="A fee paid to be legally excused from a specific instance of compulsory service">commutation</span> fee or hiring a substitute, an option available only to the wealthy, and one that helped spark the deadly New York City Draft Riots that same year. World War II's draft, by contrast, is often remembered as the most widely accepted of the three: after Pearl Harbor, the shared sense of a nation directly attacked (the very moment captured in this week's first primary source) made near-universal service feel less like a burden imposed unevenly and more like a duty shared broadly across the country.</p>
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing this module's organizing concept, plus new terms for the draft.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-civic-obligation-162">civic obligation <span class="phonetic">(SIV-ik ob-lih-GAY-shun)</span> <button class="audio-btn" data-term="civic obligation" aria-label="Play pronunciation of civic obligation">&#128266;</button></dt>
+                <dd>a duty a citizen owes back to the political community that protects their rights.</dd>
+                <dt id="gloss-commutation-fee">commutation fee <span class="phonetic">(kom-yoo-TAY-shun FEE)</span> <button class="audio-btn" data-term="commutation fee" aria-label="Play pronunciation of commutation fee">&#128266;</button></dt>
+                <dd>a payment, during the Civil War draft, that let a drafted man avoid service by paying $300, an option only the wealthy could afford.</dd>
+                <dt id="gloss-deferment">deferment <span class="phonetic">(dih-FUR-ment)</span> <button class="audio-btn" data-term="deferment" aria-label="Play pronunciation of deferment">&#128266;</button></dt>
+                <dd>an official delay or exemption from a draft, such as the Vietnam-era deferment for college enrollment.</dd>
+                <dt id="gloss-draft">draft <span class="phonetic">(DRAFT)</span> <button class="audio-btn" data-term="draft" aria-label="Play pronunciation of draft">&#128266;</button></dt>
+                <dd>a system of compulsory military service, requiring citizens to serve when called by the government.</dd>
+            </dl>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The 1863 Civil War draft allowed a drafted man to avoid service by paying a $300 <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="A fee paid to be legally excused from a specific instance of compulsory service">commutation</span> fee or hiring a substitute, an option available only to the wealthy, and one that helped spark the deadly New York City Draft Riots that same year. Those riots in July 1863 remain one of the deadliest riots in American history, with estimates of well over one hundred deaths over several days of violence. Working-class New Yorkers, many of them recent immigrants who could not afford the $300 commutation fee, targeted draft offices, wealthy homes, and, in a shameful and violent turn, black New Yorkers and black-owned businesses, blaming both the war and the draft's unfairness on a conflict fought, in the rioters' view, to free the slaves while sparing the wealthy from having to fight it themselves. World War II's draft, by contrast, is often remembered as the most widely accepted of the three: after Pearl Harbor, the shared sense of a nation directly attacked (the very moment captured in this week's first primary source) made near-universal service feel less like a burden imposed unevenly and more like a duty shared broadly across the country.</p>
     </div>
 
     <!-- PART 2 -->
@@ -125,6 +155,12 @@
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; VIETNAM AND THE RETURN OF CONTROVERSY</div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Vietnam returned the draft to serious controversy. Deferments for college enrollment allowed many young men with the means to attend college to delay or avoid service, echoing the Civil War's unevenness in a new form, even as draft calls rose through the mid-1960s. President Lyndon Johnson's April 1965 address at Johns Hopkins University, "Peace Without Conquest," defended continued and escalating American involvement in Vietnam even as the war's cost in drafted lives grew increasingly visible and increasingly contested at home.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The United States has not used a draft since Vietnam. Since 1973, the American military has been an all-volunteer force, with no one legally compelled to serve. Selective Service registration is still required by federal law for most men between eighteen and twenty-five, a standby system that could support a draft again if Congress and the President ever decided one was necessary, but no one has actually been drafted in over fifty years. Some argue this ended the fairness debate this lesson describes, since no one is forced to serve at all today; others argue it simply moved the question elsewhere, toward whether an all-volunteer force still draws disproportionately from certain communities, even without any legal compulsion involved.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The scale of these three drafts differed enormously. Roughly 776,000 men were drafted during the Civil War, though many hired substitutes rather than serving themselves. World War II saw roughly ten million men drafted over the course of the war, out of a total force of about sixteen million. Vietnam-era draft calls totaled roughly 1.8 million men between 1964 and 1973. Numbers alone cannot capture whether a draft felt fair to those living through it, but they do show how differently each war depended on compulsory service to fill its ranks.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The draft's uneven burden became entangled with the civil rights movement you studied in Module 4. Martin Luther King Jr., initially cautious about publicly criticizing the war, eventually spoke out forcefully against it in 1967, arguing that poor and black Americans were dying in Vietnam in disproportionate numbers for freedoms they did not yet fully enjoy at home. This connection between who serves and who benefits from the rights being defended abroad became one of the most powerful arguments against the war's continuation. Keep this history in mind as you read this week's two speeches, since both Presidents were asking the same basic thing of citizens, even while the country's willingness to grant that request looked very different in 1941 than in 1965.</p>
+
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Comparing all three drafts side by side reveals a recurring civic question that has never fully disappeared: when a nation compels citizens to risk their lives, how evenly must that burden fall across rich and poor, educated and uneducated, for the obligation to be experienced as legitimate rather than as a tax on those with the least power to avoid it?</p>
 
         <div class="optima-widget ow-scale">
