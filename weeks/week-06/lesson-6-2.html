@@ -33,6 +33,23 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .callout.glossary.foreign { background: #F3EEFB; border-left: 5px solid #7B3FA0; }
+    .callout.glossary.foreign .callout-kicker { color: #5B2E7E; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -85,7 +102,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Could conflict between rival groups actually protect liberty, rather than threaten it?</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">No delegate did more to shape the Convention's outcome than <strong>James Madison</strong> of Virginia, a quiet, meticulous 36-year-old who arrived in Philadelphia having spent months studying the history of failed confederations, ancient and modern, to figure out exactly what had gone wrong with them. He drafted the Virginia Plan that became the Convention's starting point, spoke more often than almost any other delegate, and kept the most detailed private notes of the debates, which remain historians' single best record of what was actually argued inside that room.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">No delegate did more to shape the Convention's outcome than <strong>James Madison</strong> of Virginia. Madison was a quiet, careful 36-year-old when he arrived in Philadelphia.</div>
     </div>
 
     <!-- Objectives -->
@@ -93,7 +110,7 @@
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#127919; BY THE END OF THIS LESSON YOU WILL BE ABLE TO&hellip;</div>
         <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
-            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe Madison's role at the Convention and explain why he resisted the title "Father of the Constitution."</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> describe Madison's role at the Convention and explain why he resisted the title &ldquo;Father of the Constitution.&rdquo;</div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 12px; margin-bottom: 12px;">
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
@@ -118,9 +135,30 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE "FATHER OF THE CONSTITUTION" WHO REFUSED THE TITLE</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE &ldquo;FATHER OF THE CONSTITUTION&rdquo; WHO REFUSED THE TITLE</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">For his drafting, his speeches, and his notes, later generations have called Madison the "Father of the Constitution," though Madison himself resisted the title, insisting the document was "the work of many heads and many hands."</p>
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing five terms from Lesson 6.1, plus one new term for this week.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-factions">factions <span class="phonetic">(FAK-shunz)</span> <button class="audio-btn" data-term="factions" aria-label="Play pronunciation of factions">&#128266;</button></dt>
+                <dd>groups of citizens with shared interests or opinions; Madison argued a good constitution should survive their conflict, not try to eliminate them.</dd>
+                <dt id="gloss-great-compromise-62">Great Compromise <span class="phonetic">(GRAYT kum-PROH-myz)</span> <button class="audio-btn" data-term="Great Compromise" aria-label="Play pronunciation of Great Compromise">&#128266;</button></dt>
+                <dd>the deal that created a two-chamber Congress, one house apportioned by population and one giving every state equal representation.</dd>
+                <dt id="gloss-new-jersey-plan-62">New Jersey Plan <span class="phonetic"></span> <button class="audio-btn" data-term="New Jersey Plan" aria-label="Play pronunciation of New Jersey Plan">&#128266;</button></dt>
+                <dd>the small states' counter-proposal at the Convention, keeping equal representation for every state regardless of size.</dd>
+                <dt id="gloss-preamble-62">Preamble <span class="phonetic">(PREE-am-buhl)</span> <button class="audio-btn" data-term="Preamble" aria-label="Play pronunciation of Preamble">&#128266;</button></dt>
+                <dd>the Constitution's opening sentence, stating the purposes of the new government before listing any of its powers.</dd>
+                <dt id="gloss-three-fifths-62">Three-Fifths Compromise <span class="phonetic"></span> <button class="audio-btn" data-term="Three-Fifths Compromise" aria-label="Play pronunciation of Three-Fifths Compromise">&#128266;</button></dt>
+                <dd>the formula that added three-fifths of a state's slave population to its free population, for both representation in Congress and direct taxation.</dd>
+                <dt id="gloss-virginia-plan-62">Virginia Plan <span class="phonetic"></span> <button class="audio-btn" data-term="Virginia Plan" aria-label="Play pronunciation of Virginia Plan">&#128266;</button></dt>
+                <dd>James Madison's proposal for a strong national government with a legislature apportioned by state population.</dd>
+            </dl>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">He had spent months beforehand studying the history of failed confederations, both ancient and modern, trying to figure out exactly what had gone wrong with each one. He drafted the Virginia Plan that became the Convention's starting point. He spoke more often than almost any other delegate. He also kept the most detailed private notes of the debates, notes that remain historians' single best record of what was actually argued inside that room. For all of this, later generations have called him the &ldquo;Father of the Constitution.&rdquo; Madison himself resisted that title. He insisted the document was &ldquo;the work of many heads and many hands,&rdquo; not the creation of any one person. It is worth knowing that many of Madison's own specific proposals were actually voted down by the other delegates. He wanted, for example, a federal veto over any state law, and a &ldquo;Council of Revision&rdquo; combining judges and the executive to review new laws before they took effect. Neither idea survived the Convention's debates. Madison later admitted he initially thought the Convention had failed to solve some of the problems he cared about most. His long-term influence came less from winning every single argument and more from framing the questions correctly and keeping careful track of what was actually agreed to.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Before the Convention, Madison had asked Thomas Jefferson, then serving as the American minister in Paris, to send him crates of books on history and government. Using what he read, Madison wrote a private memo he called &ldquo;Of Ancient and Modern Confederacies,&rdquo; working through examples from the Greek city-states, the Swiss cantons, and the Dutch Republic, and cataloging exactly how each one had eventually failed. This kind of careful, comparative homework, done months before a single delegate arrived in Philadelphia, is part of why Madison walked into the Convention more prepared than almost anyone else in the room.</p>
 
         <div class="optima-widget ow-scale">
           <div class="widget-kicker">&#9889; TRY IT &middot; WHO SAID OR DID WHAT?</div>
@@ -154,19 +192,27 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; MACHIAVELLI'S SURPRISING ARGUMENT</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Madison's thinking did not emerge from nowhere. Recall Polybius's analysis of Rome's mixed constitution from Week 2: monarchic, aristocratic, and democratic elements checking one another. Madison had absorbed this classical tradition directly, including through the Italian Renaissance writer <strong>Niccol&ograve; Machiavelli</strong>, whose <em>Discourses on Livy</em> (1531) revived and extended Polybius's argument for a Renaissance audience. Machiavelli went further than Polybius in one important respect: he argued that open conflict between a society's different <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="A group within a larger community that pursues its own particular interest, sometimes against the interest of the whole">factions</span>, the common people and the elite, was not a defect to be eliminated, but often the very engine that produced laws favorable to liberty. A government too eager to suppress all internal disagreement, Machiavelli warned, risked suppressing liberty along with it.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Madison's thinking did not come from nowhere. Think back to Polybius's analysis of Rome's mixed constitution from Week 2: monarchic, aristocratic, and democratic elements all checking one another. Madison had absorbed this classical tradition directly. One important source was the Italian Renaissance writer <strong><em class="gloss-term"><a href="#gloss-machiavelli" title="an Italian Renaissance writer whose book on Rome argued that conflict between social classes could protect liberty">Machiavelli</a></em></strong>. Machiavelli's book, the <em>Discourses on Livy</em>, published in 1531, revived and extended Polybius's argument for a new audience over a thousand years later. Machiavelli went further than Polybius in one important way. He argued that open conflict between a society's different groups, the common people and the elite, was not a problem to be eliminated. It was often the very engine that produced laws favorable to liberty. A government too eager to stamp out all internal disagreement, Machiavelli warned, risked stamping out liberty right along with it. Think back to Week 2's account of Rome's Tribune of the Plebs, an office won only after the plebeians' long political struggle against the patricians, the Struggle of the Orders. Machiavelli would say that struggle itself, not some peaceful gift from the patricians, is exactly what produced an office capable of protecting ordinary Romans' interests. Without that conflict, Machiavelli suggests, the patricians would have had little reason to ever share power at all.</p>
+
+        <div class="callout glossary foreign">
+            <div class="callout-kicker">&#127760; Foreign Language Vocabulary</div>
+            <dl class="glossary-list">
+                <dt id="gloss-machiavelli"><em>Machiavelli</em> <span class="phonetic">(mak-ee-uh-VEL-ee)</span> <button class="audio-btn" data-term="Machiavelli" aria-label="Play pronunciation of Machiavelli">&#128266;</button></dt>
+                <dd>an Italian Renaissance writer whose book on Rome argued that conflict between social classes could protect liberty rather than destroy it.</dd>
+            </dl>
+        </div>
 
         <div class="optima-widget">
           <div class="widget-kicker">&#9889; FLASHCARD &middot; CLICK TO FLIP</div>
           <div class="widget-question">Test yourself on Machiavelli's claim before you read his own words on the next page.</div>
           <div class="ow-flip">
             <div class="ow-flip-front">What did Machiavelli argue was often the very engine that produced laws favorable to liberty?</div>
-            <div class="ow-flip-back">Open <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="A noisy disturbance or commotion; here, factional unrest">tumult</span> and conflict between a society's factions, the common people and the elite, not their suppression.</div>
+            <div class="ow-flip-back">Open tumult and conflict between a society's factions, the common people and the elite, not their suppression.</div>
           </div>
           <button class="widget-reset">Reset</button>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 14px 0 0 0;">This is a genuinely surprising idea, and Madison would take it even further the following year, in the Federalist Papers you will read in Weeks 7 and 8: rather than trying to eliminate factions (an impossible and dangerous goal), a well-designed constitution should be built to <em>survive</em> and even channel their conflict productively. Watch for this idea to return with full force in Federalist No. 10.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 14px 0 0 0;">This is a genuinely surprising idea. Most people assume that unity and harmony are always good for a community, and that disagreement is always something to be managed away. Madison would take Machiavelli's idea even further the following year, in the Federalist Papers you will read in Weeks 7 and 8. Rather than trying to eliminate <strong class="gloss-term"><a href="#gloss-factions" title="groups of citizens with shared interests or opinions">factions</a></strong>, groups of citizens with shared interests or opinions, an impossible and even dangerous goal, Madison argued that a well-designed constitution should be built to survive their conflict, and even channel that conflict productively toward the common good. Watch for this idea to return with full force when you reach Federalist No. 10. For now, hold two ideas in your head at once, since both are true, and Weeks 7 and 8 will show you how Madison tried to hold them together in a single document. Conflict between groups can genuinely protect liberty, as Machiavelli argued about Rome. And conflict, left with no structure at all, can also tear a political community apart, as Hobbes warned back in Week 3. The American Constitution's whole design is an attempt to get the first benefit without paying the second price. That balancing act, channeling conflict rather than eliminating it or letting it run wild, is one of the most useful lenses you now have for reading everything else in this course.</p>
     </div>
 
     <!-- What You'll Do Next -->
@@ -209,6 +255,15 @@
 <script>
 (function () {
   document.addEventListener('click', function (e) {
+    var audioBtn = e.target.closest('.audio-btn');
+    if (audioBtn) {
+      if ('speechSynthesis' in window) {
+        var utter = new SpeechSynthesisUtterance(audioBtn.dataset.term || '');
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utter);
+      }
+      return;
+    }
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');

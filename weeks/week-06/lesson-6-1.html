@@ -33,6 +33,21 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -77,7 +92,7 @@
     <!-- Lavender title strip -->
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 6.1</div>
-        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Philadelphia, Summer 1787: Writing a New Frame of Government</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">Philadelphia, Summer 1787, Writing a New Frame of Government</div>
         <div style="font-size: 16px; color: #666;">Lesson</div>
     </div>
 
@@ -85,7 +100,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Congress sent delegates to Philadelphia to fix the Articles of Confederation. Why did most of them decide to write something entirely new instead?</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Week 5 left the new United States governed by the Articles of Confederation: a Congress with no power to tax, no power to regulate trade, no national court, no national executive, and a rule requiring all thirteen states to agree before anything about the system could change. In May 1787, delegates from twelve states (Rhode Island refused to send anyone) gathered in Philadelphia with instructions from Congress to <em>revise</em> the Articles. Within days, most delegates had abandoned that instruction entirely and begun drafting something new.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Week 5 left the new United States governed by the Articles of Confederation. Under the Articles, Congress had no power to tax. It had no power to regulate trade. There was no national court and no national executive. Every single state had to agree before anything about the system could change.</div>
     </div>
 
     <!-- Objectives -->
@@ -118,7 +133,33 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; TWO PLANS, ONE DEADLOCK</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A SECRET CONVENTION</div>
+
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing one term from Lesson 5.2, plus new terms for the Convention.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-confederation-61">confederation <span class="phonetic">(kun-fed-er-AY-shun)</span> <button class="audio-btn" data-term="confederation" aria-label="Play pronunciation of confederation">&#128266;</button></dt>
+                <dd>a loose alliance of independent states, with a weak central government that depends on the states for most real power.</dd>
+                <dt id="gloss-great-compromise">Great Compromise <span class="phonetic">(GRAYT kum-PROH-myz)</span> <button class="audio-btn" data-term="Great Compromise" aria-label="Play pronunciation of Great Compromise">&#128266;</button></dt>
+                <dd>the deal that created a two-chamber Congress, one house apportioned by population and one giving every state equal representation; also called the Connecticut Compromise.</dd>
+                <dt id="gloss-new-jersey-plan">New Jersey Plan <span class="phonetic"></span> <button class="audio-btn" data-term="New Jersey Plan" aria-label="Play pronunciation of New Jersey Plan">&#128266;</button></dt>
+                <dd>the small states' counter-proposal at the Convention, keeping equal representation for every state regardless of size.</dd>
+                <dt id="gloss-preamble">Preamble <span class="phonetic">(PREE-am-buhl)</span> <button class="audio-btn" data-term="Preamble" aria-label="Play pronunciation of Preamble">&#128266;</button></dt>
+                <dd>the Constitution's opening sentence, stating the purposes of the new government before listing any of its powers.</dd>
+                <dt id="gloss-three-fifths">Three-Fifths Compromise <span class="phonetic"></span> <button class="audio-btn" data-term="Three-Fifths Compromise" aria-label="Play pronunciation of Three-Fifths Compromise">&#128266;</button></dt>
+                <dd>the formula that added three-fifths of a state's slave population to its free population, for both representation in Congress and direct taxation.</dd>
+                <dt id="gloss-virginia-plan">Virginia Plan <span class="phonetic"></span> <button class="audio-btn" data-term="Virginia Plan" aria-label="Play pronunciation of Virginia Plan">&#128266;</button></dt>
+                <dd>James Madison's proposal for a strong national government with a legislature apportioned by state population.</dd>
+            </dl>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">In May 1787, delegates from twelve states gathered in Philadelphia. Rhode Island refused to send anyone at all. Congress had given these delegates clear instructions: revise the Articles of Confederation. Within just a few days, most delegates had abandoned that instruction entirely. They began drafting something completely new instead. The delegates worked under an unusual rule: everything said inside the room was to remain secret until the entire process was finished. They kept the windows shut and curtains drawn, even through Philadelphia's brutal summer heat, so that no one outside could overhear the debates. This secrecy rule let delegates speak freely, test out arguments, and even change their minds openly, without worrying that an unfinished position might be quoted against them back home before the final document existed. Only many years later did Madison's own notes reveal just how contentious some of these debates really were.</p>
+    </div>
+
+    <!-- PART 2 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; TWO PLANS, ONE DEADLOCK</div>
 
         <div class="optima-widget ow-reflect">
           <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
@@ -133,17 +174,26 @@
         </div>
 
         <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Virginia Plan and the New Jersey Plan</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Convention's first real fight was over representation. The <strong>Virginia Plan</strong>, largely shaped by James Madison before the Convention even opened, proposed a strong national government with a legislature apportioned by state population, a plan that favored large states like Virginia and Pennsylvania. Smaller states countered with the <strong>New Jersey Plan</strong>, which kept the Confederation's equal representation for every state regardless of size. The deadlock threatened to end the Convention before it produced anything.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Convention's first real fight was over representation: how many votes each state should get in the new national legislature. The <strong class="gloss-term"><a href="#gloss-virginia-plan" title="James Madison's proposal for a strong national government with a legislature apportioned by state population">Virginia Plan</a></strong> was largely shaped by James Madison before the Convention even opened. It proposed a strong national government with a legislature apportioned by state population. This plan favored large states like Virginia and Pennsylvania, since more people meant more votes. Smaller states pushed back with the <strong class="gloss-term"><a href="#gloss-new-jersey-plan" title="the small states' counter-proposal, keeping equal representation for every state regardless of size">New Jersey Plan</a></strong>. This plan kept the Confederation's system of equal representation for every state, no matter its size. The disagreement was so sharp that it threatened to end the Convention before it produced anything at all.</p>
 
         <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">The Great Compromise</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The solution, worked out through weeks of committee negotiation and known ever since as the <strong>Great Compromise</strong> (or Connecticut Compromise), created the two-chamber Congress you will study in detail in Module 3: a <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Having two legislative chambers, here a House and a Senate">bicameral</span> legislature with a House of Representatives apportioned by population, and a Senate with equal representation for every state.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The solution took weeks of committee negotiation to work out. It has been known ever since as the <strong class="gloss-term"><a href="#gloss-great-compromise" title="the deal that created a two-chamber Congress">Great Compromise</a></strong>, sometimes also called the Connecticut Compromise. It created the two-chamber Congress you will study in detail in Module 3. One chamber, the House of Representatives, would be apportioned by population. The other chamber, the Senate, would give every state equal representation, no matter its size.</p>
     </div>
 
-    <!-- PART 2 -->
+    <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE PREAMBLE: A POSITIVE STATEMENT OF PURPOSE</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; A HARDER COMPROMISE</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">By September, the delegates had produced a complete plan of government, opening with a single sentence explaining what the whole document was for before laying out a single power or office. This week's first primary source is that opening, the <strong>Preamble</strong>, and it is worth reading slowly, because unlike the Declaration's list of grievances against a king, the Preamble is a positive statement of purpose: what this new government exists <em>to do</em>, for whom, and why. Notice, too, that the document is meant to secure liberty's blessings not only for the people living in 1787, but for their <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Future generations; those not yet born">posterity</span>, the generations still to come.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The Convention settled one more representation dispute that same summer, and it is not a comfortable one to study, though this course's own commitment to honesty about the past requires studying it directly. Southern states wanted their slave population counted toward their state's total, since a larger population count meant more seats in the new House of Representatives. Northern states objected, since slaves held no political rights and had no voice in choosing anyone to represent them. For direct taxes, tied to that same population count, the two sides' incentives flipped. Southern states now wanted a smaller count, while Northern states wanted the slave population counted in full. The delegates settled on the <strong class="gloss-term"><a href="#gloss-three-fifths" title="the formula that added three-fifths of a state's slave population to its free population, for representation and taxation">Three-Fifths Compromise</a></strong>: three-fifths of a state's slave population would be added to its free population, for both representation and direct taxation. This was not a claim that any individual slave was somehow three-fifths human. It was a formula applied to a state's population count, deciding how much that state's slave population would add to its representation in Congress and its share of federal taxes. Getting this distinction right matters, because the compromise's real weight falls on what it actually did: it handed slaveholding states real, added political power in the new government because of how many slaves they held, even though those same slaves held no rights or voice of their own. You will read more about how the Constitution's original text treated slavery, and how the nation eventually corrected it through the Thirteenth, Fourteenth, and Fifteenth Amendments, in Module 4.</p>
+    </div>
+
+    <!-- PART 4 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; THE PREAMBLE: A POSITIVE STATEMENT OF PURPOSE</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">By September, the delegates had produced a complete plan of government. The document opens with a single sentence explaining what the whole document was for, before laying out even one power or office. This week's first primary source is that opening sentence, called the <strong class="gloss-term"><a href="#gloss-preamble" title="the Constitution's opening sentence, stating the purposes of the new government">Preamble</a></strong>. It is worth reading slowly. Unlike the Declaration's long list of complaints against a king, the Preamble is a positive statement of purpose. It tells you what this new government exists to do, for whom, and why. Unlike the Articles of Confederation, which required unanimous approval from all thirteen states to take effect, this new Constitution needed approval from only nine of the thirteen states before it could take effect among those states that ratified it. This was itself a significant break from the old system, and a controversial one, since technically no single state had the legal authority under the Articles to authorize that lower threshold. The delegates did it anyway, judging that a Constitution requiring unanimous agreement, exactly like the system they were trying to replace, would likely never be ratified at all.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Two men who loom large elsewhere in this course were notably absent from the Convention itself. Thomas Jefferson and John Adams were both serving as American diplomats in Europe that summer, Jefferson in Paris and Adams in London, and followed the proceedings only through letters. At the closing signing ceremony in September, the elderly Benjamin Franklin reportedly pointed to a sun carved on the back of the presiding officer's chair and remarked that he had wondered throughout the long summer whether it was a rising or a setting sun. Now, he said, he knew it was a rising sun. The comment captured the cautious hope many delegates felt as they sent this new, untested plan of government out to the states for ratification.</p>
 
         <div class="optima-widget ow-select">
           <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE PLAN TO ITS FEATURE</div>
@@ -213,7 +263,7 @@
 <!-- ===== FOOTER ===== -->
 <div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
     <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; M/J CIVICS &middot; Quarter 1 &middot; Student Lesson Page</div>
-    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 6.1 &middot; Philadelphia, Summer 1787: Writing a New Frame of Government</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 6.1 &middot; Philadelphia, Summer 1787, Writing a New Frame of Government</div>
     <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
 </div>
 
@@ -223,6 +273,15 @@
 <script>
 (function () {
   document.addEventListener('click', function (e) {
+    var audioBtn = e.target.closest('.audio-btn');
+    if (audioBtn) {
+      if ('speechSynthesis' in window) {
+        var utter = new SpeechSynthesisUtterance(audioBtn.dataset.term || '');
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utter);
+      }
+      return;
+    }
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');
