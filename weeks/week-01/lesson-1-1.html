@@ -33,6 +33,24 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .callout.glossary.foreign { background: #F3EEFB; border-left: 5px solid #7B3FA0; }
+    .callout.glossary.foreign .callout-kicker { color: #5B2E7E; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
+    .wrapper-pointer { font-size: 14px; color: #0E1C42; background: #EEF1F8; border-left: 4px solid #6b7a99; border-radius: 4px; padding: 10px 14px; margin: 0 0 18px; }
 </style>
 </head>
 <body>
@@ -77,9 +95,11 @@
     <!-- Lavender title strip -->
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 1.1</div>
-        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Athenian Experiment: From Tyranny to Democracy</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">The Athenian Experiment, From Tyranny to Democracy</div>
         <div style="font-size: 16px; color: #666;">Lesson</div>
     </div>
+
+    <p class="wrapper-pointer">&#128203; Before this lesson: complete the <strong>Module 1 Intro Wrapper</strong> in Canvas (ungraded, ~2 minutes, no wrong answers).</p>
 
     <!-- Today's Focus -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -101,7 +121,7 @@
         </div>
         <div style="display: flex; align-items: flex-start; gap: 12px;">
             <div style="min-width: 26px; height: 26px; border-radius: 50%; background: #C7922C; color: #fff; font-size: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
-            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> distinguish Cleisthenes's two real achievements, the right to address the Assembly and the expansion of who counted as a citizen, from the popular myth that he "extended the vote."</div>
+            <div style="font-size: 18px; color: #1a2340; line-height: 1.65;"><strong>I will be able to</strong> distinguish Cleisthenes's two real achievements, the right to address the Assembly and the expansion of who counted as a citizen, from the popular myth that he &ldquo;extended the vote.&rdquo;</div>
         </div>
     </div>
 
@@ -122,7 +142,7 @@
 
         <div class="optima-widget ow-reflect">
           <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
-          <div class="widget-question">Before you read further: if someone told you Athens "gave citizens the right to vote" sometime around 500 BC, would you assume citizens couldn't vote at all before that? (No wrong answer, just check in with yourself.)</div>
+          <div class="widget-question">Before you read further: if someone told you Athens &ldquo;gave citizens the right to vote&rdquo; sometime around 500 BC, would you assume citizens couldn't vote at all before that? (No wrong answer, just check in with yourself.)</div>
           <div class="widget-options">
             <button data-response="Reasonable guess, and also the exact assumption this lesson is going to complicate. Keep it in mind as you read.">&#129300; Yes, that seems like the obvious reading</button>
             <button data-response="Good instinct to be suspicious of it. Watch for exactly why as you read on.">&#129488; Not sure, that phrasing sounds a little too neat</button>
@@ -132,11 +152,49 @@
           <button class="widget-reset">Reset</button>
         </div>
 
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">A few words worth knowing before you read.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-aristocracy">aristocracy <span class="phonetic">(air-ih-STOK-ruh-see)</span> <button class="audio-btn" data-term="aristocracy" aria-label="Play pronunciation of aristocracy">&#128266;</button></dt>
+                <dd>a government, or a ruling class, made up of a small group of noble, &ldquo;well-born&rdquo; families.</dd>
+                <dt id="gloss-draconian">draconian <span class="phonetic">(druh-KOH-nee-un)</span> <button class="audio-btn" data-term="draconian" aria-label="Play pronunciation of draconian">&#128266;</button></dt>
+                <dd>describes rules or punishments that are much too harsh. The word comes from the lawgiver Draco.</dd>
+                <dt id="gloss-tyrant">tyrant <span class="phonetic">(TY-rant)</span> <button class="audio-btn" data-term="tyrant" aria-label="Play pronunciation of tyrant">&#128266;</button></dt>
+                <dd>in ancient Greece, a ruler who took power outside the city's normal system for choosing leaders. It did not always mean a cruel ruler, the way we use the word today.</dd>
+            </dl>
+        </div>
+
         <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A City Ruled by the Well-Born</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Athens in the early 600s BC was governed by a narrow circle of aristocratic families, the <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Greek for 'well-born'; the aristocratic families who controlled early Athenian politics">eupatridae</span>. Ordinary farmers who fell into debt could be enslaved by their own creditors. In 621 BC, a lawgiver named Draco wrote down the city's laws for the first time, a real advance, since unwritten law is whatever the powerful say it is, but the penalties were so severe (famously, death for stealing a cabbage) that "draconian" still means excessively harsh today.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Long before Rome had its Republic, one small city in Greece tried something new. That city was Athens. In Athens, ordinary citizens did not just obey their rulers. In time, they learned to rule themselves. They used their own votes and their own voices. A famous Roman thinker named Cicero later said the Roman Republic was the best government ever built. But Athens started its own experiment almost two hundred years before Rome got there. Athens tried a bold idea: let the people who live under a government also help run it. This experiment did not happen overnight. It took nearly two hundred years of crisis, failed tries, and slow change to build.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In the early 600s BC, a small group of noble families ruled Athens. The Greeks called these families the <strong><em class="gloss-term"><a href="#gloss-eupatridae" title="the small group of noble, well-born families who ruled early Athens">eupatridae</a></em></strong>, a word that means &ldquo;well-born.&rdquo; These families held almost all the power in the city. Life was much harder for ordinary farmers. If a farmer fell deep into debt, the person he owed money to could legally make him a slave. There was no written law to stop this, because Athens had no written laws at all yet. Whatever the powerful families decided, that became the rule. In 621 BC, a lawgiver named <strong><em class="gloss-term"><a href="#gloss-draco" title="the first Athenian lawgiver to write Athens's laws down, in 621 BC">Draco</a></em></strong> changed part of this problem. Draco wrote down Athens's laws for the very first time. This was an important step forward. When laws are not written down, only the powerful truly know the rules. They can bend the rules to help themselves. A written code took some of that power away. But Draco's punishments were very harsh. He punished even small crimes, like stealing a cabbage, with death. That is why people still use the word &ldquo;<strong class="gloss-term"><a href="#gloss-draconian" title="describes rules or punishments that are much too harsh">draconian</a></strong>&rdquo; today. It describes rules or punishments that are far too harsh.</p>
+
+        <div class="callout glossary foreign">
+            <div class="callout-kicker">&#127760; Foreign Language Vocabulary</div>
+            <dl class="glossary-list">
+                <dt id="gloss-cleisthenes"><em>Cleisthenes</em> <span class="phonetic">(KLYSE-thuh-neez)</span> <button class="audio-btn" data-term="Cleisthenes" aria-label="Play pronunciation of Cleisthenes">&#128266;</button></dt>
+                <dd>an Athenian reformer, active after 510 BC, who created ten new tribes and gave ordinary citizens the right to speak in the Assembly.</dd>
+                <dt id="gloss-draco"><em>Draco</em> <span class="phonetic">(DRAY-koh)</span> <button class="audio-btn" data-term="Draco" aria-label="Play pronunciation of Draco">&#128266;</button></dt>
+                <dd>the first Athenian lawgiver to write Athens's laws down, in 621 BC.</dd>
+                <dt id="gloss-eupatridae"><em>eupatridae</em> <span class="phonetic">(yoo-PAT-rih-dye)</span> <button class="audio-btn" data-term="eupatridae" aria-label="Play pronunciation of eupatridae">&#128266;</button></dt>
+                <dd>the small group of noble, &ldquo;well-born&rdquo; families who ruled early Athens.</dd>
+                <dt id="gloss-pentacosiomedimni"><em>pentacosiomedimni</em> <span class="phonetic">(pen-tuh-koh-see-oh-meh-DIM-nee)</span> <button class="audio-btn" data-term="pentacosiomedimni" aria-label="Play pronunciation of pentacosiomedimni">&#128266;</button></dt>
+                <dd>the richest of Solon's four property classes.</dd>
+                <dt id="gloss-pisistratus"><em>Pisistratus</em> <span class="phonetic">(py-SIS-truh-tuhs)</span> <button class="audio-btn" data-term="Pisistratus" aria-label="Play pronunciation of Pisistratus">&#128266;</button></dt>
+                <dd>an Athenian nobleman who seized power by force in 546 BC but kept most of Solon's reforms in place.</dd>
+                <dt id="gloss-seisachtheia"><em>seisachtheia</em> <span class="phonetic">(say-sahk-THAY-uh)</span> <button class="audio-btn" data-term="seisachtheia" aria-label="Play pronunciation of seisachtheia">&#128266;</button></dt>
+                <dd>Solon's reform that canceled crushing debts and freed debt slaves; the word means &ldquo;shaking-off of burdens.&rdquo;</dd>
+                <dt id="gloss-solon"><em>Solon</em> <span class="phonetic">(SOH-lon)</span> <button class="audio-btn" data-term="Solon" aria-label="Play pronunciation of Solon">&#128266;</button></dt>
+                <dd>an Athenian lawgiver chosen in 594 BC to rewrite the city's laws and fix its debt crisis.</dd>
+                <dt id="gloss-thetes"><em>thetes</em> <span class="phonetic">(THAY-teez)</span> <button class="audio-btn" data-term="thetes" aria-label="Play pronunciation of thetes">&#128266;</button></dt>
+                <dd>the poorest of Solon's four property classes, owning little or no land.</dd>
+                <dt id="gloss-zeugetai"><em>zeugetai</em> <span class="phonetic">(zoog-EH-tye)</span> <button class="audio-btn" data-term="zeugetai" aria-label="Play pronunciation of zeugetai">&#128266;</button></dt>
+                <dd>the middle class of Solon's four property classes, mostly farmers with a modest amount of land.</dd>
+            </dl>
+        </div>
 
         <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Solon's Bargain</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The real turning point came in 594 BC, when the Athenians gave a merchant-poet named Solon extraordinary power to rewrite the constitution and settle the debt crisis. Solon canceled outstanding debts and freed Athenians who had been enslaved for owing money, a reform he called the <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Greek for 'shaking-off of burdens'; Solon's cancellation of debts">seisachtheia</span>. He organized citizens into four property classes, from the wealthiest <em>pentacosiomedimni</em> down to the <em>thetes</em> who owned little or no land, and tied political office to wealth rather than birth alone, opening the door, however narrowly, to men who were not aristocrats. He is remembered for saying he gave Athens not the best laws he could imagine, but the best laws the Athenians would actually accept: a very practical piece of political wisdom.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The real turning point came in 594 BC. That year, the people of Athens gave huge power to a merchant and poet named <strong><em class="gloss-term"><a href="#gloss-solon" title="an Athenian lawgiver chosen in 594 BC to rewrite the city's laws and fix its debt crisis">Solon</a></em></strong>. They asked him to rewrite the city's laws and finally solve the debt crisis. Solon acted quickly. He canceled the debts that were crushing ordinary Athenians. He freed citizens who had become debt slaves just for owing money. Solon called this reform the <strong><em class="gloss-term"><a href="#gloss-seisachtheia" title="Solon's reform that canceled crushing debts and freed debt slaves; the word means shaking-off of burdens">seisachtheia</a></em></strong>. This Greek word means &ldquo;the shaking-off of burdens.&rdquo; Solon also reorganized Athenian society in a new way. He sorted citizens into four property classes, based on how much land or crops a man owned. At the top were the richest citizens, called the <strong><em class="gloss-term"><a href="#gloss-pentacosiomedimni" title="the richest of Solon's four property classes">pentacosiomedimni</a></em></strong>. At the bottom were the poorest citizens, called the <strong><em class="gloss-term"><a href="#gloss-thetes" title="the poorest of Solon's four property classes, owning little or no land">thetes</a></em></strong>. The thetes owned little or no land at all. Solon then connected political office to wealth, not to noble birth. This was a major change. For the first time, a man could hold public office just because he had grown wealthy. His family did not need to be <strong class="gloss-term"><a href="#gloss-aristocracy" title="a government, or ruling class, made up of a small group of noble, well-born families">aristocratic</a></strong> at all. Solon knew his reforms were not perfect, and he said so plainly. He explained that he had not given Athens the best laws he could imagine. Instead, he gave Athens the best laws the Athenians would actually accept and follow. That is a practical kind of wisdom. It still holds true today: a perfect law that people refuse to obey does nothing at all.</p>
     </div>
 
     <!-- PART 2 -->
@@ -145,19 +203,17 @@
 
         <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
             <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; HELPFUL TO KNOW</div>
-            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">In the original Greek sense, a <em>tyrant</em> is simply a ruler who holds power outside the traditional constitutional channels, not necessarily a cruel one. It's easy to assume "tyrant" automatically means "destroyer of reform." Pisistratus is the counterexample.</div>
+            <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">In the original Greek sense, a <em>tyrant</em> is simply a ruler who holds power outside the traditional constitutional channels, not necessarily a cruel one. It's easy to assume &ldquo;tyrant&rdquo; automatically means &ldquo;destroyer of reform.&rdquo; Pisistratus is the counterexample.</div>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Solon's reforms strained under the unrest that followed, and in 546 BC a nobleman named Pisistratus seized power by force and ruled as a tyrant. But Pisistratus did not tear down what Solon had built. He governed through Solon's existing property classes and offices rather than replacing them, and under his rule the hoplite (middle) class of <em>zeugetai</em> continued to hold office in the Council, while the poorest citizens, the <em>thetes</em>, kept the place on the juries Solon had given them. Pisistratus's real target was the old aristocratic families themselves, whose grip on power he deliberately weakened even as he preserved the constitutional structure Solon had left behind.</p>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Pisistratus ruled until his death in 527 BC, when his sons inherited power; the younger, Hipparchus, was assassinated in 514 BC, and the elder, Hippias, grew increasingly harsh until Athenians drove him out entirely in 510 BC. Only then did the door open for the reformer this week's discussion is built around: Cleisthenes.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Solon's reforms did not end the unrest in Athens. That unrest opened a door for a new kind of leader. In 546 BC, a nobleman named <strong><em class="gloss-term"><a href="#gloss-pisistratus" title="an Athenian nobleman who seized power by force in 546 BC but kept most of Solon's reforms in place">Pisistratus</a></em></strong> seized power by force. The Greeks called a ruler like this a <strong class="gloss-term"><a href="#gloss-tyrant" title="in ancient Greece, a ruler who took power outside the city's normal system for choosing leaders">tyrant</a></strong>. In the original Greek meaning, this word did not automatically mean cruel. It simply meant someone who held power outside the city's normal, traditional system. Pisistratus was a tyrant in that specific sense, but he was not necessarily a cruel one. In fact, Pisistratus did not tear down what Solon had built. He governed through Solon's existing property classes and existing offices. He did not replace them with something new. Under Pisistratus, the middle-class farmers, called the <strong><em class="gloss-term"><a href="#gloss-zeugetai" title="the middle class of Solon's four property classes, mostly farmers with a modest amount of land">zeugetai</a></em></strong>, kept their seats on the Council. The poorest citizens, the <strong><em class="gloss-term"><a href="#gloss-thetes" title="the poorest of Solon's four property classes, owning little or no land">thetes</a></em></strong>, kept the jury seats that Solon had already given them. Pisistratus's real target was the <strong class="gloss-term"><a href="#gloss-aristocracy" title="a government, or ruling class, made up of a small group of noble, well-born families">aristocratic</a></strong> families themselves. He worked steadily to weaken their grip on power. At the same time, he carefully kept the system Solon had built. Pisistratus ruled until his death in 527 BC. Then his sons inherited his power. The younger son, Hipparchus, was assassinated in 514 BC. The older son, Hippias, grew harsher and harsher as the years passed. Finally, the Athenians drove him out of the city in 510 BC. Only then did the door open for the reformer this week's discussion is about: Cleisthenes.</p>
     </div>
 
     <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WHAT CLEISTHENES ACTUALLY CHANGED</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Cleisthenes did something neither Solon nor Pisistratus had attempted. The commoners of Athens had always held the right to vote in the Assembly as members of the city's four traditional tribes; that was never in dispute. But only aristocrats had ever held the right to address the Assembly, to propose a measure or argue against one, and Cleisthenes broke that monopoly, giving ordinary citizens the standing to speak for themselves. At the same time, he tackled a separate problem: recent immigrants to Athens, people who had never belonged to any of the four traditional tribes, had no path into citizenship at all, since citizenship itself was defined by tribal membership.</p>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Cleisthenes solved both problems with the same move. He replaced the four old tribes with ten new ones, organized by geography rather than ancestry, so that immigrants could be enrolled as citizens through their new tribe and so that no single old tribe, dominated as they were by aristocratic clans, could function as a private power base. Lesson 1.2 and this week's primary sources will show you exactly how he did it, and why later thinkers, including the American founders, treated the question "who counts, and on what basis?" as one of the first questions any constitution has to answer.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><strong><em class="gloss-term"><a href="#gloss-cleisthenes" title="an Athenian reformer, active after 510 BC, who created ten new tribes and gave ordinary citizens the right to speak in the Assembly">Cleisthenes</a></em></strong> did something that neither Solon nor Pisistratus had ever tried. To understand his achievement, you first need to understand what Athens already had. Ordinary Athenians had always held the right to vote in the Assembly, as members of the city's four traditional tribes. That right was never in question. But only aristocrats had ever held the right to actually speak to the Assembly. Only an aristocrat could stand up, propose a new law, or argue against one. Cleisthenes ended that one-sided rule. He gave ordinary citizens the right to speak for themselves in public debate. They no longer just voted silently on what aristocrats proposed. At the same time, Cleisthenes tackled a second, separate problem. Recent immigrants to Athens had never belonged to any of the four traditional tribes. Because of this, they had no path into citizenship at all, since Athenian citizenship itself was defined entirely by tribal membership. Cleisthenes solved both problems with the very same move. He abolished the four old tribes. He replaced them with ten new ones, organized by geography instead of family history. This meant immigrants could now become citizens through their new tribe. It also meant that no single old tribe could work as a private power base for one aristocratic family anymore, since each old tribe had once been controlled by a particular aristocratic clan. Lesson 1.2 and this week's primary sources will show you exactly how Cleisthenes built these new tribes into a working government. You will also see why later thinkers, including the American founders, treated one question as one of the very first any constitution must answer: who counts as a citizen, and on what basis?</p>
 
         <div class="optima-widget ow-select">
           <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE REFORMER TO THE MOVE</div>
@@ -211,7 +267,7 @@
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
                 <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 1 &amp; Critical Questions 1.1</strong> (Canvas)</div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Aristotle's <em>Constitution of the Athenians</em>, ch. 21, with a translation note on the "franchise" passage.</div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Aristotle's <em>Constitution of the Athenians</em>, ch. 21, with a translation note on the &ldquo;franchise&rdquo; passage.</div>
             </div>
         </div>
     </div>
@@ -227,7 +283,7 @@
 <!-- ===== FOOTER ===== -->
 <div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
     <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; M/J CIVICS &middot; Quarter 1 &middot; Student Lesson Page</div>
-    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.1 &middot; The Athenian Experiment: From Tyranny to Democracy</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 1.1 &middot; The Athenian Experiment, From Tyranny to Democracy</div>
     <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
 </div>
 
@@ -237,6 +293,15 @@
 <script>
 (function () {
   document.addEventListener('click', function (e) {
+    var audioBtn = e.target.closest('.audio-btn');
+    if (audioBtn) {
+      if ('speechSynthesis' in window) {
+        var utter = new SpeechSynthesisUtterance(audioBtn.dataset.term || '');
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utter);
+      }
+      return;
+    }
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');
