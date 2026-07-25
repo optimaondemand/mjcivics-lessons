@@ -34,6 +34,21 @@
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
     .ow-flip + .ow-flip { margin-top: 12px; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -86,7 +101,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Why would the man who fought hardest for independence step back and let someone else write the document announcing it?</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">By the spring of 1776, the thirteen colonies had been at war with Great Britain for almost a year, but most delegates to the Second Continental Congress still hesitated to declare formal independence. Years of escalating British policy, taxation without colonial consent, the closing of Boston's port, the quartering of troops in colonial homes, and the dismissal of colonial assemblies, had pushed opinion steadily toward separation, but declaring independence outright was an irreversible act, one that would make every signer a traitor in British eyes if the rebellion failed.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">By the spring of 1776, the thirteen colonies had been at war with Great Britain for almost a year. But most delegates to the Second Continental Congress still hesitated to declare full independence.</div>
     </div>
 
     <!-- Objectives -->
@@ -121,7 +136,18 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; AN IRREVERSIBLE VOTE</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">By the spring of 1776, most delegates to the <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="The body of colonial delegates that governed the war effort and, in July 1776, voted to declare independence">Second Continental Congress</span> still hesitated to declare formal independence, even after nearly a year of war. Declaring independence outright was an irreversible act, one that would make every signer a traitor in British eyes if the rebellion failed.</p>
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing Rousseau's vocabulary from Lesson 4.2. This week's reading introduces no new Subject Vocabulary terms.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-general-will-51">general will <span class="phonetic"></span> <button class="audio-btn" data-term="general will" aria-label="Play pronunciation of general will">&#128266;</button></dt>
+                <dd>Rousseau's term for the collective judgment of the whole community about the common good, which every citizen has a genuine share in forming.</dd>
+                <dt id="gloss-state-sovereign-power-51">State, Sovereign, and Power <span class="phonetic"></span> <button class="audio-btn" data-term="State, Sovereign, and Power" aria-label="Play pronunciation of State, Sovereign, and Power">&#128266;</button></dt>
+                <dd>Rousseau's three names for the same &ldquo;moral and collective body&rdquo; formed by the social contract.</dd>
+            </dl>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">By the spring of 1776, the thirteen colonies had been at war with Great Britain for almost a year. But most delegates to the Second Continental Congress still hesitated to declare full independence. Years of harsh British policy had pushed opinion steadily toward separation. Britain had taxed the colonies without their consent. Britain had closed Boston's port. Britain had forced colonists to house British soldiers in their own homes. Britain had dismissed colonial assemblies that pushed back. All of this built up over years. But declaring independence outright was an act you could not take back. If the rebellion failed, every single signer would be considered a traitor in British eyes, and traitors could be executed.</p>
     </div>
 
     <!-- PART 2 -->
@@ -140,14 +166,14 @@
           <button class="widget-reset">Reset</button>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">No one in Congress pushed harder for the vote than <strong>John Adams</strong> of Massachusetts, a blunt, relentless advocate who had been arguing for independence since long before most of his colleagues were ready to hear it. In June 1776, Congress appointed a <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="The five-member group Congress appointed to draft the Declaration of Independence">Committee of Five</span> to draft a formal declaration explaining the colonies' reasons to the world. Adams sat on that committee, but he insisted the actual writing fall to a quieter Virginian: <strong>Thomas Jefferson</strong>. Adams later explained his reasoning plainly: Jefferson wrote better than he did, and as a Virginian, his authorship would make the document harder to dismiss as a mere New England grievance. It is one of the more consequential acts of political humility in American history: the man who fought loudest for independence stepped back so someone else could give it its lasting words.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">No one in Congress pushed harder for the vote than <strong>John Adams</strong> of Massachusetts. Adams was blunt and relentless. He had been arguing for independence since long before most of his colleagues were ready to hear it. In June 1776, Congress appointed a Committee of Five to draft a formal declaration explaining the colonies' reasons to the world. Adams sat on that committee. But he insisted that the actual writing fall to a quieter Virginian: <strong>Thomas Jefferson</strong>. Adams later explained his reasoning plainly. Jefferson wrote better than he did. And because Jefferson was a Virginian, his authorship would make the document harder to dismiss as just a New England complaint. This is one of the more remarkable acts of political humility in American history. The man who fought loudest for independence stepped back so someone else could give it its lasting words.</p>
     </div>
 
     <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; A TWO-PART ARGUMENT</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Jefferson drew on ideas you already know well from Week 3, Locke's natural rights and his theory of when a government forfeits its legitimacy, and built them into a document with two distinct halves. The opening states a general theory of government's purpose and the conditions under which people may rightfully alter or abolish it. The much longer second half applies that theory to a specific case, listing more than two dozen grievances against King George III to prove, point by point, that Britain's government had crossed exactly the line Locke described. This week's primary source is drawn from both halves.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Jefferson drew on ideas you already know well from Week 3: Locke's natural rights, and his theory of when a government loses its legitimacy. Jefferson built these ideas into a document with two distinct halves. The opening states a general theory of government's purpose. It explains the conditions under which people may rightfully change or get rid of that government. The much longer second half applies that theory to one specific case. It lists more than two dozen complaints against King George III. These complaints are meant to prove, point by point, that Britain's government had crossed exactly the line Locke described. This week's primary source is drawn from both halves of the document.</p>
 
         <div class="optima-widget">
           <div class="widget-kicker">&#9889; FLIP TO CHECK YOURSELF</div>
@@ -162,6 +188,17 @@
           </div>
           <button class="widget-reset">Reset</button>
         </div>
+    </div>
+
+    <!-- PART 4 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; THE VOTE, THE DATE, AND THE EDITS</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The vote for independence itself actually happened on July 2, 1776, when Congress formally approved separating from Britain. Two days later, on July 4, Congress approved the wording of Jefferson's document, the date we now celebrate as Independence Day. John Adams himself predicted that July 2 would be the date future Americans celebrated with fireworks and parades. He was only off by two days, since it was the document's approval, not the vote itself, that history ended up remembering most.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Jefferson's original draft also went through changes before Congress gave its final approval. Benjamin Franklin and John Adams, the other two most active members of the Committee of Five, reviewed and lightly edited Jefferson's draft before it ever reached the full Congress. Congress itself then debated the document for several days and cut about a fourth of Jefferson's original text. The most significant cut was a passage that had condemned the Atlantic slave trade and, by extension, the practice of slavery itself. Delegates from Georgia and South Carolina, along with some New England merchants involved in the slave trade, objected, and the passage was removed to preserve unity among the states. This is worth remembering. The document's stirring language about equality and unalienable rights survived. Its specific condemnation of slavery did not. You will return to this tension, between the Declaration's stated ideals and the nation's actual practices, later in this course.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">One small edit shows how much these changes mattered. Jefferson's original draft said the truths in the Declaration were &ldquo;sacred and undeniable.&rdquo; Benjamin Franklin himself crossed out that phrase and wrote in &ldquo;self-evident&rdquo; instead. That is the very word you will read in this week's primary source. Franklin's edit was not just about style. &ldquo;Sacred and undeniable&rdquo; suggests something a religious authority insists on. &ldquo;Self-evident&rdquo; suggests something reason alone can prove true, without needing anyone's authority to back it up. This fits the Declaration's whole approach: appealing to reason and natural rights, not to religious or royal authority. Small edits like this one remind us that even a document as famous as the Declaration was a genuinely collaborative piece of writing, shaped by several sharp minds working together under enormous pressure and very little time. Keep that in mind as you read this week's primary source: you are reading the version Congress approved, the version history remembers, but not the only version that was ever written. Reading it that way, as a real historical artifact shaped by debate and compromise rather than as a single flash of inspiration, makes it easier to understand why its words still carry the weight they do.</p>
     </div>
 
     <!-- What You'll Do Next -->
@@ -204,6 +241,15 @@
 <script>
 (function () {
   document.addEventListener('click', function (e) {
+    var audioBtn = e.target.closest('.audio-btn');
+    if (audioBtn) {
+      if ('speechSynthesis' in window) {
+        var utter = new SpeechSynthesisUtterance(audioBtn.dataset.term || '');
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utter);
+      }
+      return;
+    }
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');
