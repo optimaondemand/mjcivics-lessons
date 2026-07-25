@@ -33,6 +33,24 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .callout.glossary.foreign { background: #F3EEFB; border-left: 5px solid #7B3FA0; }
+    .callout.glossary.foreign .callout-kicker { color: #5B2E7E; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
+    .wrapper-pointer { font-size: 14px; color: #0E1C42; background: #EEF1F8; border-left: 4px solid #6b7a99; border-radius: 4px; padding: 10px 14px; margin: 16px 0 0; }
 </style>
 </head>
 <body>
@@ -85,7 +103,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Why do regimes collapse, and can a constitution be designed to resist collapse?</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">This module opened in Week 1 with Aristotle's account of Cleisthenes rebuilding Athenian citizenship from the ground up. It closes with Aristotle again, this time writing not as a historian of one city's reforms but as a systematic theorist of political stability in his <em>Politics</em>, Books IV and V. Having catalogued and compared the constitutions of dozens of Greek city-states, Aristotle turned to a question every framer in Philadelphia was implicitly wrestling with.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">This module opened in Week 1 with Aristotle's account of Cleisthenes rebuilding Athenian citizenship from the ground up. It closes with Aristotle again.</div>
     </div>
 
     <!-- Objectives -->
@@ -120,24 +138,53 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; TWO WAYS A REGIME CAN COLLAPSE</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Aristotle's answer in Book V centers on <em>inequality</em> and the perception of it, not necessarily inequality of wealth alone, but any group's sense that it is not receiving its rightful share of honor, office, or power relative to its actual contribution or numbers. Democracies fall, he argued, when the poor majority feels excluded from real influence; <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Rule by a small, often wealthy, privileged group">oligarchies</span> fall when a wealthy few grow so exclusive that everyone else unites against them. Revolutions, in Aristotle's analysis, are rarely random explosions of unrest; they follow a discoverable logic rooted in exactly which group feels shortchanged by the current arrangement of power.</p>
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing two terms from Lesson 8.1. This week's reading introduces no new Subject Vocabulary terms.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-demagogue-82">demagogue <span class="phonetic">(DEM-uh-gog)</span> <button class="audio-btn" data-term="demagogue" aria-label="Play pronunciation of demagogue">&#128266;</button></dt>
+                <dd>a leader who wins power by appealing to emotion and prejudice rather than reasoned argument.</dd>
+                <dt id="gloss-electors-82">electors <span class="phonetic">(ee-LEK-terz)</span> <button class="audio-btn" data-term="electors" aria-label="Play pronunciation of electors">&#128266;</button></dt>
+                <dd>specially chosen people who meet once, in separate state groups, to formally select the president.</dd>
+            </dl>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This time, he is writing not as a historian of one city's reforms, but as a systematic theorist of political stability, in his book <em>Politics</em>, Books IV and V. Aristotle had catalogued and compared the constitutions of dozens of Greek city-states. From that huge body of comparison, he turned to a question every framer in Philadelphia was implicitly wrestling with: why do regimes collapse, and can a constitution be designed to resist collapse?</p>
+
+        <div class="callout glossary foreign">
+            <div class="callout-kicker">&#127760; Foreign Language Vocabulary</div>
+            <dl class="glossary-list">
+                <dt id="gloss-aristotle-82"><em>Aristotle</em> <span class="phonetic">(AIR-ih-stot-uhl)</span> <button class="audio-btn" data-term="Aristotle" aria-label="Play pronunciation of Aristotle">&#128266;</button></dt>
+                <dd>a Greek philosopher who catalogued and compared the constitutions of dozens of Greek city-states to study why regimes fall apart.</dd>
+            </dl>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Aristotle's answer in Book V centers on <em>inequality</em>, and especially the perception of inequality. This is not necessarily inequality of wealth alone. It can be any group's sense that it is not receiving its rightful share of honor, office, or power relative to its actual contribution or numbers. Democracies fall, Aristotle argued, when the poor majority feels excluded from real influence. Oligarchies fall when a wealthy few grow so exclusive that everyone else unites against them. Revolutions, in Aristotle's analysis, are rarely random explosions of unrest. They follow a discoverable logic, rooted in exactly which group feels shortchanged by the current arrangement of power.</p>
 
         <div class="optima-widget">
           <div class="widget-kicker">&#9889; FLASHCARD &middot; CLICK TO FLIP</div>
           <div class="widget-question">Test yourself on Aristotle's diagnosis before you read his own words on the next page.</div>
           <div class="ow-flip">
             <div class="ow-flip-front">According to Aristotle, what single underlying factor drives most revolutions, more than wealth inequality by itself?</div>
-            <div class="ow-flip-back">The perception of not receiving one's rightful share of honor, office, or power relative to one's contribution or numbers, and the <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="A lack of self-restraint; excess">intemperance</span> of demagogues who stir that feeling up.</div>
+            <div class="ow-flip-back">The perception of not receiving one's rightful share of honor, office, or power relative to one's contribution or numbers, and the intemperance of demagogues who stir that feeling up.</div>
           </div>
           <button class="widget-reset">Reset</button>
         </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 14px 0 0 0;">Aristotle offered one further piece of advice worth carrying forward. In Book IV, he argued that the most stable regimes are usually the ones with a large, secure middle class, citizens who are neither desperately poor nor extravagantly rich. A large middle class, he reasoned, has the most to lose from instability and the least reason to envy or resent either the very poor or the very wealthy. Recall Solon's <em>zeugetai</em> from Week 1, the middle-class farmers whose status Pisistratus deliberately protected even after seizing power. Aristotle's theory helps explain why: a broad, secure middle class has been recognized, since ancient Athens, as one of the most reliable foundations a lasting republic can have.</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; HAMILTON'S DESIGN AS A PRACTICAL ANSWER</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Read against this backdrop, Hamilton's careful electoral design in Federalist No. 68 looks like a direct, practical application of Aristotle's diagnosis. An executive chosen entirely by a wealthy elite, cut off from any "sense of the people," would risk exactly the resentment Aristotle warned could topple an oligarchy. An executive chosen by unchecked mass passion, with no filter for qualification, risked the opposite failure mode Aristotle also catalogued: a democracy degenerating into instability once it can no longer distinguish competent leadership from popular flattery. Nearly twenty-two centuries separate Aristotle's Athens from Hamilton's Philadelphia, but the same underlying question, who gets to rule, and will everyone else accept it as legitimate, runs unbroken between them, closing the circle this module opened.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Aristotle's method itself is worth noticing. Rather than reasoning from pure abstract principle alone, as some philosophers do, Aristotle and his students reportedly collected and compared the actual written constitutions of over one hundred fifty Greek city-states before he wrote his <em>Politics</em>. His conclusions about why regimes fall are built on this unusually wide base of real comparative evidence, not on a single city's experience or a single thinker's intuition. This same comparative habit, studying many real examples before drawing a general conclusion, is exactly what Madison was doing in his own &ldquo;Ancient and Modern Confederacies&rdquo; memo back in Week 6.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice, too, how directly this week's primary source excerpt connects to Hamilton's own worry. Aristotle writes that revolutions in democracies are &ldquo;generally caused by the intemperance of <strong class="gloss-term"><a href="#gloss-demagogue-82" title="a leader who wins power by appealing to emotion and prejudice rather than reasoned argument">demagogues</a></strong>,&rdquo; who either personally attack wealthy citizens or stir up the people against them. This is precisely the danger Hamilton names when he warns that direct election could reward a leader who wins support through emotional appeal rather than genuine merit. Two writers, separated by more than two thousand years and writing in entirely different languages and political systems, converge on the same specific warning about the same specific kind of leader.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This lesson closes Module 2 as a whole. Over the past six weeks, you have moved from Rome's mixed constitution, through Hobbes and Locke's competing accounts of human nature, through Montesquieu's separated powers and Rousseau's general will, through the actual Convention that built a government out of all these ideas, and finally through the Federalist Papers that defended it clause by clause. Module 3 now turns from these founding arguments to the government those arguments actually produced: the specific structure and powers of Congress, the presidency, and the federal courts. Keep Aristotle's question in mind as you go: every structural detail you are about to study is, at bottom, one more attempt to answer who should rule, and why everyone else should accept it.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Read against this backdrop, Hamilton's careful electoral design in Federalist No. 68 looks like a direct, practical application of Aristotle's diagnosis. An executive chosen entirely by a wealthy elite, cut off from any &ldquo;sense of the people,&rdquo; would risk exactly the resentment Aristotle warned could topple an oligarchy. An executive chosen by unchecked mass passion, with no filter for qualification, risked the opposite failure mode Aristotle also catalogued. That failure mode is a democracy degenerating into instability once it can no longer distinguish competent leadership from popular flattery. Nearly twenty-two centuries separate Aristotle's Athens from Hamilton's Philadelphia. But the same underlying question, who gets to rule, and will everyone else accept it as legitimate, runs unbroken between them, closing the circle this module opened.</p>
 
         <div class="optima-widget ow-select">
           <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE REGIME TO ITS FAILURE MODE</div>
@@ -165,6 +212,8 @@
 
           <button class="widget-reset">Reset</button>
         </div>
+
+        <p class="wrapper-pointer">&#128203; Up next: the ungraded <strong>Module 2 Outro Wrapper</strong> in Canvas (~2 minutes) before moving into Module 3.</p>
     </div>
 
     <!-- What You'll Do Next -->
@@ -207,6 +256,15 @@
 <script>
 (function () {
   document.addEventListener('click', function (e) {
+    var audioBtn = e.target.closest('.audio-btn');
+    if (audioBtn) {
+      if ('speechSynthesis' in window) {
+        var utter = new SpeechSynthesisUtterance(audioBtn.dataset.term || '');
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utter);
+      }
+      return;
+    }
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');

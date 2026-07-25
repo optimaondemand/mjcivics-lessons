@@ -33,6 +33,23 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .callout.glossary.foreign { background: #F3EEFB; border-left: 5px solid #7B3FA0; }
+    .callout.glossary.foreign .callout-kicker { color: #5B2E7E; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -85,7 +102,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">A single leader looks like a king. A legislature with no strong executive just failed under the Articles. How do you choose the person who has to walk that line?</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Of the three branches the Convention created, none worried the delegates more than the executive. A single national leader looked dangerously close to the king they had just fought a revolution to escape, but a legislature with no strong executive to check it had just failed catastrophically under the Articles of Confederation. <strong>Alexander Hamilton</strong>, the most forceful defender of a strong presidency among the framers, took up the specific question of <em>how</em> to choose that executive in <strong>Federalist No. 68</strong>.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Of the three branches the Convention created, none worried the delegates more than the executive. A single national leader looked dangerously close to the king they had just fought a revolution to escape.</div>
     </div>
 
     <!-- Objectives -->
@@ -120,7 +137,22 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; TWO REJECTED METHODS</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Hamilton considered the two obvious methods and rejected both. Direct popular election, he worried, risked exactly the kind of unchecked mass enthusiasm you studied in the Athenian Assembly's vote for the Sicilian Expedition last week: a charismatic demagogue could sweep an emotional majority without possessing the <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Necessary, required for the task at hand">requisite</span> qualifications for the office. Selection by the legislature, meanwhile, risked the opposite danger: an executive who owed his position entirely to Congress would have every incentive to become its servant rather than an independent check on it, undermining the separation of powers from Week 4 and Week 7 before it even began operating.</p>
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing one term from Lesson 7.2, plus new terms for choosing a president.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-demagogue">demagogue <span class="phonetic">(DEM-uh-gog)</span> <button class="audio-btn" data-term="demagogue" aria-label="Play pronunciation of demagogue">&#128266;</button></dt>
+                <dd>a leader who wins power by appealing to emotion and prejudice rather than reasoned argument.</dd>
+                <dt id="gloss-electors">electors <span class="phonetic">(ee-LEK-terz)</span> <button class="audio-btn" data-term="electors" aria-label="Play pronunciation of electors">&#128266;</button></dt>
+                <dd>specially chosen people who meet once, in separate state groups, to formally select the president.</dd>
+                <dt id="gloss-federalism-81">federalism <span class="phonetic">(FED-er-uh-liz-um)</span> <button class="audio-btn" data-term="federalism" aria-label="Play pronunciation of federalism">&#128266;</button></dt>
+                <dd>shared and divided authority between the people, the states, and the national government.</dd>
+            </dl>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">But a legislature with no strong executive to check it had just failed catastrophically under the Articles of Confederation, as you read in Week 5. <strong>Alexander Hamilton</strong> was the most forceful defender of a strong presidency among the framers. He took up the specific question of how to choose that executive in <strong>Federalist No. 68</strong>.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Hamilton considered the two most obvious methods and rejected both. The first was direct popular election. He worried this risked exactly the kind of unchecked mass enthusiasm you studied in the Athenian Assembly's vote for the Sicilian Expedition last week. A charismatic <strong class="gloss-term"><a href="#gloss-demagogue" title="a leader who wins power by appealing to emotion and prejudice rather than reasoned argument">demagogue</a></strong>, meaning a leader who wins power by appealing to emotion and prejudice rather than reasoned argument, could sweep an emotional majority without possessing what Hamilton called the &ldquo;requisite qualifications&rdquo; for the office. The second method was selection by the legislature itself. This risked the opposite danger. An executive who owed his position entirely to Congress would have every incentive to become its servant rather than an independent check on it. This would undermine the separation of powers you studied in Week 4 and Week 7 before it even began operating.</p>
 
         <div class="optima-widget ow-select">
           <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE REJECTED METHOD TO ITS DANGER</div>
@@ -154,7 +186,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; A COMPROMISE DESIGNED AGAINST BOTH RISKS</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Hamilton's compromise, and the Convention's, was a body of specially chosen <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="A person specially chosen to formally cast a vote for president as part of the Electoral College">electors</span>, meeting only once, in separate state groups, with no ongoing existence as an institution, making them, in Hamilton's view, resistant both to mob passion and to manipulation or bribery, since there was no standing body to corrupt over time.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Hamilton's compromise, and the Convention's, was a body of specially chosen <strong class="gloss-term"><a href="#gloss-electors" title="specially chosen people who meet once, in separate state groups, to formally select the president">electors</a></strong>. These electors would meet only once, in separate state groups, with no ongoing existence as a standing institution. This design made them, in Hamilton's view, resistant both to mob passion and to manipulation or bribery, since there was no permanent body around to corrupt over time. Notice the pattern across every branch you have studied this module. The framers did not try to eliminate risk entirely. Instead, they designed specific structures, a Senate, a Preamble's stated purposes, an electoral process, to manage risks they believed were permanent features of political life, not problems that could ever be solved once and for all.</p>
 
         <div class="optima-widget ow-scale">
           <div class="widget-kicker">&#9889; TRY IT &middot; WHAT MADE THE ELECTOR SYSTEM RESISTANT TO CORRUPTION?</div>
@@ -172,8 +204,19 @@
 
           <button class="widget-reset">Reset</button>
         </div>
+    </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 14px 0 0 0;">Notice the pattern across every branch you have studied this module: not eliminate risk, but design specific structures, a Senate, a Preamble's stated purposes, an electoral process, to manage risks the framers believed were permanent features of political life, not problems that could ever be solved once and for all.</p>
+    <!-- PART 3 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; FROM DESIGN TO PRACTICE</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It is worth knowing that Hamilton's description does not fully match how the Electoral College actually works today. Hamilton imagined electors using their own independent judgment, weighing candidates' qualifications personally, much like a hiring committee. In practice, political parties emerged within just a few years of the Constitution's ratification, and electors quickly became pledged to vote for whichever candidate their party had already chosen, rather than deliberating independently once assembled. This week's Extension reading picks up exactly this kind of gap between the framers' original design and how the system actually evolved, using the disputed election of 1800 as its case study.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The number of electors each state received was tied directly to that state's total representation in Congress: one elector for each member of the House of Representatives, plus one for each of its two Senators. This meant every state's electoral voice combined both the population-based House and the equal-representation Senate, the same Great Compromise structure you studied back in Week 6, applied now to choosing the president as well as to writing the laws.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice that Hamilton is not rejecting popular sovereignty altogether, the principle from Locke and the Declaration that legitimate government rests on the people's consent. The people still choose the electors, and the electors still answer, at least once, to the voters who selected them. What Hamilton rejects is direct, unmediated popular choice on a single day for the single most powerful office in the government. This is the same instinct you have now seen at work in the Senate's original design, in the bicameral Congress, and in the layered legislative process itself: trust the people as the ultimate source of authority, but filter their judgment through structures built for careful deliberation rather than momentary passion.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The system's very first test, in 1789, went about as smoothly as Hamilton could have hoped. Every single elector who cast a vote chose George Washington, the only presidential election in American history decided by a truly unanimous vote. Washington's universal reputation as the Revolution's leading general made him an unusually easy case, one Hamilton and the other framers likely had in mind while designing the office, even though they could not write a rule reserving the presidency for any one particular man. The real test of Hamilton's design would come later, once Washington retired and ordinary political competition began in earnest.</p>
     </div>
 
     <!-- What You'll Do Next -->
@@ -190,7 +233,7 @@
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
                 <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 1 &amp; Critical Questions 8.1</strong> (Canvas)</div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Hamilton's Federalist No. 68, on "the sense of the people" and the electors' "detached and divided situation."</div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Hamilton's Federalist No. 68, on &ldquo;the sense of the people&rdquo; and the electors' &ldquo;detached and divided situation.&rdquo;</div>
             </div>
         </div>
     </div>
@@ -216,6 +259,15 @@
 <script>
 (function () {
   document.addEventListener('click', function (e) {
+    var audioBtn = e.target.closest('.audio-btn');
+    if (audioBtn) {
+      if ('speechSynthesis' in window) {
+        var utter = new SpeechSynthesisUtterance(audioBtn.dataset.term || '');
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utter);
+      }
+      return;
+    }
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');
