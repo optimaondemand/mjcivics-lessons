@@ -33,6 +33,21 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -120,6 +135,25 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; TWO PROMISES IN ONE SENTENCE</div>
 
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing three terms from Lesson 12.2, plus new terms for this week's First Amendment case.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-bill-of-rights-131">Bill of Rights <span class="phonetic"></span> <button class="audio-btn" data-term="Bill of Rights" aria-label="Play pronunciation of Bill of Rights">&#128266;</button></dt>
+                <dd>the first ten amendments to the Constitution, ratified in 1791, restraining what the federal government may do to individual rights.</dd>
+                <dt id="gloss-establishment-clause">Establishment Clause <span class="phonetic"></span> <button class="audio-btn" data-term="Establishment Clause" aria-label="Play pronunciation of Establishment Clause">&#128266;</button></dt>
+                <dd>the First Amendment promise that &ldquo;Congress shall make no law respecting an establishment of religion.&rdquo;</dd>
+                <dt id="gloss-free-exercise">Free Exercise Clause <span class="phonetic"></span> <button class="audio-btn" data-term="Free Exercise Clause" aria-label="Play pronunciation of Free Exercise Clause">&#128266;</button></dt>
+                <dd>the First Amendment promise protecting against laws &ldquo;prohibiting the free exercise&rdquo; of religion.</dd>
+                <dt id="gloss-incorporation-131">incorporation <span class="phonetic">(in-kor-por-AY-shun)</span> <button class="audio-btn" data-term="incorporation" aria-label="Play pronunciation of incorporation">&#128266;</button></dt>
+                <dd>the gradual process of applying most Bill of Rights protections against state governments too.</dd>
+                <dt id="gloss-lemon-test">Lemon test <span class="phonetic"></span> <button class="audio-btn" data-term="Lemon test" aria-label="Play pronunciation of Lemon test">&#128266;</button></dt>
+                <dd>the three-part test from <em>Lemon v. Kurtzman</em> asking whether a government action has a secular purpose, neither advances nor inhibits religion, and avoids &ldquo;excessive government entanglement.&rdquo;</dd>
+                <dt id="gloss-militia-131">militia <span class="phonetic">(muh-LISH-uh)</span> <button class="audio-btn" data-term="militia" aria-label="Play pronunciation of militia">&#128266;</button></dt>
+                <dd>a body of ordinary citizens, trained and organized rather than professional soldiers.</dd>
+            </dl>
+        </div>
+
         <div class="optima-widget ow-reflect">
           <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
           <div class="widget-question">Before you read further: do you think "Congress shall make no law respecting an establishment of religion" and "or prohibiting the free exercise thereof" are two ways of saying the same thing, or two separate promises? (No wrong answer, just check in with yourself.)</div>
@@ -146,7 +180,11 @@
             <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">In doing so, Chief Justice Burger's opinion distilled decades of earlier religion-clause cases into a single three-part test, since known simply as the <strong>Lemon test</strong>: a government action touching religion is constitutional only if it has a secular purpose, if its primary effect neither advances nor inhibits religion, and if it does not foster "excessive <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="The Court's term for government and religious institutions becoming too intertwined through ongoing monitoring or funding relationships">government entanglement</span>" between church and state.</div>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice what the Lemon test is actually doing: it is a judicially created standard, nowhere written in the Constitution's text, built to give lower courts and legislatures a workable rule for applying eleven words that were never going to interpret themselves. This is judicial review from Week 11 in action: not simply striking a law down, but constructing the interpretive framework future cases will use.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The test takes its name simply from the case, named for Alton Lemon, a parent and taxpayer who challenged Pennsylvania's law, not from any connection to the fruit or to the English idiom for a bad product. Courts used it for decades to evaluate government-sponsored prayer in public schools, religious displays on government property, and released-time religious education programs: a Nativity scene on city hall steps, a moment of silence at the start of a school day, a cross on a war memorial each forced courts to ask the same three questions, purpose, effect, and entanglement, even though the facts varied enormously from case to case.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Lemon test's dominance did not last forever. Later Supreme Court decisions gradually criticized and narrowed it, and in 2022, in <em>Kennedy v. Bremerton School District</em>, the Court stated plainly that the Lemon test no longer governs Establishment Clause cases, replacing it with a test based more directly on historical practices and understandings. That case involved a public high school football coach who knelt to pray at the fifty-yard line after games, and the district's decision to stop renewing his contract over the practice. The Court ruled in the coach's favor, holding that both his free exercise and free speech rights protected this personal, quiet prayer, and explicitly rejected the district's Lemon-based argument that allowing it would look like the school endorsed his religion. Even a widely used judicial test can eventually be replaced by a later Court that reads the Constitution differently.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Consider why the entanglement problem worried the Court so much in the actual <em>Lemon</em> case. To make sure a state-funded math teacher at a Catholic school was not quietly weaving religious content into her lessons, the state would need ongoing inspections, reporting requirements, and monitoring of exactly what happened inside that classroom. That ongoing oversight is itself the &ldquo;excessive entanglement&rdquo; the third prong worries about, not the funding alone, but the deep, continuous government involvement in a religious institution's daily operations that policing the funding would require. The lesson extends well beyond religion cases specifically: whenever the Constitution states a broad principle in a single sentence, real enforcement almost always requires courts, over time, to build a more detailed operating test underneath that sentence. The words rarely change; the tests interpreting those words change constantly, as later courts revisit, refine, and sometimes completely replace the frameworks earlier courts built.</p>
 
         <div class="optima-widget ow-select">
           <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE SCENARIO TO THE LEMON PRONG</div>

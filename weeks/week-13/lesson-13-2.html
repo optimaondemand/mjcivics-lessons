@@ -33,6 +33,21 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -120,6 +135,23 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; SHERBERT'S CHOICE</div>
 
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing three terms from Lesson 13.1, plus new terms for this week's free-exercise case.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-establishment-clause-132">Establishment Clause <span class="phonetic"></span> <button class="audio-btn" data-term="Establishment Clause" aria-label="Play pronunciation of Establishment Clause">&#128266;</button></dt>
+                <dd>the First Amendment promise that &ldquo;Congress shall make no law respecting an establishment of religion.&rdquo;</dd>
+                <dt id="gloss-free-exercise-132">Free Exercise Clause <span class="phonetic"></span> <button class="audio-btn" data-term="Free Exercise Clause" aria-label="Play pronunciation of Free Exercise Clause">&#128266;</button></dt>
+                <dd>the First Amendment promise protecting against laws &ldquo;prohibiting the free exercise&rdquo; of religion.</dd>
+                <dt id="gloss-lemon-test-132">Lemon test <span class="phonetic"></span> <button class="audio-btn" data-term="Lemon test" aria-label="Play pronunciation of Lemon test">&#128266;</button></dt>
+                <dd>the three-part test asking whether a government action has a secular purpose, neither advances nor inhibits religion, and avoids &ldquo;excessive government entanglement.&rdquo;</dd>
+                <dt id="gloss-sherbert-test">Sherbert test <span class="phonetic"></span> <button class="audio-btn" data-term="Sherbert test" aria-label="Play pronunciation of Sherbert test">&#128266;</button></dt>
+                <dd>the rule that once a law substantially burdens someone's free exercise of religion, government must show a &ldquo;compelling state interest&rdquo; to justify it.</dd>
+                <dt id="gloss-strict-scrutiny">strict scrutiny <span class="phonetic"></span> <button class="audio-btn" data-term="strict scrutiny" aria-label="Play pronunciation of strict scrutiny">&#128266;</button></dt>
+                <dd>the highest level of legal review American courts use, requiring a &ldquo;compelling state interest&rdquo; to justify a law.</dd>
+            </dl>
+        </div>
+
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Adell Sherbert, a Seventh-day Adventist in South Carolina, was fired after she refused to work on Saturdays, her faith's Sabbath. When she applied for unemployment benefits, the state denied her claim, ruling that she had turned down "suitable work" without good cause.</p>
 
         <div class="optima-widget ow-flip">
@@ -142,6 +174,10 @@
             <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; HELPFUL TO KNOW</div>
             <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">This standard, the <strong>Sherbert test</strong>, gave free-exercise claims real teeth for the next several decades: once a burden on religious practice is shown, the government carries the heavy burden of proving a <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="The highest justification standard courts require; the government must show the law serves a genuinely vital, not merely convenient, purpose">compelling state interest</span>, not merely a reasonable one.</div>
         </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Sherbert test's reach did not last forever either. In 1990, in <em>Employment Division v. Smith</em>, the Supreme Court significantly narrowed it. Alfred Smith and Galen Black were fired from their jobs at a private drug rehabilitation clinic after their employer learned they had used peyote, a hallucinogenic cactus, as part of a religious ceremony of the Native American Church. Oregon denied them unemployment benefits for work-related misconduct, and this time the Supreme Court sided with the state, holding that a neutral law applied equally to everyone, religious use included, does not need the compelling-interest justification <em>Sherbert</em> had demanded.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Congress disagreed with this narrower reading and responded in 1993 by passing the Religious Freedom Restoration Act, which restored something close to the Sherbert standard for cases involving federal law. That Act has had real, visible effects since: in <em>Burwell v. Hobby Lobby Stores</em> (2014), the Supreme Court used the Act's restored compelling-interest standard to rule that a closely held family business could object, on religious grounds, to providing certain contraceptive coverage the federal government otherwise required under a separate law. The <em>Sherbert</em>-versus-<em>Smith</em> debate over how much protection free exercise deserves did not end with either case; it simply moved from constitutional law directly into the ordinary statutes Congress writes. A Court ruling narrows a protection, Congress writes a statute to restore it, and a later case tests how far that statute itself reaches: constitutional rights in practice are rarely settled once and for all, but worked out continuously, across decades, by all three branches acting on each other in turn.</p>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Read together, <em>Lemon</em> and <em>Sherbert</em> map the two edges of the same clause: government may not push religion on citizens through excessive entanglement, and it may not push citizens away from their religion through indirect penalties either. The First Amendment's religion clauses, easy to read as a flat prohibition, turn out to require two distinct, carefully calibrated tests just to apply consistently, a pattern you will see repeat in next week's Fourth, Fifth, and Sixth Amendment cases.</p>
 
