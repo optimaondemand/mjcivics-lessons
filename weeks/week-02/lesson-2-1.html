@@ -33,6 +33,23 @@
     .ow-flip .ow-flip-back { display: none; color: #1a2340; }
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .callout.glossary.foreign { background: #F3EEFB; border-left: 5px solid #7B3FA0; }
+    .callout.glossary.foreign .callout-kicker { color: #5B2E7E; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -77,7 +94,7 @@
     <!-- Lavender title strip -->
     <div style="background: #EEF1F8; border-left: 5px solid #0E1C42; border-radius: 7px; padding: 18px 22px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #0e1c42; margin-bottom: 6px;">Lesson 2.1</div>
-        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">From Kings to Consuls: The Founding of the Republic</div>
+        <div style="font-size: 22px; color: #0e1c42; margin-bottom: 4px;">From Kings to Consuls, The Founding of the Republic</div>
         <div style="font-size: 16px; color: #666;">Lesson</div>
     </div>
 
@@ -85,7 +102,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">If you had just expelled a king and never wanted to be ruled by one man again, would you hand executive power to one new leader, or split it?</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Athens was not the only ancient city to overthrow a would-be tyrant and build something new. In 509 BC, a full generation before Cleisthenes's reforms had even settled into place across the Aegean, the Romans expelled their last king, Tarquin the Proud, and swore never to be ruled by a single man again. What they built instead, the <em>res publica</em> ("the public thing," the root of our word "republic"), would eventually govern the Mediterranean world and, two thousand years later, supply the American founders with their working vocabulary of government.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Athens was not the only ancient city to overthrow a tyrant and build something new. In 509 BC, the Romans drove out their last king, a man named Tarquin the Proud. This happened about a generation before Cleisthenes's reforms in Athens. The Romans swore, as a city, never to be ruled by a single man again.</div>
     </div>
 
     <!-- Objectives -->
@@ -120,6 +137,27 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; TWO CONSULS, NOT ONE KING</div>
 
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing two terms from Lesson 1.2, plus new ones for this week.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-consul">Consul <span class="phonetic">(KON-suhl)</span> <button class="audio-btn" data-term="Consul" aria-label="Play pronunciation of Consul">&#128266;</button></dt>
+                <dd>one of two officials who held Rome's executive power together, elected for a one-year term.</dd>
+                <dt id="gloss-direct-democracy-21">direct democracy <span class="phonetic"></span> <button class="audio-btn" data-term="direct democracy" aria-label="Play pronunciation of direct democracy">&#128266;</button></dt>
+                <dd>a system where citizens vote on laws themselves, in person, instead of choosing representatives to vote for them.</dd>
+                <dt id="gloss-dual-executive">dual executive <span class="phonetic">(DOO-uhl eg-ZEK-yoo-tiv)</span> <button class="audio-btn" data-term="dual executive" aria-label="Play pronunciation of dual executive">&#128266;</button></dt>
+                <dd>a system that splits the top power of government between two equal officials instead of one, so each can check the other.</dd>
+                <dt id="gloss-ostracism-21">ostracism <span class="phonetic">(OSS-truh-siz-um)</span> <button class="audio-btn" data-term="ostracism" aria-label="Play pronunciation of ostracism">&#128266;</button></dt>
+                <dd>a vote by the Assembly to banish a citizen from Athens for ten years, without any criminal charge.</dd>
+                <dt id="gloss-senate">Senate <span class="phonetic">(SEH-nit)</span> <button class="audio-btn" data-term="Senate" aria-label="Play pronunciation of Senate">&#128266;</button></dt>
+                <dd>a body of several hundred former officials in Rome who advised on foreign policy and controlled the treasury, though it had no formal power to pass laws.</dd>
+                <dt id="gloss-tribune">Tribune of the Plebs <span class="phonetic">(TRIB-yoon)</span> <button class="audio-btn" data-term="Tribune of the Plebs" aria-label="Play pronunciation of Tribune of the Plebs">&#128266;</button></dt>
+                <dd>a Roman official elected by the common people (plebeians) with the power to veto acts of government on their behalf.</dd>
+            </dl>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Athens was not the only ancient city to overthrow a tyrant and build something new. In 509 BC, the Romans drove out their last king, a man named Tarquin the Proud. This happened about a generation before Cleisthenes's reforms in Athens. The Romans swore, as a city, never to be ruled by a single man again. What they built instead was called the <strong><em class="gloss-term"><a href="#gloss-respublica" title="Latin for the public thing; the root of the modern word republic">res publica</a></em></strong>, a Latin phrase that means &ldquo;the public thing.&rdquo; That phrase is the root of our modern word &ldquo;republic.&rdquo; Rome's republic would eventually govern the whole Mediterranean world. Two thousand years later, it would give the American founders much of their working vocabulary of government.</p>
+
         <div class="optima-widget ow-reflect">
           <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
           <div class="widget-question">Before you read on: if two officials each held equal power and each could veto the other, would you expect that to make government faster, or slower? (No wrong answer, just check in with yourself.)</div>
@@ -132,15 +170,42 @@
           <button class="widget-reset">Reset</button>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Rome's solution to the problem of executive power was strikingly different from Athens's. In the Athenian Assembly, there was no selection process at all: any citizen who chose to show up on a given day could speak and vote, on a strict first-come basis, and if the crowd exceeded what the meeting place could hold, latecomers simply went home without a vote. Only the Council of Five Hundred, discussed in Week 1, actually rotated citizens through office by lot. The Romans took neither path. They concentrated executive authority in just two officials, called <strong>Consuls</strong>, elected annually. This is the <strong>dual executive</strong> at the center of this week's discussion: two men, holding equal power, each able to veto the other's actions, each serving only one year before stepping down. If a single consul held too much ambition, his colleague could block him. If a year's term bred no lasting loyalty, no consul could entrench himself the way a king could.</p>
+        <div class="callout glossary foreign">
+            <div class="callout-kicker">&#127760; Foreign Language Vocabulary</div>
+            <p class="glossary-note">Reviewing Lesson 1.2's Greek terms, plus new Latin terms for this week.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-auctoritas"><em>auctoritas</em> <span class="phonetic">(owk-TOH-rih-tahs)</span> <button class="audio-btn" data-term="auctoritas" aria-label="Play pronunciation of auctoritas">&#128266;</button></dt>
+                <dd>Latin for the great, informal respect and influence the Roman Senate held, even without formal lawmaking power.</dd>
+                <dt id="gloss-boule-21"><em>Boule</em> <span class="phonetic">(BOO-lay)</span> <button class="audio-btn" data-term="Boule" aria-label="Play pronunciation of Boule">&#128266;</button></dt>
+                <dd>the Greek name for the Council of Five Hundred, which prepared business for the Athenian Assembly.</dd>
+                <dt id="gloss-ekklesia-21"><em>Ekklesia</em> <span class="phonetic">(eh-KLEE-see-uh)</span> <button class="audio-btn" data-term="Ekklesia" aria-label="Play pronunciation of Ekklesia">&#128266;</button></dt>
+                <dd>the Greek name for the Athenian Assembly, where every adult male citizen could speak and vote directly.</dd>
+                <dt id="gloss-ephialtes-21"><em>Ephialtes</em> <span class="phonetic">(ee-fee-AL-teez)</span> <button class="audio-btn" data-term="Ephialtes" aria-label="Play pronunciation of Ephialtes">&#128266;</button></dt>
+                <dd>a reformer who, with Pericles, created a stipend so poorer Athenian citizens could afford to serve on the Council.</dd>
+                <dt id="gloss-intercessio"><em>intercessio</em> <span class="phonetic">(in-tur-SESS-ee-oh)</span> <button class="audio-btn" data-term="intercessio" aria-label="Play pronunciation of intercessio">&#128266;</button></dt>
+                <dd>the Latin word for a tribune's veto, spoken to stop a government action on behalf of the plebeians.</dd>
+                <dt id="gloss-patricians"><em>patricians</em> <span class="phonetic">(puh-TRISH-uhnz)</span> <button class="audio-btn" data-term="patricians" aria-label="Play pronunciation of patricians">&#128266;</button></dt>
+                <dd>the aristocratic, noble families of Rome.</dd>
+                <dt id="gloss-pericles-21"><em>Pericles</em> <span class="phonetic">(PEH-rih-kleez)</span> <button class="audio-btn" data-term="Pericles" aria-label="Play pronunciation of Pericles">&#128266;</button></dt>
+                <dd>a reformer who, with Ephialtes, helped the Athenian Assembly gain the upper hand over the Council.</dd>
+                <dt id="gloss-plebeians"><em>plebeians</em> <span class="phonetic">(pluh-BEE-uhnz)</span> <button class="audio-btn" data-term="plebeians" aria-label="Play pronunciation of plebeians">&#128266;</button></dt>
+                <dd>the common people of Rome, as distinguished from the aristocratic patricians.</dd>
+                <dt id="gloss-pnyx-21"><em>Pnyx</em> <span class="phonetic">(puh-NIKS)</span> <button class="audio-btn" data-term="Pnyx" aria-label="Play pronunciation of Pnyx">&#128266;</button></dt>
+                <dd>the hill where the Athenian Assembly met to debate and vote.</dd>
+                <dt id="gloss-respublica"><em>res publica</em> <span class="phonetic">(rays POO-blih-kah)</span> <button class="audio-btn" data-term="res publica" aria-label="Play pronunciation of res publica">&#128266;</button></dt>
+                <dd>Latin for &ldquo;the public thing&rdquo;; the root of the modern word &ldquo;republic.&rdquo;</dd>
+            </dl>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Rome solved the problem of executive power in a very different way than Athens did. Remember from Week 1 how the Athenian Assembly worked. There was no formal selection process at all. Any citizen who showed up on a given day could speak and vote, on a first-come basis. If the crowd grew too large for the meeting place, latecomers simply went home without a vote that day. Only the Council of Five Hundred, from Week 1, actually rotated citizens through office using a lottery. The Romans took neither of these paths. Instead, they gave all executive power to just two officials, called <strong class="gloss-term"><a href="#gloss-consul" title="one of two officials who held Rome's executive power together, elected for a one-year term">Consuls</a></strong>, elected fresh every single year. This is the <strong class="gloss-term"><a href="#gloss-dual-executive" title="a system that splits the top power of government between two equal officials instead of one">dual executive</a></strong> at the center of this week's discussion. Two men held perfectly equal power. Each one could veto the other's actions. Each one served only one year before stepping down for good. If a single consul grew too ambitious, his colleague could simply block him. A one-year term also builds no lasting personal loyalty among soldiers or officials. Because of this, no consul could hold onto power the way a king once had.</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE SENATE, THE ASSEMBLIES, AND THE TRIBUNE'S VETO</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Consuls did not rule alone. The <strong>Senate</strong>, a body of several hundred former magistrates drawn overwhelmingly from wealthy patrician families, held no formal legislative power but wielded immense influence through its control of finance, foreign policy, and its accumulated prestige (<span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Latin for 'prestige' or 'authority'; the Senate's influence despite lacking formal legislative power">auctoritas</span>). Below the Senate stood several popular <strong>Assemblies</strong>, where Roman citizens voted on laws and elected magistrates, and eventually the office of <strong>Tribune of the Plebs</strong>, won by the common people (<em>plebeians</em>) after a long political struggle with the aristocracy (<em>patricians</em>) known as the Struggle of the Orders. A tribune could veto almost any act of government on behalf of the plebeians: a single word, <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Latin for 'intervention'; the tribune's veto power, invoked with a single word">intercessio</span>, and the action stopped.</p>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice what has already emerged: monarchy's decisiveness (the consuls), aristocracy's experience (the Senate), and democracy's voice (the assemblies and tribunes), each checking the others. The Romans did not design this balance on a single afternoon; it accumulated over centuries of trial, conflict, and negotiated compromise. But by the time the Greek historian Polybius arrived in Rome in the 160s BC, he believed he was looking at something genuinely new: a constitution that combined the three classical forms of government instead of choosing between them. This week's primary sources come from Polybius and from Cicero, writing a century later as the Republic he was praising began to unravel.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Consuls did not rule Rome alone. The <strong class="gloss-term"><a href="#gloss-senate" title="a body of several hundred former officials in Rome who advised on foreign policy and controlled the treasury">Senate</a></strong> was a body of several hundred former officials, mostly from wealthy patrician families. The Senate held no formal power to pass laws on its own. And yet it had huge real influence. It controlled the treasury, directed foreign policy, and had built up great respect over time, a quality the Romans called <strong><em class="gloss-term"><a href="#gloss-auctoritas" title="Latin for the great, informal respect and influence the Roman Senate held">auctoritas</a></em></strong>. Below the Senate stood several popular <strong>Assemblies</strong>, where ordinary Roman citizens voted directly on proposed laws and elected the city's officials. Eventually, the common people, called <strong><em class="gloss-term"><a href="#gloss-plebeians" title="the common people of Rome, as distinguished from the aristocratic patricians">plebeians</a></em></strong>, won a brand-new office for themselves: the <strong class="gloss-term"><a href="#gloss-tribune" title="a Roman official elected by the common people with the power to veto acts of government on their behalf">Tribune of the Plebs</a></strong>. They won this office only after a long political struggle against the aristocracy, called the <strong><em class="gloss-term"><a href="#gloss-patricians" title="the aristocratic, noble families of Rome">patricians</a></em></strong>. Historians now call this struggle the Struggle of the Orders. Once in place, a tribune could veto almost any act of the Roman government on behalf of the plebeians. All it took was a single Latin word, <strong><em class="gloss-term"><a href="#gloss-intercessio" title="the Latin word for a tribune's veto">intercessio</a></em></strong>, spoken at the right moment, and the government's action stopped cold.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Notice what has already come out of this description. The consuls give quick, monarchy-like decisions. The Senate gives long experience, like an aristocracy. The assemblies and tribunes give the people's voice, like a democracy. Each of these three parts checked the other two. The Romans did not sit down and design this careful balance in a single afternoon. It built up slowly, over centuries of trial, conflict, and hard-won compromise. By the time the Greek historian Polybius arrived in Rome in the 160s BC, he believed he was looking at something truly new. Rome's constitution combined all three classical forms of government at once, instead of simply picking one and rejecting the others. This week's primary sources come from Polybius himself, and from Cicero. Cicero was writing about a century later, just as the Republic he admired so much was starting to fall apart around him.</p>
 
         <div class="optima-widget ow-select">
           <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE INSTITUTION TO ITS ROLE</div>
@@ -180,6 +245,13 @@
         </div>
     </div>
 
+    <!-- PART 3 -->
+    <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WHY TWO, NOT ONE</div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">It helps to pause and ask why the Romans distrusted a single, permanent ruler so deeply after Tarquin. Kingship had not just disappointed them once. It had grown steadily worse across several generations. It ended with a ruler remembered specifically for cruelty and abuse of power. Once that memory took hold, the Romans built their whole political culture around avoiding it. This is why the office of consul was doubled instead of left as one seat. A single consul, however carefully chosen, could still slide toward tyranny with no one in place to stop him early. Two consuls, each holding an equal veto over the other, made that slide much harder to pull off. Notice, too, that the Romans still wanted a real executive. They wanted someone able to command an army and make fast decisions in a crisis. They did not simply get rid of strong leadership altogether. Instead, they split it in two and gave it a strict time limit. This is a pattern worth remembering. You will see American constitutional design wrestle with this very same tension centuries later. How do you get the quick decisions a single leader can provide, without bringing back the very tyranny you were trying to escape in the first place?</p>
+    </div>
+
     <!-- What You'll Do Next -->
     <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
@@ -194,7 +266,7 @@
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
                 <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 1 &amp; Critical Questions 2.1</strong> (Canvas)</div>
-                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Cicero's <em>De Re Publica</em>, Book I, on what actually makes a group of people a "commonwealth."</div>
+                <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Cicero's <em>De Re Publica</em>, Book I, on what actually makes a group of people a &ldquo;commonwealth.&rdquo;</div>
             </div>
         </div>
     </div>
@@ -210,7 +282,7 @@
 <!-- ===== FOOTER ===== -->
 <div style="background: #0E1C42; border-top: 3px solid #55C8E8; padding: 18px 34px; text-align: center;">
     <div style="font-size: 18px; color: #ffffff; margin-bottom: 6px;"><span style="color: #55c8e8;">Optima Academy Online</span> &middot; M/J CIVICS &middot; Quarter 1 &middot; Student Lesson Page</div>
-    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.1 &middot; From Kings to Consuls: The Founding of the Republic</div>
+    <div style="font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 4px;">Lesson 2.1 &middot; From Kings to Consuls, The Founding of the Republic</div>
     <div style="font-size: 12px; color: rgba(255,255,255,0.4);">&copy; Optima Academy Online &middot; An Education Experience Company</div>
 </div>
 
@@ -220,6 +292,15 @@
 <script>
 (function () {
   document.addEventListener('click', function (e) {
+    var audioBtn = e.target.closest('.audio-btn');
+    if (audioBtn) {
+      if ('speechSynthesis' in window) {
+        var utter = new SpeechSynthesisUtterance(audioBtn.dataset.term || '');
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utter);
+      }
+      return;
+    }
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');

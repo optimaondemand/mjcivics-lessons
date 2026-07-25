@@ -34,6 +34,24 @@
     .ow-flip.flipped .ow-flip-front { display: none; }
     .ow-flip.flipped .ow-flip-back { display: block; }
     .ow-flip + .ow-flip { margin-top: 12px; }
+
+    /* ===== VOCABULARY GLOSSARY (byte-consistent across this site) ===== */
+    .callout { border-radius: 6px; padding: 14px 20px; margin: 14px 0; }
+    .callout .callout-kicker { font-size: 12px; font-weight: bold; margin-bottom: 8px; letter-spacing: 0.4px; }
+    .callout.glossary { background: #EEF1F8; border-left: 5px solid #0E1C42; }
+    .callout.glossary .callout-kicker { color: #0E1C42; }
+    .callout.glossary.foreign { background: #F3EEFB; border-left: 5px solid #7B3FA0; }
+    .callout.glossary.foreign .callout-kicker { color: #5B2E7E; }
+    .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
+    dl.glossary-list { margin: 0; padding: 0; }
+    dl.glossary-list dt { font-weight: bold; color: #0E1C42; font-size: 16px; margin-top: 10px; }
+    dl.glossary-list dt:first-child { margin-top: 0; }
+    dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
+    dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
+    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss-term { color: #0E1C42; }
+    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
+    .wrapper-pointer { font-size: 14px; color: #0E1C42; background: #EEF1F8; border-left: 4px solid #6b7a99; border-radius: 4px; padding: 10px 14px; margin: 16px 0 0; }
 </style>
 </head>
 <body>
@@ -86,7 +104,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128214; TODAY'S FOCUS</div>
         <div style="font-size: 20px; color: #0e1c42; font-style: italic; margin-bottom: 10px;">Every one-man, few-men, or many-men government has a good version and a corrupt twin. What made Rome different?</div>
-        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Polybius was not Roman by birth. He was a Greek statesman brought to Rome as a hostage after his home region was conquered, and it was precisely his outsider's eye that made his analysis of Rome so valuable. Having grown up steeped in Greek political theory, Polybius did not simply sort governments into three neutral types. Each of the three basic forms, rule by one, rule by the few, and rule by the many, came in a good version and a corrupt version, and the difference between them was not who ruled but for whose benefit they ruled. Monarchy, kingship exercised for the common good, decays into tyranny, the same one-man rule turned toward the ruler's own advantage. Aristocracy, rule by the best exercised for the common good, decays into oligarchy, rule by the few turned toward their own advantage. Democracy, rule by the many exercised for the common good, decays into what Polybius called <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Greek for 'mob rule'; Polybius's term for democracy's corrupt twin">ochlocracy</span>, mob rule, the same popular power turned into unrestrained self-interest. Polybius noticed that Rome did not fit neatly into any single one of these six categories. It seemed to combine all three <em>good</em> forms at once, and, just as important, to resist sliding into any of the three corrupt ones.</div>
+        <div style="font-size: 18px; color: #1a2340; line-height: 1.65;">Polybius was not Roman by birth. He was a Greek statesman brought to Rome as a hostage after his home region was conquered. It was precisely his outsider's eye that made his analysis of Rome so valuable.</div>
     </div>
 
     <!-- Objectives -->
@@ -121,7 +139,65 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; WHERE EACH GOOD FORM LIVED IN ROME</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In Book 6 of his <em>Histories</em>, Polybius laid out exactly where he saw each good element at work. The Consuls, he argued, supplied the monarchic element: they commanded armies, presided over the state, and controlled the machinery of government in the field, functioning like kings within their sphere. The Senate supplied the aristocratic element, in the good sense Polybius intended: it managed the treasury, directed foreign policy, and its members' accumulated experience gave its judgments enormous weight, even without formal legal compulsion, exercised for Rome's benefit rather than the Senate's own. The popular Assemblies and the tribunes supplied the democratic element: they could ratify or reject laws, elect magistrates, and, through the tribunes' veto, block the Senate or a consul outright.</p>
+        <div class="callout glossary">
+            <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
+            <p class="glossary-note">Reviewing four terms from Lesson 2.1, plus Polybius's five forms of government.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-aristocracy-22">Aristocracy <span class="phonetic">(air-ih-STOK-ruh-see)</span> <button class="audio-btn" data-term="Aristocracy" aria-label="Play pronunciation of Aristocracy">&#128266;</button></dt>
+                <dd>rule by the best citizens, used for the common good, in Polybius's framework.</dd>
+                <dt id="gloss-consul-22">Consul <span class="phonetic">(KON-suhl)</span> <button class="audio-btn" data-term="Consul" aria-label="Play pronunciation of Consul">&#128266;</button></dt>
+                <dd>one of two officials who held Rome's executive power together, elected for a one-year term.</dd>
+                <dt id="gloss-democracy">Democracy <span class="phonetic">(dih-MOK-ruh-see)</span> <button class="audio-btn" data-term="Democracy" aria-label="Play pronunciation of Democracy">&#128266;</button></dt>
+                <dd>rule by the many, used for the common good, in Polybius's framework.</dd>
+                <dt id="gloss-dual-executive-22">dual executive <span class="phonetic">(DOO-uhl eg-ZEK-yoo-tiv)</span> <button class="audio-btn" data-term="dual executive" aria-label="Play pronunciation of dual executive">&#128266;</button></dt>
+                <dd>a system that splits the top power of government between two equal officials instead of one.</dd>
+                <dt id="gloss-monarchy">Monarchy <span class="phonetic">(MON-ar-kee)</span> <button class="audio-btn" data-term="Monarchy" aria-label="Play pronunciation of Monarchy">&#128266;</button></dt>
+                <dd>kingship used for the common good of everyone, in Polybius's framework.</dd>
+                <dt id="gloss-oligarchy">Oligarchy <span class="phonetic">(OL-ih-gar-kee)</span> <button class="audio-btn" data-term="Oligarchy" aria-label="Play pronunciation of Oligarchy">&#128266;</button></dt>
+                <dd>aristocracy corrupted so a few rulers serve only their own selfish gain.</dd>
+                <dt id="gloss-senate-22">Senate <span class="phonetic">(SEH-nit)</span> <button class="audio-btn" data-term="Senate" aria-label="Play pronunciation of Senate">&#128266;</button></dt>
+                <dd>a body of several hundred former officials in Rome who advised on foreign policy and controlled the treasury.</dd>
+                <dt id="gloss-tribune-22">Tribune of the Plebs <span class="phonetic">(TRIB-yoon)</span> <button class="audio-btn" data-term="Tribune of the Plebs" aria-label="Play pronunciation of Tribune of the Plebs">&#128266;</button></dt>
+                <dd>a Roman official elected by the common people with the power to veto acts of government on their behalf.</dd>
+                <dt id="gloss-tyranny">Tyranny <span class="phonetic">(TEER-uh-nee)</span> <button class="audio-btn" data-term="Tyranny" aria-label="Play pronunciation of Tyranny">&#128266;</button></dt>
+                <dd>monarchy corrupted so a one-man ruler serves only his own private gain.</dd>
+            </dl>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Polybius was not Roman by birth. He was a Greek statesman who was brought to Rome as a hostage, after Roman armies conquered his home region. His outsider's eye is exactly what made his analysis of Rome so valuable to later generations. Polybius grew up surrounded by Greek political theory. He did not just sort governments into three neutral types and stop there. He argued that each of the three basic forms of government, rule by one person, rule by a few people, and rule by the many, came in a good version and a corrupt version. The real difference between the good version and the corrupt version was not about who ruled. It was about who they ruled for. <strong class="gloss-term"><a href="#gloss-monarchy" title="kingship used for the common good of everyone, in Polybius's framework">Monarchy</a></strong> meant kingship used for the common good of everyone. Left unchecked, monarchy decays into <strong class="gloss-term"><a href="#gloss-tyranny" title="monarchy corrupted so a one-man ruler serves only his own private gain">tyranny</a></strong>, the same one-man rule turned toward the ruler's own private gain. <strong class="gloss-term"><a href="#gloss-aristocracy-22" title="rule by the best citizens, used for the common good, in Polybius's framework">Aristocracy</a></strong> meant rule by the best citizens, used for the common good. Left unchecked, aristocracy decays into <strong class="gloss-term"><a href="#gloss-oligarchy" title="aristocracy corrupted so a few rulers serve only their own selfish gain">oligarchy</a></strong>, rule by a few people turned toward their own selfish gain. <strong class="gloss-term"><a href="#gloss-democracy" title="rule by the many, used for the common good, in Polybius's framework">Democracy</a></strong> meant rule by the many, used for the common good. Left unchecked, democracy decays into what Polybius called <strong><em class="gloss-term"><a href="#gloss-ochlocracy" title="Polybius's term for mob rule, the corrupt form democracy decays into">ochlocracy</a></em></strong>, or mob rule, the same popular power turned into short-sighted self-interest. Polybius noticed something striking about Rome. It did not fit neatly into any one of these six categories. It seemed to combine all three good forms at the very same time. Just as important, it seemed to resist sliding into any of the three corrupt ones.</p>
+
+        <div class="callout glossary foreign">
+            <div class="callout-kicker">&#127760; Foreign Language Vocabulary</div>
+            <p class="glossary-note">Reviewing Lesson 2.1's Latin terms, plus new Greek terms for Polybius and Aristotle's ideas.</p>
+            <dl class="glossary-list">
+                <dt id="gloss-anacyclosis"><em>anacyclosis</em> <span class="phonetic">(an-uh-sy-KLOH-sis)</span> <button class="audio-btn" data-term="anacyclosis" aria-label="Play pronunciation of anacyclosis">&#128266;</button></dt>
+                <dd>Polybius's Greek name for the repeating cycle of governments decaying from one form into the next.</dd>
+                <dt id="gloss-aristotle"><em>Aristotle</em> <span class="phonetic">(AIR-ih-stot-uhl)</span> <button class="audio-btn" data-term="Aristotle" aria-label="Play pronunciation of Aristotle">&#128266;</button></dt>
+                <dd>a Greek philosopher who, about 150 years before Polybius, named the idea of a constitution that blends more than one form of government.</dd>
+                <dt id="gloss-auctoritas-22"><em>auctoritas</em> <span class="phonetic">(owk-TOH-rih-tahs)</span> <button class="audio-btn" data-term="auctoritas" aria-label="Play pronunciation of auctoritas">&#128266;</button></dt>
+                <dd>Latin for the great, informal respect and influence the Roman Senate held.</dd>
+                <dt id="gloss-ephors"><em>ephors</em> <span class="phonetic">(EF-orz)</span> <button class="audio-btn" data-term="ephors" aria-label="Play pronunciation of ephors">&#128266;</button></dt>
+                <dd>elected overseers in Sparta who held even the two kings accountable to the law.</dd>
+                <dt id="gloss-gerousia"><em>Gerousia</em> <span class="phonetic">(jeh-ROO-see-uh)</span> <button class="audio-btn" data-term="Gerousia" aria-label="Play pronunciation of Gerousia">&#128266;</button></dt>
+                <dd>the small council of elders that supplied Sparta's aristocracy element.</dd>
+                <dt id="gloss-intercessio-22"><em>intercessio</em> <span class="phonetic">(in-tur-SESS-ee-oh)</span> <button class="audio-btn" data-term="intercessio" aria-label="Play pronunciation of intercessio">&#128266;</button></dt>
+                <dd>the Latin word for a tribune's veto.</dd>
+                <dt id="gloss-ochlocracy"><em>ochlocracy</em> <span class="phonetic">(ok-LOK-ruh-see)</span> <button class="audio-btn" data-term="ochlocracy" aria-label="Play pronunciation of ochlocracy">&#128266;</button></dt>
+                <dd>Polybius's term for mob rule, the corrupt form democracy decays into.</dd>
+                <dt id="gloss-patricians-22"><em>patricians</em> <span class="phonetic">(puh-TRISH-uhnz)</span> <button class="audio-btn" data-term="patricians" aria-label="Play pronunciation of patricians">&#128266;</button></dt>
+                <dd>the aristocratic, noble families of Rome.</dd>
+                <dt id="gloss-plebeians-22"><em>plebeians</em> <span class="phonetic">(pluh-BEE-uhnz)</span> <button class="audio-btn" data-term="plebeians" aria-label="Play pronunciation of plebeians">&#128266;</button></dt>
+                <dd>the common people of Rome, as distinguished from the aristocratic patricians.</dd>
+                <dt id="gloss-politeia"><em>politeia</em> <span class="phonetic">(poh-lih-TAY-uh)</span> <button class="audio-btn" data-term="politeia" aria-label="Play pronunciation of politeia">&#128266;</button></dt>
+                <dd>Aristotle's Greek term for a &ldquo;mixed regime&rdquo; that blends oligarchy and democracy together.</dd>
+                <dt id="gloss-polybius"><em>Polybius</em> <span class="phonetic">(poh-LIB-ee-us)</span> <button class="audio-btn" data-term="Polybius" aria-label="Play pronunciation of Polybius">&#128266;</button></dt>
+                <dd>a Greek statesman brought to Rome as a hostage, who argued Rome's constitution combined all three good forms of government at once.</dd>
+                <dt id="gloss-respublica-22"><em>res publica</em> <span class="phonetic">(rays POO-blih-kah)</span> <button class="audio-btn" data-term="res publica" aria-label="Play pronunciation of res publica">&#128266;</button></dt>
+                <dd>Latin for &ldquo;the public thing&rdquo;; the root of the modern word &ldquo;republic.&rdquo;</dd>
+            </dl>
+        </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">In Book 6 of his Histories, Polybius explained exactly where he believed each good element was at work inside the Roman system. The Consuls, he argued, supplied the monarchy element. They commanded Rome's armies, led the state during emergencies, and ran the day-to-day business of government, much like kings within their own limited area of power. The Senate supplied the aristocracy element, in the good sense Polybius meant by that word. It managed the public treasury and directed foreign policy. The Senate's members had years of experience, and this gave its judgments great practical weight, even though it had no formal legal power to force obedience. It acted for Rome's benefit, not for its own private gain. The popular Assemblies and the tribunes together supplied the democracy element. They could approve or reject proposed laws, elect the city's officials, and, through the tribunes' veto power, block the Senate or a consul outright whenever the common people's interests were threatened.</p>
     </div>
 
     <!-- PART 2 -->
@@ -129,10 +205,10 @@
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; INTERDEPENDENCE AND THE WHEEL OF CONSTITUTIONS</div>
 
         <h3 style="font-size: 20px; color: #0e1c42; margin: 0 0 8px 0;">The Genius of Interdependence</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The genius of the system, Polybius argued, was not any one part but the way each part needed the others and could obstruct the others. A consul needed the Senate's cooperation to fund his campaigns and the people's votes to be elected in the first place. The Senate needed the consuls to execute its foreign policy and could be checked by a tribune's veto. The people needed the Senate's experienced management of complex affairs and the consuls' military leadership. No single part could dominate the whole for long, because each part depended on the others to function at all.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The true genius of the system, Polybius argued, was not found in any one part working alone. It was found in the way each part needed the others' help, while also being able to block the others if needed. A consul needed the Senate's help to fund his military campaigns, and he needed the ordinary people's votes just to be elected in the first place. The Senate, in turn, needed the consuls to actually carry out its foreign policy decisions, and it could always be checked by a single tribune's veto if it went too far. The common people needed the Senate's experience in managing complicated public affairs, and they needed the consuls' skilled military leadership in wartime. Because of this constant, shared dependence, no single part of the system could take over the whole government for very long. Every part depended on the others just to function at all.</p>
 
         <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Anacyclosis: The Wheel of Constitutions</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Polybius believed this mixture explained something Greek city-states like Athens had never achieved: stability across generations. Left on its own, he warned, each pure form slides toward its corrupt twin: monarchy toward tyranny, aristocracy toward oligarchy, democracy toward ochlocracy, and from that mob rule a strongman typically emerges to restore monarchy, starting the whole cycle over again. By combining all three good forms at once, each checking the others' capacity to slide into its corrupt twin, Rome had built in resistance to this cycle, what Polybius called <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Greek for the repeating cycle Polybius traced from monarchy through tyranny, aristocracy, oligarchy, democracy, and mob rule">anacyclosis</span>.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Polybius believed this careful mixture explained something Greek city-states like Athens had never quite managed: real stability across many generations. Left entirely on its own, he warned, each pure form of government slides steadily toward its corrupt twin. Monarchy slides toward tyranny. Aristocracy slides toward oligarchy. Democracy slides toward mob rule, which Polybius called <strong><em class="gloss-term"><a href="#gloss-ochlocracy" title="Polybius's term for mob rule">ochlocracy</a></em></strong>. Out of that chaotic mob rule, a strongman usually rises up to restore monarchy again, starting the whole discouraging cycle over from the beginning. By combining all three good forms of government at the very same time, with each one checking the others' tendency to slide into its own corrupt twin, Rome had built resistance to this cycle right into its constitution. Polybius gave this repeating cycle its own Greek name: <strong><em class="gloss-term"><a href="#gloss-anacyclosis" title="Polybius's Greek name for the repeating cycle of governments decaying from one form into the next">anacyclosis</a></em></strong>.</p>
 
         <div class="optima-widget">
           <div class="widget-kicker">&#9889; FLIP TO CHECK YOURSELF</div>
@@ -153,7 +229,9 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; ARISTOTLE'S POLITEIA AND THE MADISON CONNECTION</div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Polybius was not the first to notice that a constitution could combine forms rather than choose one. A century and a half earlier, Aristotle had already given this kind of government its own Greek name: <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Sometimes translated 'polity' or 'mixed regime': a constitution that deliberately blends oligarchic and democratic elements">politeia</span>, sometimes translated simply "polity" or "mixed regime," a constitution that deliberately blends oligarchic and democratic elements so that no single class rules alone. Aristotle pointed to Sparta, already centuries old by his own day, as an example: two hereditary kings supplied the monarchic element, a small council of elders (the <em>Gerousia</em>) supplied the aristocratic element, and an assembly of citizen-soldiers supplied the democratic element, with elected overseers called <em>ephors</em> holding even the kings themselves to account. Rome's constitution, when Polybius analyzed it, was doing in practice what Aristotle had already named in theory. When James Madison sat down centuries later to defend the American Constitution's own mixture of a strong executive, an appointed judiciary, and elected legislative chambers, he was working in a tradition that ran from Aristotle's Sparta through Polybius's Rome.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Polybius was not actually the first thinker to notice that a constitution could combine several forms of government instead of just choosing one and rejecting the rest. About one hundred fifty years earlier, the philosopher <strong><em class="gloss-term"><a href="#gloss-aristotle" title="a Greek philosopher who named the idea of a constitution that blends more than one form of government">Aristotle</a></em></strong> had already given this kind of government its own Greek name: <strong><em class="gloss-term"><a href="#gloss-politeia" title="Aristotle's Greek term for a mixed regime that blends oligarchy and democracy together">politeia</a></em></strong>, a word sometimes translated as &ldquo;polity&rdquo; or &ldquo;mixed regime.&rdquo; Aristotle used this term for any constitution that deliberately blends oligarchy and democracy together, so that no single social class ever rules entirely alone. Aristotle pointed to Sparta, already centuries old even in his own day, as a working example of this kind of mixture. In Sparta, two kings, whose sons inherited the throne, supplied the monarchy element. A small council of elders, called the <strong><em class="gloss-term"><a href="#gloss-gerousia" title="the small council of elders that supplied Sparta's aristocracy element">Gerousia</a></em></strong>, supplied the aristocracy element. An assembly made up of ordinary citizen-soldiers supplied the democracy element. On top of all this, elected overseers called <strong><em class="gloss-term"><a href="#gloss-ephors" title="elected overseers in Sparta who held even the two kings accountable to the law">ephors</a></em></strong> held even the two kings accountable to the law. Centuries later, when Polybius carefully studied Rome's constitution, he was seeing in real life what Aristotle had already described in theory. Many centuries after both men, James Madison sat down to defend the American Constitution's own mixture of a strong executive, an appointed judiciary, and elected legislative chambers. He was working within a long tradition. That tradition ran from Aristotle's Sparta, through Polybius's Rome, and finally into Madison's own Philadelphia.</p>
+
+        <p class="wrapper-pointer">&#128203; Up next: the ungraded <strong>Module 1 Outro Wrapper</strong> in Canvas (~2 minutes) before moving into Module 2.</p>
     </div>
 
     <!-- What You'll Do Next -->
@@ -178,7 +256,7 @@
     <!-- Wrap-up -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
-        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Rome combined all three good forms of government at once, resisting the cycle Polybius called anacyclosis, in a tradition of "mixed" constitutions that ran from Aristotle's Sparta through Polybius's Rome. Keep this idea of blending forms in mind: when you reach the American Constitutional Convention later this quarter, you will see Madison and the framers working in that same tradition.</p>
+        <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Rome combined all three good forms of government at once, resisting the cycle Polybius called anacyclosis, in a tradition of &ldquo;mixed&rdquo; constitutions that ran from Aristotle's Sparta through Polybius's Rome. Keep this idea of blending forms in mind: when you reach the American Constitutional Convention later this quarter, you will see Madison and the framers working in that same tradition.</p>
     </div>
 
 </div>
@@ -196,6 +274,15 @@
 <script>
 (function () {
   document.addEventListener('click', function (e) {
+    var audioBtn = e.target.closest('.audio-btn');
+    if (audioBtn) {
+      if ('speechSynthesis' in window) {
+        var utter = new SpeechSynthesisUtterance(audioBtn.dataset.term || '');
+        window.speechSynthesis.cancel();
+        window.speechSynthesis.speak(utter);
+      }
+      return;
+    }
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');
