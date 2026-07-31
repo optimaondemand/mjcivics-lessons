@@ -47,7 +47,12 @@
     dl.glossary-list dt:first-child { margin-top: 0; }
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
-    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+        .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
     .gloss-term { color: #0E1C42; }
     .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
@@ -135,24 +140,24 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; PUBLIUS ANSWERS THE ANTI-FEDERALISTS</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; PUBLIUS ANSWERS THE ANTI-FEDERALISTS</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing one term from Lesson 6.2, plus new terms for the ratification debate.</p>
             <dl class="glossary-list">
-                <dt id="gloss-anti-federalists">Anti-Federalists <span class="phonetic">(AN-ty-fed-er-uh-lists)</span> <button class="audio-btn" data-term="Anti-Federalists" aria-label="Play pronunciation of Anti-Federalists">&#128266;</button></dt>
+                <dt id="gloss-anti-federalists">Anti-Federalists <span class="phonetic">(AN-ty-fed-er-uh-lists)</span> <button class="gloss-audio" data-term="Anti-Federalists" aria-label="Play pronunciation of Anti-Federalists" onclick="speakGloss(event,'Anti-Federalists')">&#128266;</button></dt>
                 <dd>critics of the proposed Constitution who warned the new government was too strong and too light on protections for individual rights.</dd>
-                <dt id="gloss-factions-71">factions <span class="phonetic">(FAK-shunz)</span> <button class="audio-btn" data-term="factions" aria-label="Play pronunciation of factions">&#128266;</button></dt>
+                <dt id="gloss-factions-71">factions <span class="phonetic">(FAK-shunz)</span> <button class="gloss-audio" data-term="factions" aria-label="Play pronunciation of factions" onclick="speakGloss(event,'factions')">&#128266;</button></dt>
                 <dd>groups of citizens with shared interests or opinions; Madison argued a good constitution should survive their conflict, not try to eliminate them.</dd>
-                <dt id="gloss-federalist-papers">Federalist Papers <span class="phonetic">(FED-er-uh-list PAY-perz)</span> <button class="audio-btn" data-term="Federalist Papers" aria-label="Play pronunciation of Federalist Papers">&#128266;</button></dt>
+                <dt id="gloss-federalist-papers">Federalist Papers <span class="phonetic">(FED-er-uh-list PAY-perz)</span> <button class="gloss-audio" data-term="Federalist Papers" aria-label="Play pronunciation of Federalist Papers" onclick="speakGloss(event,'Federalist Papers')">&#128266;</button></dt>
                 <dd>85 essays written by Hamilton, Madison, and Jay under the shared name &ldquo;Publius,&rdquo; arguing for the Constitution's ratification.</dd>
-                <dt id="gloss-federalists">Federalists <span class="phonetic">(FED-er-uh-lists)</span> <button class="audio-btn" data-term="Federalists" aria-label="Play pronunciation of Federalists">&#128266;</button></dt>
+                <dt id="gloss-federalists">Federalists <span class="phonetic">(FED-er-uh-lists)</span> <button class="gloss-audio" data-term="Federalists" aria-label="Play pronunciation of Federalists" onclick="speakGloss(event,'Federalists')">&#128266;</button></dt>
                 <dd>supporters of the proposed Constitution who argued in public for its ratification.</dd>
             </dl>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Critics who called themselves <strong class="gloss-term"><a href="#gloss-anti-federalists" title="critics of the proposed Constitution who warned the new government was too strong">Anti-Federalists</a></strong> warned that the new government was too strong and too distant from ordinary citizens. They also worried it was dangerously light on explicit protections for individual rights, a fear that would eventually produce the Bill of Rights you will study in Module 4. Supporters of the new Constitution, called the <strong class="gloss-term"><a href="#gloss-federalists" title="supporters of the proposed Constitution who argued in public for its ratification">Federalists</a></strong>, needed to answer these objections in public, and in detail.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Critics who called themselves <span class="gloss" tabindex="0">Anti-Federalists<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Anti-Federalists')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">(AN-ty-fed-er-uh-lists)</span>critics of the proposed Constitution who warned the new government was too strong and too light on protections for individual rights.</span></span> warned that the new government was too strong and too distant from ordinary citizens. They also worried it was dangerously light on explicit protections for individual rights, a fear that would eventually produce the Bill of Rights you will study in Module 4. Supporters of the new Constitution, called the <span class="gloss" tabindex="0">Federalists<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Federalists')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">(FED-er-uh-lists)</span>supporters of the proposed Constitution who argued in public for its ratification.</span></span>, needed to answer these objections in public, and in detail.</p>
 
         <div class="optima-widget">
           <div class="widget-kicker">&#9889; FLASHCARD &middot; CLICK TO FLIP</div>
@@ -164,20 +169,20 @@
           <button class="widget-reset">Reset</button>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Between October 1787 and August 1788, Alexander Hamilton, James Madison, and John Jay published 85 essays under a single shared pen name, &ldquo;<strong><em class="gloss-term"><a href="#gloss-publius" title="the shared pen name Hamilton, Madison, and Jay used to write the Federalist Papers">Publius</a></em></strong>.&rdquo; These essays, collected today as <strong class="gloss-term"><a href="#gloss-federalist-papers" title="85 essays arguing for the Constitution's ratification">The Federalist Papers</a></strong>, argued state by state, clause by clause, for ratification. Madison's contributions include some of the most searching defenses of the Constitution's structure ever written. None is more famous than <strong>Federalist No. 51</strong>. This essay tackles the separation-of-powers problem you studied through Montesquieu back in Week 4, and it asks a harder follow-up question. Separating power on paper is easy enough to write down. But what actually keeps each branch in its own lane once the government is up and running, day after day, year after year?</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Between October 1787 and August 1788, Alexander Hamilton, James Madison, and John Jay published 85 essays under a single shared pen name, &ldquo;<span class="gloss" tabindex="0"><em>Publius</em><button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Publius')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">(POO-blee-us)</span>the shared pen name Hamilton, Madison, and Jay used to write the Federalist Papers, honoring a Roman consul who helped establish popular government after Rome's kings were overthrown.</span></span>.&rdquo; These essays, collected today as <span class="gloss" tabindex="0">The Federalist Papers<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Federalist Papers')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">(FED-er-uh-list PAY-perz)</span>85 essays written by Hamilton, Madison, and Jay under the shared name &ldquo;Publius,&rdquo; arguing for the Constitution's ratification.</span></span>, argued state by state, clause by clause, for ratification. Madison's contributions include some of the most searching defenses of the Constitution's structure ever written. None is more famous than <strong>Federalist No. 51</strong>. This essay tackles the separation-of-powers problem you studied through Montesquieu back in Week 4, and it asks a harder follow-up question. Separating power on paper is easy enough to write down. But what actually keeps each branch in its own lane once the government is up and running, day after day, year after year?</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; A NAME BORROWED FROM ROME</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; A NAME BORROWED FROM ROME</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <div class="callout glossary foreign">
             <div class="callout-kicker">&#127760; Foreign Language Vocabulary</div>
             <p class="glossary-note">Reviewing Machiavelli from Lesson 6.2, plus a new Latin pen name.</p>
             <dl class="glossary-list">
-                <dt id="gloss-machiavelli-71"><em>Machiavelli</em> <span class="phonetic">(mak-ee-uh-VEL-ee)</span> <button class="audio-btn" data-term="Machiavelli" aria-label="Play pronunciation of Machiavelli">&#128266;</button></dt>
+                <dt id="gloss-machiavelli-71"><em>Machiavelli</em> <span class="phonetic">(mak-ee-uh-VEL-ee)</span> <button class="gloss-audio" data-term="Machiavelli" aria-label="Play pronunciation of Machiavelli" onclick="speakGloss(event,'Machiavelli')">&#128266;</button></dt>
                 <dd>an Italian Renaissance writer whose book on Rome argued that conflict between social classes could protect liberty.</dd>
-                <dt id="gloss-publius"><em>Publius</em> <span class="phonetic">(POO-blee-us)</span> <button class="audio-btn" data-term="Publius" aria-label="Play pronunciation of Publius">&#128266;</button></dt>
+                <dt id="gloss-publius"><em>Publius</em> <span class="phonetic">(POO-blee-us)</span> <button class="gloss-audio" data-term="Publius" aria-label="Play pronunciation of Publius" onclick="speakGloss(event,'Publius')">&#128266;</button></dt>
                 <dd>the shared pen name Hamilton, Madison, and Jay used to write the Federalist Papers, honoring a Roman consul who helped establish popular government after Rome's kings were overthrown.</dd>
             </dl>
         </div>
@@ -189,7 +194,7 @@
 
     <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; AMBITION MUST COUNTERACT AMBITION</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 3 &middot; AMBITION MUST COUNTERACT AMBITION</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Madison's answer rejected the comfortable assumption that good character alone would hold the system together. Instead, he argued the Constitution should give each branch both the structural means and the personal motive to resist encroachment, or overreach, by the others. He summarized this in a now-famous phrase: &ldquo;ambition must be made to counteract ambition.&rdquo; This is not cynicism for its own sake. It is a design principle. Rather than hoping officeholders will always be virtuous, you build a system where even self-interested officeholders, each one jealously guarding his own branch's power, end up protecting the separation of powers as a side effect of protecting his own turf.</p>
 
@@ -223,7 +228,7 @@
 
     <!-- PART 4 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; AMBITION COUNTERACTING AMBITION IN PRACTICE</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 4 &middot; AMBITION COUNTERACTING AMBITION IN PRACTICE</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Consider what &ldquo;ambition counteracting ambition&rdquo; looks like in practice. If Congress tried to pass a law giving itself the power to personally arrest and punish someone without a trial, the judicial branch would have both the motive and the constitutional standing to strike that law down as unconstitutional, since courts jealously guard their own role in judging guilt and innocence. If the President tried to spend money Congress had not appropriated, Congress would have both the motive and the power to refuse funding for that program going forward, since the legislature jealously guards its own control over the nation's purse. Neither branch needs to be especially virtuous for this system to work. Each branch simply needs to care about protecting its own authority, and that self-interest does the rest. You have not yet studied the specific powers of Congress, the President, and the federal courts in close detail; that comes in Module 3. But Federalist No. 51 gives you the theory behind that structure before you meet its details. Every specific check you will encounter there, the presidential veto, Senate confirmation of judges, judicial review, congressional oversight, exists because Madison and his fellow framers built &ldquo;ambition counteracting ambition&rdquo; into the Constitution's actual text, not just into their essays defending it.</p>
     </div>
@@ -234,14 +239,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reading Quiz 7.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="https://optimaoaoteam.instructure.com/courses/35/quizzes/297" target="_blank" rel="noopener" style="color: #0e1c42;">Reading Quiz 7.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Five inference questions on the Anti-Federalists, Publius, and Federalist No. 51.</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 1 &amp; Critical Questions 7.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-1.html" style="color: #0e1c42;">Primary Source 1</a> &amp; <a href="https://optimaoaoteam.instructure.com/courses/35/assignments/563" target="_blank" rel="noopener" style="color: #0e1c42;">Critical Questions 7.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Madison's Federalist No. 51, the &ldquo;if men were angels&rdquo; passage in full.</div>
             </div>
         </div>
@@ -265,7 +270,15 @@
 </div>
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
-<script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
     var audioBtn = e.target.closest('.audio-btn');

@@ -47,7 +47,12 @@
     dl.glossary-list dt:first-child { margin-top: 0; }
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
-    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+        .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
     .gloss-term { color: #0E1C42; }
     .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
@@ -135,19 +140,19 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A VOTE SWEPT UP IN ENTHUSIASM</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; A VOTE SWEPT UP IN ENTHUSIASM</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">5 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing three terms from Lesson 7.1, plus one new term for this week.</p>
             <dl class="glossary-list">
-                <dt id="gloss-anti-federalists-72">Anti-Federalists <span class="phonetic">(AN-ty-fed-er-uh-lists)</span> <button class="audio-btn" data-term="Anti-Federalists" aria-label="Play pronunciation of Anti-Federalists">&#128266;</button></dt>
+                <dt id="gloss-anti-federalists-72">Anti-Federalists <span class="phonetic">(AN-ty-fed-er-uh-lists)</span> <button class="gloss-audio" data-term="Anti-Federalists" aria-label="Play pronunciation of Anti-Federalists" onclick="speakGloss(event,'Anti-Federalists')">&#128266;</button></dt>
                 <dd>critics of the proposed Constitution who warned the new government was too strong and too light on protections for individual rights.</dd>
-                <dt id="gloss-federalism">federalism <span class="phonetic">(FED-er-uh-liz-um)</span> <button class="audio-btn" data-term="federalism" aria-label="Play pronunciation of federalism">&#128266;</button></dt>
+                <dt id="gloss-federalism">federalism <span class="phonetic">(FED-er-uh-liz-um)</span> <button class="gloss-audio" data-term="federalism" aria-label="Play pronunciation of federalism" onclick="speakGloss(event,'federalism')">&#128266;</button></dt>
                 <dd>shared and divided authority between the people, the states, and the national government.</dd>
-                <dt id="gloss-federalist-papers-72">Federalist Papers <span class="phonetic">(FED-er-uh-list PAY-perz)</span> <button class="audio-btn" data-term="Federalist Papers" aria-label="Play pronunciation of Federalist Papers">&#128266;</button></dt>
+                <dt id="gloss-federalist-papers-72">Federalist Papers <span class="phonetic">(FED-er-uh-list PAY-perz)</span> <button class="gloss-audio" data-term="Federalist Papers" aria-label="Play pronunciation of Federalist Papers" onclick="speakGloss(event,'Federalist Papers')">&#128266;</button></dt>
                 <dd>85 essays written by Hamilton, Madison, and Jay under the shared name &ldquo;Publius,&rdquo; arguing for the Constitution's ratification.</dd>
-                <dt id="gloss-federalists-72">Federalists <span class="phonetic">(FED-er-uh-lists)</span> <button class="audio-btn" data-term="Federalists" aria-label="Play pronunciation of Federalists">&#128266;</button></dt>
+                <dt id="gloss-federalists-72">Federalists <span class="phonetic">(FED-er-uh-lists)</span> <button class="gloss-audio" data-term="Federalists" aria-label="Play pronunciation of Federalists" onclick="speakGloss(event,'Federalists')">&#128266;</button></dt>
                 <dd>supporters of the proposed Constitution who argued in public for its ratification.</dd>
             </dl>
         </div>
@@ -158,16 +163,16 @@
             <div class="callout-kicker">&#127760; Foreign Language Vocabulary</div>
             <p class="glossary-note">Reviewing Publius from Lesson 7.1, plus two Greek names for this week.</p>
             <dl class="glossary-list">
-                <dt id="gloss-alcibiades"><em>Alcibiades</em> <span class="phonetic">(al-suh-BY-uh-deez)</span> <button class="audio-btn" data-term="Alcibiades" aria-label="Play pronunciation of Alcibiades">&#128266;</button></dt>
+                <dt id="gloss-alcibiades"><em>Alcibiades</em> <span class="phonetic">(al-suh-BY-uh-deez)</span> <button class="gloss-audio" data-term="Alcibiades" aria-label="Play pronunciation of Alcibiades" onclick="speakGloss(event,'Alcibiades')">&#128266;</button></dt>
                 <dd>the charismatic Athenian general who persuaded the Assembly to approve the disastrous Sicilian expedition.</dd>
-                <dt id="gloss-publius-72"><em>Publius</em> <span class="phonetic">(POO-blee-us)</span> <button class="audio-btn" data-term="Publius" aria-label="Play pronunciation of Publius">&#128266;</button></dt>
+                <dt id="gloss-publius-72"><em>Publius</em> <span class="phonetic">(POO-blee-us)</span> <button class="gloss-audio" data-term="Publius" aria-label="Play pronunciation of Publius" onclick="speakGloss(event,'Publius')">&#128266;</button></dt>
                 <dd>the shared pen name Hamilton, Madison, and Jay used to write the Federalist Papers.</dd>
-                <dt id="gloss-thucydides"><em>Thucydides</em> <span class="phonetic">(thoo-SID-ih-deez)</span> <button class="audio-btn" data-term="Thucydides" aria-label="Play pronunciation of Thucydides">&#128266;</button></dt>
+                <dt id="gloss-thucydides"><em>Thucydides</em> <span class="phonetic">(thoo-SID-ih-deez)</span> <button class="gloss-audio" data-term="Thucydides" aria-label="Play pronunciation of Thucydides" onclick="speakGloss(event,'Thucydides')">&#128266;</button></dt>
                 <dd>the Greek historian who recorded the Athenian Assembly's disastrous vote to invade Sicily.</dd>
             </dl>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The historian <strong class="gloss-term"><a href="#gloss-thucydides" title="the Greek historian who recorded the Athenian Assembly's disastrous vote to invade Sicily">Thucydides</a></strong>, in his <em>History of the Peloponnesian War</em>, recorded exactly how this vote unfolded. The charismatic and ambitious Athenian general <strong class="gloss-term"><a href="#gloss-alcibiades" title="the charismatic Athenian general who persuaded the Assembly to approve the Sicilian expedition">Alcibiades</a></strong> persuaded the Assembly to approve the expedition. He did this against the cautious warnings of an older statesman named Nicias, who argued the campaign was reckless and poorly justified. Nicias's specific warnings, which the Assembly ignored, are worth naming. He pointed out that Sicily lay a long distance from Athens, across open sea, making reinforcement and resupply difficult. He noted that Athens knew little about the actual strength of the Sicilian cities it planned to conquer. And he warned that committing so many ships and soldiers so far from home would leave Athens dangerously exposed at home, where Sparta and her allies remained a constant threat nearby. Every one of these specific warnings turned out to be justified by what actually happened.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The historian <span class="gloss" tabindex="0">Thucydides<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Thucydides')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">(thoo-SID-ih-deez)</span>the Greek historian who recorded the Athenian Assembly's disastrous vote to invade Sicily.</span></span>, in his <em>History of the Peloponnesian War</em>, recorded exactly how this vote unfolded. The charismatic and ambitious Athenian general <span class="gloss" tabindex="0">Alcibiades<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Alcibiades')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">(al-suh-BY-uh-deez)</span>the charismatic Athenian general who persuaded the Assembly to approve the disastrous Sicilian expedition.</span></span> persuaded the Assembly to approve the expedition. He did this against the cautious warnings of an older statesman named Nicias, who argued the campaign was reckless and poorly justified. Nicias's specific warnings, which the Assembly ignored, are worth naming. He pointed out that Sicily lay a long distance from Athens, across open sea, making reinforcement and resupply difficult. He noted that Athens knew little about the actual strength of the Sicilian cities it planned to conquer. And he warned that committing so many ships and soldiers so far from home would leave Athens dangerously exposed at home, where Sparta and her allies remained a constant threat nearby. Every one of these specific warnings turned out to be justified by what actually happened.</p>
 
         <div class="optima-widget ow-reflect">
           <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
@@ -186,9 +191,9 @@
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE LESSON THE FRAMERS TOOK FROM IT</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; THE LESSON THE FRAMERS TOOK FROM IT</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">5 min</span></div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is exactly the danger Madison and his fellow Federalists worried a &ldquo;pure&rdquo; democracy could not avoid. A single persuasive speaker, a wave of momentary popular enthusiasm, and no structural delay or check standing between an emotional majority and an irreversible decision. This is why the Constitution's design deliberately avoids direct popular votes on most matters. Instead, it layers decisions through elected representatives, a two-chamber Congress, and a separate executive. This layered system is a form of <strong class="gloss-term"><a href="#gloss-federalism" title="shared and divided authority between the people, the states, and the national government">federalism</a></strong>: shared and divided authority between the people, the states, and the national government, a topic you will read more about in the Federalist Papers next week. Thucydides gave the framers a two-thousand-year-old case study in exactly what unchecked popular passion, unslowed by any structural delay, can do to a republic.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is exactly the danger Madison and his fellow Federalists worried a &ldquo;pure&rdquo; democracy could not avoid. A single persuasive speaker, a wave of momentary popular enthusiasm, and no structural delay or check standing between an emotional majority and an irreversible decision. This is why the Constitution's design deliberately avoids direct popular votes on most matters. Instead, it layers decisions through elected representatives, a two-chamber Congress, and a separate executive. This layered system is a form of <span class="gloss" tabindex="0">federalism<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'federalism')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">(FED-er-uh-liz-um)</span>shared and divided authority between the people, the states, and the national government.</span></span>: shared and divided authority between the people, the states, and the national government, a topic you will read more about in the Federalist Papers next week. Thucydides gave the framers a two-thousand-year-old case study in exactly what unchecked popular passion, unslowed by any structural delay, can do to a republic.</p>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It helps to spell out exactly what &ldquo;unmediated&rdquo; democracy means in this comparison. In Athens, a single vote on a single afternoon, taken by whoever happened to be in the crowd that day, could commit the entire city to an irreversible war. There was no second body to review the decision, no cooling-off period, and no official whose job was to weigh the decision more slowly and carefully before it took effect. The American system builds in exactly these kinds of delays on purpose. A bill must pass both a House and a Senate elected in different ways, on different cycles, before it can even reach the President's desk, and the President can then veto it outright. None of these steps guarantees a wise decision. But together, they make an Athens-style stampede toward a single afternoon's enthusiasm far less likely.</p>
 
@@ -228,14 +233,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 2</strong> (GitHub lesson page)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-2.html" style="color: #0e1c42;">Primary Source 2</a></strong> (GitHub lesson page)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Thucydides, <em>History of the Peloponnesian War</em>, Book VI, on the Assembly's &ldquo;excessive enthusiasm.&rdquo;</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source Report 7</strong> (Canvas, Tier 3)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="https://optimaoaoteam.instructure.com/courses/35/assignments/564" target="_blank" rel="noopener" style="color: #0e1c42;">Primary Source Report 7</a></strong> (Canvas, Tier 3)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">A short Word document drawing on both this week's primary sources, Madison and Thucydides.</div>
             </div>
         </div>
@@ -259,7 +264,15 @@
 </div>
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
-<script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
     var audioBtn = e.target.closest('.audio-btn');

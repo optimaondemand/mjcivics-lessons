@@ -46,7 +46,12 @@
     dl.glossary-list dt:first-child { margin-top: 0; }
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
-    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+        .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
     .gloss-term { color: #0E1C42; }
     .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
@@ -134,13 +139,13 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE PAMPHLET THAT CHANGED MINDS</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; THE PAMPHLET THAT CHANGED MINDS</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">5 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">One new term this week.</p>
             <dl class="glossary-list">
-                <dt id="gloss-confederation">confederation <span class="phonetic">(kun-fed-er-AY-shun)</span> <button class="audio-btn" data-term="confederation" aria-label="Play pronunciation of confederation">&#128266;</button></dt>
+                <dt id="gloss-confederation">confederation <span class="phonetic">(kun-fed-er-AY-shun)</span> <button class="gloss-audio" data-term="confederation" aria-label="Play pronunciation of confederation" onclick="speakGloss(event,'confederation')">&#128266;</button></dt>
                 <dd>a loose alliance of independent states, with a weak central government that depends on the states for most real power.</dd>
             </dl>
         </div>
@@ -162,14 +167,14 @@
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; A GOVERNMENT DESIGNED TO BE WEAK</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; A GOVERNMENT DESIGNED TO BE WEAK</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">But declaring independence and building a functioning government were two separate problems. The second problem proved far harder than the first. In November 1777, Congress adopted the <strong>Articles of Confederation</strong> as the new nation's first constitution. All thirteen states formally approved it by 1781. The colonists had just fought a war against what they saw as an overreaching central government. Because of this, the framers of the Articles built a purposefully weak one. It was called a &ldquo;<strong class="gloss-term"><a href="#gloss-confederation" title="a loose alliance of independent states, with a weak central government">confederation</a></strong>,&rdquo; meaning a loose alliance of independent states. The national Congress it created had no power to tax. It had no power to regulate trade between the states. It had no national court system and no national executive to enforce its own laws. It also required the unanimous consent of all thirteen states just to make any single amendment. Each state had exactly one vote in Congress, no matter how many people lived there. Tiny Delaware carried the same weight as much larger Virginia. This equal-vote structure protected small states from being outvoted by large ones. But it also meant a bare majority of small states could block action favored by states representing most of the country's actual population.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">But declaring independence and building a functioning government were two separate problems. The second problem proved far harder than the first. In November 1777, Congress adopted the <strong>Articles of Confederation</strong> as the new nation's first constitution. All thirteen states formally approved it by 1781. The colonists had just fought a war against what they saw as an overreaching central government. Because of this, the framers of the Articles built a purposefully weak one. It was called a &ldquo;<span class="gloss" tabindex="0">confederation<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'confederation')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">(kun-fed-er-AY-shun)</span>a loose alliance of independent states, with a weak central government that depends on the states for most real power.</span></span>,&rdquo; meaning a loose alliance of independent states. The national Congress it created had no power to tax. It had no power to regulate trade between the states. It had no national court system and no national executive to enforce its own laws. It also required the unanimous consent of all thirteen states just to make any single amendment. Each state had exactly one vote in Congress, no matter how many people lived there. Tiny Delaware carried the same weight as much larger Virginia. This equal-vote structure protected small states from being outvoted by large ones. But it also meant a bare majority of small states could block action favored by states representing most of the country's actual population.</p>
     </div>
 
     <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WHEN WEAKNESS BECOMES DANGEROUS</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 3 &middot; WHEN WEAKNESS BECOMES DANGEROUS</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Within a few years, the consequences of this weakness became impossible to ignore. States printed their own separate currencies. States taxed each other's goods at their borders, as if they were foreign countries trading with one another. Congress could not raise money to pay off Revolutionary War debts. It could not fund an army to put down unrest inside the country's own borders. One event made these weaknesses especially vivid. In 1786 and 1787, a Massachusetts farmer and former Revolutionary War soldier named Daniel Shays led an armed uprising of struggling farmers against high taxes and debt collection in the state. The national government under the Articles had no army of its own to help put the uprising down. Massachusetts had to rely on a privately funded militia instead. Shays's Rebellion frightened many leaders across the states, since it showed a government too weak even to keep basic order within its own borders. It became one of the clearest signs that the Articles of Confederation needed to be replaced, not just patched up. When you reach Week 6's study of the Constitutional Convention, you will see delegates arrive in Philadelphia. Most delegates did not come to fine-tune the Articles. They came, in most of their own minds, to replace the Articles outright. A government too weak to actually govern had turned out to be nearly as dangerous as a government with too much power.</p>
 
@@ -211,14 +216,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 2</strong> (GitHub lesson page)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-2.html" style="color: #0e1c42;">Primary Source 2</a></strong> (GitHub lesson page)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Paine, <em>Common Sense</em> (1776), on the difference between society and government.</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source Report 5</strong> (Canvas, Tier 3)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="https://optimaoaoteam.instructure.com/courses/35/assignments/546" target="_blank" rel="noopener" style="color: #0e1c42;">Primary Source Report 5</a></strong> (Canvas, Tier 3)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">A short Word document drawing on both this week's primary sources, Jefferson and Paine.</div>
             </div>
         </div>
@@ -242,7 +247,15 @@
 </div>
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
-<script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
     var audioBtn = e.target.closest('.audio-btn');

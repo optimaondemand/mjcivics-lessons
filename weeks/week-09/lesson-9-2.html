@@ -45,7 +45,12 @@
     dl.glossary-list dt:first-child { margin-top: 0; }
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
-    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+        .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
     .gloss-term { color: #0E1C42; }
     .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
@@ -133,21 +138,21 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A LIST, NOT A BLANK CHECK</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; A LIST, NOT A BLANK CHECK</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing two terms from Lesson 9.1, plus new terms for what Congress can and cannot do.</p>
             <dl class="glossary-list">
-                <dt id="gloss-enumerated-powers">enumerated powers <span class="phonetic">(ee-NOO-mer-ay-ted POW-erz)</span> <button class="audio-btn" data-term="enumerated powers" aria-label="Play pronunciation of enumerated powers">&#128266;</button></dt>
+                <dt id="gloss-enumerated-powers">enumerated powers <span class="phonetic">(ee-NOO-mer-ay-ted POW-erz)</span> <button class="gloss-audio" data-term="enumerated powers" aria-label="Play pronunciation of enumerated powers" onclick="speakGloss(event,'enumerated powers')">&#128266;</button></dt>
                 <dd>the doctrine that a national legislature may only exercise the powers specifically named for it in the text, not simply assumed.</dd>
-                <dt id="gloss-house-92">House of Representatives <span class="phonetic"></span> <button class="audio-btn" data-term="House of Representatives" aria-label="Play pronunciation of House of Representatives">&#128266;</button></dt>
+                <dt id="gloss-house-92">House of Representatives <span class="phonetic"></span> <button class="gloss-audio" data-term="House of Representatives" aria-label="Play pronunciation of House of Representatives" onclick="speakGloss(event,'House of Representatives')">&#128266;</button></dt>
                 <dd>the chamber of Congress apportioned by state population and elected every two years.</dd>
-                <dt id="gloss-necessary-proper">Necessary and Proper Clause <span class="phonetic"></span> <button class="audio-btn" data-term="Necessary and Proper Clause" aria-label="Play pronunciation of Necessary and Proper Clause">&#128266;</button></dt>
+                <dt id="gloss-necessary-proper">Necessary and Proper Clause <span class="phonetic"></span> <button class="gloss-audio" data-term="Necessary and Proper Clause" aria-label="Play pronunciation of Necessary and Proper Clause" onclick="speakGloss(event,'Necessary and Proper Clause')">&#128266;</button></dt>
                 <dd>the clause letting Congress make laws needed to carry out its enumerated powers; critics call it the &ldquo;elastic clause.&rdquo;</dd>
-                <dt id="gloss-police-power">police power <span class="phonetic"></span> <button class="audio-btn" data-term="police power" aria-label="Play pronunciation of police power">&#128266;</button></dt>
+                <dt id="gloss-police-power">police power <span class="phonetic"></span> <button class="gloss-audio" data-term="police power" aria-label="Play pronunciation of police power" onclick="speakGloss(event,'police power')">&#128266;</button></dt>
                 <dd>the broad power to regulate for public health, safety, and morals, which the Constitution leaves to the states rather than granting to Congress.</dd>
-                <dt id="gloss-senate-congress-92">Senate <span class="phonetic">(SEH-nit)</span> <button class="audio-btn" data-term="Senate" aria-label="Play pronunciation of Senate">&#128266;</button></dt>
+                <dt id="gloss-senate-congress-92">Senate <span class="phonetic">(SEH-nit)</span> <button class="gloss-audio" data-term="Senate" aria-label="Play pronunciation of Senate" onclick="speakGloss(event,'Senate')">&#128266;</button></dt>
                 <dd>the chamber of Congress giving every state two Senators regardless of population.</dd>
             </dl>
         </div>
@@ -164,14 +169,14 @@
           <button class="widget-reset">Reset</button>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">This is the doctrine of <strong class="gloss-term"><a href="#gloss-enumerated-powers" title="the doctrine that a national legislature may only exercise the powers specifically named for it">enumerated powers</a></strong>. A national legislature may only exercise the powers specifically granted to it in the text. This is different from a state legislature, which under its own constitution may generally do anything not specifically forbidden. Congress can lay and collect taxes, borrow money, regulate commerce between the states and with foreign nations, coin money, raise armies, and declare war. Each power is named individually. None is simply assumed.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">This is the doctrine of <span class="gloss" tabindex="0">enumerated powers<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'enumerated powers')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">(ee-NOO-mer-ay-ted POW-erz)</span>the doctrine that a national legislature may only exercise the powers specifically named for it in the text, not simply assumed.</span></span>. A national legislature may only exercise the powers specifically granted to it in the text. This is different from a state legislature, which under its own constitution may generally do anything not specifically forbidden. Congress can lay and collect taxes, borrow money, regulate commerce between the states and with foreign nations, coin money, raise armies, and declare war. Each power is named individually. None is simply assumed.</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE CLAUSE THAT WON'T STOP ARGUING</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; THE CLAUSE THAT WON'T STOP ARGUING</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The list closes with a clause that has generated more constitutional argument than almost any other sentence in the document. Congress may &ldquo;make all Laws which shall be necessary and proper for carrying into Execution the foregoing Powers.&rdquo; This is called the <strong class="gloss-term"><a href="#gloss-necessary-proper" title="the clause letting Congress make laws needed to carry out its enumerated powers">Necessary and Proper Clause</a></strong>, and its critics sometimes call it the &ldquo;elastic clause.&rdquo; It lets Congress choose the specific means for exercising its enumerated ends, without the Constitution having to spell out every conceivable law in advance.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The list closes with a clause that has generated more constitutional argument than almost any other sentence in the document. Congress may &ldquo;make all Laws which shall be necessary and proper for carrying into Execution the foregoing Powers.&rdquo; This is called the <span class="gloss" tabindex="0">Necessary and Proper Clause<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Necessary and Proper Clause')">&#128266;</button><span class="gloss-tip">the clause letting Congress make laws needed to carry out its enumerated powers; critics call it the &ldquo;elastic clause.&rdquo;</span></span>, and its critics sometimes call it the &ldquo;elastic clause.&rdquo; It lets Congress choose the specific means for exercising its enumerated ends, without the Constitution having to spell out every conceivable law in advance.</p>
 
         <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
             <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; HELPFUL TO KNOW</div>
@@ -181,9 +186,9 @@
 
     <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WHAT SECTION 8 DOES NOT GRANT</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 3 &middot; WHAT SECTION 8 DOES NOT GRANT</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice what this section does not grant. Congress has no general &ldquo;<strong class="gloss-term"><a href="#gloss-police-power" title="the broad power to regulate for public health, safety, and morals, left to the states">police power</a></strong>&rdquo; to regulate for the health, safety, and morals of the public. The states retained that broad power for themselves. This is the same logic of limited, divided government you traced in Week 4 through Montesquieu, and in the Preamble's structure in Week 6. A legislature that can point to a specific textual grant for everything it does is a legislature that can be checked, in principle, by anyone who can actually read the list.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice what this section does not grant. Congress has no general &ldquo;<span class="gloss" tabindex="0">police power<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'police power')">&#128266;</button><span class="gloss-tip">the broad power to regulate for public health, safety, and morals, which the Constitution leaves to the states rather than granting to Congress.</span></span>&rdquo; to regulate for the health, safety, and morals of the public. The states retained that broad power for themselves. This is the same logic of limited, divided government you traced in Week 4 through Montesquieu, and in the Preamble's structure in Week 6. A legislature that can point to a specific textual grant for everything it does is a legislature that can be checked, in principle, by anyone who can actually read the list.</p>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Consider a concrete contrast. Congress can regulate interstate trucking, since that falls under its enumerated power to regulate commerce among the states. But Congress cannot, on its own authority, set the speed limit on a purely local city street, license hairdressers, or decide who may get married, since none of those powers appears anywhere in Article I, Section 8's list. States handle all of that under their own general police power instead. This is exactly the kind of sorting you will practice in this week's VR activity.</p>
 
@@ -224,7 +229,7 @@
 
     <!-- PART 4 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; WHY A LIST AT ALL, AND WHAT McCULLOCH v. MARYLAND SETTLED</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 4 &middot; WHY A LIST AT ALL, AND WHAT McCULLOCH v. MARYLAND SETTLED</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It is worth naming why the framers chose an enumerated list at all, rather than simply trusting Congress with general lawmaking authority the way Parliament had traditionally worked in Britain. A list can be checked against. If Congress passes a law and someone believes it has no basis anywhere in Article I, Section 8, that person has a specific, concrete argument to make in court, not just a vague complaint about overreach. This is part of what makes judicial review, which you will study in Week 11, possible at all: courts need an actual written standard to measure a law against, and the enumerated-powers list is exactly that standard for federal legislation.</p>
 
@@ -239,7 +244,7 @@
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 2 &amp; Primary Source Exercise 9</strong> (Canvas, Tier 2)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-2.html" style="color: #0e1c42;">Primary Source 2</a> &amp; <a href="https://optimaoaoteam.instructure.com/courses/35/assignments/593" target="_blank" rel="noopener" style="color: #0e1c42;">Primary Source Exercise 9</a></strong> (Canvas, Tier 2)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">U.S. Constitution, Article I, &sect;8: the full enumerated-powers list and the Necessary and Proper Clause.</div>
             </div>
         </div>
@@ -263,7 +268,15 @@
 </div>
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
-<script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
     var audioBtn = e.target.closest('.audio-btn');

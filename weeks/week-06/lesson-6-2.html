@@ -47,7 +47,12 @@
     dl.glossary-list dt:first-child { margin-top: 0; }
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
-    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+        .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
     .gloss-term { color: #0E1C42; }
     .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
@@ -135,23 +140,23 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE &ldquo;FATHER OF THE CONSTITUTION&rdquo; WHO REFUSED THE TITLE</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; THE &ldquo;FATHER OF THE CONSTITUTION&rdquo; WHO REFUSED THE TITLE</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing five terms from Lesson 6.1, plus one new term for this week.</p>
             <dl class="glossary-list">
-                <dt id="gloss-factions">factions <span class="phonetic">(FAK-shunz)</span> <button class="audio-btn" data-term="factions" aria-label="Play pronunciation of factions">&#128266;</button></dt>
+                <dt id="gloss-factions">factions <span class="phonetic">(FAK-shunz)</span> <button class="gloss-audio" data-term="factions" aria-label="Play pronunciation of factions" onclick="speakGloss(event,'factions')">&#128266;</button></dt>
                 <dd>groups of citizens with shared interests or opinions; Madison argued a good constitution should survive their conflict, not try to eliminate them.</dd>
-                <dt id="gloss-great-compromise-62">Great Compromise <span class="phonetic">(GRAYT kum-PROH-myz)</span> <button class="audio-btn" data-term="Great Compromise" aria-label="Play pronunciation of Great Compromise">&#128266;</button></dt>
+                <dt id="gloss-great-compromise-62">Great Compromise <span class="phonetic">(GRAYT kum-PROH-myz)</span> <button class="gloss-audio" data-term="Great Compromise" aria-label="Play pronunciation of Great Compromise" onclick="speakGloss(event,'Great Compromise')">&#128266;</button></dt>
                 <dd>the deal that created a two-chamber Congress, one house apportioned by population and one giving every state equal representation.</dd>
-                <dt id="gloss-new-jersey-plan-62">New Jersey Plan <span class="phonetic"></span> <button class="audio-btn" data-term="New Jersey Plan" aria-label="Play pronunciation of New Jersey Plan">&#128266;</button></dt>
+                <dt id="gloss-new-jersey-plan-62">New Jersey Plan <span class="phonetic"></span> <button class="gloss-audio" data-term="New Jersey Plan" aria-label="Play pronunciation of New Jersey Plan" onclick="speakGloss(event,'New Jersey Plan')">&#128266;</button></dt>
                 <dd>the small states' counter-proposal at the Convention, keeping equal representation for every state regardless of size.</dd>
-                <dt id="gloss-preamble-62">Preamble <span class="phonetic">(PREE-am-buhl)</span> <button class="audio-btn" data-term="Preamble" aria-label="Play pronunciation of Preamble">&#128266;</button></dt>
+                <dt id="gloss-preamble-62">Preamble <span class="phonetic">(PREE-am-buhl)</span> <button class="gloss-audio" data-term="Preamble" aria-label="Play pronunciation of Preamble" onclick="speakGloss(event,'Preamble')">&#128266;</button></dt>
                 <dd>the Constitution's opening sentence, stating the purposes of the new government before listing any of its powers.</dd>
-                <dt id="gloss-three-fifths-62">Three-Fifths Compromise <span class="phonetic"></span> <button class="audio-btn" data-term="Three-Fifths Compromise" aria-label="Play pronunciation of Three-Fifths Compromise">&#128266;</button></dt>
+                <dt id="gloss-three-fifths-62">Three-Fifths Compromise <span class="phonetic"></span> <button class="gloss-audio" data-term="Three-Fifths Compromise" aria-label="Play pronunciation of Three-Fifths Compromise" onclick="speakGloss(event,'Three-Fifths Compromise')">&#128266;</button></dt>
                 <dd>the formula that added three-fifths of a state's slave population to its free population, for both representation in Congress and direct taxation.</dd>
-                <dt id="gloss-virginia-plan-62">Virginia Plan <span class="phonetic"></span> <button class="audio-btn" data-term="Virginia Plan" aria-label="Play pronunciation of Virginia Plan">&#128266;</button></dt>
+                <dt id="gloss-virginia-plan-62">Virginia Plan <span class="phonetic"></span> <button class="gloss-audio" data-term="Virginia Plan" aria-label="Play pronunciation of Virginia Plan" onclick="speakGloss(event,'Virginia Plan')">&#128266;</button></dt>
                 <dd>James Madison's proposal for a strong national government with a legislature apportioned by state population.</dd>
             </dl>
         </div>
@@ -190,14 +195,14 @@
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; MACHIAVELLI'S SURPRISING ARGUMENT</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; MACHIAVELLI'S SURPRISING ARGUMENT</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">6 min</span></div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Madison's thinking did not come from nowhere. Think back to Polybius's analysis of Rome's mixed constitution from Week 2: monarchic, aristocratic, and democratic elements all checking one another. Madison had absorbed this classical tradition directly. One important source was the Italian Renaissance writer <strong><em class="gloss-term"><a href="#gloss-machiavelli" title="an Italian Renaissance writer whose book on Rome argued that conflict between social classes could protect liberty">Machiavelli</a></em></strong>. Machiavelli's book, the <em>Discourses on Livy</em>, published in 1531, revived and extended Polybius's argument for a new audience over a thousand years later. Machiavelli went further than Polybius in one important way. He argued that open conflict between a society's different groups, the common people and the elite, was not a problem to be eliminated. It was often the very engine that produced laws favorable to liberty. A government too eager to stamp out all internal disagreement, Machiavelli warned, risked stamping out liberty right along with it. Think back to Week 2's account of Rome's Tribune of the Plebs, an office won only after the plebeians' long political struggle against the patricians, the Struggle of the Orders. Machiavelli would say that struggle itself, not some peaceful gift from the patricians, is exactly what produced an office capable of protecting ordinary Romans' interests. Without that conflict, Machiavelli suggests, the patricians would have had little reason to ever share power at all.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Madison's thinking did not come from nowhere. Think back to Polybius's analysis of Rome's mixed constitution from Week 2: monarchic, aristocratic, and democratic elements all checking one another. Madison had absorbed this classical tradition directly. One important source was the Italian Renaissance writer <span class="gloss" tabindex="0"><em>Machiavelli</em><button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Machiavelli')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">(mak-ee-uh-VEL-ee)</span>an Italian Renaissance writer whose book on Rome argued that conflict between social classes could protect liberty rather than destroy it.</span></span>. Machiavelli's book, the <em>Discourses on Livy</em>, published in 1531, revived and extended Polybius's argument for a new audience over a thousand years later. Machiavelli went further than Polybius in one important way. He argued that open conflict between a society's different groups, the common people and the elite, was not a problem to be eliminated. It was often the very engine that produced laws favorable to liberty. A government too eager to stamp out all internal disagreement, Machiavelli warned, risked stamping out liberty right along with it. Think back to Week 2's account of Rome's Tribune of the Plebs, an office won only after the plebeians' long political struggle against the patricians, the Struggle of the Orders. Machiavelli would say that struggle itself, not some peaceful gift from the patricians, is exactly what produced an office capable of protecting ordinary Romans' interests. Without that conflict, Machiavelli suggests, the patricians would have had little reason to ever share power at all.</p>
 
         <div class="callout glossary foreign">
             <div class="callout-kicker">&#127760; Foreign Language Vocabulary</div>
             <dl class="glossary-list">
-                <dt id="gloss-machiavelli"><em>Machiavelli</em> <span class="phonetic">(mak-ee-uh-VEL-ee)</span> <button class="audio-btn" data-term="Machiavelli" aria-label="Play pronunciation of Machiavelli">&#128266;</button></dt>
+                <dt id="gloss-machiavelli"><em>Machiavelli</em> <span class="phonetic">(mak-ee-uh-VEL-ee)</span> <button class="gloss-audio" data-term="Machiavelli" aria-label="Play pronunciation of Machiavelli" onclick="speakGloss(event,'Machiavelli')">&#128266;</button></dt>
                 <dd>an Italian Renaissance writer whose book on Rome argued that conflict between social classes could protect liberty rather than destroy it.</dd>
             </dl>
         </div>
@@ -212,7 +217,7 @@
           <button class="widget-reset">Reset</button>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 14px 0 0 0;">This is a genuinely surprising idea. Most people assume that unity and harmony are always good for a community, and that disagreement is always something to be managed away. Madison would take Machiavelli's idea even further the following year, in the Federalist Papers you will read in Weeks 7 and 8. Rather than trying to eliminate <strong class="gloss-term"><a href="#gloss-factions" title="groups of citizens with shared interests or opinions">factions</a></strong>, groups of citizens with shared interests or opinions, an impossible and even dangerous goal, Madison argued that a well-designed constitution should be built to survive their conflict, and even channel that conflict productively toward the common good. Watch for this idea to return with full force when you reach Federalist No. 10. For now, hold two ideas in your head at once, since both are true, and Weeks 7 and 8 will show you how Madison tried to hold them together in a single document. Conflict between groups can genuinely protect liberty, as Machiavelli argued about Rome. And conflict, left with no structure at all, can also tear a political community apart, as Hobbes warned back in Week 3. The American Constitution's whole design is an attempt to get the first benefit without paying the second price. That balancing act, channeling conflict rather than eliminating it or letting it run wild, is one of the most useful lenses you now have for reading everything else in this course.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 14px 0 0 0;">This is a genuinely surprising idea. Most people assume that unity and harmony are always good for a community, and that disagreement is always something to be managed away. Madison would take Machiavelli's idea even further the following year, in the Federalist Papers you will read in Weeks 7 and 8. Rather than trying to eliminate <span class="gloss" tabindex="0">factions<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'factions')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">(FAK-shunz)</span>groups of citizens with shared interests or opinions; Madison argued a good constitution should survive their conflict, not try to eliminate them.</span></span>, groups of citizens with shared interests or opinions, an impossible and even dangerous goal, Madison argued that a well-designed constitution should be built to survive their conflict, and even channel that conflict productively toward the common good. Watch for this idea to return with full force when you reach Federalist No. 10. For now, hold two ideas in your head at once, since both are true, and Weeks 7 and 8 will show you how Madison tried to hold them together in a single document. Conflict between groups can genuinely protect liberty, as Machiavelli argued about Rome. And conflict, left with no structure at all, can also tear a political community apart, as Hobbes warned back in Week 3. The American Constitution's whole design is an attempt to get the first benefit without paying the second price. That balancing act, channeling conflict rather than eliminating it or letting it run wild, is one of the most useful lenses you now have for reading everything else in this course.</p>
     </div>
 
     <!-- What You'll Do Next -->
@@ -221,14 +226,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 2</strong> (GitHub lesson page)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-2.html" style="color: #0e1c42;">Primary Source 2</a></strong> (GitHub lesson page)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Machiavelli's <em>Discourses on Livy</em>, Book I, Ch. 4, on factional conflict and Roman liberty.</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source Exercise 6</strong> (Canvas, Tier 2)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="https://optimaoaoteam.instructure.com/courses/35/assignments/554" target="_blank" rel="noopener" style="color: #0e1c42;">Primary Source Exercise 6</a></strong> (Canvas, Tier 2)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Questions drawing on Machiavelli's argument, including a comparison to Montesquieu's separation of powers from Week 4.</div>
             </div>
         </div>
@@ -252,7 +257,15 @@
 </div>
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
-<script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
     var audioBtn = e.target.closest('.audio-btn');

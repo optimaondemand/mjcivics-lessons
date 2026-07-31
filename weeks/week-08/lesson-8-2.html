@@ -47,7 +47,12 @@
     dl.glossary-list dt:first-child { margin-top: 0; }
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
-    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+        .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
     .gloss-term { color: #0E1C42; }
     .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
     .wrapper-pointer { font-size: 14px; color: #0E1C42; background: #EEF1F8; border-left: 4px solid #6b7a99; border-radius: 4px; padding: 10px 14px; margin: 16px 0 0; }
@@ -136,15 +141,15 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; TWO WAYS A REGIME CAN COLLAPSE</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; TWO WAYS A REGIME CAN COLLAPSE</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing two terms from Lesson 8.1. This week's reading introduces no new Subject Vocabulary terms.</p>
             <dl class="glossary-list">
-                <dt id="gloss-demagogue-82">demagogue <span class="phonetic">(DEM-uh-gog)</span> <button class="audio-btn" data-term="demagogue" aria-label="Play pronunciation of demagogue">&#128266;</button></dt>
+                <dt id="gloss-demagogue-82">demagogue <span class="phonetic">(DEM-uh-gog)</span> <button class="gloss-audio" data-term="demagogue" aria-label="Play pronunciation of demagogue" onclick="speakGloss(event,'demagogue')">&#128266;</button></dt>
                 <dd>a leader who wins power by appealing to emotion and prejudice rather than reasoned argument.</dd>
-                <dt id="gloss-electors-82">electors <span class="phonetic">(ee-LEK-terz)</span> <button class="audio-btn" data-term="electors" aria-label="Play pronunciation of electors">&#128266;</button></dt>
+                <dt id="gloss-electors-82">electors <span class="phonetic">(ee-LEK-terz)</span> <button class="gloss-audio" data-term="electors" aria-label="Play pronunciation of electors" onclick="speakGloss(event,'electors')">&#128266;</button></dt>
                 <dd>specially chosen people who meet once, in separate state groups, to formally select the president.</dd>
             </dl>
         </div>
@@ -154,7 +159,7 @@
         <div class="callout glossary foreign">
             <div class="callout-kicker">&#127760; Foreign Language Vocabulary</div>
             <dl class="glossary-list">
-                <dt id="gloss-aristotle-82"><em>Aristotle</em> <span class="phonetic">(AIR-ih-stot-uhl)</span> <button class="audio-btn" data-term="Aristotle" aria-label="Play pronunciation of Aristotle">&#128266;</button></dt>
+                <dt id="gloss-aristotle-82"><em>Aristotle</em> <span class="phonetic">(AIR-ih-stot-uhl)</span> <button class="gloss-audio" data-term="Aristotle" aria-label="Play pronunciation of Aristotle" onclick="speakGloss(event,'Aristotle')">&#128266;</button></dt>
                 <dd>a Greek philosopher who catalogued and compared the constitutions of dozens of Greek city-states to study why regimes fall apart.</dd>
             </dl>
         </div>
@@ -176,11 +181,11 @@
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; HAMILTON'S DESIGN AS A PRACTICAL ANSWER</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; HAMILTON'S DESIGN AS A PRACTICAL ANSWER</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">6 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Aristotle's method itself is worth noticing. Rather than reasoning from pure abstract principle alone, as some philosophers do, Aristotle and his students reportedly collected and compared the actual written constitutions of over one hundred fifty Greek city-states before he wrote his <em>Politics</em>. His conclusions about why regimes fall are built on this unusually wide base of real comparative evidence, not on a single city's experience or a single thinker's intuition. This same comparative habit, studying many real examples before drawing a general conclusion, is exactly what Madison was doing in his own &ldquo;Ancient and Modern Confederacies&rdquo; memo back in Week 6.</p>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice, too, how directly this week's primary source excerpt connects to Hamilton's own worry. Aristotle writes that revolutions in democracies are &ldquo;generally caused by the intemperance of <strong class="gloss-term"><a href="#gloss-demagogue-82" title="a leader who wins power by appealing to emotion and prejudice rather than reasoned argument">demagogues</a></strong>,&rdquo; who either personally attack wealthy citizens or stir up the people against them. This is precisely the danger Hamilton names when he warns that direct election could reward a leader who wins support through emotional appeal rather than genuine merit. Two writers, separated by more than two thousand years and writing in entirely different languages and political systems, converge on the same specific warning about the same specific kind of leader.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice, too, how directly this week's primary source excerpt connects to Hamilton's own worry. Aristotle writes that revolutions in democracies are &ldquo;generally caused by the intemperance of <span class="gloss" tabindex="0">demagogues<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'demagogue')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">(DEM-uh-gog)</span>a leader who wins power by appealing to emotion and prejudice rather than reasoned argument.</span></span>,&rdquo; who either personally attack wealthy citizens or stir up the people against them. This is precisely the danger Hamilton names when he warns that direct election could reward a leader who wins support through emotional appeal rather than genuine merit. Two writers, separated by more than two thousand years and writing in entirely different languages and political systems, converge on the same specific warning about the same specific kind of leader.</p>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This lesson closes Module 2 as a whole. Over the past six weeks, you have moved from Rome's mixed constitution, through Hobbes and Locke's competing accounts of human nature, through Montesquieu's separated powers and Rousseau's general will, through the actual Convention that built a government out of all these ideas, and finally through the Federalist Papers that defended it clause by clause. Module 3 now turns from these founding arguments to the government those arguments actually produced: the specific structure and powers of Congress, the presidency, and the federal courts. Keep Aristotle's question in mind as you go: every structural detail you are about to study is, at bottom, one more attempt to answer who should rule, and why everyone else should accept it.</p>
 
@@ -213,7 +218,7 @@
           <button class="widget-reset">Reset</button>
         </div>
 
-        <p class="wrapper-pointer">&#128203; Up next: the ungraded <strong>Module 2 Outro Wrapper</strong> in Canvas (~2 minutes) before moving into Module 3.</p>
+        <p class="wrapper-pointer">&#128203; Up next: the ungraded <a href="https://optimaoaoteam.instructure.com/courses/35/quizzes/302" target="_blank" rel="noopener" style="color: #0e1c42;"><strong>Module 2 Outro Wrapper</strong></a> (~2 minutes) before moving into Module 3.</p>
     </div>
 
     <!-- What You'll Do Next -->
@@ -222,14 +227,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 2</strong> (GitHub lesson page)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-2.html" style="color: #0e1c42;">Primary Source 2</a></strong> (GitHub lesson page)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Aristotle, <em>Politics</em>, Book V, Ch. 1, on the causes of revolution.</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source Report 8</strong> (Canvas, Tier 3)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="https://optimaoaoteam.instructure.com/courses/35/assignments/570" target="_blank" rel="noopener" style="color: #0e1c42;">Primary Source Report 8</a></strong> (Canvas, Tier 3)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">A short Word document drawing on both this week's primary sources, Hamilton and Aristotle.</div>
             </div>
         </div>
@@ -253,7 +258,15 @@
 </div>
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
-<script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
     var audioBtn = e.target.closest('.audio-btn');

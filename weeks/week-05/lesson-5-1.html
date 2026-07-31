@@ -46,7 +46,12 @@
     dl.glossary-list dt:first-child { margin-top: 0; }
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
-    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+        .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
     .gloss-term { color: #0E1C42; }
     .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
@@ -134,15 +139,15 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; AN IRREVERSIBLE VOTE</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; AN IRREVERSIBLE VOTE</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing Rousseau's vocabulary from Lesson 4.2. This week's reading introduces no new Subject Vocabulary terms.</p>
             <dl class="glossary-list">
-                <dt id="gloss-general-will-51">general will <span class="phonetic"></span> <button class="audio-btn" data-term="general will" aria-label="Play pronunciation of general will">&#128266;</button></dt>
+                <dt id="gloss-general-will-51">general will <span class="phonetic"></span> <button class="gloss-audio" data-term="general will" aria-label="Play pronunciation of general will" onclick="speakGloss(event,'general will')">&#128266;</button></dt>
                 <dd>Rousseau's term for the collective judgment of the whole community about the common good, which every citizen has a genuine share in forming.</dd>
-                <dt id="gloss-state-sovereign-power-51">State, Sovereign, and Power <span class="phonetic"></span> <button class="audio-btn" data-term="State, Sovereign, and Power" aria-label="Play pronunciation of State, Sovereign, and Power">&#128266;</button></dt>
+                <dt id="gloss-state-sovereign-power-51">State, Sovereign, and Power <span class="phonetic"></span> <button class="gloss-audio" data-term="State, Sovereign, and Power" aria-label="Play pronunciation of State, Sovereign, and Power" onclick="speakGloss(event,'State, Sovereign, and Power')">&#128266;</button></dt>
                 <dd>Rousseau's three names for the same &ldquo;moral and collective body&rdquo; formed by the social contract.</dd>
             </dl>
         </div>
@@ -152,7 +157,7 @@
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; ADAMS STEPS BACK, JEFFERSON STEPS FORWARD</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; ADAMS STEPS BACK, JEFFERSON STEPS FORWARD</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <div class="optima-widget ow-reflect">
           <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
@@ -171,7 +176,7 @@
 
     <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; A TWO-PART ARGUMENT</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 3 &middot; A TWO-PART ARGUMENT</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Jefferson drew on ideas you already know well from Week 3: Locke's natural rights, and his theory of when a government loses its legitimacy. Jefferson built these ideas into a document with two distinct halves. The opening states a general theory of government's purpose. It explains the conditions under which people may rightfully change or get rid of that government. The much longer second half applies that theory to one specific case. It lists more than two dozen complaints against King George III. These complaints are meant to prove, point by point, that Britain's government had crossed exactly the line Locke described. This week's primary source is drawn from both halves of the document.</p>
 
@@ -192,7 +197,7 @@
 
     <!-- PART 4 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; THE VOTE, THE DATE, AND THE EDITS</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 4 &middot; THE VOTE, THE DATE, AND THE EDITS</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The vote for independence itself actually happened on July 2, 1776, when Congress formally approved separating from Britain. Two days later, on July 4, Congress approved the wording of Jefferson's document, the date we now celebrate as Independence Day. John Adams himself predicted that July 2 would be the date future Americans celebrated with fireworks and parades. He was only off by two days, since it was the document's approval, not the vote itself, that history ended up remembering most.</p>
 
@@ -207,14 +212,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reading Quiz 5.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="https://optimaoaoteam.instructure.com/courses/35/quizzes/293" target="_blank" rel="noopener" style="color: #0e1c42;">Reading Quiz 5.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Five inference questions on the Committee of Five, Adams's reasoning, and the Declaration's two-part structure.</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 1 &amp; Critical Questions 5.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-1.html" style="color: #0e1c42;">Primary Source 1</a> &amp; <a href="https://optimaoaoteam.instructure.com/courses/35/assignments/545" target="_blank" rel="noopener" style="color: #0e1c42;">Critical Questions 5.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Jefferson, <em>Declaration of Independence</em> (1776), on the purpose of government and the right to alter or abolish it.</div>
             </div>
         </div>
@@ -238,7 +243,15 @@
 </div>
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
-<script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
     var audioBtn = e.target.closest('.audio-btn');

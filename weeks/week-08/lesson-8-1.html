@@ -47,7 +47,12 @@
     dl.glossary-list dt:first-child { margin-top: 0; }
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
-    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+        .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
     .gloss-term { color: #0E1C42; }
     .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
@@ -135,24 +140,24 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; TWO REJECTED METHODS</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; TWO REJECTED METHODS</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing one term from Lesson 7.2, plus new terms for choosing a president.</p>
             <dl class="glossary-list">
-                <dt id="gloss-demagogue">demagogue <span class="phonetic">(DEM-uh-gog)</span> <button class="audio-btn" data-term="demagogue" aria-label="Play pronunciation of demagogue">&#128266;</button></dt>
+                <dt id="gloss-demagogue">demagogue <span class="phonetic">(DEM-uh-gog)</span> <button class="gloss-audio" data-term="demagogue" aria-label="Play pronunciation of demagogue" onclick="speakGloss(event,'demagogue')">&#128266;</button></dt>
                 <dd>a leader who wins power by appealing to emotion and prejudice rather than reasoned argument.</dd>
-                <dt id="gloss-electors">electors <span class="phonetic">(ee-LEK-terz)</span> <button class="audio-btn" data-term="electors" aria-label="Play pronunciation of electors">&#128266;</button></dt>
+                <dt id="gloss-electors">electors <span class="phonetic">(ee-LEK-terz)</span> <button class="gloss-audio" data-term="electors" aria-label="Play pronunciation of electors" onclick="speakGloss(event,'electors')">&#128266;</button></dt>
                 <dd>specially chosen people who meet once, in separate state groups, to formally select the president.</dd>
-                <dt id="gloss-federalism-81">federalism <span class="phonetic">(FED-er-uh-liz-um)</span> <button class="audio-btn" data-term="federalism" aria-label="Play pronunciation of federalism">&#128266;</button></dt>
+                <dt id="gloss-federalism-81">federalism <span class="phonetic">(FED-er-uh-liz-um)</span> <button class="gloss-audio" data-term="federalism" aria-label="Play pronunciation of federalism" onclick="speakGloss(event,'federalism')">&#128266;</button></dt>
                 <dd>shared and divided authority between the people, the states, and the national government.</dd>
             </dl>
         </div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">But a legislature with no strong executive to check it had just failed catastrophically under the Articles of Confederation, as you read in Week 5. <strong>Alexander Hamilton</strong> was the most forceful defender of a strong presidency among the framers. He took up the specific question of how to choose that executive in <strong>Federalist No. 68</strong>.</p>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Hamilton considered the two most obvious methods and rejected both. The first was direct popular election. He worried this risked exactly the kind of unchecked mass enthusiasm you studied in the Athenian Assembly's vote for the Sicilian Expedition last week. A charismatic <strong class="gloss-term"><a href="#gloss-demagogue" title="a leader who wins power by appealing to emotion and prejudice rather than reasoned argument">demagogue</a></strong>, meaning a leader who wins power by appealing to emotion and prejudice rather than reasoned argument, could sweep an emotional majority without possessing what Hamilton called the &ldquo;requisite qualifications&rdquo; for the office. The second method was selection by the legislature itself. This risked the opposite danger. An executive who owed his position entirely to Congress would have every incentive to become its servant rather than an independent check on it. This would undermine the separation of powers you studied in Week 4 and Week 7 before it even began operating.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Hamilton considered the two most obvious methods and rejected both. The first was direct popular election. He worried this risked exactly the kind of unchecked mass enthusiasm you studied in the Athenian Assembly's vote for the Sicilian Expedition last week. A charismatic <span class="gloss" tabindex="0">demagogue<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'demagogue')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">(DEM-uh-gog)</span>a leader who wins power by appealing to emotion and prejudice rather than reasoned argument.</span></span>, meaning a leader who wins power by appealing to emotion and prejudice rather than reasoned argument, could sweep an emotional majority without possessing what Hamilton called the &ldquo;requisite qualifications&rdquo; for the office. The second method was selection by the legislature itself. This risked the opposite danger. An executive who owed his position entirely to Congress would have every incentive to become its servant rather than an independent check on it. This would undermine the separation of powers you studied in Week 4 and Week 7 before it even began operating.</p>
 
         <div class="optima-widget ow-select">
           <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE REJECTED METHOD TO ITS DANGER</div>
@@ -184,9 +189,9 @@
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; A COMPROMISE DESIGNED AGAINST BOTH RISKS</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; A COMPROMISE DESIGNED AGAINST BOTH RISKS</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Hamilton's compromise, and the Convention's, was a body of specially chosen <strong class="gloss-term"><a href="#gloss-electors" title="specially chosen people who meet once, in separate state groups, to formally select the president">electors</a></strong>. These electors would meet only once, in separate state groups, with no ongoing existence as a standing institution. This design made them, in Hamilton's view, resistant both to mob passion and to manipulation or bribery, since there was no permanent body around to corrupt over time. Notice the pattern across every branch you have studied this module. The framers did not try to eliminate risk entirely. Instead, they designed specific structures, a Senate, a Preamble's stated purposes, an electoral process, to manage risks they believed were permanent features of political life, not problems that could ever be solved once and for all.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Hamilton's compromise, and the Convention's, was a body of specially chosen <span class="gloss" tabindex="0">electors<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'electors')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">(ee-LEK-terz)</span>specially chosen people who meet once, in separate state groups, to formally select the president.</span></span>. These electors would meet only once, in separate state groups, with no ongoing existence as a standing institution. This design made them, in Hamilton's view, resistant both to mob passion and to manipulation or bribery, since there was no permanent body around to corrupt over time. Notice the pattern across every branch you have studied this module. The framers did not try to eliminate risk entirely. Instead, they designed specific structures, a Senate, a Preamble's stated purposes, an electoral process, to manage risks they believed were permanent features of political life, not problems that could ever be solved once and for all.</p>
 
         <div class="optima-widget ow-scale">
           <div class="widget-kicker">&#9889; TRY IT &middot; WHAT MADE THE ELECTOR SYSTEM RESISTANT TO CORRUPTION?</div>
@@ -208,7 +213,7 @@
 
     <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; FROM DESIGN TO PRACTICE</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 3 &middot; FROM DESIGN TO PRACTICE</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It is worth knowing that Hamilton's description does not fully match how the Electoral College actually works today. Hamilton imagined electors using their own independent judgment, weighing candidates' qualifications personally, much like a hiring committee. In practice, political parties emerged within just a few years of the Constitution's ratification, and electors quickly became pledged to vote for whichever candidate their party had already chosen, rather than deliberating independently once assembled. This week's Extension reading picks up exactly this kind of gap between the framers' original design and how the system actually evolved, using the disputed election of 1800 as its case study.</p>
 
@@ -225,14 +230,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reading Quiz 8.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="https://optimaoaoteam.instructure.com/courses/35/quizzes/300" target="_blank" rel="noopener" style="color: #0e1c42;">Reading Quiz 8.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Five inference questions on Hamilton's reasoning in Federalist No. 68.</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 1 &amp; Critical Questions 8.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-1.html" style="color: #0e1c42;">Primary Source 1</a> &amp; <a href="https://optimaoaoteam.instructure.com/courses/35/assignments/569" target="_blank" rel="noopener" style="color: #0e1c42;">Critical Questions 8.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Hamilton's Federalist No. 68, on &ldquo;the sense of the people&rdquo; and the electors' &ldquo;detached and divided situation.&rdquo;</div>
             </div>
         </div>
@@ -256,7 +261,15 @@
 </div>
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
-<script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
     var audioBtn = e.target.closest('.audio-btn');
