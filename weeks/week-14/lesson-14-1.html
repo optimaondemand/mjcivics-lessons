@@ -46,6 +46,12 @@
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
     .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
     .gloss-term { color: #0E1C42; }
     .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
@@ -133,19 +139,19 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THREE AMENDMENTS, ONE GAP</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; THREE AMENDMENTS, ONE GAP</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing two terms from Lesson 13.2, plus new terms for the right to remain silent.</p>
             <dl class="glossary-list">
-                <dt id="gloss-exclusionary-rule">exclusionary rule <span class="phonetic"></span> <button class="audio-btn" data-term="exclusionary rule" aria-label="Play pronunciation of exclusionary rule">&#128266;</button></dt>
+                <dt id="gloss-exclusionary-rule">exclusionary rule <span class="phonetic"></span> <button class="gloss-audio" data-term="exclusionary rule" aria-label="Play pronunciation of exclusionary rule" onclick="speakGloss(event,'exclusionary rule')">&#128266;</button></dt>
                 <dd>the rule that a confession obtained in violation of Miranda cannot normally be used as evidence against the suspect at trial.</dd>
-                <dt id="gloss-miranda-warnings">Miranda warnings <span class="phonetic">(muh-RAN-duh)</span> <button class="audio-btn" data-term="Miranda warnings" aria-label="Play pronunciation of Miranda warnings">&#128266;</button></dt>
+                <dt id="gloss-miranda-warnings">Miranda warnings <span class="phonetic">(muh-RAN-duh)</span> <button class="gloss-audio" data-term="Miranda warnings" aria-label="Play pronunciation of Miranda warnings" onclick="speakGloss(event,'Miranda warnings')">&#128266;</button></dt>
                 <dd>the specific warnings police must give a suspect who is in custody, before any interrogation begins.</dd>
-                <dt id="gloss-sherbert-test-141">Sherbert test <span class="phonetic"></span> <button class="audio-btn" data-term="Sherbert test" aria-label="Play pronunciation of Sherbert test">&#128266;</button></dt>
+                <dt id="gloss-sherbert-test-141">Sherbert test <span class="phonetic"></span> <button class="gloss-audio" data-term="Sherbert test" aria-label="Play pronunciation of Sherbert test" onclick="speakGloss(event,'Sherbert test')">&#128266;</button></dt>
                 <dd>the rule that once a law substantially burdens someone's free exercise of religion, government must show a &ldquo;compelling state interest.&rdquo;</dd>
-                <dt id="gloss-strict-scrutiny-141">strict scrutiny <span class="phonetic"></span> <button class="audio-btn" data-term="strict scrutiny" aria-label="Play pronunciation of strict scrutiny">&#128266;</button></dt>
+                <dt id="gloss-strict-scrutiny-141">strict scrutiny <span class="phonetic"></span> <button class="gloss-audio" data-term="strict scrutiny" aria-label="Play pronunciation of strict scrutiny" onclick="speakGloss(event,'strict scrutiny')">&#128266;</button></dt>
                 <dd>the highest level of legal review American courts use, requiring a &ldquo;compelling state interest&rdquo; to justify a law.</dd>
             </dl>
         </div>
@@ -153,11 +159,13 @@
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Three amendments work together to protect someone accused of a crime: the Fourth (against unreasonable searches and seizures), the Fifth (against being compelled to be "a witness against himself," among other protections), and the Sixth (guaranteeing "the Assistance of Counsel for his defence"). None of these amendments explains exactly how police must behave once they take a suspect into custody, and in 1966, that gap produced one of the most famous rulings in the Court's history.</p>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Ernesto Miranda had confessed to a crime during police interrogation after being taken into custody, without ever being told he had a right to remain silent or a right to a lawyer. In <em>Miranda v. Arizona</em>, Chief Justice Earl Warren's majority opinion held that the Fifth Amendment's protection against <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Police questioning of a suspect who has been taken into custody, as opposed to a free-to-leave conversation">self-incrimination</span> could not function as intended inside the pressure of custodial interrogation unless suspects were clearly informed of their rights beforehand. The Court did not simply strike down Miranda's conviction; it wrote out the specific warning police must give once a suspect is in custody and before any interrogation begins: the "Miranda warnings" that have since become a fixture of American police procedure and popular culture alike.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The warning police must give has four distinct parts, not just the one line most people can recite from memory. Police must state: that the suspect has the right to remain silent; that anything said can and will be used against him in a court of law; that he has the right to an attorney; and that if he cannot afford an attorney, one will be appointed for him before any questioning, if he wishes. All four parts must be given, and a suspect must clearly understand them, before interrogation may begin.</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; CUSTODY, NOT JUST A QUESTION</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; CUSTODY, NOT JUST A QUESTION</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <div class="optima-widget ow-select">
           <div class="widget-kicker">&#9889; TRY IT &middot; DOES THIS SITUATION REQUIRE A MIRANDA WARNING?</div>
@@ -195,18 +203,20 @@
 
     <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; MAKING A RIGHT ACTUALLY WORK</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 3 &middot; MAKING A RIGHT ACTUALLY WORK</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
             <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; HELPFUL TO KNOW</div>
             <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Notice the structural move here, the same one you saw in <em>Lemon v. Kurtzman</em> last week: the Court is not adding new words to the Fifth or Sixth Amendments. It is building a specific, practical procedure that makes an existing constitutional guarantee actually effective in the real conditions of a police station, where an unrepresented suspect facing trained interrogators is in a far weaker position than the Constitution's text alone can protect.</div>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It matters, too, what actually happens if police skip these warnings. A confession obtained in violation of Miranda cannot normally be used as evidence against the suspect at trial, a consequence called the <strong class="gloss-term"><a href="#gloss-exclusionary-rule" title="a confession obtained in violation of Miranda cannot normally be used as evidence at trial">exclusionary rule</a></strong>. Some critics have argued this lets obviously guilty people escape punishment on a technicality; supporters respond that the only way to make the Fifth Amendment's protection actually mean something is to remove the government's incentive to violate it in the first place. A right with no real consequence for its violation is barely a right at all.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It matters, too, what actually happens if police skip these warnings. A confession obtained in violation of Miranda cannot normally be used as evidence against the suspect at trial, a consequence called the <span class="gloss" tabindex="0">exclusionary rule<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'exclusionary rule')">&#128266;</button><span class="gloss-tip">the rule that a confession obtained in violation of Miranda cannot normally be used as evidence against the suspect at trial.</span></span>. Some critics have argued this lets obviously guilty people escape punishment on a technicality; supporters respond that the only way to make the Fifth Amendment's protection actually mean something is to remove the government's incentive to violate it in the first place. A right with no real consequence for its violation is barely a right at all.</p>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Ernesto Miranda's own story did not end with the Supreme Court's ruling. Arizona retried him without using his original confession as evidence, and prosecutors convicted him anyway based on other evidence, including testimony from his girlfriend. After his release from prison years later, Miranda sometimes made money autographing police-issued Miranda warning cards. He was killed in a bar fight in 1976, and in a notable irony, the suspect arrested in connection with his death was read his Miranda rights and chose to remain silent; no one was ever convicted of Miranda's killing.</p>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The promise that &ldquo;if he cannot afford an attorney one will be appointed for him&rdquo; did not come from thin air. Three years before <em>Miranda</em>, in <em>Gideon v. Wainwright</em> (1963), the Supreme Court had already ruled that the Sixth Amendment's right to counsel requires states to provide a free lawyer to any criminal defendant who cannot afford one, at least in serious cases. Clarence Earl Gideon, the defendant in that case, had been forced to represent himself in a Florida courtroom after a judge refused his request for a lawyer, and was convicted. Gideon's own handwritten appeal to the Supreme Court, written in pencil from his prison cell, helped establish a right that <em>Miranda</em>'s warnings would later require police to actually announce out loud. Read together, <em>Gideon</em> and <em>Miranda</em> show the Sixth and Fifth Amendments reinforcing each other: one guarantees a lawyer's help, the other guarantees a suspect actually learns that help is available.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Notice, too, how much work happened between the Bill of Rights' ratification in 1791 and these two twentieth-century cases actually making its promises functional in an ordinary police station or courtroom. The Sixth Amendment's right to counsel sat in the Constitution's text for 172 years before <em>Gideon</em> required states to actually provide a lawyer to defendants who could not afford one. A written right and a right a person can actually use in the moment it matters are not automatically the same thing, and closing that gap has often taken the judiciary generations of case-by-case work.</p>
     </div>
 
     <!-- What You'll Do Next -->
@@ -215,14 +225,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reading Quiz 14.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="https://optimaoaoteam.instructure.com/courses/35/quizzes/358" target="_blank" rel="noopener" style="color: #0e1c42;">Reading Quiz 14.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Five inference questions on the Fourth, Fifth, and Sixth Amendments and <em>Miranda v. Arizona</em>.</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 1 &amp; Critical Questions 14.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-1.html" style="color: #0e1c42;">Primary Source 1</a> &amp; <a href="https://optimaoaoteam.instructure.com/courses/35/assignments/654" target="_blank" rel="noopener" style="color: #0e1c42;">Critical Questions 14.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;"><em>Miranda v. Arizona</em>, 384 U.S. 436 (1966), the Court's opinion setting out the four required warnings.</div>
             </div>
         </div>
@@ -247,6 +257,15 @@
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
 <script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
     var reset = e.target.closest('.widget-reset');

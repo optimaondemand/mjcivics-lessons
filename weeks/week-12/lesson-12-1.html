@@ -46,6 +46,12 @@
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
     .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
     .gloss-term { color: #0E1C42; }
     .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
     .wrapper-pointer { font-size: 14px; color: #0E1C42; background: #EEF1F8; border-left: 4px solid #6b7a99; border-radius: 4px; padding: 10px 14px; margin: 0 0 18px; }
@@ -97,7 +103,7 @@
         <div style="font-size: 16px; color: #666;">Lesson</div>
     </div>
 
-    <p class="wrapper-pointer">&#128203; Before this lesson: complete the <strong>Module 4 Intro Wrapper</strong> in Canvas (ungraded, ~2 minutes, no wrong answers).</p>
+    <p class="wrapper-pointer">&#128203; Before this lesson: complete the <a href="https://optimaoaoteam.instructure.com/courses/35/quizzes/355" target="_blank" rel="noopener" style="color: #0e1c42;"><strong>Module 4 Intro Wrapper</strong></a> in Canvas (ungraded, ~2 minutes, no wrong answers).</p>
 
     <!-- Today's Focus -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -136,17 +142,17 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE RATIFICATION COMPROMISE</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; THE RATIFICATION COMPROMISE</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing one term from Lesson 11.2, plus new terms for this module.</p>
             <dl class="glossary-list">
-                <dt id="gloss-bill-of-rights">Bill of Rights <span class="phonetic"></span> <button class="audio-btn" data-term="Bill of Rights" aria-label="Play pronunciation of Bill of Rights">&#128266;</button></dt>
+                <dt id="gloss-bill-of-rights">Bill of Rights <span class="phonetic"></span> <button class="gloss-audio" data-term="Bill of Rights" aria-label="Play pronunciation of Bill of Rights" onclick="speakGloss(event,'Bill of Rights')">&#128266;</button></dt>
                 <dd>the first ten amendments to the Constitution, ratified in 1791, restraining what the federal government may do to individual rights.</dd>
-                <dt id="gloss-incorporation">incorporation <span class="phonetic">(in-kor-por-AY-shun)</span> <button class="audio-btn" data-term="incorporation" aria-label="Play pronunciation of incorporation">&#128266;</button></dt>
+                <dt id="gloss-incorporation">incorporation <span class="phonetic">(in-kor-por-AY-shun)</span> <button class="gloss-audio" data-term="incorporation" aria-label="Play pronunciation of incorporation" onclick="speakGloss(event,'incorporation')">&#128266;</button></dt>
                 <dd>the gradual process, using the 14th Amendment's Due Process Clause, of applying most Bill of Rights protections against state governments too.</dd>
-                <dt id="gloss-judicial-review-121">judicial review <span class="phonetic"></span> <button class="audio-btn" data-term="judicial review" aria-label="Play pronunciation of judicial review">&#128266;</button></dt>
+                <dt id="gloss-judicial-review-121">judicial review <span class="phonetic"></span> <button class="gloss-audio" data-term="judicial review" aria-label="Play pronunciation of judicial review" onclick="speakGloss(event,'judicial review')">&#128266;</button></dt>
                 <dd>the power of federal courts to strike down a law as unconstitutional.</dd>
             </dl>
         </div>
@@ -164,11 +170,15 @@
         </div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Congress kept its promise. Twelve amendments passed in 1789; ten were ratified by the states in 1791. Together they are the Bill of Rights. The Preamble the states received along with the amendments explained their purpose plainly: to add "further <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Formally stating or declaring something officially, as opposed to creating something new">declaratory</span> and restrictive clauses" so as to "prevent misconstruction or abuse" of the government's powers, the same limited-government logic you traced through Locke, Montesquieu, and the enumerated powers of Article I.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">James Madison, who had originally sided with Hamilton and doubted a bill of rights was even necessary, changed his mind once he saw how many state ratifying conventions demanded one as their actual price for approval. Serving in the First Congress, Madison became the amendments' chief drafter himself, drawing heavily on George Mason's 1776 Virginia Declaration of Rights and on England's own 1689 Bill of Rights, sources that stretch the tradition of written guarantees back more than a century before the American founding. Congress trimmed Madison's original list of proposals from seventeen down to twelve, and the states ratified ten of those twelve in 1791.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Ratification of the original Constitution itself had been closer than many students assume. Virginia approved it by a margin of only ten votes out of more than 168 cast, and New York's convention, deeply divided, ratified by an even narrower three-vote margin, in both cases only after Federalist delegates promised amendments would follow. Without that specific promise, it is genuinely unclear whether either state, both essential to a workable union, would have joined at all.</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; A FENCE, NOT A GRANT</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; A FENCE, NOT A GRANT</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
             <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; HELPFUL TO KNOW</div>
@@ -176,13 +186,21 @@
         </div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is why Hamilton's original objection mattered so much to the Anti-Federalists' opponents: if rights come from nature rather than from government, then listing some of them risks implying, by omission, that whatever is left off the list isn't protected at all. The framers who drafted the actual amendments had to write carefully enough to avoid that trap.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Anti-Federalists were not being paranoid. English and colonial history gave them real examples of governments that treated an unwritten liberty as no liberty at all once it grew inconvenient to those in power. Their specific fix appears in the Ninth Amendment, which states directly that listing certain rights "shall not be construed to deny or disparage others retained by the people." In other words, the amendments anticipated their own biggest objection and answered it in the text itself: this list is not exhaustive, and citizens keep whatever unlisted rights they already possessed. The Tenth Amendment adds a parallel guardrail for federalism, reserving to the states, or to the people, any power the Constitution neither grants to the federal government nor forbids to the states.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">This is the same natural-rights logic you first met through Locke back in Week 3: rights do not originate with government, so government cannot be the final word on which ones exist. A bill of rights, read this way, is less a gift from the state to its citizens than a citizen's own reminder to the state of what it was never given permission to touch in the first place.</p>
     </div>
 
     <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; FIVE FREEDOMS IN ONE SENTENCE</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 3 &middot; FIVE FREEDOMS IN ONE SENTENCE</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The First Amendment packs five separate freedoms into a single sentence: no law establishing a religion, no law prohibiting the free exercise of religion, no law abridging speech or the press, and protection for peaceable assembly and petitioning the government for a redress of grievances. Notice the amendment's structure: it restrains Congress ("Congress shall make no law"), not private citizens or private institutions. Two of this module's coming weeks will test exactly how far that restraint on government reaches once real disputes reach the Supreme Court.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">For most of American history, the First Amendment restrained only the federal government, exactly as its opening words say. States were free to set up their own official religions or restrict speech under their own state constitutions, and several actually did so in the earliest years of the republic. This changed only gradually, through a process called <span class="gloss" tabindex="0">incorporation<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'incorporation')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">(in-kor-por-AY-shun)</span>the gradual process, using the 14th Amendment's Due Process Clause, of applying most Bill of Rights protections against state governments too.</span></span>, in which the Supreme Court used the 14th Amendment's Due Process Clause, ratified in 1868, to apply most Bill of Rights protections against state governments as well. You will trace two specific incorporation cases, <em>Lemon v. Kurtzman</em> and <em>Sherbert v. Verner</em>, in the next two weeks of this module.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The idea that a free press deserved special protection did not begin with the First Amendment. Decades earlier, in 1735, a colonial printer named John Peter Zenger was put on trial in New York for publishing articles criticizing the colony's royal governor. His lawyer argued, successfully, that true statements critical of government officials should not be punished as a crime, even though colonial law treated them as libelous. The jury agreed and acquitted Zenger, in defiance of the trial judge's own instructions. The case became an early, celebrated example of the very principle the First Amendment would later write directly into the Constitution's text.</p>
 
         <div class="optima-widget ow-select">
           <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE SCENARIO TO THE FREEDOM</div>
@@ -228,14 +246,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reading Quiz 12.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="https://optimaoaoteam.instructure.com/courses/35/quizzes/356" target="_blank" rel="noopener" style="color: #0e1c42;">Reading Quiz 12.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Five inference questions on the ratification compromise, the Preamble, and the First Amendment.</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 1 &amp; Critical Questions 12.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-1.html" style="color: #0e1c42;">Primary Source 1</a> &amp; <a href="https://optimaoaoteam.instructure.com/courses/35/assignments/644" target="_blank" rel="noopener" style="color: #0e1c42;">Critical Questions 12.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">The Preamble to the Bill of Rights and the First Amendment (1791), with a note on the original text.</div>
             </div>
         </div>
@@ -260,6 +278,15 @@
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
 <script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
     var reset = e.target.closest('.widget-reset');

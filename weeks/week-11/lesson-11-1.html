@@ -46,6 +46,12 @@
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
     .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
     .gloss-term { color: #0E1C42; }
     .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
@@ -133,21 +139,21 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A BARE OUTLINE, FILLED IN LATER</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; A BARE OUTLINE, FILLED IN LATER</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing three terms from Lesson 10.2, plus new terms for the judiciary.</p>
             <dl class="glossary-list">
-                <dt id="gloss-case-controversy">&ldquo;case or controversy&rdquo; requirement <span class="phonetic"></span> <button class="audio-btn" data-term="case or controversy requirement" aria-label="Play pronunciation of case or controversy requirement">&#128266;</button></dt>
+                <dt id="gloss-case-controversy">&ldquo;case or controversy&rdquo; requirement <span class="phonetic"></span> <button class="gloss-audio" data-term="case or controversy requirement" aria-label="Play pronunciation of case or controversy requirement" onclick="speakGloss(event,'case or controversy requirement')">&#128266;</button></dt>
                 <dd>the rule that federal courts may only decide real disputes between real parties who have actually been harmed, not give advisory opinions on hypothetical laws.</dd>
-                <dt id="gloss-diversity-jurisdiction">diversity jurisdiction <span class="phonetic"></span> <button class="audio-btn" data-term="diversity jurisdiction" aria-label="Play pronunciation of diversity jurisdiction">&#128266;</button></dt>
+                <dt id="gloss-diversity-jurisdiction">diversity jurisdiction <span class="phonetic"></span> <button class="gloss-audio" data-term="diversity jurisdiction" aria-label="Play pronunciation of diversity jurisdiction" onclick="speakGloss(event,'diversity jurisdiction')">&#128266;</button></dt>
                 <dd>letting a lawsuit between citizens of different states be heard in a neutral federal court instead of a state court that might favor its own resident.</dd>
-                <dt id="gloss-line-item-veto-111">line-item veto <span class="phonetic">(LYNE-EYE-tem VEE-toh)</span> <button class="audio-btn" data-term="line-item veto" aria-label="Play pronunciation of line-item veto">&#128266;</button></dt>
+                <dt id="gloss-line-item-veto-111">line-item veto <span class="phonetic">(LYNE-EYE-tem VEE-toh)</span> <button class="gloss-audio" data-term="line-item veto" aria-label="Play pronunciation of line-item veto" onclick="speakGloss(event,'line-item veto')">&#128266;</button></dt>
                 <dd>the power, held by most state governors but not the President, to strike out specific spending provisions in a budget bill while signing the rest.</dd>
-                <dt id="gloss-pocket-veto-111">pocket veto <span class="phonetic">(POK-et VEE-toh)</span> <button class="audio-btn" data-term="pocket veto" aria-label="Play pronunciation of pocket veto">&#128266;</button></dt>
+                <dt id="gloss-pocket-veto-111">pocket veto <span class="phonetic">(POK-et VEE-toh)</span> <button class="gloss-audio" data-term="pocket veto" aria-label="Play pronunciation of pocket veto" onclick="speakGloss(event,'pocket veto')">&#128266;</button></dt>
                 <dd>when a President lets a bill die simply by not signing it before Congress adjourns.</dd>
-                <dt id="gloss-veto-111">veto <span class="phonetic">(VEE-toh)</span> <button class="audio-btn" data-term="veto" aria-label="Play pronunciation of veto">&#128266;</button></dt>
+                <dt id="gloss-veto-111">veto <span class="phonetic">(VEE-toh)</span> <button class="gloss-audio" data-term="veto" aria-label="Play pronunciation of veto" onclick="speakGloss(event,'veto')">&#128266;</button></dt>
                 <dd>the President's power to reject a bill passed by Congress and return it with objections.</dd>
             </dl>
         </div>
@@ -165,25 +171,33 @@
         </div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Congress did create lower federal courts, immediately, in the Judiciary Act of 1789, but the Constitution itself did not require it. The framers, having just spent most of their energy on the legislature and the executive, left the judiciary's finer details to be worked out later, by statute and by practice.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">That first Judiciary Act built the three-tier system federal courts still use today: district courts to hear a case first, circuit courts to hear appeals, and the Supreme Court sitting at the very top. The Supreme Court itself started with only six justices, a number set by Congress, not the Constitution. Congress changed the Court's size several times over the next century, shrinking and expanding it during political fights, before settling on nine justices in 1869, a number that has held ever since. Article III itself gives Congress the power &ldquo;to constitute Tribunals inferior to the supreme Court,&rdquo; so this was not an oversight. The framers deliberately handed these structural choices to the legislature, to be worked out through ordinary lawmaking and experience, rather than freezing one particular court system into the Constitution's text forever. Part of their confidence came from the fact that every state already had its own working court system before the Convention even met. State courts had been deciding ordinary lawsuits for generations, so the new federal courts only had to handle the narrower set of cases that genuinely needed a national forum, not every legal dispute in the country.</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; TWO PROTECTIONS, ONE PURPOSE</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; TWO PROTECTIONS, ONE PURPOSE</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Federal judges hold their offices &ldquo;during <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="A legal phrase meaning, in practice, service for life, removable only through impeachment">good Behaviour</span>,&rdquo; in practice, for life, removable only through impeachment, and their salaries cannot be reduced while they serve. Both protections exist for the same reason: a judge who feared losing his job or his pay for an unpopular ruling would not be a genuinely independent check on the other branches.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Federal judges hold their offices &ldquo;during <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="A legal phrase meaning, in practice, service for life, removable only through impeachment">good Behaviour</span>,&rdquo; in practice, for life, removable only through impeachment, and their salaries cannot be reduced while they serve. Both protections exist for the same reason: a judge who feared losing his job or his pay for an unpopular ruling would not be a genuinely independent check on the other branches. The protection has held up remarkably well in practice. In more than two centuries, only one Supreme Court Justice has ever been impeached, Samuel Chase in 1804, and the Senate acquitted him. That single case has stood ever since as practical proof of how strongly &ldquo;good Behaviour&rdquo; actually shields judges from being removed simply for handing down an unpopular ruling.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">These protections connect directly to how much power courts actually get to use. Article III's own text limits federal courts to real disputes, a rule lawyers call the &ldquo;<span class="gloss" tabindex="0">case or controversy<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'case or controversy requirement')">&#128266;</button><span class="gloss-tip">the rule that federal courts may only decide real disputes between real parties who have actually been harmed, not give advisory opinions on hypothetical laws.</span></span>&rdquo; requirement. A court cannot rule on a law simply because a citizen dislikes it in the abstract; it must wait for an actual dispute between real parties to reach it. This is one reason the &ldquo;least dangerous&rdquo; label fits: judges cannot go looking for constitutional questions to decide. Article III also lets federal courts hear lawsuits between citizens of different states, called <span class="gloss" tabindex="0">diversity jurisdiction<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'diversity jurisdiction')">&#128266;</button><span class="gloss-tip">letting a lawsuit between citizens of different states be heard in a neutral federal court instead of a state court that might favor its own resident.</span></span>, so the case does not have to be decided by a state court that might unfairly favor its own resident over an out-of-state opponent.</p>
 
         <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
             <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; HELPFUL TO KNOW</div>
             <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">Article III, Section 2 defines the kinds of cases federal courts may hear at all: cases arising under the Constitution, federal law, or treaties, along with disputes between states, or between citizens of different states. Federal courts cannot simply decide to rule on any dispute that interests them; their <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="The scope of cases a court is authorized to hear">jurisdiction</span>, like Congress's powers, is limited to what the text grants.</div>
         </div>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 14px 0 0 0;">Section 2 also splits the Supreme Court's own jurisdiction into two kinds. In a small number of case types, mostly disputes involving ambassadors or a state as a party, the Constitution gives the Supreme Court original jurisdiction, meaning the case can start there directly, with no trial in a lower court first. In every other kind of case, the Supreme Court has only appellate jurisdiction: it can review a decision already made by a lower court, but the case must work its way up through the system first. In practice, this means the overwhelming majority of Supreme Court cases you have ever heard of, cases about free speech, criminal procedure, or federal law, arrived there on appeal, years after starting out in a district court far below.</p>
     </div>
 
     <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; &ldquo;THE LEAST DANGEROUS&rdquo; BRANCH</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 3 &middot; &ldquo;THE LEAST DANGEROUS&rdquo; BRANCH</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is the branch Hamilton would go on to call, in this week's primary source, &ldquo;the least dangerous&rdquo; of the three, not because its work matters least, but because it commands neither the power of the purse Congress holds nor the power of the sword the President commands. What it has instead is judgment: the authority to say, in a case actually before it, what the law requires.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Hamilton's comparison was not just theoretical. The judiciary has no army and no treasury of its own; it depends entirely on the other branches, and ultimately on the public's own willingness, to actually carry out its rulings. President Andrew Jackson is said to have responded to an 1832 Supreme Court ruling he disliked by simply refusing to enforce it, although historians debate whether he ever said so quite that bluntly. Whether or not the exact story is accurate, it captures something true: a court's authority rests on voluntary compliance far more than on force. This dependence is exactly why Hamilton thought the judiciary was the branch least likely to threaten liberty, even though, as you will see in Lesson 11.2, it would go on to claim one of the most consequential powers in the entire constitutional system.</p>
 
         <div class="optima-widget ow-scale">
           <div class="widget-kicker">&#9889; TRY IT &middot; DOES FEDERAL JURISDICTION COVER THIS?</div>
@@ -226,14 +240,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reading Quiz 11.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="https://optimaoaoteam.instructure.com/courses/35/quizzes/352" target="_blank" rel="noopener" style="color: #0e1c42;">Reading Quiz 11.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Five inference questions on Article III's structure, judicial tenure and pay protections, and Hamilton's &ldquo;least dangerous&rdquo; label.</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 1 &amp; Critical Questions 11.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-1.html" style="color: #0e1c42;">Primary Source 1</a> &amp; <a href="https://optimaoaoteam.instructure.com/courses/35/assignments/636" target="_blank" rel="noopener" style="color: #0e1c42;">Critical Questions 11.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">U.S. Constitution, Article III, &sect;&sect;1&ndash;2, including the original and appellate jurisdiction clauses.</div>
             </div>
         </div>
@@ -258,6 +272,15 @@
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
 <script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
     var reset = e.target.closest('.widget-reset');

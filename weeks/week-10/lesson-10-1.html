@@ -46,6 +46,12 @@
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
     .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
     .gloss-term { color: #0E1C42; }
     .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
@@ -133,23 +139,23 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; ONE EXECUTIVE, NOT A COUNCIL</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; ONE EXECUTIVE, NOT A COUNCIL</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing three terms from Lesson 9.2, plus new terms for the presidency.</p>
             <dl class="glossary-list">
-                <dt id="gloss-commander-in-chief">Commander in Chief <span class="phonetic">(kuh-MAN-der in CHEEF)</span> <button class="audio-btn" data-term="Commander in Chief" aria-label="Play pronunciation of Commander in Chief">&#128266;</button></dt>
+                <dt id="gloss-commander-in-chief">Commander in Chief <span class="phonetic">(kuh-MAN-der in CHEEF)</span> <button class="gloss-audio" data-term="Commander in Chief" aria-label="Play pronunciation of Commander in Chief" onclick="speakGloss(event,'Commander in Chief')">&#128266;</button></dt>
                 <dd>the President's constitutional role as head of the armed forces, though only Congress can declare war.</dd>
-                <dt id="gloss-enumerated-powers-101">enumerated powers <span class="phonetic">(ee-NOO-mer-ay-ted POW-erz)</span> <button class="audio-btn" data-term="enumerated powers" aria-label="Play pronunciation of enumerated powers">&#128266;</button></dt>
+                <dt id="gloss-enumerated-powers-101">enumerated powers <span class="phonetic">(ee-NOO-mer-ay-ted POW-erz)</span> <button class="gloss-audio" data-term="enumerated powers" aria-label="Play pronunciation of enumerated powers" onclick="speakGloss(event,'enumerated powers')">&#128266;</button></dt>
                 <dd>the doctrine that a national legislature may only exercise the powers specifically named for it in the text.</dd>
-                <dt id="gloss-high-crimes">&ldquo;high Crimes and Misdemeanors&rdquo; <span class="phonetic"></span> <button class="audio-btn" data-term="high Crimes and Misdemeanors" aria-label="Play pronunciation of high Crimes and Misdemeanors">&#128266;</button></dt>
+                <dt id="gloss-high-crimes">&ldquo;high Crimes and Misdemeanors&rdquo; <span class="phonetic"></span> <button class="gloss-audio" data-term="high Crimes and Misdemeanors" aria-label="Play pronunciation of high Crimes and Misdemeanors" onclick="speakGloss(event,'high Crimes and Misdemeanors')">&#128266;</button></dt>
                 <dd>the Constitution's phrase for the grounds for impeachment; unlike treason or bribery, it has no single fixed legal definition.</dd>
-                <dt id="gloss-necessary-proper-101">Necessary and Proper Clause <span class="phonetic"></span> <button class="audio-btn" data-term="Necessary and Proper Clause" aria-label="Play pronunciation of Necessary and Proper Clause">&#128266;</button></dt>
+                <dt id="gloss-necessary-proper-101">Necessary and Proper Clause <span class="phonetic"></span> <button class="gloss-audio" data-term="Necessary and Proper Clause" aria-label="Play pronunciation of Necessary and Proper Clause" onclick="speakGloss(event,'Necessary and Proper Clause')">&#128266;</button></dt>
                 <dd>the clause letting Congress make laws needed to carry out its enumerated powers; critics call it the &ldquo;elastic clause.&rdquo;</dd>
-                <dt id="gloss-pardon">pardon <span class="phonetic">(PAR-dun)</span> <button class="audio-btn" data-term="pardon" aria-label="Play pronunciation of pardon">&#128266;</button></dt>
+                <dt id="gloss-pardon">pardon <span class="phonetic">(PAR-dun)</span> <button class="gloss-audio" data-term="pardon" aria-label="Play pronunciation of pardon" onclick="speakGloss(event,'pardon')">&#128266;</button></dt>
                 <dd>the President's power to forgive a federal crime or delay its punishment.</dd>
-                <dt id="gloss-police-power-101">police power <span class="phonetic"></span> <button class="audio-btn" data-term="police power" aria-label="Play pronunciation of police power">&#128266;</button></dt>
+                <dt id="gloss-police-power-101">police power <span class="phonetic"></span> <button class="gloss-audio" data-term="police power" aria-label="Play pronunciation of police power" onclick="speakGloss(event,'police power')">&#128266;</button></dt>
                 <dd>the broad power to regulate for public health, safety, and morals, left to the states.</dd>
             </dl>
         </div>
@@ -168,19 +174,19 @@
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Article II creates something the Articles of Confederation had deliberately refused to create: a single national executive. Recall from Week 2 that Rome's answer to the danger of one-man rule was a dual executive, two consuls who could check each other. The Constitutional Convention debated this question seriously, and chose one President instead. The delegates judged that a single officer could act with a speed and accountability that a council could not match, as long as his powers were narrowly listed and checked by the other branches.</p>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">This choice was not obvious or unanimous at the Convention. Edmund Randolph of Virginia, who had introduced the Virginia Plan back in Week 6, argued strongly for a plural executive, a small council of three or more people sharing power together, precisely to avoid recreating anything resembling a king. Other delegates, including James Wilson of Pennsylvania, argued just as strongly for a single executive, believing a council would blur responsibility and make it harder for citizens to know exactly whom to praise or blame for the executive branch's actions. The single-executive side eventually won the debate, but the worry behind Randolph's argument, that concentrating executive power in one person courts danger, is exactly what the rest of Article II's careful limits are built to answer.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">This choice was not obvious or unanimous at the Convention. Edmund Randolph of Virginia, who had introduced the Virginia Plan back in Week 6, argued strongly for a plural executive, a small council of three or more people sharing power together, precisely to avoid recreating anything resembling a king. Other delegates, including James Wilson of Pennsylvania, argued just as strongly for a single executive, believing a council would blur responsibility and make it harder for citizens to know exactly whom to praise or blame for the executive branch's actions. Alexander Hamilton, whose Federalist essays you will read later this week, went even further than Wilson during the Convention's private debates: he floated an executive serving on good behavior for life, closer to a king than almost any other delegate was willing to accept. The Convention rejected that idea quickly, but Hamilton's willingness to argue for it shows how wide a range of executive designs the delegates actually considered before settling on a single President serving a fixed term. The single-executive side eventually won the debate, but the worry behind Randolph's argument, that concentrating executive power in one person courts danger, is exactly what the rest of Article II's careful limits are built to answer.</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; A SHORT LIST OF NAMED POWERS</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; A SHORT LIST OF NAMED POWERS</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Article II, Sections 2 and 3 read almost like Article I, Section 8 in miniature. They give a specific list of granted powers, not a general grant of authority. The President is <strong class="gloss-term"><a href="#gloss-commander-in-chief" title="the President's constitutional role as head of the armed forces">Commander in Chief</a></strong> of the armed forces, but only Congress can declare war. He may grant <strong class="gloss-term"><a href="#gloss-pardon" title="the President's power to forgive a federal crime or delay its punishment">pardons</a></strong> and reprieves, meaning he can forgive a federal crime or delay its punishment. He may make treaties and appoint ambassadors, judges, and other federal officers, but only &ldquo;by and with the Advice and Consent of the Senate.&rdquo; That is the very power you studied last week as one of the Senate's distinguishing functions. And he is charged to &ldquo;take Care that the Laws be faithfully executed.&rdquo; This is a duty to enforce the law, not to write it.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Article II, Sections 2 and 3 read almost like Article I, Section 8 in miniature. They give a specific list of granted powers, not a general grant of authority. The President is <span class="gloss" tabindex="0">Commander in Chief<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Commander in Chief')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">(kuh-MAN-der in CHEEF)</span>the President's constitutional role as head of the armed forces, though only Congress can declare war.</span></span> of the armed forces, but only Congress can declare war. He may grant <span class="gloss" tabindex="0">pardons<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'pardon')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">(PAR-dun)</span>the President's power to forgive a federal crime or delay its punishment.</span></span> and reprieves, meaning he can forgive a federal crime or delay its punishment. He may make treaties and appoint ambassadors, judges, and other federal officers, but only &ldquo;by and with the Advice and Consent of the Senate.&rdquo; That is the very power you studied last week as one of the Senate's distinguishing functions. Section 3 adds two smaller but real duties: the President must periodically give Congress information on &ldquo;the State of the Union,&rdquo; and he alone receives foreign ambassadors, which is part of why the President, not Congress, generally speaks for the country in dealings with other nations. And he is charged to &ldquo;take Care that the Laws be faithfully executed.&rdquo; This is a duty to enforce the law, not to write it.</p>
     </div>
 
     <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; POWERS BUILT TO NEED THE OTHER BRANCHES</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 3 &middot; POWERS BUILT TO NEED THE OTHER BRANCHES</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Every one of these powers assumes another branch standing nearby, ready to participate or object. A President cannot make a binding treaty alone; he needs two-thirds of the Senate. He cannot seat a federal judge alone; he needs a Senate majority to confirm. The single executive the framers created is powerful, but it is not an executive that acts by itself; it is an executive built to need the other branches, by design.</p>
 
@@ -208,13 +214,15 @@
 
     <!-- PART 4 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; TERMS, SUCCESSION, AND IMPEACHMENT</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 4 &middot; TERMS, SUCCESSION, AND IMPEACHMENT</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The original Constitution set no limit on how many terms a President could serve, only a four-year term length. George Washington voluntarily stepped down after two terms, and this two-term tradition held as an unwritten norm for nearly a century and a half. Franklin Roosevelt broke that tradition during the Great Depression and World War II, winning four consecutive elections. In response, the 22nd Amendment, ratified in 1951, wrote the two-term limit directly into the Constitution's text, turning Washington's voluntary example into an enforceable rule.</p>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Article II also creates the Vice Presidency, whose primary constitutional job is remarkably narrow: wait to succeed the President if the President dies, resigns, or becomes unable to serve. For most of American history, the exact rules for handling presidential disability were vague and untested. The 25th Amendment, ratified in 1967, finally spelled out a clear process for succession and for temporarily transferring power if a President becomes incapacitated, closing a gap the original Constitution had simply left open.</p>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Article II, Section 4 also states the specific grounds for removing a President, Vice President, or other civil officer through impeachment: &ldquo;Treason, Bribery, or other <strong class="gloss-term"><a href="#gloss-high-crimes" title="the Constitution's phrase for the grounds for impeachment; it has no single fixed legal definition">high Crimes and Misdemeanors</a></strong>.&rdquo; The first two terms are fairly specific. The third, &ldquo;high Crimes and Misdemeanors,&rdquo; has never been given one single fixed legal definition, and Congress has had to work out its meaning case by case across American history. This ambiguity connects directly to last week's account of the Senate's role as the body that actually tries these cases. Notice, too, that impeachment itself is a shared power split across two branches: the House alone decides whether to bring charges, and the Senate alone decides guilt, exactly the kind of divided authority this whole course keeps returning to.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Article II, Section 4 also states the specific grounds for removing a President, Vice President, or other civil officer through impeachment: &ldquo;Treason, Bribery, or other <span class="gloss" tabindex="0">high Crimes and Misdemeanors<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'high Crimes and Misdemeanors')">&#128266;</button><span class="gloss-tip">the Constitution's phrase for the grounds for impeachment; unlike treason or bribery, it has no single fixed legal definition.</span></span>.&rdquo; The first two terms are fairly specific. The third, &ldquo;high Crimes and Misdemeanors,&rdquo; has never been given one single fixed legal definition, and Congress has had to work out its meaning case by case across American history. This ambiguity connects directly to last week's account of the Senate's role as the body that actually tries these cases. Notice, too, that impeachment itself is a shared power split across two branches: the House alone decides whether to bring charges, and the Senate alone decides guilt, exactly the kind of divided authority this whole course keeps returning to.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">In practice, the two-branch design has made removal extremely rare. Andrew Johnson became the first President impeached by the House, in 1868, over his conflict with Congress during Reconstruction; the Senate fell one vote short of the two-thirds needed to convict him. More than a century passed before it happened again. No President has ever actually been removed from office through this process, a fact that says less about how well presidents have behaved and more about how high the Constitution deliberately set the bar for using impeachment against the nation's chief executive.</p>
     </div>
 
     <!-- What You'll Do Next -->
@@ -223,14 +231,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reading Quiz 10.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="https://optimaoaoteam.instructure.com/courses/35/quizzes/339" target="_blank" rel="noopener" style="color: #0e1c42;">Reading Quiz 10.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Five inference questions on the single executive, the Article II power list, and why each power requires another branch's cooperation.</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 1 &amp; Critical Questions 10.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-1.html" style="color: #0e1c42;">Primary Source 1</a> &amp; <a href="https://optimaoaoteam.instructure.com/courses/35/assignments/621" target="_blank" rel="noopener" style="color: #0e1c42;">Critical Questions 10.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">U.S. Constitution, Article II, &sect;&sect;2&ndash;3.</div>
             </div>
         </div>
@@ -255,6 +263,15 @@
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
 <script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
     var audioBtn = e.target.closest('.audio-btn');

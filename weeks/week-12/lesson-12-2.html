@@ -46,6 +46,12 @@
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
     .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
     .gloss-term { color: #0E1C42; }
     .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
@@ -133,17 +139,17 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; ONE SENTENCE, TWO READINGS</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; ONE SENTENCE, TWO READINGS</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing two terms from Lesson 12.1, plus one new term for this week.</p>
             <dl class="glossary-list">
-                <dt id="gloss-bill-of-rights-122">Bill of Rights <span class="phonetic"></span> <button class="audio-btn" data-term="Bill of Rights" aria-label="Play pronunciation of Bill of Rights">&#128266;</button></dt>
+                <dt id="gloss-bill-of-rights-122">Bill of Rights <span class="phonetic"></span> <button class="gloss-audio" data-term="Bill of Rights" aria-label="Play pronunciation of Bill of Rights" onclick="speakGloss(event,'Bill of Rights')">&#128266;</button></dt>
                 <dd>the first ten amendments to the Constitution, ratified in 1791, restraining what the federal government may do to individual rights.</dd>
-                <dt id="gloss-incorporation-122">incorporation <span class="phonetic">(in-kor-por-AY-shun)</span> <button class="audio-btn" data-term="incorporation" aria-label="Play pronunciation of incorporation">&#128266;</button></dt>
+                <dt id="gloss-incorporation-122">incorporation <span class="phonetic">(in-kor-por-AY-shun)</span> <button class="gloss-audio" data-term="incorporation" aria-label="Play pronunciation of incorporation" onclick="speakGloss(event,'incorporation')">&#128266;</button></dt>
                 <dd>the gradual process of applying most Bill of Rights protections against state governments too.</dd>
-                <dt id="gloss-militia">militia <span class="phonetic">(muh-LISH-uh)</span> <button class="audio-btn" data-term="militia" aria-label="Play pronunciation of militia">&#128266;</button></dt>
+                <dt id="gloss-militia">militia <span class="phonetic">(muh-LISH-uh)</span> <button class="gloss-audio" data-term="militia" aria-label="Play pronunciation of militia" onclick="speakGloss(event,'militia')">&#128266;</button></dt>
                 <dd>a body of ordinary citizens, trained and organized rather than professional soldiers, that the Second Amendment names as &ldquo;necessary to the security of a free State.&rdquo;</dd>
             </dl>
         </div>
@@ -161,22 +167,26 @@
         </div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Does the amendment protect an individual's right to own weapons for personal use, or does it protect that right only in connection with organized militia service? The stated justification, "a well regulated Militia," and the stated right, "the right of the people to keep and bear Arms," sit side by side, and readers have disagreed for generations about how tightly the first clause limits the second.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Part of the debate turns on how language has shifted since 1791. In eighteenth-century usage, "well regulated" meant well trained, well disciplined, and properly organized and equipped, not "restricted by government rules" in the sense the word "regulated" often carries today. A "well regulated Militia," in the framers' own vocabulary, meant a militia that was actually prepared and organized for service, a description of military readiness rather than of legal control.</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; WHY THE FRAMERS CARED</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; WHY THE FRAMERS CARED</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Context from Week 5's Paine reading helps explain why the framers cared about this question at all. The Revolution had been fought substantially by citizen militias, not a professional standing army, and English political tradition, reaching back to the 1689 English Bill of Rights, which listed a standing army kept "without Consent of Parlyament" among its grievances against James II, treated a disarmed population and an unaccountable standing army as classic tools of tyranny. A right to bear arms, in this reading, was inseparable from the practical ability of ordinary citizens to resist a government that betrayed the social contract Locke and Rousseau had described.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Congress gave this idea legal shape almost immediately. The Militia Act of 1792 defined the <span class="gloss" tabindex="0">militia<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'militia')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">(muh-LISH-uh)</span>a body of ordinary citizens, trained and organized rather than professional soldiers, that the Second Amendment names as &ldquo;necessary to the security of a free State.&rdquo;</span></span> broadly, enrolling virtually every able-bodied male citizen between eighteen and forty-five and requiring each to arm himself at his own expense. Under this understanding, "the militia" was not a small, separately selected group; it was, in principle, the whole body of eligible citizens. This is part of why some readers of the amendment see the individual right and the militia purpose as two sides of the same coin, rather than as separate, competing claims.</p>
     </div>
 
     <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; HELLER SETTLES THE QUESTION, FOR NOW</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 3 &middot; HELLER SETTLES THE QUESTION, FOR NOW</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">6 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Supreme Court did not resolve the individual-versus-militia question definitively until <em>District of Columbia v. Heller</em> in 2008, which held the amendment protects an individual right to keep a firearm for lawful purposes such as self-defense, unconnected with militia service. This is a reminder that even amendments ratified in 1791 can remain live constitutional questions well into the twenty-first century, decided not by rewriting the text but by judges applying it, exactly as Hamilton described in last week's Federalist No. 78. A right that is not clearly <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="Violated or trespassed upon; the Second Amendment's own word for what government may not do to this right">infringed</span> upon still had to wait over two centuries for a definitive Supreme Court ruling on what it actually covers.</p>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It is worth knowing that <em>Heller</em> did not eliminate all gun regulation. The Court's opinion explicitly stated that the right is not unlimited, and that many longstanding regulations, such as bans on possession by felons or restrictions in sensitive places like schools and government buildings, remain presumptively lawful. Two years later, in <em>McDonald v. City of Chicago</em> (2010), the Court applied the Second Amendment against state and local governments too, using the same incorporation process from Lesson 12.1. Before <em>McDonald</em>, a state or city government was not directly bound by the Second Amendment at all.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It is worth knowing that <em>Heller</em> did not eliminate all gun regulation. The Court's opinion explicitly stated that the right is not unlimited, and that many longstanding regulations, such as bans on possession by felons or restrictions in sensitive places like schools and government buildings, remain presumptively lawful. Two years later, in <em>McDonald v. City of Chicago</em> (2010), the Court applied the Second Amendment against state and local governments too, using the same incorporation process from Lesson 12.1. Before <em>McDonald</em>, a state or city government was not directly bound by the Second Amendment at all. Together, <em>Heller</em> and <em>McDonald</em> show incorporation working in two separate steps: first the Court decides what a right actually means, then a later case decides whether that meaning binds state and local governments too, not just the federal government the amendment's framers were originally most worried about.</p>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The case itself began with Dick Heller, a licensed special police officer in Washington, D.C., who was permitted to carry a handgun on duty but was barred by district law from keeping one at his own home for self-defense. Heller sued, arguing the district's near-total ban on functional handguns violated his Second Amendment rights. The Supreme Court agreed, striking down the D.C. law by a narrow five-to-four vote, a margin worth noting: even after two centuries of the amendment sitting in the Constitution, the justices closest to actually deciding its meaning were sharply divided.</p>
 
@@ -226,7 +236,7 @@
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source Report 12</strong> (Canvas Assignment, Tier 3)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="https://optimaoaoteam.instructure.com/courses/35/assignments/645" target="_blank" rel="noopener" style="color: #0e1c42;">Primary Source Report 12</a></strong> (Canvas Assignment, Tier 3)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">A short Word document analyzing both this week's primary sources, the Preamble/First Amendment and the Second Amendment, quoting each directly.</div>
             </div>
         </div>
@@ -251,6 +261,15 @@
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
 <script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
     var reset = e.target.closest('.widget-reset');

@@ -46,6 +46,12 @@
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
     .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
     .gloss-term { color: #0E1C42; }
     .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
@@ -133,17 +139,17 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A POWER THE TEXT NEVER NAMES</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; A POWER THE TEXT NEVER NAMES</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">5 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing two terms from Lesson 11.1, plus this week's key term.</p>
             <dl class="glossary-list">
-                <dt id="gloss-case-controversy-112">&ldquo;case or controversy&rdquo; requirement <span class="phonetic"></span> <button class="audio-btn" data-term="case or controversy requirement" aria-label="Play pronunciation of case or controversy requirement">&#128266;</button></dt>
+                <dt id="gloss-case-controversy-112">&ldquo;case or controversy&rdquo; requirement <span class="phonetic"></span> <button class="gloss-audio" data-term="case or controversy requirement" aria-label="Play pronunciation of case or controversy requirement" onclick="speakGloss(event,'case or controversy requirement')">&#128266;</button></dt>
                 <dd>the rule that federal courts may only decide real disputes between real parties who have actually been harmed.</dd>
-                <dt id="gloss-diversity-jurisdiction-112">diversity jurisdiction <span class="phonetic"></span> <button class="audio-btn" data-term="diversity jurisdiction" aria-label="Play pronunciation of diversity jurisdiction">&#128266;</button></dt>
+                <dt id="gloss-diversity-jurisdiction-112">diversity jurisdiction <span class="phonetic"></span> <button class="gloss-audio" data-term="diversity jurisdiction" aria-label="Play pronunciation of diversity jurisdiction" onclick="speakGloss(event,'diversity jurisdiction')">&#128266;</button></dt>
                 <dd>letting a lawsuit between citizens of different states be heard in a neutral federal court instead of a state court that might favor its own resident.</dd>
-                <dt id="gloss-judicial-review">judicial review <span class="phonetic"></span> <button class="audio-btn" data-term="judicial review" aria-label="Play pronunciation of judicial review">&#128266;</button></dt>
+                <dt id="gloss-judicial-review">judicial review <span class="phonetic"></span> <button class="gloss-audio" data-term="judicial review" aria-label="Play pronunciation of judicial review" onclick="speakGloss(event,'judicial review')">&#128266;</button></dt>
                 <dd>the power of federal courts to strike down a law as unconstitutional, first exercised in 1803's <em>Marbury v. Madison</em>.</dd>
             </dl>
         </div>
@@ -160,21 +166,31 @@
           <button class="widget-reset">Reset</button>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><em>Marbury v. Madison</em> arose when the outgoing President John Adams's last-minute judicial appointments became tangled up in a dispute the incoming Jefferson administration refused to honor. Chief Justice John Marshall's opinion in that case is where the Supreme Court first actually struck down an act of Congress as unconstitutional. The specific outcome is almost more interesting than the general principle it established: Marshall ruled that Marbury did have a right to his judicial commission, and that the executive branch had wrongly withheld it, but also ruled that the specific law Marbury relied on to bring his case directly to the Supreme Court was itself unconstitutional, since it expanded the Court's original jurisdiction beyond what Article III actually allows. The result was that Marbury lost his case, even though Marshall agreed he had been wronged, while the Supreme Court gained something far larger: an accepted power to declare an act of Congress void. Fifteen years earlier, Hamilton had already predicted and defended exactly this power, reasoning from the structure of the Constitution itself rather than from any single clause that names the power outright.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The case began in the final hours of the outgoing Adams administration in early 1801, when Adams and his outgoing Federalist Congress rushed to fill dozens of minor judicial posts before Thomas Jefferson took office. William Marbury was one of these last-minute appointees, named a justice of the peace for the District of Columbia. His commission was signed and sealed, but the outgoing administration ran out of time to actually deliver it before Jefferson's inauguration. Jefferson's new Secretary of State, James Madison, then simply refused to hand it over, since Jefferson considered the whole batch of eleventh-hour appointments improper. Marbury sued directly, asking the Supreme Court to order Madison to deliver his commission.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Chief Justice John Marshall's opinion in that case is where the Supreme Court first actually struck down an act of Congress as unconstitutional. The specific outcome is almost more interesting than the general principle it established: Marshall ruled that Marbury did have a right to his judicial commission, and that the executive branch had wrongly withheld it, but also ruled that the specific law Marbury relied on to bring his case directly to the Supreme Court was itself unconstitutional, since it expanded the Court's original jurisdiction beyond what Article III actually allows. The result was that Marbury lost his case, even though Marshall agreed he had been wronged, while the Supreme Court gained something far larger: an accepted power to declare an act of Congress void. Fifteen years earlier, Hamilton had already predicted and defended exactly this power, reasoning from the structure of the Constitution itself rather than from any single clause that names the power outright.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Marshall himself is worth remembering. He served as Chief Justice for 34 years, longer than almost any other Justice in American history, and used that unusually long tenure to shape how the Court thought about its own authority well beyond this single case. It is a small irony of the story that Marshall's own cousin, Thomas Jefferson, was the President whose administration he ruled against, a reminder that the framers' insistence on judicial independence was meant to hold even when a judge's own family ties ran directly into the case before him.</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; HAMILTON'S CHAIN OF REASONING</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; HAMILTON'S CHAIN OF REASONING</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Hamilton's argument runs like this: the Constitution is a limited grant of authority from the people to their government. If Congress passes a law that exceeds the authority the Constitution actually grants it, that law conflicts with the higher law the people themselves adopted. Someone has to decide which document controls when they conflict, and Hamilton argued it must be the courts, whose entire job is interpreting law in the cases before them, not because judges are wiser than legislators, but because &ldquo;the interpretation of the laws is the proper and peculiar province of the courts,&rdquo; and a court applying the Constitution over a conflicting statute is not overruling the people, but enforcing the people's own prior decision against their temporary representatives.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Hamilton pushed the comparison further. Representatives, he argued, are servants of the people, not their masters, so it would be strange indeed if a servant's ordinary acts could override the master's own founding instructions. Courts applying the Constitution over a conflicting statute were not defying popular will in his account, but enforcing the one act of popular will that outranks every ordinary law: the Constitution itself, adopted directly by the people rather than passed by their temporary representatives in a single session of Congress.</p>
     </div>
 
     <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WHY IT DOESN'T BECOME A ROVING COMMISSION</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 3 &middot; WHY IT DOESN'T BECOME A ROVING COMMISSION</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This argument depends entirely on everything Article III already establishes: life tenure insulates judges from the political pressure that might otherwise tempt them to rubber-stamp whatever the current Congress wants, and the limited, defined jurisdiction of Section 2 means judges exercise this power only inside real cases, never as a roving commission to review laws in the abstract. Hamilton's &ldquo;least dangerous branch&rdquo; turns out to hold one of the most consequential powers of all, consequential precisely because it is exercised so narrowly.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Congress does retain one structural check on this power. Article III lets Congress set exceptions to the Supreme Court's appellate jurisdiction, meaning Congress can, within limits, remove certain categories of cases from the Court's reach altogether. This tool has been used only rarely across American history, but it is a reminder that even <span class="gloss" tabindex="0">judicial review<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'judicial review')">&#128266;</button><span class="gloss-tip">the power of federal courts to strike down a law as unconstitutional, first exercised in 1803's <em>Marbury v. Madison</em>.</span></span> operates inside boundaries the other two branches still help define.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It is also worth noticing that this is a specifically American choice, not an inevitable feature of every constitutional government. Other democracies built different answers to the same problem: some assign constitutional review to a specialized constitutional court kept separate from ordinary judges, and some, including the United Kingdom for most of its history, give Parliament itself the final word on what a law means, with no court empowered to override it. The United States is unusual in handing this power to ordinary courts deciding ordinary cases, an arrangement Hamilton defended before it ever existed and Marshall's Court claimed for the first time fifteen years later.</p>
 
         <div class="optima-widget ow-flip">
           <div class="widget-kicker">&#9889; FLIP IT &middot; TRACE HAMILTON'S ARGUMENT</div>
@@ -204,7 +220,7 @@
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 2 &amp; Primary Source Exercise 11</strong> (Canvas, Tier 2)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-2.html" style="color: #0e1c42;">Primary Source 2</a> &amp; <a href="https://optimaoaoteam.instructure.com/courses/35/assignments/638" target="_blank" rel="noopener" style="color: #0e1c42;">Primary Source Exercise 11</a></strong> (Canvas, Tier 2)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Hamilton, <em>Federalist No. 78</em>, on force, will, and judgment, and the courts as an intermediate body between the people and the legislature.</div>
             </div>
         </div>
@@ -214,7 +230,7 @@
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 12px;">&#128170; CARRY THIS FORWARD</div>
         <p style="font-size: 18px; color: #1a2340; line-height: 1.65; margin: 0;">Module 3 has now traced all three branches: a Congress limited to enumerated powers, a single executive bound to need the other branches, and a judiciary whose narrowest power turned out to be its most consequential. Carry Hamilton's warning with you into Module 4: a right written down and defended by no independent institution is only a promise, and that module's four weeks are about how the Bill of Rights and the courts try to make that promise real.</p>
-        <p style="font-size: 15px; color: #666; font-style: italic; margin: 12px 0 0;">&#128203; Up next: the ungraded <strong>Module 3 Outro Wrapper</strong> in Canvas (~2 minutes) before moving into Module 4.</p>
+        <p style="font-size: 15px; color: #666; font-style: italic; margin: 12px 0 0;">&#128203; Up next: the ungraded <a href="https://optimaoaoteam.instructure.com/courses/35/quizzes/354" target="_blank" rel="noopener" style="color: #0e1c42;"><strong>Module 3 Outro Wrapper</strong></a> in Canvas (~2 minutes) before moving into Module 4.</p>
     </div>
 
 </div>
@@ -230,6 +246,15 @@
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
 <script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
     var reset = e.target.closest('.widget-reset');
