@@ -46,6 +46,12 @@
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
     .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
     .gloss-term { color: #0E1C42; }
     .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
@@ -130,31 +136,33 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE CIVIL WAR AND WORLD WAR II DRAFTS</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; THE CIVIL WAR AND WORLD WAR II DRAFTS</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing this module's organizing concept, plus new terms for the draft.</p>
             <dl class="glossary-list">
-                <dt id="gloss-civic-obligation-162">civic obligation <span class="phonetic">(SIV-ik ob-lih-GAY-shun)</span> <button class="audio-btn" data-term="civic obligation" aria-label="Play pronunciation of civic obligation">&#128266;</button></dt>
+                <dt id="gloss-civic-obligation-162">civic obligation <span class="phonetic">(SIV-ik ob-lih-GAY-shun)</span> <button class="audio-btn" data-term="civic obligation" aria-label="Play pronunciation of civic obligation" onclick="speakGloss(event,'civic obligation')">&#128266;</button></dt>
                 <dd>a duty a citizen owes back to the political community that protects their rights.</dd>
-                <dt id="gloss-commutation-fee">commutation fee <span class="phonetic">(kom-yoo-TAY-shun FEE)</span> <button class="audio-btn" data-term="commutation fee" aria-label="Play pronunciation of commutation fee">&#128266;</button></dt>
+                <dt id="gloss-commutation-fee">commutation fee <span class="phonetic">(kom-yoo-TAY-shun FEE)</span> <button class="audio-btn" data-term="commutation fee" aria-label="Play pronunciation of commutation fee" onclick="speakGloss(event,'commutation fee')">&#128266;</button></dt>
                 <dd>a payment, during the Civil War draft, that let a drafted man avoid service by paying $300, an option only the wealthy could afford.</dd>
-                <dt id="gloss-deferment">deferment <span class="phonetic">(dih-FUR-ment)</span> <button class="audio-btn" data-term="deferment" aria-label="Play pronunciation of deferment">&#128266;</button></dt>
+                <dt id="gloss-deferment">deferment <span class="phonetic">(dih-FUR-ment)</span> <button class="audio-btn" data-term="deferment" aria-label="Play pronunciation of deferment" onclick="speakGloss(event,'deferment')">&#128266;</button></dt>
                 <dd>an official delay or exemption from a draft, such as the Vietnam-era deferment for college enrollment.</dd>
-                <dt id="gloss-draft">draft <span class="phonetic">(DRAFT)</span> <button class="audio-btn" data-term="draft" aria-label="Play pronunciation of draft">&#128266;</button></dt>
+                <dt id="gloss-draft">draft <span class="phonetic">(DRAFT)</span> <button class="audio-btn" data-term="draft" aria-label="Play pronunciation of draft" onclick="speakGloss(event,'draft')">&#128266;</button></dt>
                 <dd>a system of compulsory military service, requiring citizens to serve when called by the government.</dd>
             </dl>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The 1863 Civil War draft allowed a drafted man to avoid service by paying a $300 <span style="border-bottom: 1.5px dotted #C7922C; cursor: help; color: #0E1C42;" title="A fee paid to be legally excused from a specific instance of compulsory service">commutation</span> fee or hiring a substitute, an option available only to the wealthy, and one that helped spark the deadly New York City Draft Riots that same year. Those riots in July 1863 remain one of the deadliest riots in American history, with estimates of well over one hundred deaths over several days of violence. Working-class New Yorkers, many of them recent immigrants who could not afford the $300 commutation fee, targeted draft offices, wealthy homes, and, in a shameful and violent turn, black New Yorkers and black-owned businesses, blaming both the war and the draft's unfairness on a conflict fought, in the rioters' view, to free the slaves while sparing the wealthy from having to fight it themselves. World War II's draft, by contrast, is often remembered as the most widely accepted of the three: after Pearl Harbor, the shared sense of a nation directly attacked (the very moment captured in this week's first primary source) made near-universal service feel less like a burden imposed unevenly and more like a duty shared broadly across the country.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The 1863 Civil War <span class="gloss" tabindex="0">draft<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'draft')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">DRAFT</span>a system of compulsory military service, requiring citizens to serve when called by the government.</span></span> allowed a drafted man to avoid service by paying a $300 <span class="gloss" tabindex="0">commutation fee<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'commutation fee')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">kom-yoo-TAY-shun FEE</span>a payment, during the Civil War draft, that let a drafted man avoid service by paying $300, an option only the wealthy could afford.</span></span> or hiring a substitute, an option available only to the wealthy, and one that helped spark the deadly New York City Draft Riots that same year. Those riots in July 1863 remain one of the deadliest riots in American history, with estimates of well over one hundred deaths over several days of violence. Working-class New Yorkers, many of them recent immigrants who could not afford the $300 commutation fee, targeted draft offices, wealthy homes, and, in a shameful and violent turn, black New Yorkers and black-owned businesses, blaming both the war and the draft's unfairness on a conflict fought, in the rioters' view, to free the slaves while sparing the wealthy from having to fight it themselves. World War II's draft, by contrast, is often remembered as the most widely accepted of the three: after Pearl Harbor, the shared sense of a nation directly attacked (the very moment captured in this week's first primary source) made near-universal service feel less like a burden imposed unevenly and more like a duty shared broadly across the country.</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; VIETNAM AND THE RETURN OF CONTROVERSY</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; VIETNAM AND THE RETURN OF CONTROVERSY</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">7 min</span></div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Vietnam returned the draft to serious controversy. Deferments for college enrollment allowed many young men with the means to attend college to delay or avoid service, echoing the Civil War's unevenness in a new form, even as draft calls rose through the mid-1960s. President Lyndon Johnson's April 1965 address at Johns Hopkins University, "Peace Without Conquest," defended continued and escalating American involvement in Vietnam even as the war's cost in drafted lives grew increasingly visible and increasingly contested at home.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Vietnam returned the draft to serious controversy. <span class="gloss" tabindex="0">Deferments<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'deferment')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">dih-FUR-ment</span>an official delay or exemption from a draft, such as the Vietnam-era deferment for college enrollment.</span></span> for college enrollment allowed many young men with the means to attend college to delay or avoid service, echoing the Civil War's unevenness in a new form, even as draft calls rose through the mid-1960s. President Lyndon Johnson's April 1965 address at Johns Hopkins University, "Peace Without Conquest," defended continued and escalating American involvement in Vietnam even as the war's cost in drafted lives grew increasingly visible and increasingly contested at home.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In 1969, the government tried to make the draft fairer by switching to a lottery: birthdates were drawn at random to set draft order, replacing a patchwork of local draft boards that had sometimes applied noticeably different standards from one community to the next. The lottery reduced some kinds of unevenness, but college deferments stayed in place for several more years, so the same basic fairness question persisted even after the process itself became more random than personal. The draft also recognized conscientious objector status, letting individuals who could demonstrate genuine religious or moral opposition to war perform alternative civilian service instead of combat duty, a recognition tracing back to the same religious-liberty tradition Week 13's <em>Sherbert v. Verner</em> examined.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The United States has not used a draft since Vietnam. Since 1973, the American military has been an all-volunteer force, with no one legally compelled to serve. Selective Service registration is still required by federal law for most men between eighteen and twenty-five, a standby system that could support a draft again if Congress and the President ever decided one was necessary, but no one has actually been drafted in over fifty years. Some argue this ended the fairness debate this lesson describes, since no one is forced to serve at all today; others argue it simply moved the question elsewhere, toward whether an all-volunteer force still draws disproportionately from certain communities, even without any legal compulsion involved.</p>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The scale of these three drafts differed enormously. Roughly 776,000 men were drafted during the Civil War, though many hired substitutes rather than serving themselves. World War II saw roughly ten million men drafted over the course of the war, out of a total force of about sixteen million. Vietnam-era draft calls totaled roughly 1.8 million men between 1964 and 1973. Numbers alone cannot capture whether a draft felt fair to those living through it, but they do show how differently each war depended on compulsory service to fill its ranks.</p>
@@ -207,7 +215,7 @@
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 2 &amp; Primary Source Exercise 16</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-2.html" style="color: #0e1c42;">Primary Source 2</a> &amp; <a href="https://optimaoaoteam.instructure.com/courses/35/assignments/665" target="_blank" rel="noopener" style="color: #0e1c42;">Primary Source Exercise 16</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Lyndon B. Johnson's Johns Hopkins Address, "Peace Without Conquest" (April 7, 1965).</div>
             </div>
         </div>
@@ -232,6 +240,15 @@
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
 <script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
     var reset = e.target.closest('.widget-reset');

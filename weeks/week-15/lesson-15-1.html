@@ -46,6 +46,12 @@
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
     .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
     .gloss-term { color: #0E1C42; }
     .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
@@ -133,26 +139,28 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A QUESTION SIXTY YEARS IN THE MAKING</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; A QUESTION SIXTY YEARS IN THE MAKING</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">5 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing three terms from Lesson 14.2, plus new terms for this week's landmark cases.</p>
             <dl class="glossary-list">
-                <dt id="gloss-equal-protection">equal protection <span class="phonetic"></span> <button class="audio-btn" data-term="equal protection" aria-label="Play pronunciation of equal protection">&#128266;</button></dt>
+                <dt id="gloss-equal-protection">equal protection <span class="phonetic"></span> <button class="audio-btn" data-term="equal protection" aria-label="Play pronunciation of equal protection" onclick="speakGloss(event,'equal protection')">&#128266;</button></dt>
                 <dd>the 14th Amendment's guarantee, to every citizen, of &ldquo;the equal protection of the laws.&rdquo;</dd>
-                <dt id="gloss-probable-cause-151">probable cause <span class="phonetic"></span> <button class="audio-btn" data-term="probable cause" aria-label="Play pronunciation of probable cause">&#128266;</button></dt>
+                <dt id="gloss-probable-cause-151">probable cause <span class="phonetic"></span> <button class="audio-btn" data-term="probable cause" aria-label="Play pronunciation of probable cause" onclick="speakGloss(event,'probable cause')">&#128266;</button></dt>
                 <dd>enough facts that a reasonable person would believe a crime has probably been committed.</dd>
-                <dt id="gloss-reasonable-suspicion-151">reasonable suspicion <span class="phonetic"></span> <button class="audio-btn" data-term="reasonable suspicion" aria-label="Play pronunciation of reasonable suspicion">&#128266;</button></dt>
+                <dt id="gloss-reasonable-suspicion-151">reasonable suspicion <span class="phonetic"></span> <button class="audio-btn" data-term="reasonable suspicion" aria-label="Play pronunciation of reasonable suspicion" onclick="speakGloss(event,'reasonable suspicion')">&#128266;</button></dt>
                 <dd>specific facts suggesting criminal activity might be happening; a lower standard than probable cause.</dd>
-                <dt id="gloss-separate-but-equal">&ldquo;separate but equal&rdquo; <span class="phonetic"></span> <button class="audio-btn" data-term="separate but equal" aria-label="Play pronunciation of separate but equal">&#128266;</button></dt>
+                <dt id="gloss-separate-but-equal">&ldquo;separate but equal&rdquo; <span class="phonetic"></span> <button class="audio-btn" data-term="separate but equal" aria-label="Play pronunciation of separate but equal" onclick="speakGloss(event,'separate but equal')">&#128266;</button></dt>
                 <dd>the doctrine, permitted by the Court for nearly sixty years before <em>Brown</em>, that legally segregated public facilities satisfied equal protection.</dd>
-                <dt id="gloss-terry-stop-151">Terry stop <span class="phonetic"></span> <button class="audio-btn" data-term="Terry stop" aria-label="Play pronunciation of Terry stop">&#128266;</button></dt>
+                <dt id="gloss-terry-stop-151">Terry stop <span class="phonetic"></span> <button class="audio-btn" data-term="Terry stop" aria-label="Play pronunciation of Terry stop" onclick="speakGloss(event,'Terry stop')">&#128266;</button></dt>
                 <dd>a brief investigative stop and pat-down for weapons, justified by reasonable suspicion rather than probable cause.</dd>
             </dl>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The case's name comes from Oliver Brown, whose daughter Linda was denied admission to her neighborhood elementary school in Topeka, Kansas, solely because of her race, and was instead required to travel much farther to a school for black children. <em>Brown v. Board of Education</em> was actually a combination of five separate lawsuits from Kansas, South Carolina, Virginia, Delaware, and the District of Columbia, all raising the same basic constitutional question. The Supreme Court combined them into a single case and a single ruling, applying its answer to every school district in the country at once, not just to the schools named in the original lawsuits.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The case's name comes from Oliver Brown, whose daughter Linda was denied admission to her neighborhood elementary school in Topeka, Kansas, solely because of her race, and was instead required to travel much farther to a school for black children. <em>Brown v. Board of Education</em> was actually a combination of five separate lawsuits from Kansas, South Carolina, Virginia, Delaware, and the District of Columbia, all raising the same basic constitutional question. The Supreme Court combined them into a single case and a single ruling, applying its answer to every school district in the country at once, not just to the schools named in the original lawsuits. Notice that Kansas was one of the five, a reminder that segregated schooling was not confined to the Deep South; states across the country maintained separate schools for black and white children.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Segregated schools were rarely equal in any practical sense, even before the Court asked whether "separate but equal" could ever satisfy the Constitution at all. In many of the districts named in the five lawsuits, per-pupil spending on black schools ran to only a fraction of spending on white schools nearby, and black schools frequently made do with outdated textbooks, crowded classrooms, and buses that white students did not have to share. <em>Brown</em>'s ruling did not rest on this unevenness alone, since the Court went on to hold segregation unconstitutional even where resources happened to be matched, but the everyday gap between the two systems made the stakes of the lawsuit unmistakable to the families who brought it.</p>
 
         <div class="optima-widget ow-reflect">
           <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
@@ -166,21 +174,23 @@
           <button class="widget-reset">Reset</button>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><em>Brown</em> asked the Court to decide whether racially segregated public schools could ever actually be equal. Chief Justice Earl Warren's opinion, joined by all nine Justices, answered no. Segregated schools, Warren wrote, harmed black children regardless of whether the physical buildings, textbooks, and teacher salaries were formally equal, because the act of separation itself communicated a message of inferiority that no amount of matched resources could undo. The doctrine of "separate but equal," the Court held, "has no place" in public education. Separate was, by its nature, unequal.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><em>Brown</em> asked the Court to decide whether racially segregated public schools could ever actually be equal. Chief Justice Earl Warren's opinion, joined by all nine Justices, answered no. Segregated schools, Warren wrote, harmed black children regardless of whether the physical buildings, textbooks, and teacher salaries were formally equal, because the act of separation itself communicated a message of inferiority that no amount of matched resources could undo. The doctrine of "<span class="gloss" tabindex="0">separate but equal<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'separate but equal')">&#128266;</button><span class="gloss-tip">the doctrine, permitted by the Court for nearly sixty years before Brown, that legally segregated public facilities satisfied equal protection.</span></span>," the Court held, "has no place" in public education. Separate was, by its nature, unequal.</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; A RULING IS NOT THE SAME AS ENFORCEMENT</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; A RULING IS NOT THE SAME AS ENFORCEMENT</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">6 min</span></div>
 
         <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
             <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; HELPFUL TO KNOW</div>
             <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">A unanimous ruling from the Court did not by itself desegregate a single school the next morning; enforcement took years of further litigation, federal action, and the broader civil rights movement your later coursework will trace.</div>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">But <em>Brown</em> did something a legislature alone could not easily have done at the time: it declared, as a matter of constitutional law binding on every state, that segregation could no longer claim the Fourteenth Amendment's protection, correcting an error the Court itself had made fifty-eight years earlier.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">But <em>Brown</em> did something a legislature alone could not easily have done at the time: it declared, as a matter of constitutional law binding on every state, that segregation could no longer satisfy the Fourteenth Amendment's guarantee of <span class="gloss" tabindex="0">equal protection<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'equal protection')">&#128266;</button><span class="gloss-tip">the 14th Amendment's guarantee, to every citizen, of &ldquo;the equal protection of the laws.&rdquo;</span></span>, correcting an error the Court itself had made fifty-eight years earlier.</p>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Part of what made the Warren Court's reasoning distinctive was its willingness to draw on evidence beyond legal precedent alone. The Court's opinion cited social science research, including psychological studies by Kenneth and Mamie Clark, two black psychologists who had asked young black children to choose between black and white dolls and describe which doll was &ldquo;nice&rdquo; or &ldquo;bad.&rdquo; Many children in the studies associated the white doll with positive traits and the black doll with negative ones, evidence the Court cited as supporting its conclusion that segregation itself, not just unequal resources, damaged children's sense of their own worth.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;"><em>Brown</em>'s path to unanimity was not straightforward. The case was actually argued before the Court twice: once in December 1952, and again a year later after the Justices asked both sides for further arguments specifically on how the Fourteenth Amendment's own framers had understood school segregation in 1868. In between the two arguments, Chief Justice Fred Vinson died unexpectedly in September 1953, and President Eisenhower appointed California's governor, Earl Warren, to replace him. Some historians believe the Court might never have reached a unanimous ruling under Vinson, who colleagues believed was less certain segregation must fall; Warren's arrival changed the Court's internal balance at exactly the moment the case needed it to.</p>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Chief Justice Warren worked hard behind the scenes to secure a unanimous decision, rather than settling for a narrow majority with several dissents. Some of the Justices had personal doubts or came from backgrounds sympathetic to Southern traditions, and reaching genuine unanimity took months of careful, patient persuasion. Warren believed a divided ruling on a question this consequential would give segregationist states an excuse to claim the issue was still legally unsettled; a single, unanimous voice, he judged, would carry far more moral and legal weight than a narrow victory ever could.</p>
 
@@ -224,14 +234,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reading Quiz 15.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="https://optimaoaoteam.instructure.com/courses/35/quizzes/359" target="_blank" rel="noopener" style="color: #0e1c42;">Reading Quiz 15.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Five inference questions on the Fourteenth Amendment, "separate but equal," and <em>Brown v. Board of Education</em>.</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 1 &amp; Critical Questions 15.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-1.html" style="color: #0e1c42;">Primary Source 1</a> &amp; <a href="https://optimaoaoteam.instructure.com/courses/35/assignments/659" target="_blank" rel="noopener" style="color: #0e1c42;">Critical Questions 15.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;"><em>Brown v. Board of Education</em>, 347 U.S. 483 (1954), the Court's unanimous opinion.</div>
             </div>
         </div>
@@ -256,6 +266,15 @@
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
 <script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
     var reset = e.target.closest('.widget-reset');

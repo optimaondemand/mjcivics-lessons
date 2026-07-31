@@ -46,6 +46,12 @@
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
     .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
     .gloss-term { color: #0E1C42; }
     .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
@@ -130,30 +136,32 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A COALITION THROUGH THE UN</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; A COALITION THROUGH THE UN</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">7 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing five terms from Lesson 17.1, plus new terms for the post-Cold War order.</p>
             <dl class="glossary-list">
-                <dt id="gloss-containment-172">containment <span class="phonetic">(kun-TAYN-ment)</span> <button class="audio-btn" data-term="containment" aria-label="Play pronunciation of containment">&#128266;</button></dt>
+                <dt id="gloss-containment-172">containment <span class="phonetic">(kun-TAYN-ment)</span> <button class="audio-btn" data-term="containment" aria-label="Play pronunciation of containment" onclick="speakGloss(event,'containment')">&#128266;</button></dt>
                 <dd>the Cold War policy of preventing the further spread of Soviet communism.</dd>
-                <dt id="gloss-domino-theory-172">domino theory <span class="phonetic"></span> <button class="audio-btn" data-term="domino theory" aria-label="Play pronunciation of domino theory">&#128266;</button></dt>
+                <dt id="gloss-domino-theory-172">domino theory <span class="phonetic"></span> <button class="audio-btn" data-term="domino theory" aria-label="Play pronunciation of domino theory" onclick="speakGloss(event,'domino theory')">&#128266;</button></dt>
                 <dd>the fear that if one nation fell to communism, its neighbors would topple in turn.</dd>
-                <dt id="gloss-marshall-plan-172">Marshall Plan <span class="phonetic"></span> <button class="audio-btn" data-term="Marshall Plan" aria-label="Play pronunciation of Marshall Plan">&#128266;</button></dt>
+                <dt id="gloss-marshall-plan-172">Marshall Plan <span class="phonetic"></span> <button class="audio-btn" data-term="Marshall Plan" aria-label="Play pronunciation of Marshall Plan" onclick="speakGloss(event,'Marshall Plan')">&#128266;</button></dt>
                 <dd>the massive American economic aid program to rebuild war-shattered European economies.</dd>
-                <dt id="gloss-nato-172">NATO <span class="phonetic"></span> <button class="audio-btn" data-term="NATO" aria-label="Play pronunciation of NATO">&#128266;</button></dt>
+                <dt id="gloss-nato-172">NATO <span class="phonetic"></span> <button class="audio-btn" data-term="NATO" aria-label="Play pronunciation of NATO" onclick="speakGloss(event,'NATO')">&#128266;</button></dt>
                 <dd>the North Atlantic Treaty Organization, a mutual-defense alliance.</dd>
-                <dt id="gloss-new-world-order">new world order <span class="phonetic"></span> <button class="audio-btn" data-term="new world order" aria-label="Play pronunciation of new world order">&#128266;</button></dt>
+                <dt id="gloss-new-world-order">new world order <span class="phonetic"></span> <button class="audio-btn" data-term="new world order" aria-label="Play pronunciation of new world order" onclick="speakGloss(event,'new world order')">&#128266;</button></dt>
                 <dd>Bush's vision of a world where nations act collectively through international law and institutions rather than through great-power standoff.</dd>
-                <dt id="gloss-truman-doctrine-172">Truman Doctrine <span class="phonetic"></span> <button class="audio-btn" data-term="Truman Doctrine" aria-label="Play pronunciation of Truman Doctrine">&#128266;</button></dt>
+                <dt id="gloss-truman-doctrine-172">Truman Doctrine <span class="phonetic"></span> <button class="audio-btn" data-term="Truman Doctrine" aria-label="Play pronunciation of Truman Doctrine" onclick="speakGloss(event,'Truman Doctrine')">&#128266;</button></dt>
                 <dd>the 1947 commitment to support &ldquo;free peoples&rdquo; resisting subjugation anywhere in the world.</dd>
-                <dt id="gloss-united-nations">United Nations <span class="phonetic"></span> <button class="audio-btn" data-term="United Nations" aria-label="Play pronunciation of United Nations">&#128266;</button></dt>
+                <dt id="gloss-united-nations">United Nations <span class="phonetic"></span> <button class="audio-btn" data-term="United Nations" aria-label="Play pronunciation of United Nations" onclick="speakGloss(event,'United Nations')">&#128266;</button></dt>
                 <dd>the international body whose Security Council (five veto-holding permanent members plus ten rotating members) holds primary responsibility for international peace and security.</dd>
             </dl>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The United Nations itself is worth understanding in outline. Its Security Council holds primary responsibility for international peace and security, and includes five permanent members, the United States, Russia, China, the United Kingdom, and France, each holding a veto over substantive resolutions, plus ten rotating members elected for two-year terms. Its General Assembly includes every member nation, currently 193 countries, each with one vote, though General Assembly resolutions carry far less binding force than Security Council decisions. This structure means real UN action against a major crisis, as in 1990, still depends heavily on whether the five permanent members can agree, or at least decline to veto.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The <span class="gloss" tabindex="0">United Nations<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'United Nations')">&#128266;</button><span class="gloss-tip">the international body whose Security Council (five veto-holding permanent members plus ten rotating members) holds primary responsibility for international peace and security.</span></span> itself is worth understanding in outline. Its Security Council holds primary responsibility for international peace and security, and includes five permanent members, the United States, Russia, China, the United Kingdom, and France, each holding a veto over substantive resolutions, plus ten rotating members elected for two-year terms. Its General Assembly includes every member nation, currently 193 countries, each with one vote, though General Assembly resolutions carry far less binding force than Security Council decisions. This structure means real UN action against a major crisis, as in 1990, still depends heavily on whether the five permanent members can agree, or at least decline to veto.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Iraq's president, Saddam Hussein, defended the invasion by claiming Kuwait was historically part of Iraq and by accusing Kuwait of overproducing oil in ways that damaged Iraq's own war-strained economy. Almost no other nation accepted this justification, and the Security Council condemned the invasion within hours, a rare moment of near-total agreement among all five permanent members. The UN's response remains one of the clearest examples, in the organization's history, of the Security Council functioning exactly as its founders in 1945 intended: a collective response to plain territorial aggression, agreed to by every veto-holding power at once.</p>
 
         <div class="optima-widget ow-reflect">
           <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
@@ -167,9 +175,11 @@
           <button class="widget-reset">Reset</button>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Bush's response combined both institutions this week's Discussion Focus names. He secured a series of UN Security Council resolutions condemning the invasion and authorizing force, then built a multinational coalition, including NATO allies and, notably, several Arab nations, that ultimately liberated Kuwait in the brief Gulf War of early 1991. The coalition eventually included troops from more than thirty countries, an unusually broad alliance for a single military operation. It succeeded in its stated, limited goal: expelling Iraqi forces from Kuwait. It deliberately did not attempt to remove Saddam Hussein from power in Iraq itself, a decision some officials at the time defended as consistent with the narrower UN mandate, and others later criticized as leaving unfinished business that contributed to a second, much larger American-led war against Iraq in 2003.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Bush's response combined both institutions this week's Discussion Focus names. He secured a series of UN Security Council resolutions condemning the invasion and authorizing force, then built a multinational coalition, including <span class="gloss" tabindex="0">NATO<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'NATO')">&#128266;</button><span class="gloss-tip">the North Atlantic Treaty Organization, a mutual-defense alliance built on the promise that an attack on any member is an attack on all.</span></span> allies and, notably, several Arab nations, that ultimately liberated Kuwait in the brief Gulf War of early 1991. The coalition eventually included troops from more than thirty countries, an unusually broad alliance for a single military operation. It succeeded in its stated, limited goal: expelling Iraqi forces from Kuwait. It deliberately did not attempt to remove Saddam Hussein from power in Iraq itself, a decision some officials at the time defended as consistent with the narrower UN mandate, and others later criticized as leaving unfinished business that contributed to a second, much larger American-led war against Iraq in 2003.</p>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Bush's speech mentioned "our fifth objective" almost in passing, a reference to a numbered list of American goals regarding the Gulf crisis that he had laid out earlier in the same address: Iraq's complete withdrawal from Kuwait, restoration of Kuwait's government, regional stability, protection of American citizens abroad, and finally, this broader vision of a new world order. Notice that the loftiest, most idealistic goal was listed last, after four much more concrete and immediate objectives, an ordering that suggests even visionary rhetoric about international cooperation was grounded in, and dependent on, first solving the specific crisis directly in front of him.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Gulf War itself, once the coalition attacked in January 1991, was strikingly brief: weeks of air bombardment were followed by a ground campaign that lasted only about a hundred hours before Iraqi forces were driven from Kuwait entirely. The speed and scale of the coalition's success made the operation, at the time, look like exactly the kind of collective action Bush's "new world order" had promised.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Bush's speech mentioned "our fifth objective" almost in passing, a reference to a numbered list of American goals regarding the Gulf crisis that he had laid out earlier in the same address: Iraq's complete withdrawal from Kuwait, restoration of Kuwait's government, regional stability, protection of American citizens abroad, and finally, this broader vision of a <span class="gloss" tabindex="0">new world order<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'new world order')">&#128266;</button><span class="gloss-tip">Bush's vision of a world where nations act collectively through international law and institutions rather than through great-power standoff.</span></span>. Notice that the loftiest, most idealistic goal was listed last, after four much more concrete and immediate objectives, an ordering that suggests even visionary rhetoric about international cooperation was grounded in, and dependent on, first solving the specific crisis directly in front of him.</p>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Not every coalition member contributed troops. Some nations, including Japan, Germany, and Saudi Arabia, primarily provided financial support instead, helping cover the war's substantial costs without deploying their own forces to the region. This mix of military and financial contributions became a template later American-led coalitions would follow: not every ally needs to fight, but broad participation, in whatever form, helps establish that an action carries genuine international backing rather than representing one nation acting purely on its own.</p>
 
@@ -178,9 +188,11 @@
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; TWO PRESIDENTS, TWO TOOLS</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; TWO PRESIDENTS, TWO TOOLS</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice the difference in tools between Truman's speech and Bush's: Truman spoke of American leadership standing largely alone against a rival superpower's expansion; Bush spoke of American leadership organizing a coalition through the UN's collective machinery. Both are foreign policy, both invoke American leadership, and both illustrate the range of methods a nation can use to pursue its interests and ideals abroad: diplomacy, alliance-building, economic aid, and, when those failed, military force.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Notice also a structural difference between the two institutions this week studies. NATO requires unanimous agreement among its members to act, but once that agreement exists, member nations are formally obligated to respond. The UN Security Council can authorize action with only nine of fifteen votes, provided none of the five permanent members casts a veto, but no member nation is legally required to actually contribute forces even after a resolution passes. Each design trades one kind of difficulty for another: NATO trades speed for a guaranteed commitment; the UN trades a guaranteed commitment for broader international legitimacy.</p>
 
         <div class="optima-widget ow-scale">
           <div class="widget-kicker">&#9889; TRY IT &middot; TEST YOUR RECALL</div>
@@ -226,7 +238,7 @@
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 2 &amp; Primary Source Exercise 17</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-2.html" style="color: #0e1c42;">Primary Source 2</a> &amp; <a href="https://optimaoaoteam.instructure.com/courses/35/assignments/671" target="_blank" rel="noopener" style="color: #0e1c42;">Primary Source Exercise 17</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">George H.W. Bush's Address to Congress, "Toward a New World Order" (September 11, 1990).</div>
             </div>
         </div>
@@ -251,6 +263,15 @@
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
 <script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
     var reset = e.target.closest('.widget-reset');

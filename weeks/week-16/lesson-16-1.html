@@ -48,6 +48,12 @@
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
     .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
+    .gloss { position: relative; border-bottom: 1px dotted #2196D0; font-weight: 600; color: #0E1C42; cursor: help; }
+    .gloss:hover .gloss-tip, .gloss:focus .gloss-tip, .gloss.gloss-open .gloss-tip { display: block; }
+    .gloss-tip { display: none; position: absolute; left: 0; bottom: 100%; margin-bottom: 8px; width: 260px; max-width: 70vw; background: #0E1C42; color: #fff; font-weight: normal; font-size: 13px; line-height: 1.5; padding: 10px 12px; border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,0.25); z-index: 20; }
+    .gloss-tip .gloss-pron { color: #55C8E8; display: block; margin-bottom: 4px; font-style: italic; }
+    .gloss-audio { display: inline-flex; align-items: center; justify-content: center; border: none; background: none; cursor: pointer; font-size: 12px; padding: 0 0 0 2px; vertical-align: middle; color: #1B6A94; }
+    .gloss-audio:hover { color: #0E1C42; }
     .gloss-term { color: #0E1C42; }
     .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
     .wrapper-pointer { font-size: 14px; color: #0E1C42; background: #EEF1F8; border-left: 4px solid #6b7a99; border-radius: 4px; padding: 10px 14px; margin: 0 0 18px; }
@@ -99,7 +105,7 @@
         <div style="font-size: 16px; color: #666;">Lesson</div>
     </div>
 
-    <p class="wrapper-pointer">&#128203; Before this lesson: complete the <strong>Module 5 Intro Wrapper</strong> in Canvas (ungraded, ~2 minutes, no wrong answers).</p>
+    <p class="wrapper-pointer">&#128203; Before this lesson: complete the <strong><a href="https://optimaoaoteam.instructure.com/courses/35/quizzes/361" target="_blank" rel="noopener" style="color: #0e1c42;">Module 5 Intro Wrapper</a></strong> in Canvas (ungraded, ~2 minutes, no wrong answers).</p>
 
     <!-- Today's Focus -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -138,15 +144,15 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; JURY DUTY, A GUARANTEE THAT NEEDS VOLUNTEERS</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; JURY DUTY, A GUARANTEE THAT NEEDS VOLUNTEERS</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">7 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing one term from Lesson 15.2, plus this module's organizing concept.</p>
             <dl class="glossary-list">
-                <dt id="gloss-civic-obligation">civic obligation <span class="phonetic">(SIV-ik ob-lih-GAY-shun)</span> <button class="audio-btn" data-term="civic obligation" aria-label="Play pronunciation of civic obligation">&#128266;</button></dt>
+                <dt id="gloss-civic-obligation">civic obligation <span class="phonetic">(SIV-ik ob-lih-GAY-shun)</span> <button class="audio-btn" data-term="civic obligation" aria-label="Play pronunciation of civic obligation" onclick="speakGloss(event,'civic obligation')">&#128266;</button></dt>
                 <dd>a duty a citizen owes back to the political community that protects their rights, such as voting, jury duty, or military service.</dd>
-                <dt id="gloss-jim-crow-161">Jim Crow laws <span class="phonetic"></span> <button class="audio-btn" data-term="Jim Crow laws" aria-label="Play pronunciation of Jim Crow laws">&#128266;</button></dt>
+                <dt id="gloss-jim-crow-161">Jim Crow laws <span class="phonetic"></span> <button class="audio-btn" data-term="Jim Crow laws" aria-label="Play pronunciation of Jim Crow laws" onclick="speakGloss(event,'Jim Crow laws')">&#128266;</button></dt>
                 <dd>the system of state segregation laws that <em>Plessy</em> gave constitutional cover to grow for decades.</dd>
             </dl>
         </div>
@@ -154,12 +160,14 @@
             <div class="callout-kicker">&#127760; Foreign Language Vocabulary</div>
             <p class="glossary-note">Reviewing Lesson 15.2's French term. This week's reading introduces no new foreign-language terms.</p>
             <dl class="glossary-list">
-                <dt id="gloss-comite-161"><strong>Citizens' Committee</strong> (<em>Comit&eacute; des Citoyens</em>) <span class="phonetic">(koh-mee-TAY day see-twah-YEN)</span> <button class="audio-btn" data-term="Comite des Citoyens" aria-label="Play pronunciation of Comite des Citoyens">&#128266;</button></dt>
+                <dt id="gloss-comite-161"><strong>Citizens' Committee</strong> (<em>Comit&eacute; des Citoyens</em>) <span class="phonetic">(koh-mee-TAY day see-twah-YEN)</span> <button class="audio-btn" data-term="Comite des Citoyens" aria-label="Play pronunciation of Comite des Citoyens" onclick="speakGloss(event,'Comite des Citoyens')">&#128266;</button></dt>
                 <dd>a group of black and Creole activists in New Orleans who organized the staged legal test that became <em>Plessy v. Ferguson</em>.</dd>
             </dl>
         </div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Voting itself has not always meant the same thing in American history. The original Constitution left voting qualifications almost entirely to the states, and most states initially limited the vote to white male property owners. Later amendments steadily widened this circle. The Fifteenth Amendment (1870) barred denying the vote based on race, though many states evaded it for decades through discriminatory practices later struck down by courts and Congress. The Nineteenth Amendment (1920) guaranteed women the vote nationwide. The Twenty-Sixth Amendment (1971) lowered the voting age to eighteen, driven substantially by the argument that a man old enough to be drafted to fight in Vietnam was old enough to vote on the policies sending him there. Each expansion answered the same underlying question this week's other two obligations raise: who, exactly, counts as a full member of the political community, obligated to serve it and entitled to a voice in it?</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Congress and the states closed one more gap in 1964, when the Twenty-Fourth Amendment banned poll taxes in federal elections, one of the very tools some states had used for decades to keep poor citizens, disproportionately black citizens, from voting at all. The Voting Rights Act of 1965 went further still, authorizing federal oversight of elections in states with a history of discrimination and effectively ending literacy tests as a voting requirement nationwide. Together, these two measures did for voting what this week's lesson argues jury duty and military service still ask of every citizen directly: they turned a right written on paper into a right citizens could actually exercise.</p>
 
         <div class="optima-widget ow-reflect">
           <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
@@ -214,12 +222,12 @@
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Jury service historically tracked the same exclusions as voting. For much of American history, only white men could serve on juries in many states. The Supreme Court struck down explicit racial exclusion from juries in <em>Strauder v. West Virginia</em> (1880), though in practice, discriminatory jury selection persisted for decades afterward through less explicit means. Women were not guaranteed the right to serve on federal juries nationwide until 1957, and some states continued to exempt women from jury service, often at their own request, well into the 1970s. The right to serve on a jury and the right to be judged by one's fellow citizens turn out to be two sides of the very same coin.</p>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In practice, jury summons arrive through the mail, usually drawn from voter registration rolls or driver's license records. Ignoring a jury summons entirely is not simply impolite; it is against the law in most jurisdictions, and can result in a fine or even a contempt-of-court charge. Courts do excuse people from service for genuine hardship, illness, or an unavoidable conflict, but the underlying expectation remains: this is treated as a legal duty, not merely a polite request. Notice the shape of this whole lesson: every civic obligation it names, voting, jury service, and now military service, has both a formal legal requirement and a lived history of who was actually allowed, or forced, to fulfill it.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">In practice, jury summons arrive through the mail, usually drawn from voter registration rolls or driver's license records. Ignoring a jury summons entirely is not simply impolite; it is against the law in most jurisdictions, and can result in a fine or even a contempt-of-court charge. Courts do excuse people from service for genuine hardship, illness, or an unavoidable conflict, but the underlying expectation remains: this is treated as a legal duty, not merely a polite request. Notice the shape of this whole lesson: every <span class="gloss" tabindex="0">civic obligation<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'civic obligation')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">SIV-ik ob-lih-GAY-shun</span>a duty a citizen owes back to the political community that protects their rights, such as voting, jury duty, or military service.</span></span> it names, voting, jury service, and now military service, has both a formal legal requirement and a lived history of who was actually allowed, or forced, to fulfill it.</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; A NATION MOVES FROM PEACE TO WAR</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; A NATION MOVES FROM PEACE TO WAR</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <div style="background: #E8F6FB; border-left: 5px solid #2196D0; border-top: 3px solid #55C8E8; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
             <div style="font-size: 11px; color: #1B6A94; margin-bottom: 8px;">&#128161; HELPFUL TO KNOW</div>
@@ -227,6 +235,10 @@
         </div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Military service asks the most of a citizen, and American history has not always asked evenly. This week's first primary source drops you into the moment military obligation became urgent for an entire generation: President Franklin Roosevelt's address to Congress on December 8, 1941, one day after the Japanese attack on Pearl Harbor. Notice how quickly this single speech moves the country from peace to a declared state of war, and how directly it would shortly translate into a national draft calling millions of young Americans to serve.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The attack itself was devastating by any measure: more than 2,400 Americans killed in a single morning, eight battleships damaged or sunk, and nearly two hundred aircraft destroyed, many of them before they ever left the ground. Roosevelt's speech to Congress the next day lasted barely seven minutes, remarkably short for a request asking an entire nation to enter a world war, but Congress declared war on Japan within an hour of his finishing it, with only one dissenting vote across both chambers combined.</p>
+
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The same attack that produced this speech also led the government, within months, to order the forced relocation and internment of Japanese Americans, a decision this course has already examined as a documented failure of civil liberties in wartime. Roosevelt's address itself asked only for a declaration of war against the nations responsible, not for anything resembling internment. Keep both facts in view together: a single moment in history can produce one decision future generations honor and another they condemn, sometimes within the very same administration.</p>
     </div>
 
     <!-- What You'll Do Next -->
@@ -235,14 +247,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reading Quiz 16.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="https://optimaoaoteam.instructure.com/courses/35/quizzes/362" target="_blank" rel="noopener" style="color: #0e1c42;">Reading Quiz 16.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Five inference questions on jury duty, military service, and Roosevelt's address to Congress.</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 1 &amp; Critical Questions 16.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-1.html" style="color: #0e1c42;">Primary Source 1</a> &amp; <a href="https://optimaoaoteam.instructure.com/courses/35/assignments/664" target="_blank" rel="noopener" style="color: #0e1c42;">Critical Questions 16.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Franklin D. Roosevelt's Address to Congress, December 8, 1941.</div>
             </div>
         </div>
@@ -267,6 +279,15 @@
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
 <script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
     var reset = e.target.closest('.widget-reset');
