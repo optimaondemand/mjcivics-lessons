@@ -46,9 +46,6 @@
     dl.glossary-list dt:first-child { margin-top: 0; }
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
-    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
-    .gloss-term { color: #0E1C42; }
-    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -134,21 +131,21 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A TROUBLING QUESTION</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; A TROUBLING QUESTION</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing the three branches from Lesson 4.1, plus Rousseau's own vocabulary.</p>
             <dl class="glossary-list">
-                <dt id="gloss-executive-42">executive <span class="phonetic">(eg-ZEK-yoo-tiv)</span> <button class="audio-btn" data-term="executive" aria-label="Play pronunciation of executive">&#128266;</button></dt>
+                <dt id="gloss-executive-42">executive <span class="phonetic">(eg-ZEK-yoo-tiv)</span> <button class="gloss-audio" data-term="executive" aria-label="Play pronunciation of executive" onclick="speakGloss(event,'executive')">&#128266;</button></dt>
                 <dd>the power to carry out and enforce laws.</dd>
-                <dt id="gloss-general-will">general will <span class="phonetic"></span> <button class="audio-btn" data-term="general will" aria-label="Play pronunciation of general will">&#128266;</button></dt>
+                <dt id="gloss-general-will">general will <span class="phonetic"></span> <button class="gloss-audio" data-term="general will" aria-label="Play pronunciation of general will" onclick="speakGloss(event,'general will')">&#128266;</button></dt>
                 <dd>Rousseau's term for the collective judgment of the whole community about the common good, which every citizen has a genuine share in forming.</dd>
-                <dt id="gloss-judicial-42">judicial <span class="phonetic">(joo-DISH-uhl)</span> <button class="audio-btn" data-term="judicial" aria-label="Play pronunciation of judicial">&#128266;</button></dt>
+                <dt id="gloss-judicial-42">judicial <span class="phonetic">(joo-DISH-uhl)</span> <button class="gloss-audio" data-term="judicial" aria-label="Play pronunciation of judicial" onclick="speakGloss(event,'judicial')">&#128266;</button></dt>
                 <dd>the power to judge disputes under the law.</dd>
-                <dt id="gloss-legislative-42">legislative <span class="phonetic">(LEJ-iss-lay-tiv)</span> <button class="audio-btn" data-term="legislative" aria-label="Play pronunciation of legislative">&#128266;</button></dt>
+                <dt id="gloss-legislative-42">legislative <span class="phonetic">(LEJ-iss-lay-tiv)</span> <button class="gloss-audio" data-term="legislative" aria-label="Play pronunciation of legislative" onclick="speakGloss(event,'legislative')">&#128266;</button></dt>
                 <dd>the power to make laws.</dd>
-                <dt id="gloss-state-sovereign-power">State, Sovereign, and Power <span class="phonetic"></span> <button class="audio-btn" data-term="State, Sovereign, and Power" aria-label="Play pronunciation of State, Sovereign, and Power">&#128266;</button></dt>
+                <dt id="gloss-state-sovereign-power">State, Sovereign, and Power <span class="phonetic"></span> <button class="gloss-audio" data-term="State, Sovereign, and Power" aria-label="Play pronunciation of State, Sovereign, and Power" onclick="speakGloss(event,'State, Sovereign, and Power')">&#128266;</button></dt>
                 <dd>Rousseau's three names for the same &ldquo;moral and collective body&rdquo; formed by the social contract: State when it is simply being governed, Sovereign when it is actively making decisions, and Power when compared to other nations.</dd>
             </dl>
         </div>
@@ -170,14 +167,14 @@
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE GENERAL WILL</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; THE GENERAL WILL</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Rousseau's answer builds on the social contract tradition you already studied with Locke, but it pushes that tradition in a very different direction. He argued that when individuals unite into a political community, they do not simply trade obedience for protection, the way Locke's account might suggest. Instead, each person gives himself entirely to the whole community. In exchange, he becomes a participating author of the laws that govern everyone, including himself. The result, Rousseau claimed, is something he called the <strong class="gloss-term"><a href="#gloss-general-will" title="the collective judgment of the whole community about the common good">general will</a></strong>. This is not simply whatever most people happen to want at any given moment. It is the collective judgment of the whole community about the common good, a judgment every citizen has a genuine share in forming.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Rousseau's answer builds on the social contract tradition you already studied with Locke, but it pushes that tradition in a very different direction. He argued that when individuals unite into a political community, they do not simply trade obedience for protection, the way Locke's account might suggest. Instead, each person gives himself entirely to the whole community. In exchange, he becomes a participating author of the laws that govern everyone, including himself. The result, Rousseau claimed, is something he called the <span class="gloss" tabindex="0">general will<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'general will')">&#128266;</button><span class="gloss-tip">Rousseau's term for the collective judgment of the whole community about the common good, which every citizen has a genuine share in forming.</span></span>. This is not simply whatever most people happen to want at any given moment. It is the collective judgment of the whole community about the common good, a judgment every citizen has a genuine share in forming.</p>
     </div>
 
     <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; FORCED TO BE FREE?</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 3 &middot; FORCED TO BE FREE?</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">5 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This is a genuinely radical idea, and not an entirely comfortable one. Because the general will represents the whole community's judgment about the common good, Rousseau argued that someone who disobeys a law made this way is not simply defying the majority. He is acting against his own truer, more rational self, the self that participates in the collective sovereign. Rousseau put this starkly: society may &ldquo;force him to be free.&rdquo; Picture a town where the community votes, after fair and open debate, to require every household to help maintain the town well that everyone depends on. Rousseau would say a person who refuses is not just breaking a rule. He is failing to live up to the shared judgment he himself helped form as a citizen, judgment aimed at everyone's real common good, including his own. That is what Rousseau means when he says such a person can be &ldquo;forced to be free&rdquo;: forced to act in line with the reasonable, public-minded self he already agreed to be part of.</p>
 
@@ -223,9 +220,9 @@
 
     <!-- PART 4 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 4 &middot; STATE, SOVEREIGN, AND POWER</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 4 &middot; STATE, SOVEREIGN, AND POWER</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">This week's primary source uses several technical terms for the new &ldquo;moral and collective body&rdquo; formed by the social contract. When passive, simply existing and being governed, Rousseau calls it the <strong class="gloss-term"><a href="#gloss-state-sovereign-power" title="Rousseau's three names for the same collective body: State, Sovereign, and Power">State</a></strong>. When active, actually making decisions and exercising power, he calls it the <strong class="gloss-term"><a href="#gloss-state-sovereign-power" title="Rousseau's three names for the same collective body: State, Sovereign, and Power">Sovereign</a></strong>. When compared to other similar bodies, other nations or communities, he calls it a <strong class="gloss-term"><a href="#gloss-state-sovereign-power" title="Rousseau's three names for the same collective body: State, Sovereign, and Power">Power</a></strong>. The individual members of this body are called the people when considered all together, and citizens when considered one at a time, since as citizens they each share in the sovereign power that governs them all. This vocabulary matters because it shows how thoroughly Rousseau's theory blurs the line between ruler and ruled. In his system, citizens are, at the very same time, the ones being governed and, collectively, the ones doing the governing. There is no separate ruling class standing above the citizens, the way a king or a council of nobles might stand above ordinary people in other systems. The whole community rules, and the whole community is ruled, at once.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">This week's primary source uses several technical terms for the new &ldquo;moral and collective body&rdquo; formed by the social contract. When passive, simply existing and being governed, Rousseau calls it the <span class="gloss" tabindex="0">State<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'State, Sovereign, and Power')">&#128266;</button><span class="gloss-tip">Rousseau's three names for the same &ldquo;moral and collective body&rdquo; formed by the social contract: State when it is simply being governed, Sovereign when it is actively making decisions, and Power when compared to other nations.</span></span>. When active, actually making decisions and exercising power, he calls it the <span class="gloss" tabindex="0">Sovereign<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'State, Sovereign, and Power')">&#128266;</button><span class="gloss-tip">Rousseau's three names for the same &ldquo;moral and collective body&rdquo; formed by the social contract: State when it is simply being governed, Sovereign when it is actively making decisions, and Power when compared to other nations.</span></span>. When compared to other similar bodies, other nations or communities, he calls it a <span class="gloss" tabindex="0">Power<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'State, Sovereign, and Power')">&#128266;</button><span class="gloss-tip">Rousseau's three names for the same &ldquo;moral and collective body&rdquo; formed by the social contract: State when it is simply being governed, Sovereign when it is actively making decisions, and Power when compared to other nations.</span></span>. The individual members of this body are called the people when considered all together, and citizens when considered one at a time, since as citizens they each share in the sovereign power that governs them all. This vocabulary matters because it shows how thoroughly Rousseau's theory blurs the line between ruler and ruled. In his system, citizens are, at the very same time, the ones being governed and, collectively, the ones doing the governing. There is no separate ruling class standing above the citizens, the way a king or a council of nobles might stand above ordinary people in other systems. The whole community rules, and the whole community is ruled, at once.</p>
     </div>
 
     <!-- What You'll Do Next -->
@@ -234,14 +231,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 2</strong> (GitHub lesson page)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-2.html" style="color: #0e1c42;">Primary Source 2</a></strong> (GitHub lesson page)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Rousseau, <em>On the Social Contract</em>, Book I, Ch. 6, on the moral and collective body formed by association.</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source Report 4</strong> (Canvas, Tier 3)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="https://optimaoaoteam.instructure.com/courses/35/assignments/541" target="_blank" rel="noopener" style="color: #0e1c42;">Primary Source Report 4</a></strong> (Canvas, Tier 3)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">A short Word document drawing on both this week's primary sources, Montesquieu and Rousseau.</div>
             </div>
         </div>
@@ -266,17 +263,17 @@
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
 <script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
-    var audioBtn = e.target.closest('.audio-btn');
-    if (audioBtn) {
-      if ('speechSynthesis' in window) {
-        var utter = new SpeechSynthesisUtterance(audioBtn.dataset.term || '');
-        window.speechSynthesis.cancel();
-        window.speechSynthesis.speak(utter);
-      }
-      return;
-    }
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');

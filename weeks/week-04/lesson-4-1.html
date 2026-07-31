@@ -46,9 +46,6 @@
     dl.glossary-list dt:first-child { margin-top: 0; }
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
-    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
-    .gloss-term { color: #0E1C42; }
-    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -134,27 +131,27 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; A NOBLEMAN'S QUESTION</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; A NOBLEMAN'S QUESTION</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing five terms from Lesson 3.2, plus new terms for the three branches.</p>
             <dl class="glossary-list">
-                <dt id="gloss-dissolution-41">dissolve / dissolution <span class="phonetic">(dih-ZOLV / dis-uh-LOO-shun)</span> <button class="audio-btn" data-term="dissolution" aria-label="Play pronunciation of dissolution">&#128266;</button></dt>
+                <dt id="gloss-dissolution-41">dissolve / dissolution <span class="phonetic">(dih-ZOLV / dis-uh-LOO-shun)</span> <button class="gloss-audio" data-term="dissolution" aria-label="Play pronunciation of dissolution" onclick="speakGloss(event,'dissolution')">&#128266;</button></dt>
                 <dd>when a government falls apart because it has broken the people's trust, not simply because a ruler is unpopular.</dd>
-                <dt id="gloss-executive">executive <span class="phonetic">(eg-ZEK-yoo-tiv)</span> <button class="audio-btn" data-term="executive" aria-label="Play pronunciation of executive">&#128266;</button></dt>
+                <dt id="gloss-executive">executive <span class="phonetic">(eg-ZEK-yoo-tiv)</span> <button class="gloss-audio" data-term="executive" aria-label="Play pronunciation of executive" onclick="speakGloss(event,'executive')">&#128266;</button></dt>
                 <dd>the power to carry out and enforce laws.</dd>
-                <dt id="gloss-judicial">judicial <span class="phonetic">(joo-DISH-uhl)</span> <button class="audio-btn" data-term="judicial" aria-label="Play pronunciation of judicial">&#128266;</button></dt>
+                <dt id="gloss-judicial">judicial <span class="phonetic">(joo-DISH-uhl)</span> <button class="gloss-audio" data-term="judicial" aria-label="Play pronunciation of judicial" onclick="speakGloss(event,'judicial')">&#128266;</button></dt>
                 <dd>the power to judge disputes under the law.</dd>
-                <dt id="gloss-legislative">legislative <span class="phonetic">(LEJ-iss-lay-tiv)</span> <button class="audio-btn" data-term="legislative" aria-label="Play pronunciation of legislative">&#128266;</button></dt>
+                <dt id="gloss-legislative">legislative <span class="phonetic">(LEJ-iss-lay-tiv)</span> <button class="gloss-audio" data-term="legislative" aria-label="Play pronunciation of legislative" onclick="speakGloss(event,'legislative')">&#128266;</button></dt>
                 <dd>the power to make laws.</dd>
-                <dt id="gloss-leviathan-41">Leviathan <span class="phonetic">(luh-VY-uh-thun)</span> <button class="audio-btn" data-term="Leviathan" aria-label="Play pronunciation of Leviathan">&#128266;</button></dt>
+                <dt id="gloss-leviathan-41">Leviathan <span class="phonetic">(luh-VY-uh-thun)</span> <button class="gloss-audio" data-term="Leviathan" aria-label="Play pronunciation of Leviathan" onclick="speakGloss(event,'Leviathan')">&#128266;</button></dt>
                 <dd>a giant sea monster described in the Bible; Hobbes's name for the single, overwhelming ruler he believed government needed.</dd>
-                <dt id="gloss-natural-rights-41">natural rights <span class="phonetic">(NACH-er-ul RYTS)</span> <button class="audio-btn" data-term="natural rights" aria-label="Play pronunciation of natural rights">&#128266;</button></dt>
+                <dt id="gloss-natural-rights-41">natural rights <span class="phonetic">(NACH-er-ul RYTS)</span> <button class="gloss-audio" data-term="natural rights" aria-label="Play pronunciation of natural rights" onclick="speakGloss(event,'natural rights')">&#128266;</button></dt>
                 <dd>rights people have simply by being human, before any government exists: life, liberty, and property, according to Locke.</dd>
-                <dt id="gloss-social-contract-41">social contract <span class="phonetic">(SOH-shul KON-trakt)</span> <button class="audio-btn" data-term="social contract" aria-label="Play pronunciation of social contract">&#128266;</button></dt>
+                <dt id="gloss-social-contract-41">social contract <span class="phonetic">(SOH-shul KON-trakt)</span> <button class="gloss-audio" data-term="social contract" aria-label="Play pronunciation of social contract" onclick="speakGloss(event,'social contract')">&#128266;</button></dt>
                 <dd>the agreement people make to leave the state of nature and form a government, trading some independence for protection of their rights.</dd>
-                <dt id="gloss-state-of-nature-41">state of nature <span class="phonetic"></span> <button class="audio-btn" data-term="state of nature" aria-label="Play pronunciation of state of nature">&#128266;</button></dt>
+                <dt id="gloss-state-of-nature-41">state of nature <span class="phonetic"></span> <button class="gloss-audio" data-term="state of nature" aria-label="Play pronunciation of state of nature" onclick="speakGloss(event,'state of nature')">&#128266;</button></dt>
                 <dd>a condition before or outside any organized government, where people are free but have no police, courts, or army to protect their rights.</dd>
             </dl>
         </div>
@@ -164,7 +161,7 @@
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THREE POWERS, KEPT APART</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; THREE POWERS, KEPT APART</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">5 min</span></div>
 
         <div class="optima-widget ow-reflect">
           <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
@@ -179,7 +176,7 @@
         </div>
 
         <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">Studying England, Generalizing a Theory</h3>
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Montesquieu studied England's government closely, since it offered him a real example rather than just a theory. By his time, England had developed a rough separation between three different kinds of power. There was the power to make laws, held mostly by Parliament. There was the power to carry out those laws, held by the Crown and its ministers. And there was the power to judge disputes under the law, held by independent courts. Montesquieu turned this observation into a general theory about all governments, not just England's. He argued that political liberty requires <strong class="gloss-term"><a href="#gloss-legislative" title="the power to make laws">legislative</a></strong>, <strong class="gloss-term"><a href="#gloss-executive" title="the power to carry out and enforce laws">executive</a></strong>, and <strong class="gloss-term"><a href="#gloss-judicial" title="the power to judge disputes under the law">judicial</a></strong> power to be kept in separate hands. His reasoning was direct. Whoever writes the laws, enforces the laws, and judges the laws all at the same time has no reason to write laws that limit himself. No independent check exists to stop that person from abusing any of the three powers. Montesquieu warned that combining any two of the three powers makes arbitrary, unfair rule likely. Combining all three makes it almost certain.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Montesquieu studied England's government closely, since it offered him a real example rather than just a theory. By his time, England had developed a rough separation between three different kinds of power. There was the power to make laws, held mostly by Parliament. There was the power to carry out those laws, held by the Crown and its ministers. And there was the power to judge disputes under the law, held by independent courts. Montesquieu turned this observation into a general theory about all governments, not just England's. He argued that political liberty requires <span class="gloss" tabindex="0">legislative<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'legislative')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">LEJ-iss-lay-tiv</span>the power to make laws.</span></span>, <span class="gloss" tabindex="0">executive<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'executive')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">eg-ZEK-yoo-tiv</span>the power to carry out and enforce laws.</span></span>, and <span class="gloss" tabindex="0">judicial<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'judicial')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">joo-DISH-uhl</span>the power to judge disputes under the law.</span></span> power to be kept in separate hands. His reasoning was direct. Whoever writes the laws, enforces the laws, and judges the laws all at the same time has no reason to write laws that limit himself. No independent check exists to stop that person from abusing any of the three powers. Montesquieu warned that combining any two of the three powers makes arbitrary, unfair rule likely. Combining all three makes it almost certain.</p>
 
         <h3 style="font-size: 20px; color: #0e1c42; margin: 18px 0 8px 0;">A Familiar Insight</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">This might remind you of Polybius's analysis of Rome from Module 1. Both thinkers believed that spreading power across different institutions, rather than concentrating it in one place, was the real secret to a lasting, stable government. Montesquieu's version organizes power by <em>function</em>, by what kind of power it is, while Polybius organized it more by <em>who</em> holds it, one man, a few men, or the many. Both approaches share the same core insight: unchecked power in any single place is dangerous, no matter how good the person or persons who hold it might seem at the time.</p>
@@ -190,7 +187,7 @@
 
     <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; FROM THEORY TO THE AMERICAN CONSTITUTION</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 3 &middot; FROM THEORY TO THE AMERICAN CONSTITUTION</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <h3 style="font-size: 20px; color: #0e1c42; margin: 0 0 8px 0;">Cooperation, Not Isolation</h3>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">It is worth noticing that Montesquieu did not think the three powers needed to be totally walled off from each other with no contact at all. Some overlap and cooperation between the branches can actually help each one check the others more effectively. What matters most is that no single branch can act completely alone, with no other branch able to slow it down, reject its decision, or hold it accountable. This distinction, between three branches acting in complete isolation and three branches that check each other while still working together, becomes important again when you study the American Constitution's own checks and balances in Module 3.</p>
@@ -238,14 +235,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reading Quiz 4.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="https://optimaoaoteam.instructure.com/courses/35/quizzes/292" target="_blank" rel="noopener" style="color: #0e1c42;">Reading Quiz 4.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Five inference questions on Montesquieu's separation of powers and its connection to the Constitution.</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 1 &amp; Critical Questions 4.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-1.html" style="color: #0e1c42;">Primary Source 1</a> &amp; <a href="https://optimaoaoteam.instructure.com/courses/35/assignments/540" target="_blank" rel="noopener" style="color: #0e1c42;">Critical Questions 4.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Montesquieu, <em>The Spirit of the Laws</em>, Book XI, Ch. 6, on the dangers of combining legislative, executive, and judicial power.</div>
             </div>
         </div>
@@ -270,17 +267,17 @@
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
 <script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
-    var audioBtn = e.target.closest('.audio-btn');
-    if (audioBtn) {
-      if ('speechSynthesis' in window) {
-        var utter = new SpeechSynthesisUtterance(audioBtn.dataset.term || '');
-        window.speechSynthesis.cancel();
-        window.speechSynthesis.speak(utter);
-      }
-      return;
-    }
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');

@@ -48,9 +48,6 @@
     dl.glossary-list dt:first-child { margin-top: 0; }
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
-    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
-    .gloss-term { color: #0E1C42; }
-    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
     .wrapper-pointer { font-size: 14px; color: #0E1C42; background: #EEF1F8; border-left: 4px solid #6b7a99; border-radius: 4px; padding: 10px 14px; margin: 0 0 18px; }
 </style>
 </head>
@@ -100,7 +97,7 @@
         <div style="font-size: 16px; color: #666;">Lesson</div>
     </div>
 
-    <p class="wrapper-pointer">&#128203; Before this lesson: complete the <strong>Module 2 Intro Wrapper</strong> in Canvas (ungraded, ~2 minutes, no wrong answers).</p>
+    <p class="wrapper-pointer">&#128203; Before this lesson: complete the <a href="https://optimaoaoteam.instructure.com/courses/35/quizzes/289" target="_blank" rel="noopener" style="color: #0E1C42; text-decoration: underline;"><strong>Module 2 Intro Wrapper</strong></a> in Canvas (ungraded, ~2 minutes, no wrong answers).</p>
 
     <!-- Today's Focus -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
@@ -139,29 +136,29 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; THE STATE OF NATURE AND NATURAL RIGHTS</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; THE STATE OF NATURE AND NATURAL RIGHTS</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">7 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing Polybius's five forms of government from Lesson 2.2, plus new terms for this week.</p>
             <dl class="glossary-list">
-                <dt id="gloss-aristocracy-31">Aristocracy <span class="phonetic">(air-ih-STOK-ruh-see)</span> <button class="audio-btn" data-term="Aristocracy" aria-label="Play pronunciation of Aristocracy">&#128266;</button></dt>
+                <dt id="gloss-aristocracy-31">Aristocracy <span class="phonetic">(air-ih-STOK-ruh-see)</span> <button class="gloss-audio" data-term="Aristocracy" aria-label="Play pronunciation of Aristocracy" onclick="speakGloss(event,'Aristocracy')">&#128266;</button></dt>
                 <dd>rule by the best citizens, used for the common good, in Polybius's framework.</dd>
-                <dt id="gloss-democracy-31">Democracy <span class="phonetic">(dih-MOK-ruh-see)</span> <button class="audio-btn" data-term="Democracy" aria-label="Play pronunciation of Democracy">&#128266;</button></dt>
+                <dt id="gloss-democracy-31">Democracy <span class="phonetic">(dih-MOK-ruh-see)</span> <button class="gloss-audio" data-term="Democracy" aria-label="Play pronunciation of Democracy" onclick="speakGloss(event,'Democracy')">&#128266;</button></dt>
                 <dd>rule by the many, used for the common good, in Polybius's framework.</dd>
-                <dt id="gloss-dissolution">dissolve / dissolution <span class="phonetic">(dih-ZOLV / dis-uh-LOO-shun)</span> <button class="audio-btn" data-term="dissolution" aria-label="Play pronunciation of dissolution">&#128266;</button></dt>
+                <dt id="gloss-dissolution">dissolve / dissolution <span class="phonetic">(dih-ZOLV / dis-uh-LOO-shun)</span> <button class="gloss-audio" data-term="dissolution" aria-label="Play pronunciation of dissolution" onclick="speakGloss(event,'dissolution')">&#128266;</button></dt>
                 <dd>when a government falls apart because it has broken the people's trust, not simply because a ruler is unpopular.</dd>
-                <dt id="gloss-natural-rights">natural rights <span class="phonetic">(NACH-er-ul RYTS)</span> <button class="audio-btn" data-term="natural rights" aria-label="Play pronunciation of natural rights">&#128266;</button></dt>
+                <dt id="gloss-natural-rights">natural rights <span class="phonetic">(NACH-er-ul RYTS)</span> <button class="gloss-audio" data-term="natural rights" aria-label="Play pronunciation of natural rights" onclick="speakGloss(event,'natural rights')">&#128266;</button></dt>
                 <dd>rights people have simply by being human, before any government exists: life, liberty, and property, according to Locke.</dd>
-                <dt id="gloss-oligarchy-31">Oligarchy <span class="phonetic">(OL-ih-gar-kee)</span> <button class="audio-btn" data-term="Oligarchy" aria-label="Play pronunciation of Oligarchy">&#128266;</button></dt>
+                <dt id="gloss-oligarchy-31">Oligarchy <span class="phonetic">(OL-ih-gar-kee)</span> <button class="gloss-audio" data-term="Oligarchy" aria-label="Play pronunciation of Oligarchy" onclick="speakGloss(event,'Oligarchy')">&#128266;</button></dt>
                 <dd>aristocracy corrupted so a few rulers serve only their own selfish gain.</dd>
-                <dt id="gloss-social-contract">social contract <span class="phonetic">(SOH-shul KON-trakt)</span> <button class="audio-btn" data-term="social contract" aria-label="Play pronunciation of social contract">&#128266;</button></dt>
+                <dt id="gloss-social-contract">social contract <span class="phonetic">(SOH-shul KON-trakt)</span> <button class="gloss-audio" data-term="social contract" aria-label="Play pronunciation of social contract" onclick="speakGloss(event,'social contract')">&#128266;</button></dt>
                 <dd>the agreement people make to leave the state of nature and form a government, trading some independence for protection of their rights.</dd>
-                <dt id="gloss-state-of-nature">state of nature <span class="phonetic"></span> <button class="audio-btn" data-term="state of nature" aria-label="Play pronunciation of state of nature">&#128266;</button></dt>
+                <dt id="gloss-state-of-nature">state of nature <span class="phonetic"></span> <button class="gloss-audio" data-term="state of nature" aria-label="Play pronunciation of state of nature" onclick="speakGloss(event,'state of nature')">&#128266;</button></dt>
                 <dd>a condition before or outside any organized government, where people are free but have no police, courts, or army to protect their rights.</dd>
-                <dt id="gloss-tyranny-31">Tyranny <span class="phonetic">(TEER-uh-nee)</span> <button class="audio-btn" data-term="Tyranny" aria-label="Play pronunciation of Tyranny">&#128266;</button></dt>
+                <dt id="gloss-tyranny-31">Tyranny <span class="phonetic">(TEER-uh-nee)</span> <button class="gloss-audio" data-term="Tyranny" aria-label="Play pronunciation of Tyranny" onclick="speakGloss(event,'Tyranny')">&#128266;</button></dt>
                 <dd>monarchy corrupted so a one-man ruler serves only his own private gain.</dd>
-                <dt id="gloss-monarchy-31">Monarchy <span class="phonetic">(MON-ar-kee)</span> <button class="audio-btn" data-term="Monarchy" aria-label="Play pronunciation of Monarchy">&#128266;</button></dt>
+                <dt id="gloss-monarchy-31">Monarchy <span class="phonetic">(MON-ar-kee)</span> <button class="gloss-audio" data-term="Monarchy" aria-label="Play pronunciation of Monarchy" onclick="speakGloss(event,'Monarchy')">&#128266;</button></dt>
                 <dd>kingship used for the common good of everyone, in Polybius's framework.</dd>
             </dl>
         </div>
@@ -184,31 +181,31 @@
             <div class="callout-kicker">&#127760; Foreign Language Vocabulary</div>
             <p class="glossary-note">Reviewing Lesson 2.2's Greek terms. This week's reading introduces no new foreign-language terms.</p>
             <dl class="glossary-list">
-                <dt id="gloss-anacyclosis-31"><em>anacyclosis</em> <span class="phonetic">(an-uh-sy-KLOH-sis)</span> <button class="audio-btn" data-term="anacyclosis" aria-label="Play pronunciation of anacyclosis">&#128266;</button></dt>
+                <dt id="gloss-anacyclosis-31"><em>anacyclosis</em> <span class="phonetic">(an-uh-sy-KLOH-sis)</span> <button class="gloss-audio" data-term="anacyclosis" aria-label="Play pronunciation of anacyclosis" onclick="speakGloss(event,'anacyclosis')">&#128266;</button></dt>
                 <dd>Polybius's Greek name for the repeating cycle of governments decaying from one form into the next.</dd>
-                <dt id="gloss-aristotle-31"><em>Aristotle</em> <span class="phonetic">(AIR-ih-stot-uhl)</span> <button class="audio-btn" data-term="Aristotle" aria-label="Play pronunciation of Aristotle">&#128266;</button></dt>
+                <dt id="gloss-aristotle-31"><em>Aristotle</em> <span class="phonetic">(AIR-ih-stot-uhl)</span> <button class="gloss-audio" data-term="Aristotle" aria-label="Play pronunciation of Aristotle" onclick="speakGloss(event,'Aristotle')">&#128266;</button></dt>
                 <dd>a Greek philosopher who named the idea of a constitution that blends more than one form of government.</dd>
-                <dt id="gloss-ephors-31"><em>ephors</em> <span class="phonetic">(EF-orz)</span> <button class="audio-btn" data-term="ephors" aria-label="Play pronunciation of ephors">&#128266;</button></dt>
+                <dt id="gloss-ephors-31"><em>ephors</em> <span class="phonetic">(EF-orz)</span> <button class="gloss-audio" data-term="ephors" aria-label="Play pronunciation of ephors" onclick="speakGloss(event,'ephors')">&#128266;</button></dt>
                 <dd>elected overseers in Sparta who held even the two kings accountable to the law.</dd>
-                <dt id="gloss-gerousia-31"><em>Gerousia</em> <span class="phonetic">(jeh-ROO-see-uh)</span> <button class="audio-btn" data-term="Gerousia" aria-label="Play pronunciation of Gerousia">&#128266;</button></dt>
+                <dt id="gloss-gerousia-31"><em>Gerousia</em> <span class="phonetic">(jeh-ROO-see-uh)</span> <button class="gloss-audio" data-term="Gerousia" aria-label="Play pronunciation of Gerousia" onclick="speakGloss(event,'Gerousia')">&#128266;</button></dt>
                 <dd>the small council of elders that supplied Sparta's aristocracy element.</dd>
-                <dt id="gloss-ochlocracy-31"><em>ochlocracy</em> <span class="phonetic">(ok-LOK-ruh-see)</span> <button class="audio-btn" data-term="ochlocracy" aria-label="Play pronunciation of ochlocracy">&#128266;</button></dt>
+                <dt id="gloss-ochlocracy-31"><em>ochlocracy</em> <span class="phonetic">(ok-LOK-ruh-see)</span> <button class="gloss-audio" data-term="ochlocracy" aria-label="Play pronunciation of ochlocracy" onclick="speakGloss(event,'ochlocracy')">&#128266;</button></dt>
                 <dd>Polybius's term for mob rule, the corrupt form democracy decays into.</dd>
-                <dt id="gloss-politeia-31"><em>politeia</em> <span class="phonetic">(poh-lih-TAY-uh)</span> <button class="audio-btn" data-term="politeia" aria-label="Play pronunciation of politeia">&#128266;</button></dt>
+                <dt id="gloss-politeia-31"><em>politeia</em> <span class="phonetic">(poh-lih-TAY-uh)</span> <button class="gloss-audio" data-term="politeia" aria-label="Play pronunciation of politeia" onclick="speakGloss(event,'politeia')">&#128266;</button></dt>
                 <dd>Aristotle's Greek term for a &ldquo;mixed regime&rdquo; that blends oligarchy and democracy together.</dd>
-                <dt id="gloss-polybius-31"><em>Polybius</em> <span class="phonetic">(poh-LIB-ee-us)</span> <button class="audio-btn" data-term="Polybius" aria-label="Play pronunciation of Polybius">&#128266;</button></dt>
+                <dt id="gloss-polybius-31"><em>Polybius</em> <span class="phonetic">(poh-LIB-ee-us)</span> <button class="gloss-audio" data-term="Polybius" aria-label="Play pronunciation of Polybius" onclick="speakGloss(event,'Polybius')">&#128266;</button></dt>
                 <dd>a Greek statesman who argued Rome's constitution combined all three good forms of government at once.</dd>
             </dl>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The philosopher who made this case most famously was <strong>John Locke</strong>. He wrote in the years around England's Glorious Revolution of 1688, when the English forced out one king and replaced him with another under new limits set by Parliament. Locke argued that in a <strong class="gloss-term"><a href="#gloss-state-of-nature" title="a condition before or outside any organized government">state of nature</a></strong>, a condition before or outside any organized government, people already have <strong class="gloss-term"><a href="#gloss-natural-rights" title="rights people have simply by being human, before any government exists">natural rights</a></strong>. These rights are life, liberty, and property. People do not need a king or a parliament to grant them these rights. Instead, people can discover that they have these rights just by using reason and thinking clearly about what it means to be human. Imagine, for a moment, a person living completely alone, with no government of any kind nearby. That person still owns his own life. He is still free to make his own choices. He can still claim the fruits of his own labor as his property. Government did not give him any of that. But there is a serious problem with the state of nature. If a person's rights are violated there, he has no police to call, no court to bring his case to, and no army to protect him. Enforcing your own rights all by yourself is both inconvenient and unsafe. Because of this danger, Locke argued, people agree to leave the state of nature. They form a political community together instead. This agreement is called the <strong class="gloss-term"><a href="#gloss-social-contract" title="the agreement people make to leave the state of nature and form a government">social contract</a></strong>. Individuals agree to be governed. In exchange, the government's entire job is to protect the rights they already had before it existed. A government under the social contract does not hand out rights like gifts. It exists because people already agreed that protecting life, liberty, and property was worth giving up some of their independence for.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The philosopher who made this case most famously was <strong>John Locke</strong>. He wrote in the years around England's Glorious Revolution of 1688, when the English forced out one king and replaced him with another under new limits set by Parliament. Locke argued that in a <span class="gloss" tabindex="0">state of nature<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'state of nature')">&#128266;</button><span class="gloss-tip">a condition before or outside any organized government, where people are free but have no police, courts, or army to protect their rights.</span></span>, a condition before or outside any organized government, people already have <span class="gloss" tabindex="0">natural rights<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'natural rights')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">NACH-er-ul RYTS</span>rights people have simply by being human, before any government exists: life, liberty, and property, according to Locke.</span></span>. These rights are life, liberty, and property. People do not need a king or a parliament to grant them these rights. Instead, people can discover that they have these rights just by using reason and thinking clearly about what it means to be human. Imagine, for a moment, a person living completely alone, with no government of any kind nearby. That person still owns his own life. He is still free to make his own choices. He can still claim the fruits of his own labor as his property. Government did not give him any of that. But there is a serious problem with the state of nature. If a person's rights are violated there, he has no police to call, no court to bring his case to, and no army to protect him. Enforcing your own rights all by yourself is both inconvenient and unsafe. Because of this danger, Locke argued, people agree to leave the state of nature. They form a political community together instead. This agreement is called the <span class="gloss" tabindex="0">social contract<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'social contract')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">SOH-shul KON-trakt</span>the agreement people make to leave the state of nature and form a government, trading some independence for protection of their rights.</span></span>. Individuals agree to be governed. In exchange, the government's entire job is to protect the rights they already had before it existed. A government under the social contract does not hand out rights like gifts. It exists because people already agreed that protecting life, liberty, and property was worth giving up some of their independence for.</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; A TRUST THAT ANY GOVERNMENT CAN BREAK</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; A TRUST THAT ANY GOVERNMENT CAN BREAK</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice what follows from this idea, and notice that it follows no matter who is doing the governing. If government exists only to protect rights that already existed, then government did not create those rights in the first place. This means government cannot justly take those rights away without a very good reason. This is true whether the government is a king, a council of aristocrats, a small ruling group, or an elected democratic majority. Locke pushed this reasoning to a conclusion that few rulers of any kind wanted to hear. When a government keeps breaking the trust the people placed in it, when rulers start acting as though the people exist to serve them, instead of the other way around, the people are allowed to resist. If necessary, they are allowed to replace that government entirely. The type of government makes no difference to this argument. What matters is only whether the government keeps the people's trust or breaks it. Locke is drawing a careful, sharp line here. A ruler who simply makes decisions people dislike has not broken the social contract. A ruler who tries to seize people's property without their consent, or who rules by raw force instead of settled law, has crossed that line completely. This week's Locke reading comes from late in his book, the <strong>Second Treatise of Government</strong>. It spells out exactly when and why a government <strong class="gloss-term"><a href="#gloss-dissolution" title="when a government falls apart because it has broken the people's trust">dissolves</a></strong>, or falls apart. A government does not dissolve simply because a ruler becomes unpopular. It dissolves when the basic trust between ruler and ruled has truly been broken.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Notice what follows from this idea, and notice that it follows no matter who is doing the governing. If government exists only to protect rights that already existed, then government did not create those rights in the first place. This means government cannot justly take those rights away without a very good reason. This is true whether the government is a king, a council of aristocrats, a small ruling group, or an elected democratic majority. Locke pushed this reasoning to a conclusion that few rulers of any kind wanted to hear. When a government keeps breaking the trust the people placed in it, when rulers start acting as though the people exist to serve them, instead of the other way around, the people are allowed to resist. If necessary, they are allowed to replace that government entirely. The type of government makes no difference to this argument. What matters is only whether the government keeps the people's trust or breaks it. Locke is drawing a careful, sharp line here. A ruler who simply makes decisions people dislike has not broken the social contract. A ruler who tries to seize people's property without their consent, or who rules by raw force instead of settled law, has crossed that line completely. This week's Locke reading comes from late in his book, the <strong>Second Treatise of Government</strong>. It spells out exactly when and why a government <span class="gloss" tabindex="0">dissolves<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'dissolve / dissolution')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">dih-ZOLV / dis-uh-LOO-shun</span>when a government falls apart because it has broken the people's trust, not simply because a ruler is unpopular.</span></span>, or falls apart. A government does not dissolve simply because a ruler becomes unpopular. It dissolves when the basic trust between ruler and ruled has truly been broken.</p>
 
         <div class="optima-widget ow-select">
           <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE TERM TO WHAT IT MEANS</div>
@@ -250,7 +247,7 @@
 
     <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; FROM ENGLAND TO PHILADELPHIA</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 3 &middot; FROM ENGLAND TO PHILADELPHIA</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">This idea did not stay confined to England. It also did not stay confined to arguments against kings specifically. Locke's ideas crossed the Atlantic Ocean and took root among American colonists, many of whom read his works widely in the decades before the Revolution. A century after Locke wrote, the American colonists broke with Britain. Their central conflict was actually with Parliament, the British lawmaking body, not with the King himself. In 1775, the Continental Congress sent the Olive Branch Petition. This petition appealed directly to King George III, asking him to step in against Parliament on the colonists' behalf. This was an unspoken appeal to the very reasoning you are studying this week: that even a legislature, or lawmaking body, can break the people's trust and lose its claim to their obedience. When you reach Week 5's study of the Declaration of Independence, you will recognize this week's vocabulary almost word for word. That is because Thomas Jefferson had Locke's Second Treatise close at hand when he wrote it.</p>
     </div>
@@ -261,14 +258,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reading Quiz 3.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="https://optimaoaoteam.instructure.com/courses/35/quizzes/290" target="_blank" rel="noopener" style="color: #0e1c42;">Reading Quiz 3.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Five inference questions on the state of nature, natural rights, the social contract, and why Locke's argument applies to any form of government.</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 1 &amp; Critical Questions 3.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-1.html" style="color: #0e1c42;">Primary Source 1</a> &amp; <a href="https://optimaoaoteam.instructure.com/courses/35/assignments/533" target="_blank" rel="noopener" style="color: #0e1c42;">Critical Questions 3.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Locke, <em>Second Treatise of Government</em>, Ch. XIX, on when and why a government dissolves.</div>
             </div>
         </div>
@@ -293,17 +290,17 @@
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
 <script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
-    var audioBtn = e.target.closest('.audio-btn');
-    if (audioBtn) {
-      if ('speechSynthesis' in window) {
-        var utter = new SpeechSynthesisUtterance(audioBtn.dataset.term || '');
-        window.speechSynthesis.cancel();
-        window.speechSynthesis.speak(utter);
-      }
-      return;
-    }
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');

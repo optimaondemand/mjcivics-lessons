@@ -47,9 +47,6 @@
     dl.glossary-list dt:first-child { margin-top: 0; }
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
-    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
-    .gloss-term { color: #0E1C42; }
-    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -135,28 +132,28 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; TWO CONSULS, NOT ONE KING</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; TWO CONSULS, NOT ONE KING</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">7 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing two terms from Lesson 1.2, plus new ones for this week.</p>
             <dl class="glossary-list">
-                <dt id="gloss-consul">Consul <span class="phonetic">(KON-suhl)</span> <button class="audio-btn" data-term="Consul" aria-label="Play pronunciation of Consul">&#128266;</button></dt>
+                <dt id="gloss-consul">Consul <span class="phonetic">(KON-suhl)</span> <button class="gloss-audio" data-term="Consul" aria-label="Play pronunciation of Consul" onclick="speakGloss(event,'Consul')">&#128266;</button></dt>
                 <dd>one of two officials who held Rome's executive power together, elected for a one-year term.</dd>
-                <dt id="gloss-direct-democracy-21">direct democracy <span class="phonetic"></span> <button class="audio-btn" data-term="direct democracy" aria-label="Play pronunciation of direct democracy">&#128266;</button></dt>
+                <dt id="gloss-direct-democracy-21">direct democracy <span class="phonetic"></span> <button class="gloss-audio" data-term="direct democracy" aria-label="Play pronunciation of direct democracy" onclick="speakGloss(event,'direct democracy')">&#128266;</button></dt>
                 <dd>a system where citizens vote on laws themselves, in person, instead of choosing representatives to vote for them.</dd>
-                <dt id="gloss-dual-executive">dual executive <span class="phonetic">(DOO-uhl eg-ZEK-yoo-tiv)</span> <button class="audio-btn" data-term="dual executive" aria-label="Play pronunciation of dual executive">&#128266;</button></dt>
+                <dt id="gloss-dual-executive">dual executive <span class="phonetic">(DOO-uhl eg-ZEK-yoo-tiv)</span> <button class="gloss-audio" data-term="dual executive" aria-label="Play pronunciation of dual executive" onclick="speakGloss(event,'dual executive')">&#128266;</button></dt>
                 <dd>a system that splits the top power of government between two equal officials instead of one, so each can check the other.</dd>
-                <dt id="gloss-ostracism-21">ostracism <span class="phonetic">(OSS-truh-siz-um)</span> <button class="audio-btn" data-term="ostracism" aria-label="Play pronunciation of ostracism">&#128266;</button></dt>
+                <dt id="gloss-ostracism-21">ostracism <span class="phonetic">(OSS-truh-siz-um)</span> <button class="gloss-audio" data-term="ostracism" aria-label="Play pronunciation of ostracism" onclick="speakGloss(event,'ostracism')">&#128266;</button></dt>
                 <dd>a vote by the Assembly to banish a citizen from Athens for ten years, without any criminal charge.</dd>
-                <dt id="gloss-senate">Senate <span class="phonetic">(SEH-nit)</span> <button class="audio-btn" data-term="Senate" aria-label="Play pronunciation of Senate">&#128266;</button></dt>
+                <dt id="gloss-senate">Senate <span class="phonetic">(SEH-nit)</span> <button class="gloss-audio" data-term="Senate" aria-label="Play pronunciation of Senate" onclick="speakGloss(event,'Senate')">&#128266;</button></dt>
                 <dd>a body of several hundred former officials in Rome who advised on foreign policy and controlled the treasury, though it had no formal power to pass laws.</dd>
-                <dt id="gloss-tribune">Tribune of the Plebs <span class="phonetic">(TRIB-yoon)</span> <button class="audio-btn" data-term="Tribune of the Plebs" aria-label="Play pronunciation of Tribune of the Plebs">&#128266;</button></dt>
+                <dt id="gloss-tribune">Tribune of the Plebs <span class="phonetic">(TRIB-yoon)</span> <button class="gloss-audio" data-term="Tribune of the Plebs" aria-label="Play pronunciation of Tribune of the Plebs" onclick="speakGloss(event,'Tribune of the Plebs')">&#128266;</button></dt>
                 <dd>a Roman official elected by the common people (plebeians) with the power to veto acts of government on their behalf.</dd>
             </dl>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Athens was not the only ancient city to overthrow a tyrant and build something new. In 509 BC, the Romans drove out their last king, a man named Tarquin the Proud. This happened about a generation before Cleisthenes's reforms in Athens. The Romans swore, as a city, never to be ruled by a single man again. What they built instead was called the <strong><em class="gloss-term"><a href="#gloss-respublica" title="Latin for the public thing; the root of the modern word republic">res publica</a></em></strong>, a Latin phrase that means &ldquo;the public thing.&rdquo; That phrase is the root of our modern word &ldquo;republic.&rdquo; Rome's republic would eventually govern the whole Mediterranean world. Two thousand years later, it would give the American founders much of their working vocabulary of government.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Athens was not the only ancient city to overthrow a tyrant and build something new. In 509 BC, the Romans drove out their last king, a man named Tarquin the Proud. This happened about a generation before Cleisthenes's reforms in Athens. The Romans swore, as a city, never to be ruled by a single man again. What they built instead was called the <span class="gloss" tabindex="0"><em>res publica</em><button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'res publica')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">rays POO-blih-kah</span>Latin for &ldquo;the public thing&rdquo;; the root of the modern word &ldquo;republic.&rdquo;</span></span>, a Latin phrase that means &ldquo;the public thing.&rdquo; That phrase is the root of our modern word &ldquo;republic.&rdquo; Rome's republic would eventually govern the whole Mediterranean world. Two thousand years later, it would give the American founders much of their working vocabulary of government.</p>
 
         <div class="optima-widget ow-reflect">
           <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
@@ -174,37 +171,37 @@
             <div class="callout-kicker">&#127760; Foreign Language Vocabulary</div>
             <p class="glossary-note">Reviewing Lesson 1.2's Greek terms, plus new Latin terms for this week.</p>
             <dl class="glossary-list">
-                <dt id="gloss-auctoritas"><em>auctoritas</em> <span class="phonetic">(owk-TOH-rih-tahs)</span> <button class="audio-btn" data-term="auctoritas" aria-label="Play pronunciation of auctoritas">&#128266;</button></dt>
+                <dt id="gloss-auctoritas"><em>auctoritas</em> <span class="phonetic">(owk-TOH-rih-tahs)</span> <button class="gloss-audio" data-term="auctoritas" aria-label="Play pronunciation of auctoritas" onclick="speakGloss(event,'auctoritas')">&#128266;</button></dt>
                 <dd>Latin for the great, informal respect and influence the Roman Senate held, even without formal lawmaking power.</dd>
-                <dt id="gloss-boule-21"><em>Boule</em> <span class="phonetic">(BOO-lay)</span> <button class="audio-btn" data-term="Boule" aria-label="Play pronunciation of Boule">&#128266;</button></dt>
+                <dt id="gloss-boule-21"><em>Boule</em> <span class="phonetic">(BOO-lay)</span> <button class="gloss-audio" data-term="Boule" aria-label="Play pronunciation of Boule" onclick="speakGloss(event,'Boule')">&#128266;</button></dt>
                 <dd>the Greek name for the Council of Five Hundred, which prepared business for the Athenian Assembly.</dd>
-                <dt id="gloss-ekklesia-21"><em>Ekklesia</em> <span class="phonetic">(eh-KLEE-see-uh)</span> <button class="audio-btn" data-term="Ekklesia" aria-label="Play pronunciation of Ekklesia">&#128266;</button></dt>
+                <dt id="gloss-ekklesia-21"><em>Ekklesia</em> <span class="phonetic">(eh-KLEE-see-uh)</span> <button class="gloss-audio" data-term="Ekklesia" aria-label="Play pronunciation of Ekklesia" onclick="speakGloss(event,'Ekklesia')">&#128266;</button></dt>
                 <dd>the Greek name for the Athenian Assembly, where every adult male citizen could speak and vote directly.</dd>
-                <dt id="gloss-ephialtes-21"><em>Ephialtes</em> <span class="phonetic">(ee-fee-AL-teez)</span> <button class="audio-btn" data-term="Ephialtes" aria-label="Play pronunciation of Ephialtes">&#128266;</button></dt>
+                <dt id="gloss-ephialtes-21"><em>Ephialtes</em> <span class="phonetic">(ee-fee-AL-teez)</span> <button class="gloss-audio" data-term="Ephialtes" aria-label="Play pronunciation of Ephialtes" onclick="speakGloss(event,'Ephialtes')">&#128266;</button></dt>
                 <dd>a reformer who, with Pericles, created a stipend so poorer Athenian citizens could afford to serve on the Council.</dd>
-                <dt id="gloss-intercessio"><em>intercessio</em> <span class="phonetic">(in-tur-SESS-ee-oh)</span> <button class="audio-btn" data-term="intercessio" aria-label="Play pronunciation of intercessio">&#128266;</button></dt>
+                <dt id="gloss-intercessio"><em>intercessio</em> <span class="phonetic">(in-tur-SESS-ee-oh)</span> <button class="gloss-audio" data-term="intercessio" aria-label="Play pronunciation of intercessio" onclick="speakGloss(event,'intercessio')">&#128266;</button></dt>
                 <dd>the Latin word for a tribune's veto, spoken to stop a government action on behalf of the plebeians.</dd>
-                <dt id="gloss-patricians"><em>patricians</em> <span class="phonetic">(puh-TRISH-uhnz)</span> <button class="audio-btn" data-term="patricians" aria-label="Play pronunciation of patricians">&#128266;</button></dt>
+                <dt id="gloss-patricians"><em>patricians</em> <span class="phonetic">(puh-TRISH-uhnz)</span> <button class="gloss-audio" data-term="patricians" aria-label="Play pronunciation of patricians" onclick="speakGloss(event,'patricians')">&#128266;</button></dt>
                 <dd>the aristocratic, noble families of Rome.</dd>
-                <dt id="gloss-pericles-21"><em>Pericles</em> <span class="phonetic">(PEH-rih-kleez)</span> <button class="audio-btn" data-term="Pericles" aria-label="Play pronunciation of Pericles">&#128266;</button></dt>
+                <dt id="gloss-pericles-21"><em>Pericles</em> <span class="phonetic">(PEH-rih-kleez)</span> <button class="gloss-audio" data-term="Pericles" aria-label="Play pronunciation of Pericles" onclick="speakGloss(event,'Pericles')">&#128266;</button></dt>
                 <dd>a reformer who, with Ephialtes, helped the Athenian Assembly gain the upper hand over the Council.</dd>
-                <dt id="gloss-plebeians"><em>plebeians</em> <span class="phonetic">(pluh-BEE-uhnz)</span> <button class="audio-btn" data-term="plebeians" aria-label="Play pronunciation of plebeians">&#128266;</button></dt>
+                <dt id="gloss-plebeians"><em>plebeians</em> <span class="phonetic">(pluh-BEE-uhnz)</span> <button class="gloss-audio" data-term="plebeians" aria-label="Play pronunciation of plebeians" onclick="speakGloss(event,'plebeians')">&#128266;</button></dt>
                 <dd>the common people of Rome, as distinguished from the aristocratic patricians.</dd>
-                <dt id="gloss-pnyx-21"><em>Pnyx</em> <span class="phonetic">(puh-NIKS)</span> <button class="audio-btn" data-term="Pnyx" aria-label="Play pronunciation of Pnyx">&#128266;</button></dt>
+                <dt id="gloss-pnyx-21"><em>Pnyx</em> <span class="phonetic">(puh-NIKS)</span> <button class="gloss-audio" data-term="Pnyx" aria-label="Play pronunciation of Pnyx" onclick="speakGloss(event,'Pnyx')">&#128266;</button></dt>
                 <dd>the hill where the Athenian Assembly met to debate and vote.</dd>
-                <dt id="gloss-respublica"><em>res publica</em> <span class="phonetic">(rays POO-blih-kah)</span> <button class="audio-btn" data-term="res publica" aria-label="Play pronunciation of res publica">&#128266;</button></dt>
+                <dt id="gloss-respublica"><em>res publica</em> <span class="phonetic">(rays POO-blih-kah)</span> <button class="gloss-audio" data-term="res publica" aria-label="Play pronunciation of res publica" onclick="speakGloss(event,'res publica')">&#128266;</button></dt>
                 <dd>Latin for &ldquo;the public thing&rdquo;; the root of the modern word &ldquo;republic.&rdquo;</dd>
             </dl>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Rome solved the problem of executive power in a very different way than Athens did. Remember from Week 1 how the Athenian Assembly worked. There was no formal selection process at all. Any citizen who showed up on a given day could speak and vote, on a first-come basis. If the crowd grew too large for the meeting place, latecomers simply went home without a vote that day. Only the Council of Five Hundred, from Week 1, actually rotated citizens through office using a lottery. The Romans took neither of these paths. Instead, they gave all executive power to just two officials, called <strong class="gloss-term"><a href="#gloss-consul" title="one of two officials who held Rome's executive power together, elected for a one-year term">Consuls</a></strong>, elected fresh every single year. This is the <strong class="gloss-term"><a href="#gloss-dual-executive" title="a system that splits the top power of government between two equal officials instead of one">dual executive</a></strong> at the center of this week's discussion. Two men held perfectly equal power. Each one could veto the other's actions. Each one served only one year before stepping down for good. If a single consul grew too ambitious, his colleague could simply block him. A one-year term also builds no lasting personal loyalty among soldiers or officials. Because of this, no consul could hold onto power the way a king once had.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Rome solved the problem of executive power in a very different way than Athens did. Remember from Week 1 how the Athenian Assembly worked. There was no formal selection process at all. Any citizen who showed up on a given day could speak and vote, on a first-come basis. If the crowd grew too large for the meeting place, latecomers simply went home without a vote that day. Only the Council of Five Hundred, from Week 1, actually rotated citizens through office using a lottery. The Romans took neither of these paths. Instead, they gave all executive power to just two officials, called <span class="gloss" tabindex="0">Consuls<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Consul')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">KON-suhl</span>one of two officials who held Rome's executive power together, elected for a one-year term.</span></span>, elected fresh every single year. This is the <span class="gloss" tabindex="0">dual executive<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'dual executive')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">DOO-uhl eg-ZEK-yoo-tiv</span>a system that splits the top power of government between two equal officials instead of one, so each can check the other.</span></span> at the center of this week's discussion. Two men held perfectly equal power. Each one could veto the other's actions. Each one served only one year before stepping down for good. If a single consul grew too ambitious, his colleague could simply block him. A one-year term also builds no lasting personal loyalty among soldiers or officials. Because of this, no consul could hold onto power the way a king once had.</p>
     </div>
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; THE SENATE, THE ASSEMBLIES, AND THE TRIBUNE'S VETO</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; THE SENATE, THE ASSEMBLIES, AND THE TRIBUNE'S VETO</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">5 min</span></div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Consuls did not rule Rome alone. The <strong class="gloss-term"><a href="#gloss-senate" title="a body of several hundred former officials in Rome who advised on foreign policy and controlled the treasury">Senate</a></strong> was a body of several hundred former officials, mostly from wealthy patrician families. The Senate held no formal power to pass laws on its own. And yet it had huge real influence. It controlled the treasury, directed foreign policy, and had built up great respect over time, a quality the Romans called <strong><em class="gloss-term"><a href="#gloss-auctoritas" title="Latin for the great, informal respect and influence the Roman Senate held">auctoritas</a></em></strong>. Below the Senate stood several popular <strong>Assemblies</strong>, where ordinary Roman citizens voted directly on proposed laws and elected the city's officials. Eventually, the common people, called <strong><em class="gloss-term"><a href="#gloss-plebeians" title="the common people of Rome, as distinguished from the aristocratic patricians">plebeians</a></em></strong>, won a brand-new office for themselves: the <strong class="gloss-term"><a href="#gloss-tribune" title="a Roman official elected by the common people with the power to veto acts of government on their behalf">Tribune of the Plebs</a></strong>. They won this office only after a long political struggle against the aristocracy, called the <strong><em class="gloss-term"><a href="#gloss-patricians" title="the aristocratic, noble families of Rome">patricians</a></em></strong>. Historians now call this struggle the Struggle of the Orders. Once in place, a tribune could veto almost any act of the Roman government on behalf of the plebeians. All it took was a single Latin word, <strong><em class="gloss-term"><a href="#gloss-intercessio" title="the Latin word for a tribune's veto">intercessio</a></em></strong>, spoken at the right moment, and the government's action stopped cold.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Consuls did not rule Rome alone. The <span class="gloss" tabindex="0">Senate<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Senate')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">SEH-nit</span>a body of several hundred former officials in Rome who advised on foreign policy and controlled the treasury, though it had no formal power to pass laws.</span></span> was a body of several hundred former officials, mostly from wealthy patrician families. The Senate held no formal power to pass laws on its own. And yet it had huge real influence. It controlled the treasury, directed foreign policy, and had built up great respect over time, a quality the Romans called <span class="gloss" tabindex="0"><em>auctoritas</em><button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'auctoritas')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">owk-TOH-rih-tahs</span>Latin for the great, informal respect and influence the Roman Senate held, even without formal lawmaking power.</span></span>. Below the Senate stood several popular <strong>Assemblies</strong>, where ordinary Roman citizens voted directly on proposed laws and elected the city's officials. Eventually, the common people, called <span class="gloss" tabindex="0"><em>plebeians</em><button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'plebeians')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">pluh-BEE-uhnz</span>the common people of Rome, as distinguished from the aristocratic patricians.</span></span>, won a brand-new office for themselves: the <span class="gloss" tabindex="0">Tribune of the Plebs<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Tribune of the Plebs')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">TRIB-yoon</span>a Roman official elected by the common people (plebeians) with the power to veto acts of government on their behalf.</span></span>. They won this office only after a long political struggle against the aristocracy, called the <span class="gloss" tabindex="0"><em>patricians</em><button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'patricians')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">puh-TRISH-uhnz</span>the aristocratic, noble families of Rome.</span></span>. Historians now call this struggle the Struggle of the Orders. Once in place, a tribune could veto almost any act of the Roman government on behalf of the plebeians. All it took was a single Latin word, <span class="gloss" tabindex="0"><em>intercessio</em><button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'intercessio')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">in-tur-SESS-ee-oh</span>the Latin word for a tribune's veto, spoken to stop a government action on behalf of the plebeians.</span></span>, spoken at the right moment, and the government's action stopped cold.</p>
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Notice what has already come out of this description. The consuls give quick, monarchy-like decisions. The Senate gives long experience, like an aristocracy. The assemblies and tribunes give the people's voice, like a democracy. Each of these three parts checked the other two. The Romans did not sit down and design this careful balance in a single afternoon. It built up slowly, over centuries of trial, conflict, and hard-won compromise. By the time the Greek historian Polybius arrived in Rome in the 160s BC, he believed he was looking at something truly new. Rome's constitution combined all three classical forms of government at once, instead of simply picking one and rejecting the others. This week's primary sources come from Polybius himself, and from Cicero. Cicero was writing about a century later, just as the Republic he admired so much was starting to fall apart around him.</p>
 
         <div class="optima-widget ow-select">
@@ -247,7 +244,7 @@
 
     <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; WHY TWO, NOT ONE</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 3 &middot; WHY TWO, NOT ONE</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">It helps to pause and ask why the Romans distrusted a single, permanent ruler so deeply after Tarquin. Kingship had not just disappointed them once. It had grown steadily worse across several generations. It ended with a ruler remembered specifically for cruelty and abuse of power. Once that memory took hold, the Romans built their whole political culture around avoiding it. This is why the office of consul was doubled instead of left as one seat. A single consul, however carefully chosen, could still slide toward tyranny with no one in place to stop him early. Two consuls, each holding an equal veto over the other, made that slide much harder to pull off. Notice, too, that the Romans still wanted a real executive. They wanted someone able to command an army and make fast decisions in a crisis. They did not simply get rid of strong leadership altogether. Instead, they split it in two and gave it a strict time limit. This is a pattern worth remembering. You will see American constitutional design wrestle with this very same tension centuries later. How do you get the quick decisions a single leader can provide, without bringing back the very tyranny you were trying to escape in the first place?</p>
     </div>
@@ -258,14 +255,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Reading Quiz 2.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="https://optimaoaoteam.instructure.com/courses/35/quizzes/285" target="_blank" rel="noopener" style="color: #0e1c42;">Reading Quiz 2.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Five inference questions on the Consuls, the Senate, the Tribune of the Plebs, and the good-versus-corrupt distinction between aristocracy and oligarchy.</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 1 &amp; Critical Questions 2.1</strong> (Canvas)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-1.html" style="color: #0e1c42;">Primary Source 1</a> &amp; <a href="https://optimaoaoteam.instructure.com/courses/35/assignments/524" target="_blank" rel="noopener" style="color: #0e1c42;">Critical Questions 2.1</a></strong> (Canvas)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Cicero's <em>De Re Publica</em>, Book I, on what actually makes a group of people a &ldquo;commonwealth.&rdquo;</div>
             </div>
         </div>
@@ -290,17 +287,17 @@
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
 <script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
-    var audioBtn = e.target.closest('.audio-btn');
-    if (audioBtn) {
-      if ('speechSynthesis' in window) {
-        var utter = new SpeechSynthesisUtterance(audioBtn.dataset.term || '');
-        window.speechSynthesis.cancel();
-        window.speechSynthesis.speak(utter);
-      }
-      return;
-    }
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');

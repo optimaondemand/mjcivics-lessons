@@ -46,9 +46,6 @@
     dl.glossary-list .phonetic { font-weight: normal; font-style: italic; color: #6b7a99; font-size: 13px; }
     dl.glossary-list dd { margin: 2px 0 0 0; font-size: 15px; color: #1a2340; line-height: 1.5; }
     .glossary-note { font-size: 13px; color: #666; margin: 0 0 10px; }
-    .audio-btn { border: none; background: none; cursor: pointer; font-size: 14px; margin-left: 4px; padding: 0; vertical-align: middle; }
-    .gloss-term { color: #0E1C42; }
-    .gloss-term a { color: inherit; text-decoration: underline dotted; text-underline-offset: 2px; }
 </style>
 </head>
 <body>
@@ -134,26 +131,26 @@
 
     <!-- PART 1 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 1 &middot; SAME STARTING POINT, DARKER CONCLUSION</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 1 &middot; SAME STARTING POINT, DARKER CONCLUSION</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">6 min</span></div>
 
         <div class="callout glossary">
             <div class="callout-kicker">&#128214; Glossary of Subject Vocabulary</div>
             <p class="glossary-note">Reviewing four terms from Lesson 3.1, plus one new term for Hobbes's argument.</p>
             <dl class="glossary-list">
-                <dt id="gloss-dissolution-32">dissolve / dissolution <span class="phonetic">(dih-ZOLV / dis-uh-LOO-shun)</span> <button class="audio-btn" data-term="dissolution" aria-label="Play pronunciation of dissolution">&#128266;</button></dt>
+                <dt id="gloss-dissolution-32">dissolve / dissolution <span class="phonetic">(dih-ZOLV / dis-uh-LOO-shun)</span> <button class="gloss-audio" data-term="dissolution" aria-label="Play pronunciation of dissolution" onclick="speakGloss(event,'dissolution')">&#128266;</button></dt>
                 <dd>when a government falls apart because it has broken the people's trust, not simply because a ruler is unpopular.</dd>
-                <dt id="gloss-leviathan">Leviathan <span class="phonetic">(luh-VY-uh-thun)</span> <button class="audio-btn" data-term="Leviathan" aria-label="Play pronunciation of Leviathan">&#128266;</button></dt>
+                <dt id="gloss-leviathan">Leviathan <span class="phonetic">(luh-VY-uh-thun)</span> <button class="gloss-audio" data-term="Leviathan" aria-label="Play pronunciation of Leviathan" onclick="speakGloss(event,'Leviathan')">&#128266;</button></dt>
                 <dd>a giant sea monster described in the Bible; Hobbes's name for the single, overwhelming ruler he believed government needed.</dd>
-                <dt id="gloss-natural-rights-32">natural rights <span class="phonetic">(NACH-er-ul RYTS)</span> <button class="audio-btn" data-term="natural rights" aria-label="Play pronunciation of natural rights">&#128266;</button></dt>
+                <dt id="gloss-natural-rights-32">natural rights <span class="phonetic">(NACH-er-ul RYTS)</span> <button class="gloss-audio" data-term="natural rights" aria-label="Play pronunciation of natural rights" onclick="speakGloss(event,'natural rights')">&#128266;</button></dt>
                 <dd>rights people have simply by being human, before any government exists: life, liberty, and property, according to Locke.</dd>
-                <dt id="gloss-social-contract-32">social contract <span class="phonetic">(SOH-shul KON-trakt)</span> <button class="audio-btn" data-term="social contract" aria-label="Play pronunciation of social contract">&#128266;</button></dt>
+                <dt id="gloss-social-contract-32">social contract <span class="phonetic">(SOH-shul KON-trakt)</span> <button class="gloss-audio" data-term="social contract" aria-label="Play pronunciation of social contract" onclick="speakGloss(event,'social contract')">&#128266;</button></dt>
                 <dd>the agreement people make to leave the state of nature and form a government, trading some independence for protection of their rights.</dd>
-                <dt id="gloss-state-of-nature-32">state of nature <span class="phonetic"></span> <button class="audio-btn" data-term="state of nature" aria-label="Play pronunciation of state of nature">&#128266;</button></dt>
+                <dt id="gloss-state-of-nature-32">state of nature <span class="phonetic"></span> <button class="gloss-audio" data-term="state of nature" aria-label="Play pronunciation of state of nature" onclick="speakGloss(event,'state of nature')">&#128266;</button></dt>
                 <dd>a condition before or outside any organized government, where people are free but have no police, courts, or army to protect their rights.</dd>
             </dl>
         </div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Locke was not the first Englishman to reason from a &ldquo;<strong class="gloss-term"><a href="#gloss-state-of-nature-32" title="a condition before or outside any organized government">state of nature</a></strong>&rdquo; toward a theory of government. A generation earlier, <strong>Thomas Hobbes</strong> reached a very different conclusion using strikingly similar tools. Hobbes had lived through the chaos of the English Civil War, a brutal conflict in the 1640s that tore England apart and ended with the country's own king executed by his own Parliament. That experience shaped everything Hobbes later wrote about government. Hobbes agreed with Locke about one important thing: people are naturally free, and roughly equal in their abilities. A strong man can be killed in his sleep by a weaker one, so even the strongest person is never fully safe from everyone else. But where Locke saw the state of nature as merely inconvenient, something people would eventually want to leave for practical reasons, Hobbes saw it as an outright disaster, a condition no reasonable person could tolerate for long.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Locke was not the first Englishman to reason from a &ldquo;<span class="gloss" tabindex="0">state of nature<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'state of nature')">&#128266;</button><span class="gloss-tip">a condition before or outside any organized government, where people are free but have no police, courts, or army to protect their rights.</span></span>&rdquo; toward a theory of government. A generation earlier, <strong>Thomas Hobbes</strong> reached a very different conclusion using strikingly similar tools. Hobbes had lived through the chaos of the English Civil War, a brutal conflict in the 1640s that tore England apart and ended with the country's own king executed by his own Parliament. That experience shaped everything Hobbes later wrote about government. Hobbes agreed with Locke about one important thing: people are naturally free, and roughly equal in their abilities. A strong man can be killed in his sleep by a weaker one, so even the strongest person is never fully safe from everyone else. But where Locke saw the state of nature as merely inconvenient, something people would eventually want to leave for practical reasons, Hobbes saw it as an outright disaster, a condition no reasonable person could tolerate for long.</p>
 
         <div class="optima-widget ow-reflect">
           <div class="widget-kicker">&#9889; QUICK CHECK-IN</div>
@@ -172,16 +169,16 @@
 
     <!-- PART 2 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 2 &middot; WHY A PROMISE ALONE MEANS NOTHING</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 2 &middot; WHY A PROMISE ALONE MEANS NOTHING</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">This is also why Hobbes insisted that promises and agreements, on their own, could never truly hold up in the state of nature. A promise is only as good as some power that can punish whoever breaks it. In a state of nature, no such power exists at all. There is an even worse problem hiding underneath this one. Suppose I plan to keep my word, but I have no way of knowing whether you will keep yours. If I go first and follow through, I gain nothing if you break your word, and I risk everything. So even a completely sincere person has every reason to break a promise the moment it stops helping him. And that same sincere person has every reason to expect the exact same behavior from everyone else around him. Hobbes put this bluntly. He said agreements without a sword to enforce them are, in his own words, &ldquo;but words, and of no strength to secure a man at all.&rdquo; This is exactly the problem his solution was built to solve.</p>
     </div>
 
     <!-- PART 3 -->
     <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
-        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px;">&#128218; PART 3 &middot; THE LEVIATHAN SOLUTION</div>
+        <div style="font-size: 11px; color: #c7922c; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;"><span>&#128218; PART 3 &middot; THE LEVIATHAN SOLUTION</span><span style="background: #C7922C; color: #fff; font-size: 13px; padding: 3px 10px; border-radius: 10px; white-space: nowrap;">4 min</span></div>
 
-        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Hobbes's solution was as bold as his diagnosis was bleak. To escape this war, he argued, people must give up their individual right to judge and enforce their own claims entirely. Instead, they must hand that power over to a single, overwhelming ruler. Hobbes called this ruler the <strong class="gloss-term"><a href="#gloss-leviathan" title="a giant sea monster described in the Bible; Hobbes's name for the single, overwhelming ruler he believed government needed">Leviathan</a></strong>, after a giant sea monster described in the Bible. The name stood for an authority so powerful that no one would dare challenge it. Only a power that strong, Hobbes believed, could finally make promises mean something, since only it could punish anyone who broke one. For Hobbes, this handover of power had to be almost total, covering nearly every part of a person's public life. Once made, it could not really be taken back by the people who made it. He worried that a ruler with divided or limited power would not be strong enough to stop society from sliding back into war the moment real trouble arrived. This is the sharpest difference between Hobbes and Locke. Locke believed rights survived even after government was formed, and that those rights could justify resisting a government that broke its trust. Hobbes believed that almost any government, however harsh or demanding, was better than no government at all. As you read this week's second primary source, ask yourself which philosopher's view of human nature you find more convincing. Notice, too, that the American founders, as you will see across the rest of this module, sided far more with Locke than with Hobbes, even while they still took Hobbes's warning about disorder and chaos seriously. Both philosophers agreed that people need government. They disagreed sharply about how much freedom people could safely keep once that government existed.</p>
+        <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Hobbes's solution was as bold as his diagnosis was bleak. To escape this war, he argued, people must give up their individual right to judge and enforce their own claims entirely. Instead, they must hand that power over to a single, overwhelming ruler. Hobbes called this ruler the <span class="gloss" tabindex="0">Leviathan<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Leviathan')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">luh-VY-uh-thun</span>a giant sea monster described in the Bible; Hobbes's name for the single, overwhelming ruler he believed government needed.</span></span>, after a giant sea monster described in the Bible. The name stood for an authority so powerful that no one would dare challenge it. Only a power that strong, Hobbes believed, could finally make promises mean something, since only it could punish anyone who broke one. For Hobbes, this handover of power had to be almost total, covering nearly every part of a person's public life. Once made, it could not really be taken back by the people who made it. He worried that a ruler with divided or limited power would not be strong enough to stop society from sliding back into war the moment real trouble arrived. This is the sharpest difference between Hobbes and Locke. Locke believed rights survived even after government was formed, and that those rights could justify resisting a government that broke its trust. Hobbes believed that almost any government, however harsh or demanding, was better than no government at all. As you read this week's second primary source, ask yourself which philosopher's view of human nature you find more convincing. Notice, too, that the American founders, as you will see across the rest of this module, sided far more with Locke than with Hobbes, even while they still took Hobbes's warning about disorder and chaos seriously. Both philosophers agreed that people need government. They disagreed sharply about how much freedom people could safely keep once that government existed.</p>
 
         <div class="optima-widget">
           <div class="widget-kicker">&#9889; FLIP TO CHECK YOURSELF</div>
@@ -204,14 +201,14 @@
         <div style="display: flex; align-items: flex-start; gap: 14px; margin-bottom: 16px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source 2</strong> (GitHub lesson page)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="primary-source-2.html" style="color: #0e1c42;">Primary Source 2</a></strong> (GitHub lesson page)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">Hobbes, <em>Leviathan</em>, Ch. XIII, on life without a common power.</div>
             </div>
         </div>
         <div style="display: flex; align-items: flex-start; gap: 14px;">
             <div style="min-width: 34px; height: 34px; border-radius: 50%; background: #0E1C42; color: #fff; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
             <div>
-                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong>Primary Source Report 3</strong> (Canvas, Tier 3)</div>
+                <div style="font-size: 18px; color: #0e1c42; margin-bottom: 4px;"><strong><a href="https://optimaoaoteam.instructure.com/courses/35/assignments/536" target="_blank" rel="noopener" style="color: #0e1c42;">Primary Source Report 3</a></strong> (Canvas, Tier 3)</div>
                 <div style="font-size: 16px; color: #1a2340; line-height: 1.55;">A short Word document drawing on both this week's primary sources, Locke and Hobbes.</div>
             </div>
         </div>
@@ -236,17 +233,17 @@
 
 <!-- ===== WIDGET RUNTIME (byte-consistent across this site) ===== -->
 <script>
+function speakGloss(e, text) {
+  e.stopPropagation();
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(text);
+    u.rate = 0.85;
+    window.speechSynthesis.speak(u);
+  }
+}
 (function () {
   document.addEventListener('click', function (e) {
-    var audioBtn = e.target.closest('.audio-btn');
-    if (audioBtn) {
-      if ('speechSynthesis' in window) {
-        var utter = new SpeechSynthesisUtterance(audioBtn.dataset.term || '');
-        window.speechSynthesis.cancel();
-        window.speechSynthesis.speak(utter);
-      }
-      return;
-    }
     var reset = e.target.closest('.widget-reset');
     if (reset) {
       var w = reset.closest('.optima-widget');
