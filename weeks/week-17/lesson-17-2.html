@@ -198,38 +198,44 @@
           <div class="widget-kicker">&#9889; TRY IT &middot; TEST YOUR RECALL</div>
           <div class="widget-question">For each statement below, pick the option that matches the lesson.</div>
 
-          <div class="widget-row" data-correct="0" data-fb="Right. Iraq invaded and annexed Kuwait in August 1990." data-hint="Reread the lesson's opening paragraph for the exact month and year.">
+          <div class="widget-row" data-correct="2" data-fb="Right. Iraq invaded and annexed Kuwait in August 1990." data-hint="Reread the lesson's opening paragraph for the exact month and year.">
             <div class="widget-row-prompt">1. Iraq invaded and annexed Kuwait in:</div>
             <div class="widget-options">
-              <button data-choice="0">August 1990</button>
+              <button data-choice="0">1949</button>
               <button data-choice="1">March 1947</button>
-              <button data-choice="2">September 2001</button>
-              <button data-choice="3">1949</button>
+              <button data-choice="2">August 1990</button>
+              <button data-choice="3">September 2001</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="2" data-fb="Right. Bush's coalition notably included NATO allies and several Arab nations." data-hint="Reread Part 1: who joined Bush's coalition, beyond just NATO members?">
+          <div class="widget-row" data-correct="1" data-fb="Right. Bush's coalition notably included NATO allies and several Arab nations." data-hint="Reread Part 1: who joined Bush's coalition, beyond just NATO members?">
             <div class="widget-row-prompt">2. Bush's coalition included, notably:</div>
             <div class="widget-options">
               <button data-choice="0">Only NATO members</button>
-              <button data-choice="1">Only Arab nations</button>
-              <button data-choice="2">NATO allies and several Arab nations</button>
+              <button data-choice="1">NATO allies and several Arab nations</button>
+              <button data-choice="2">Only Arab nations</button>
               <button data-choice="3">Only the Soviet Union</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="1" data-fb="Right. This is the exact contrast Part 2 draws between the two presidents' approaches." data-hint="Reread Part 2's direct comparison of Truman's and Bush's tools.">
+          <div class="widget-row" data-correct="0" data-fb="Right. This is the exact contrast Part 2 draws between the two presidents' approaches." data-hint="Reread Part 2's direct comparison of Truman's and Bush's tools.">
             <div class="widget-row-prompt">3. According to the lesson, Bush's approach differed from Truman's mainly because:</div>
             <div class="widget-options">
-              <button data-choice="0">Bush acted alone while Truman built a coalition</button>
-              <button data-choice="1">Bush organized a coalition through the UN's collective machinery, while Truman's leadership stood largely alone against a rival superpower</button>
-              <button data-choice="2">There was no real difference between the two</button>
+              <button data-choice="0">Bush organized a coalition through the UN's collective machinery, while Truman's leadership stood largely alone against a rival superpower</button>
+              <button data-choice="1">There was no real difference between the two</button>
+              <button data-choice="2">Bush acted alone while Truman built a coalition</button>
               <button data-choice="3">Truman used military force while Bush used only diplomacy</button>
             </div>
           </div>
 
           <button class="widget-reset">Reset</button>
         </div>
+    </div>
+
+    <!-- AI-AWARENESS CALLOUT -->
+    <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+        <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; AI REALITY CHECK &middot; READING A SPEECH CLOSELY</div>
+        <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">AI tools can quickly summarize what a speech says. It <em>cannot</em> replace the close reading this lesson asks of you: noticing exactly how a president like Bush orders his claims and builds his case, word by word, to persuade a specific audience.</div>
     </div>
 
     <!-- What You'll Do Next -->
@@ -281,6 +287,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

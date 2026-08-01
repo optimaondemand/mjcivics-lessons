@@ -217,20 +217,20 @@
           <div class="widget-row" data-correct="2" data-fb="Right. Two Consuls, each able to veto the other, each serving one year, is exactly the check on ambition and entrenchment this lesson describes." data-hint="This is the office at the center of this week's discussion, held by two men at once.">
             <div class="widget-row-prompt">1. Held equal executive power, split between two men, each able to veto the other, each serving one year</div>
             <div class="widget-options">
-              <button data-choice="0">The Senate</button>
-              <button data-choice="1">Tribune of the Plebs</button>
+              <button data-choice="0">The Assemblies</button>
+              <button data-choice="1">The Senate</button>
               <button data-choice="2">The Consuls</button>
-              <button data-choice="3">The Assemblies</button>
+              <button data-choice="3">Tribune of the Plebs</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="0" data-fb="Right. The Senate lacked formal legislative power but wielded enormous influence through finance, foreign policy, and auctoritas." data-hint="This body held no formal legislative power at all, yet the lesson says it wielded 'immense influence' anyway. Which one fits?">
+          <div class="widget-row" data-correct="1" data-fb="Right. The Senate lacked formal legislative power but wielded enormous influence through finance, foreign policy, and auctoritas." data-hint="This body held no formal legislative power at all, yet the lesson says it wielded 'immense influence' anyway. Which one fits?">
             <div class="widget-row-prompt">2. Held no formal legislative power, but wielded immense influence through finance, foreign policy, and accumulated prestige</div>
             <div class="widget-options">
-              <button data-choice="0">The Senate</button>
-              <button data-choice="1">The Consuls</button>
-              <button data-choice="2">Tribune of the Plebs</button>
-              <button data-choice="3">The Assemblies</button>
+              <button data-choice="0">The Assemblies</button>
+              <button data-choice="1">The Senate</button>
+              <button data-choice="2">The Consuls</button>
+              <button data-choice="3">Tribune of the Plebs</button>
             </div>
           </div>
 
@@ -311,6 +311,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

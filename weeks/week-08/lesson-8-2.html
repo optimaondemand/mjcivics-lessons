@@ -195,23 +195,23 @@
           <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE REGIME TO ITS FAILURE MODE</div>
           <div class="widget-question">For each cause of collapse below, pick the regime type Aristotle connects it to.</div>
 
-          <div class="widget-row" data-correct="1" data-fb="Right. Aristotle argues democracies fall when the poor majority feels excluded from real influence." data-hint="This is the regime where the majority, not a wealthy few, holds formal power.">
+          <div class="widget-row" data-correct="2" data-fb="Right. Aristotle argues democracies fall when the poor majority feels excluded from real influence." data-hint="This is the regime where the majority, not a wealthy few, holds formal power.">
             <div class="widget-row-prompt">1. Falls when the poor majority feels excluded from real influence</div>
             <div class="widget-options">
-              <button data-choice="0">Oligarchy</button>
-              <button data-choice="1">Democracy</button>
-              <button data-choice="2">Monarchy</button>
-              <button data-choice="3">Aristocracy</button>
+              <button data-choice="0">Aristocracy</button>
+              <button data-choice="1">Oligarchy</button>
+              <button data-choice="2">Democracy</button>
+              <button data-choice="3">Monarchy</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="0" data-fb="Right. Aristotle argues oligarchies fall when a wealthy few grow so exclusive that everyone else unites against them." data-hint="This is the regime ruled by a small, wealthy elite." >
+          <div class="widget-row" data-correct="1" data-fb="Right. Aristotle argues oligarchies fall when a wealthy few grow so exclusive that everyone else unites against them." data-hint="This is the regime ruled by a small, wealthy elite." >
             <div class="widget-row-prompt">2. Falls when a wealthy few grow so exclusive that everyone else unites against them</div>
             <div class="widget-options">
-              <button data-choice="0">Oligarchy</button>
-              <button data-choice="1">Democracy</button>
-              <button data-choice="2">Tyranny</button>
-              <button data-choice="3">Cleisthenes's system</button>
+              <button data-choice="0">Tyranny</button>
+              <button data-choice="1">Oligarchy</button>
+              <button data-choice="2">Cleisthenes's system</button>
+              <button data-choice="3">Democracy</button>
             </div>
           </div>
 
@@ -286,6 +286,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

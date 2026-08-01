@@ -204,8 +204,17 @@
           <div class="widget-kicker">&#9889; TRY IT &middot; HOW LIKELY IS ARBITRARY RULE?</div>
           <div class="widget-question">For each scenario, use Montesquieu's own warning to judge how likely arbitrary rule becomes.</div>
 
-          <div class="widget-row" data-correct="1" data-fb="Right. Montesquieu's warning is specifically about combining powers; one official holding only legislative power, with executive and judicial power held elsewhere, is not the danger he describes." data-hint="Reread Part 2: Montesquieu's warning is about combining two or three powers, not about holding a single power alone.">
+          <div class="widget-row" data-correct="0" data-fb="Right. Montesquieu's warning is specifically about combining powers; one official holding only legislative power, with executive and judicial power held elsewhere, is not the danger he describes." data-hint="Reread Part 2: Montesquieu's warning is about combining two or three powers, not about holding a single power alone.">
             <div class="widget-row-prompt">1. One official holds only legislative power (writes the laws); separate people hold executive and judicial power.</div>
+            <div class="widget-options">
+              <button data-choice="0">Not the scenario Montesquieu warns about</button>
+              <button data-choice="1">Almost certain</button>
+              <button data-choice="2">Likely</button>
+            </div>
+          </div>
+
+          <div class="widget-row" data-correct="2" data-fb="Right. Montesquieu says combining any two of the three powers, here legislative and executive, makes arbitrary rule likely." data-hint="This official holds two of the three powers. Reread what Montesquieu says happens when any two are combined.">
+            <div class="widget-row-prompt">2. One official holds both legislative and executive power (writing the laws and enforcing them).</div>
             <div class="widget-options">
               <button data-choice="0">Almost certain</button>
               <button data-choice="1">Not the scenario Montesquieu warns about</button>
@@ -213,20 +222,11 @@
             </div>
           </div>
 
-          <div class="widget-row" data-correct="0" data-fb="Right. Montesquieu says combining any two of the three powers, here legislative and executive, makes arbitrary rule likely." data-hint="This official holds two of the three powers. Reread what Montesquieu says happens when any two are combined.">
-            <div class="widget-row-prompt">2. One official holds both legislative and executive power (writing the laws and enforcing them).</div>
-            <div class="widget-options">
-              <button data-choice="0">Likely</button>
-              <button data-choice="1">Not the scenario Montesquieu warns about</button>
-              <button data-choice="2">Almost certain</button>
-            </div>
-          </div>
-
           <div class="widget-row" data-correct="2" data-fb="Right. Montesquieu says combining all three powers, legislative, executive, and judicial, makes arbitrary rule almost certain." data-hint="This official holds all three powers at once. Reread the strongest version of Montesquieu's warning in Part 2.">
             <div class="widget-row-prompt">3. One official holds legislative, executive, AND judicial power, all three at once.</div>
             <div class="widget-options">
-              <button data-choice="0">Not the scenario Montesquieu warns about</button>
-              <button data-choice="1">Likely</button>
+              <button data-choice="0">Likely</button>
+              <button data-choice="1">Not the scenario Montesquieu warns about</button>
               <button data-choice="2">Almost certain</button>
             </div>
           </div>
@@ -291,6 +291,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

@@ -173,12 +173,14 @@
           <div class="widget-kicker">&#9889; FLIP THE CARD</div>
           <div class="ow-flip-front" style="font-size: 18px; color: #0E1C42;">The Gulag</div>
           <div class="ow-flip-back" style="font-size: 16px; line-height: 1.55;">The Soviet network of forced-labor camps holding millions of political prisoners, dissidents, and ordinary citizens on fabricated or minor charges, with no independent judiciary to check the arrests.</div>
+          <button class="widget-reset">Reset</button>
         </div>
 
         <div class="optima-widget ow-flip">
           <div class="widget-kicker">&#9889; FLIP THE CARD</div>
           <div class="ow-flip-front" style="font-size: 18px; color: #0E1C42;">Aleksandr Solzhenitsyn</div>
           <div class="ow-flip-back" style="font-size: 16px; line-height: 1.55;">A Soviet Army veteran arrested in 1945 for privately criticizing Stalin in a letter to a friend; spent eight years in the Gulag; wrote <em>The Gulag Archipelago</em>, published in the West in 1973.</div>
+          <button class="widget-reset">Reset</button>
         </div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 10px 0 0 0;"><strong>Aleksandr</strong> <span class="gloss" tabindex="0"><em>Solzhenitsyn</em><button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Solzhenitsyn')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">sohl-zhuh-NEET-sin</span>a Soviet Army veteran and Gulag survivor whose book The Gulag Archipelago documented the camp system's scale and mechanics.</span></span>, a Soviet Army veteran arrested in 1945 for privately criticizing Stalin in a letter to a friend, spent eight years in the <span class="gloss" tabindex="0">Gulag<button class="gloss-audio" aria-label="Play pronunciation" onclick="speakGloss(event,'Gulag')">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">GOO-lahg</span>the Soviet network of forced-labor camps that held millions of political prisoners and ordinary citizens on fabricated or minor charges.</span></span> system himself. His multi-volume work <em>The Gulag Archipelago</em>, smuggled out of the Soviet Union and published in the West in 1973, was the first systematic account to document the camp system's scale and mechanics from the perspective of someone who had actually survived it, drawing on his own experience and testimony he gathered from hundreds of fellow former prisoners.</p>
@@ -209,23 +211,23 @@
           <div class="widget-kicker">&#9889; TRY IT &middot; TEST YOUR RECALL</div>
           <div class="widget-question">For each statement below, pick the option that matches the lesson.</div>
 
-          <div class="widget-row" data-correct="1" data-fb="Right. Solzhenitsyn was arrested for a private letter criticizing Stalin, not for any of the other listed reasons." data-hint="Reread the flip card above for the exact charge against Solzhenitsyn.">
+          <div class="widget-row" data-correct="0" data-fb="Right. Solzhenitsyn was arrested for a private letter criticizing Stalin, not for any of the other listed reasons." data-hint="Reread the flip card above for the exact charge against Solzhenitsyn.">
             <div class="widget-row-prompt">1. Solzhenitsyn was arrested in 1945 for:</div>
             <div class="widget-options">
-              <button data-choice="0">Military desertion</button>
-              <button data-choice="1">Privately criticizing Stalin in a letter to a friend</button>
+              <button data-choice="0">Privately criticizing Stalin in a letter to a friend</button>
+              <button data-choice="1">Writing a published book</button>
               <button data-choice="2">Organizing a strike</button>
-              <button data-choice="3">Writing a published book</button>
+              <button data-choice="3">Military desertion</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="2" data-fb="Right. The Gulag Archipelago was smuggled out and published in the West in 1973." data-hint="Reread the flip card above for the exact publication year.">
+          <div class="widget-row" data-correct="3" data-fb="Right. The Gulag Archipelago was smuggled out and published in the West in 1973." data-hint="Reread the flip card above for the exact publication year.">
             <div class="widget-row-prompt">2. <em>The Gulag Archipelago</em> was first published:</div>
             <div class="widget-options">
-              <button data-choice="0">In 1945, inside the Soviet Union</button>
-              <button data-choice="1">In 1991</button>
-              <button data-choice="2">In 1973, in the West</button>
-              <button data-choice="3">In 1933</button>
+              <button data-choice="0">In 1991</button>
+              <button data-choice="1">In 1933</button>
+              <button data-choice="2">In 1945, inside the Soviet Union</button>
+              <button data-choice="3">In 1973, in the West</button>
             </div>
           </div>
 
@@ -282,6 +284,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

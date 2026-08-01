@@ -264,33 +264,33 @@
           <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE INSTITUTION TO ITS JOB</div>
           <div class="widget-question">For each description below, pick the institution that actually did that job.</div>
 
-          <div class="widget-row" data-correct="1" data-fb="Right. The Council of Five Hundred, not the Assembly, prepared the agenda and supervised magistrates, giving it the practical upper hand under Cleisthenes's system." data-hint="Reread Part 1: this body's control over the agenda is exactly what gave it the practical upper hand.">
+          <div class="widget-row" data-correct="0" data-fb="Right. The Council of Five Hundred, not the Assembly, prepared the agenda and supervised magistrates, giving it the practical upper hand under Cleisthenes's system." data-hint="Reread Part 1: this body's control over the agenda is exactly what gave it the practical upper hand.">
             <div class="widget-row-prompt">1. Prepared the Assembly's agenda and supervised the magistrates day to day</div>
             <div class="widget-options">
-              <button data-choice="0">Ostracism vote</button>
-              <button data-choice="1">The Council of Five Hundred</button>
-              <button data-choice="2">The Assembly itself</button>
-              <button data-choice="3">The Areopagus</button>
+              <button data-choice="0">The Council of Five Hundred</button>
+              <button data-choice="1">The Areopagus</button>
+              <button data-choice="2">Ostracism vote</button>
+              <button data-choice="3">The Assembly itself</button>
             </div>
           </div>
 
           <div class="widget-row" data-correct="3" data-fb="Right. The Ekklesia, the Assembly, is where every adult male citizen voted directly, without a representative standing in for him." data-hint="This is the body described as 'direct democracy' in Part 2, where citizens rule rather than choose someone to rule for them.">
             <div class="widget-row-prompt">2. Let every adult male citizen speak and vote directly on war, peace, laws, and spending</div>
             <div class="widget-options">
-              <button data-choice="0">The Council of Five Hundred</button>
+              <button data-choice="0">Selection by lot alone</button>
               <button data-choice="1">A stipend system</button>
-              <button data-choice="2">Selection by lot alone</button>
+              <button data-choice="2">The Council of Five Hundred</button>
               <button data-choice="3">The Assembly</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="2" data-fb="Right. Ostracism let the Assembly exile a citizen for ten years with no formal charge, as a safety valve against anyone growing too powerful." data-hint="Part 2 calls this the institution that required 'no formal charge,' just enough votes." >
+          <div class="widget-row" data-correct="3" data-fb="Right. Ostracism let the Assembly exile a citizen for ten years with no formal charge, as a safety valve against anyone growing too powerful." data-hint="Part 2 calls this the institution that required 'no formal charge,' just enough votes." >
             <div class="widget-row-prompt">3. Allowed the Assembly to exile a citizen for ten years with no formal charge required</div>
             <div class="widget-options">
               <button data-choice="0">The Council of Five Hundred</button>
               <button data-choice="1">Election by deme</button>
-              <button data-choice="2">Ostracism</button>
-              <button data-choice="3">The stipend reform of Ephialtes and Pericles</button>
+              <button data-choice="2">The stipend reform of Ephialtes and Pericles</button>
+              <button data-choice="3">Ostracism</button>
             </div>
           </div>
 
@@ -354,6 +354,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

@@ -190,24 +190,30 @@
             </div>
           </div>
 
-          <div class="widget-row" data-correct="1" data-fb="Right. The lesson states Congress had no power to regulate trade between the states." data-hint="Reread Part 2's list again: this is one of the powers explicitly named as missing.">
+          <div class="widget-row" data-correct="0" data-fb="Right. The lesson states Congress had no power to regulate trade between the states." data-hint="Reread Part 2's list again: this is one of the powers explicitly named as missing.">
             <div class="widget-row-prompt">2. Under the Articles, Congress could regulate trade between the states.</div>
-            <div class="widget-options">
-              <button data-choice="0">Accurate</button>
-              <button data-choice="1">Not accurate</button>
-            </div>
-          </div>
-
-          <div class="widget-row" data-correct="1" data-fb="Right. The Articles required the unanimous consent of all thirteen states to make any amendment at all." data-hint="This is a requirement the Articles actually had, unlike the powers Congress lacked.">
-            <div class="widget-row-prompt">3. Under the Articles, amending the document required the unanimous consent of all thirteen states.</div>
             <div class="widget-options">
               <button data-choice="0">Not accurate</button>
               <button data-choice="1">Accurate</button>
             </div>
           </div>
 
+          <div class="widget-row" data-correct="0" data-fb="Right. The Articles required the unanimous consent of all thirteen states to make any amendment at all." data-hint="This is a requirement the Articles actually had, unlike the powers Congress lacked.">
+            <div class="widget-row-prompt">3. Under the Articles, amending the document required the unanimous consent of all thirteen states.</div>
+            <div class="widget-options">
+              <button data-choice="0">Accurate</button>
+              <button data-choice="1">Not accurate</button>
+            </div>
+          </div>
+
           <button class="widget-reset">Reset</button>
         </div>
+    </div>
+
+    <!-- AI-AWARENESS CALLOUT -->
+    <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+        <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; AI REALITY CHECK &middot; PERSUASIVE WRITING</div>
+        <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">AI tools can suggest ways to tighten a sentence or make an argument read more smoothly. It <em>cannot</em> decide which words will actually move a real audience, the kind of judgment Paine made when he chose plain, blunt language over a formal, learned argument.</div>
     </div>
 
     <!-- What You'll Do Next -->
@@ -275,6 +281,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

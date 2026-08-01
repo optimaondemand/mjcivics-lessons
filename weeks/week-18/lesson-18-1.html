@@ -211,35 +211,41 @@
           <div class="widget-row" data-correct="1" data-fb="Right. The famine was largely caused by state grain-requisition policy, not natural disaster." data-hint="Reread Part 1's account of the famine's cause.">
             <div class="widget-row-prompt">1. The 1932&ndash;1933 famine was primarily caused by:</div>
             <div class="widget-options">
-              <button data-choice="0">Severe drought with no government role</button>
+              <button data-choice="0">Peasant hoarding for profit</button>
               <button data-choice="1">State grain-requisition policy</button>
               <button data-choice="2">Foreign blockade</button>
-              <button data-choice="3">Peasant hoarding for profit</button>
+              <button data-choice="3">Severe drought with no government role</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="3" data-fb="Right. Jones walked through villages himself, outside official tours, and reported what he saw." data-hint="Reread Part 1's account of what made Jones's reporting different.">
+          <div class="widget-row" data-correct="1" data-fb="Right. Jones walked through villages himself, outside official tours, and reported what he saw." data-hint="Reread Part 1's account of what made Jones's reporting different.">
             <div class="widget-row-prompt">2. Gareth Jones's reporting mattered because:</div>
             <div class="widget-options">
-              <button data-choice="0">He repeated official Soviet denials</button>
-              <button data-choice="1">He only wrote from Moscow press briefings</button>
-              <button data-choice="2">He focused only on industrial output</button>
-              <button data-choice="3">He personally walked through villages outside official tours and reported what he saw</button>
+              <button data-choice="0">He focused only on industrial output</button>
+              <button data-choice="1">He personally walked through villages outside official tours and reported what he saw</button>
+              <button data-choice="2">He only wrote from Moscow press briefings</button>
+              <button data-choice="3">He repeated official Soviet denials</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="2" data-fb="Right. This is the exact comparative point Part 2 draws to Weeks 9 and 12." data-hint="Reread Part 2's connection between this week's topic and Weeks 9 and 12.">
+          <div class="widget-row" data-correct="1" data-fb="Right. This is the exact comparative point Part 2 draws to Weeks 9 and 12." data-hint="Reread Part 2's connection between this week's topic and Weeks 9 and 12.">
             <div class="widget-row-prompt">3. The lesson connects this week's topic to Week 9 and Week 12 by arguing:</div>
             <div class="widget-options">
-              <button data-choice="0">The Soviet Union followed the U.S. Bill of Rights</button>
-              <button data-choice="1">There is no real connection</button>
-              <button data-choice="2">A government without an independent press or courts has less friction preventing it from hiding a crisis</button>
+              <button data-choice="0">There is no real connection</button>
+              <button data-choice="1">A government without an independent press or courts has less friction preventing it from hiding a crisis</button>
+              <button data-choice="2">The Soviet Union followed the U.S. Bill of Rights</button>
               <button data-choice="3">The Soviet Union also had a bicameral legislature</button>
             </div>
           </div>
 
           <button class="widget-reset">Reset</button>
         </div>
+    </div>
+
+    <!-- AI-AWARENESS CALLOUT -->
+    <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+        <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; VERIFYING WHAT YOU'RE TOLD</div>
+        <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">AI tools can repeat back whatever a source claims, official or not. It <em>cannot</em> do what Gareth Jones did: walk the ground himself, check a claim against what he could actually see, and refuse to accept an official story just because it was official.</div>
     </div>
 
     <!-- What You'll Do Next -->
@@ -298,6 +304,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

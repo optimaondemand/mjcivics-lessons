@@ -206,19 +206,19 @@
             <div class="widget-row-prompt">1. "The separation of powers holds together mainly because officeholders are honorable and self-restrained."</div>
             <div class="widget-options">
               <button data-choice="0">False, according to the lesson</button>
-              <button data-choice="1">True, according to the lesson</button>
-              <button data-choice="2">True, but only for the judiciary</button>
-              <button data-choice="3">The lesson takes no position</button>
+              <button data-choice="1">The lesson takes no position</button>
+              <button data-choice="2">True, according to the lesson</button>
+              <button data-choice="3">True, but only for the judiciary</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="3" data-fb="Right. Building a system where self-interested officeholders end up protecting the separation of powers as a side effect is exactly the design principle described." data-hint="Reread the phrase 'ambition must be made to counteract ambition.'">
+          <div class="widget-row" data-correct="0" data-fb="Right. Building a system where self-interested officeholders end up protecting the separation of powers as a side effect is exactly the design principle described." data-hint="Reread the phrase 'ambition must be made to counteract ambition.'">
             <div class="widget-row-prompt">2. "Ambition must be made to counteract ambition" describes a system where&hellip;</div>
             <div class="widget-options">
-              <button data-choice="0">virtue is required of every officeholder</button>
-              <button data-choice="1">ambition is eliminated from politics</button>
-              <button data-choice="2">only one branch is allowed any ambition</button>
-              <button data-choice="3">self-interested officeholders end up protecting the separation of powers</button>
+              <button data-choice="0">self-interested officeholders end up protecting the separation of powers</button>
+              <button data-choice="1">only one branch is allowed any ambition</button>
+              <button data-choice="2">ambition is eliminated from politics</button>
+              <button data-choice="3">virtue is required of every officeholder</button>
             </div>
           </div>
 
@@ -298,6 +298,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

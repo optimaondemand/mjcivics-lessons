@@ -206,23 +206,23 @@
           <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE SCENARIO TO THE FREEDOM</div>
           <div class="widget-question">For each scenario below, pick the First Amendment freedom most directly at stake.</div>
 
-          <div class="widget-row" data-correct="2" data-fb="Right. Publishing critical reporting about a public official is a core Press Clause protection." data-hint="Think about which freedom protects publications, not just individual speakers.">
+          <div class="widget-row" data-correct="0" data-fb="Right. Publishing critical reporting about a public official is a core Press Clause protection." data-hint="Think about which freedom protects publications, not just individual speakers.">
             <div class="widget-row-prompt">1. A newspaper prints an investigation critical of a senator</div>
             <div class="widget-options">
-              <button data-choice="0">Right to Petition</button>
+              <button data-choice="0">Freedom of the Press</button>
               <button data-choice="1">Free Exercise Clause</button>
-              <button data-choice="2">Freedom of the Press</button>
-              <button data-choice="3">Establishment Clause</button>
+              <button data-choice="2">Establishment Clause</button>
+              <button data-choice="3">Right to Petition</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="0" data-fb="Right. Gathering peaceably to protest is exactly what the Assembly Clause protects." data-hint="This is about a group physically gathering, not writing or speaking alone.">
+          <div class="widget-row" data-correct="3" data-fb="Right. Gathering peaceably to protest is exactly what the Assembly Clause protects." data-hint="This is about a group physically gathering, not writing or speaking alone.">
             <div class="widget-row-prompt">2. A small group gathers peacefully outside city hall to protest a new law</div>
             <div class="widget-options">
-              <button data-choice="0">Freedom of Assembly</button>
-              <button data-choice="1">Free Exercise Clause</button>
-              <button data-choice="2">Freedom of Speech</button>
-              <button data-choice="3">Establishment Clause</button>
+              <button data-choice="0">Establishment Clause</button>
+              <button data-choice="1">Freedom of Speech</button>
+              <button data-choice="2">Free Exercise Clause</button>
+              <button data-choice="3">Freedom of Assembly</button>
             </div>
           </div>
 
@@ -296,6 +296,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

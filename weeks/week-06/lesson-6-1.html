@@ -204,33 +204,33 @@
           <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE PLAN TO ITS FEATURE</div>
           <div class="widget-question">For each feature below, pick the plan or compromise that actually had it.</div>
 
-          <div class="widget-row" data-correct="2" data-fb="Right. The Virginia Plan apportioned the legislature by population, which favored larger states like Virginia and Pennsylvania." data-hint="This is the plan Madison largely shaped before the Convention even opened.">
+          <div class="widget-row" data-correct="0" data-fb="Right. The Virginia Plan apportioned the legislature by population, which favored larger states like Virginia and Pennsylvania." data-hint="This is the plan Madison largely shaped before the Convention even opened.">
             <div class="widget-row-prompt">1. Apportioned the legislature by population, favoring large states like Virginia and Pennsylvania</div>
-            <div class="widget-options">
-              <button data-choice="0">New Jersey Plan</button>
-              <button data-choice="1">Great Compromise</button>
-              <button data-choice="2">Virginia Plan</button>
-              <button data-choice="3">Articles of Confederation</button>
-            </div>
-          </div>
-
-          <div class="widget-row" data-correct="0" data-fb="Right. The New Jersey Plan kept the Confederation's equal representation for every state, regardless of size." data-hint="This plan was smaller states' counter to the Virginia Plan.">
-            <div class="widget-row-prompt">2. Kept equal representation for every state, regardless of size, just as the Articles of Confederation had</div>
-            <div class="widget-options">
-              <button data-choice="0">New Jersey Plan</button>
-              <button data-choice="1">Virginia Plan</button>
-              <button data-choice="2">Great Compromise</button>
-              <button data-choice="3">Preamble</button>
-            </div>
-          </div>
-
-          <div class="widget-row" data-correct="3" data-fb="Right. The Great Compromise created a two-chamber Congress: a House by population and a Senate with equal state representation." data-hint="This is the solution worked out through weeks of committee negotiation.">
-            <div class="widget-row-prompt">3. Created a two-chamber Congress: a House by population and a Senate with equal state representation</div>
             <div class="widget-options">
               <button data-choice="0">Virginia Plan</button>
               <button data-choice="1">New Jersey Plan</button>
               <button data-choice="2">Articles of Confederation</button>
               <button data-choice="3">Great Compromise</button>
+            </div>
+          </div>
+
+          <div class="widget-row" data-correct="2" data-fb="Right. The New Jersey Plan kept the Confederation's equal representation for every state, regardless of size." data-hint="This plan was smaller states' counter to the Virginia Plan.">
+            <div class="widget-row-prompt">2. Kept equal representation for every state, regardless of size, just as the Articles of Confederation had</div>
+            <div class="widget-options">
+              <button data-choice="0">Preamble</button>
+              <button data-choice="1">Great Compromise</button>
+              <button data-choice="2">New Jersey Plan</button>
+              <button data-choice="3">Virginia Plan</button>
+            </div>
+          </div>
+
+          <div class="widget-row" data-correct="0" data-fb="Right. The Great Compromise created a two-chamber Congress: a House by population and a Senate with equal state representation." data-hint="This is the solution worked out through weeks of committee negotiation.">
+            <div class="widget-row-prompt">3. Created a two-chamber Congress: a House by population and a Senate with equal state representation</div>
+            <div class="widget-options">
+              <button data-choice="0">Great Compromise</button>
+              <button data-choice="1">New Jersey Plan</button>
+              <button data-choice="2">Virginia Plan</button>
+              <button data-choice="3">Articles of Confederation</button>
             </div>
           </div>
 
@@ -303,6 +303,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

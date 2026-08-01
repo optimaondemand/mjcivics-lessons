@@ -211,21 +211,21 @@
             </div>
           </div>
 
-          <div class="widget-row" data-correct="0" data-fb="Right. The House is apportioned by population and elected every two years, making it the chamber closest to shifts in public mood." data-hint="Reread Part 2: which chamber does the lesson call responsive and quick to reflect public mood?">
+          <div class="widget-row" data-correct="1" data-fb="Right. The House is apportioned by population and elected every two years, making it the chamber closest to shifts in public mood." data-hint="Reread Part 2: which chamber does the lesson call responsive and quick to reflect public mood?">
             <div class="widget-row-prompt">2. Apportioned by state population, elected every two years, built to be closest to the people</div>
             <div class="widget-options">
-              <button data-choice="0">House of Representatives</button>
-              <button data-choice="1">Senate</button>
-              <button data-choice="2">Both chambers equally</button>
+              <button data-choice="0">Both chambers equally</button>
+              <button data-choice="1">House of Representatives</button>
+              <button data-choice="2">Senate</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="1" data-fb="Right. Only the Senate gives advice and consent on treaties and presidential nominations." data-hint="Reread Part 3: which chamber alone gives advice and consent?">
+          <div class="widget-row" data-correct="2" data-fb="Right. Only the Senate gives advice and consent on treaties and presidential nominations." data-hint="Reread Part 3: which chamber alone gives advice and consent?">
             <div class="widget-row-prompt">3. Gives advice and consent on treaties and on the President's nominations</div>
             <div class="widget-options">
               <button data-choice="0">Both chambers equally</button>
-              <button data-choice="1">Senate</button>
-              <button data-choice="2">House of Representatives</button>
+              <button data-choice="1">House of Representatives</button>
+              <button data-choice="2">Senate</button>
             </div>
           </div>
 
@@ -242,6 +242,12 @@
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The Constitution also sets different personal qualifications for each chamber, reflecting the same basic design difference. A Representative must be at least twenty-five years old, a citizen for seven years, and a resident of the state he represents. A Senator must be at least thirty years old, a citizen for nine years, and also a resident of his state. The higher age and longer citizenship requirement for Senators fits the chamber's intended role: a body meant for longer-term, more seasoned judgment, not quick responsiveness to the latest shift in public opinion.</p>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">Keep this week's discussion focus in view as you read: the Senate's powers over treaties, nominations, and impeachment trials are not random extras bolted onto an otherwise identical chamber. They follow directly from the design choices you just studied, the longer term, the insulation from immediate public pressure, the smaller and more deliberate body. A chamber built to cool hot legislation is also, for exactly the same reasons, a chamber the framers trusted with the government's slowest, weightiest, most consequential decisions.</p>
+    </div>
+
+    <!-- AI-AWARENESS CALLOUT -->
+    <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+        <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; AI REALITY CHECK &middot; SLOW JUDGMENT VS. FAST ANSWERS</div>
+        <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">AI tools can hand you an instant answer to almost any question. It <em>cannot</em> supply the kind of slow, seasoned judgment the framers built into the Senate on purpose, patience that comes only from experience and time, not speed.</div>
     </div>
 
     <!-- What You'll Do Next -->
@@ -309,6 +315,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

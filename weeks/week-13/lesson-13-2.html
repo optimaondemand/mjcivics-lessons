@@ -171,6 +171,7 @@
             <div class="widget-kicker">&#9989; ANSWER</div>
             <div style="font-size: 16px; line-height: 1.55;">The Court ruled that denying benefits placed real pressure on Sherbert to abandon her Sabbath in order to receive a government benefit, "the same kind of burden" Justice Brennan wrote as a direct fine for Saturday worship. The Court held that once a law substantially burdens free exercise, government must show a "compelling state interest" to justify that burden, and South Carolina had shown none.</div>
           </div>
+          <button class="widget-reset">Reset</button>
         </div>
     </div>
 
@@ -196,13 +197,13 @@
         <div class="optima-widget ow-scale">
           <div class="widget-kicker">&#9889; TRY IT &middot; HOW MUCH JUSTIFICATION DOES THE GOVERNMENT NEED?</div>
           <div class="widget-question">Rate the level of justification South Carolina needed to supply once the Court found its rule burdened Sherbert's free exercise of religion.</div>
-          <div class="widget-row" data-correct="3" data-fb="Right. Once a substantial burden on free exercise is shown, the Sherbert test demands the government's strongest level of justification: a compelling state interest." data-hint="Reread Part 2: this is the standard the lesson names directly, and it is the highest of the four options.">
+          <div class="widget-row" data-correct="2" data-fb="Right. Once a substantial burden on free exercise is shown, the Sherbert test demands the government's strongest level of justification: a compelling state interest." data-hint="Reread Part 2: this is the standard the lesson names directly, and it is the highest of the four options.">
             <div class="widget-row-prompt">Select the level of justification the Sherbert test actually requires</div>
             <div class="widget-options">
-              <button data-choice="0">No justification needed</button>
-              <button data-choice="1">Any rational reason</button>
-              <button data-choice="2">An important interest</button>
-              <button data-choice="3">A compelling state interest</button>
+              <button data-choice="0">An important interest</button>
+              <button data-choice="1">No justification needed</button>
+              <button data-choice="2">A compelling state interest</button>
+              <button data-choice="3">Any rational reason</button>
             </div>
           </div>
           <button class="widget-reset">Reset</button>
@@ -265,6 +266,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

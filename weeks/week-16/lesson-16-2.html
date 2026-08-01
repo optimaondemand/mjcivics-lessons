@@ -175,18 +175,8 @@
           <div class="widget-kicker">&#9889; TRY IT &middot; WHICH DRAFT?</div>
           <div class="widget-question">For each description below, pick the era it matches.</div>
 
-          <div class="widget-row" data-correct="0" data-fb="Right. The $300 commutation fee and paid substitutes were specific to the 1863 Civil War draft." data-hint="Reread Part 1: which era let a drafted man pay a fee or hire a substitute?">
+          <div class="widget-row" data-correct="1" data-fb="Right. The $300 commutation fee and paid substitutes were specific to the 1863 Civil War draft." data-hint="Reread Part 1: which era let a drafted man pay a fee or hire a substitute?">
             <div class="widget-row-prompt">1. Allowed a drafted man to avoid service by paying a $300 fee or hiring a substitute</div>
-            <div class="widget-options">
-              <button data-choice="0">Civil War</button>
-              <button data-choice="1">World War II</button>
-              <button data-choice="2">Vietnam</button>
-              <button data-choice="3">None of these</button>
-            </div>
-          </div>
-
-          <div class="widget-row" data-correct="3" data-fb="Right. The lesson describes World War II's draft as the most widely accepted of the three, following Pearl Harbor." data-hint="Reread Part 1's comparison of Civil War unevenness to this era's shared sense of a nation attacked.">
-            <div class="widget-row-prompt">2. Remembered as the most widely accepted of the three drafts, according to the lesson</div>
             <div class="widget-options">
               <button data-choice="0">Vietnam</button>
               <button data-choice="1">Civil War</button>
@@ -195,13 +185,23 @@
             </div>
           </div>
 
-          <div class="widget-row" data-correct="1" data-fb="Right. College deferments let wealthier young men delay or avoid service during Vietnam." data-hint="Reread Part 2: which era used college enrollment as a path to delay service?">
+          <div class="widget-row" data-correct="0" data-fb="Right. The lesson describes World War II's draft as the most widely accepted of the three, following Pearl Harbor." data-hint="Reread Part 1's comparison of Civil War unevenness to this era's shared sense of a nation attacked.">
+            <div class="widget-row-prompt">2. Remembered as the most widely accepted of the three drafts, according to the lesson</div>
+            <div class="widget-options">
+              <button data-choice="0">World War II</button>
+              <button data-choice="1">Civil War</button>
+              <button data-choice="2">Vietnam</button>
+              <button data-choice="3">None of these</button>
+            </div>
+          </div>
+
+          <div class="widget-row" data-correct="0" data-fb="Right. College deferments let wealthier young men delay or avoid service during Vietnam." data-hint="Reread Part 2: which era used college enrollment as a path to delay service?">
             <div class="widget-row-prompt">3. Used college deferments that let wealthier young men delay or avoid service</div>
             <div class="widget-options">
-              <button data-choice="0">Civil War</button>
-              <button data-choice="1">Vietnam</button>
-              <button data-choice="2">World War II</button>
-              <button data-choice="3">None of these</button>
+              <button data-choice="0">Vietnam</button>
+              <button data-choice="1">World War II</button>
+              <button data-choice="2">None of these</button>
+              <button data-choice="3">Civil War</button>
             </div>
           </div>
 
@@ -258,6 +258,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

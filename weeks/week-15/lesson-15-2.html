@@ -177,8 +177,8 @@
           <div class="widget-row" data-correct="2" data-fb="Right. The Comit&eacute; des Citoyens organized the challenge to Louisiana's 1890 law and selected Plessy to bring it." data-hint="Reread Part 1: which group is described as organized specifically to challenge the law?">
             <div class="widget-row-prompt">1. Organized the legal challenge to Louisiana's separate-car law and selected Plessy to bring it</div>
             <div class="widget-options">
-              <button data-choice="0">The East Louisiana Railroad</button>
-              <button data-choice="1">The private detective</button>
+              <button data-choice="0">The private detective</button>
+              <button data-choice="1">The East Louisiana Railroad</button>
               <button data-choice="2">The Comit&eacute; des Citoyens</button>
               <button data-choice="3">The train conductor</button>
             </div>
@@ -189,8 +189,8 @@
             <div class="widget-options">
               <button data-choice="0">The Comit&eacute; des Citoyens</button>
               <button data-choice="1">The East Louisiana Railroad</button>
-              <button data-choice="2">Homer Plessy</button>
-              <button data-choice="3">The private detective</button>
+              <button data-choice="2">The private detective</button>
+              <button data-choice="3">Homer Plessy</button>
             </div>
           </div>
 
@@ -229,6 +229,7 @@
             <div class="widget-kicker">&#9989; ANSWER</div>
             <div style="font-size: 16px; line-height: 1.55;">Justice John Marshall Harlan's lone dissent insisted that "our Constitution is color-blind, and neither knows nor tolerates classes among citizens," and predicted that the decision would prove as damaging as the Court's earlier ruling in <em>Dred Scott v. Sandford</em>. Harlan was in the minority of one in 1896. By 1954, his reasoning, not the majority's, had become the law of the land.</div>
           </div>
+          <button class="widget-reset">Reset</button>
         </div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">Harlan's willingness to dissent alone is itself worth noticing. Before the Civil War, Harlan had come from a slaveholding Kentucky family, and by his own account his views on race changed substantially in the decades that followed. That personal change makes his lone dissent a reminder that constitutional reasoning, like a person's own understanding, can outgrow assumptions once taken for granted, the same kind of honest growth this course asks of its own students when they revisit an earlier opinion in light of better evidence.</p>
@@ -305,6 +306,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

@@ -179,13 +179,13 @@
             </div>
           </div>
 
-          <div class="widget-row" data-correct="0" data-fb="Right. Madison insisted the Constitution was &ldquo;the work of many heads and many hands,&rdquo; not his alone." data-hint="This figure resisted being called the sole 'Father' of the document.">
+          <div class="widget-row" data-correct="2" data-fb="Right. Madison insisted the Constitution was &ldquo;the work of many heads and many hands,&rdquo; not his alone." data-hint="This figure resisted being called the sole 'Father' of the document.">
             <div class="widget-row-prompt">2. Insisted the Constitution was "the work of many heads and many hands," not his own</div>
             <div class="widget-options">
-              <button data-choice="0">Madison</button>
+              <button data-choice="0">A Convention clerk</button>
               <button data-choice="1">Machiavelli</button>
-              <button data-choice="2">Polybius</button>
-              <button data-choice="3">A Convention clerk</button>
+              <button data-choice="2">Madison</button>
+              <button data-choice="3">Polybius</button>
             </div>
           </div>
 
@@ -285,6 +285,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

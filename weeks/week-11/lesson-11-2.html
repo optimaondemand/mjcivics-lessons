@@ -214,6 +214,12 @@
         </div>
     </div>
 
+    <!-- AI-AWARENESS CALLOUT -->
+    <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+        <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; JUDGMENT, NOT AN ANSWER KEY</div>
+        <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">AI tools can summarize a case or lay out a legal argument's steps quickly. It <em>cannot</em> exercise the kind of judgment Hamilton insisted courts alone must supply: weighing one specific law against the Constitution inside a real case, not producing the fastest plausible answer.</div>
+    </div>
+
     <!-- What You'll Do Next -->
     <div style="background: #FFFFFF; border-top: 3px solid #0E1C42; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #c7922c; margin-bottom: 16px;">&#10145;&#65039; WHAT YOU'LL DO NEXT</div>
@@ -264,6 +270,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

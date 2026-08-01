@@ -217,33 +217,33 @@
           <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE TERM TO WHAT IT MEANS</div>
           <div class="widget-question">For each description below, pick the term from the lesson that fits.</div>
 
-          <div class="widget-row" data-correct="2" data-fb="Right. This is Locke's state of nature, the condition that exists before or outside organized government." data-hint="Reread Part 1: this is the condition Locke starts his whole argument from.">
+          <div class="widget-row" data-correct="1" data-fb="Right. This is Locke's state of nature, the condition that exists before or outside organized government." data-hint="Reread Part 1: this is the condition Locke starts his whole argument from.">
             <div class="widget-row-prompt">1. A condition, before or outside organized government, in which people already possess rights to life, liberty, and property</div>
             <div class="widget-options">
               <button data-choice="0">Social contract</button>
-              <button data-choice="1">Government dissolves</button>
+              <button data-choice="1">State of nature</button>
+              <button data-choice="2">Government dissolves</button>
+              <button data-choice="3">Natural rights</button>
+            </div>
+          </div>
+
+          <div class="widget-row" data-correct="3" data-fb="Right. Rights to life, liberty, and property, discoverable through reason, are what Locke calls natural rights." data-hint="Look for the specific rights Locke names in Part 1: life, liberty, and property.">
+            <div class="widget-row-prompt">2. Rights to life, liberty, and property that exist before government and are discoverable through reason</div>
+            <div class="widget-options">
+              <button data-choice="0">Social contract</button>
+              <button data-choice="1">Dissolution</button>
               <button data-choice="2">State of nature</button>
               <button data-choice="3">Natural rights</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="0" data-fb="Right. Rights to life, liberty, and property, discoverable through reason, are what Locke calls natural rights." data-hint="Look for the specific rights Locke names in Part 1: life, liberty, and property.">
-            <div class="widget-row-prompt">2. Rights to life, liberty, and property that exist before government and are discoverable through reason</div>
-            <div class="widget-options">
-              <button data-choice="0">Natural rights</button>
-              <button data-choice="1">State of nature</button>
-              <button data-choice="2">Dissolution</button>
-              <button data-choice="3">Social contract</button>
-            </div>
-          </div>
-
-          <div class="widget-row" data-correct="3" data-fb="Right. Locke says this happens when the fundamental trust between ruler and ruled has been broken, whatever form the government takes." data-hint="Reread the last sentence of Part 2 closely: this is the word Locke's Second Treatise reading uses for exactly this moment.">
+          <div class="widget-row" data-correct="2" data-fb="Right. Locke says this happens when the fundamental trust between ruler and ruled has been broken, whatever form the government takes." data-hint="Reread the last sentence of Part 2 closely: this is the word Locke's Second Treatise reading uses for exactly this moment.">
             <div class="widget-row-prompt">3. What Locke says happens to a government, of any kind, when it persistently breaks the trust the people placed in it</div>
             <div class="widget-options">
-              <button data-choice="0">Social contract</button>
+              <button data-choice="0">State of nature</button>
               <button data-choice="1">Natural rights</button>
-              <button data-choice="2">State of nature</button>
-              <button data-choice="3">Government dissolves</button>
+              <button data-choice="2">Government dissolves</button>
+              <button data-choice="3">Social contract</button>
             </div>
           </div>
 
@@ -314,6 +314,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

@@ -197,23 +197,23 @@
             </div>
           </div>
 
-          <div class="widget-row" data-correct="0" data-fb="Right. Roosevelt addressed Congress on December 8, 1941, the day after the attack." data-hint="Reread the lesson's account of the timing between the attack and the speech.">
+          <div class="widget-row" data-correct="3" data-fb="Right. Roosevelt addressed Congress on December 8, 1941, the day after the attack." data-hint="Reread the lesson's account of the timing between the attack and the speech.">
             <div class="widget-row-prompt">2. Roosevelt addressed Congress:</div>
             <div class="widget-options">
-              <button data-choice="0">The day after the attack, December 8, 1941</button>
-              <button data-choice="1">The same day as the attack</button>
-              <button data-choice="2">One week after the attack</button>
-              <button data-choice="3">Several months after the attack</button>
+              <button data-choice="0">Several months after the attack</button>
+              <button data-choice="1">One week after the attack</button>
+              <button data-choice="2">The same day as the attack</button>
+              <button data-choice="3">The day after the attack, December 8, 1941</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="3" data-fb="Right. A right exists only on paper unless citizens actually agree to staff it." data-hint="Reread the sentence about the Sixth Amendment's guarantee only meaning something in practice.">
+          <div class="widget-row" data-correct="2" data-fb="Right. A right exists only on paper unless citizens actually agree to staff it." data-hint="Reread the sentence about the Sixth Amendment's guarantee only meaning something in practice.">
             <div class="widget-row-prompt">3. According to the lesson, what does the Sixth Amendment's jury guarantee actually depend on in practice?</div>
             <div class="widget-options">
               <button data-choice="0">Judges appointing their own jurors</button>
               <button data-choice="1">Professional lawyers volunteering their time</button>
-              <button data-choice="2">The President appointing jurors directly</button>
-              <button data-choice="3">Ordinary citizens actually agreeing to show up and serve when summoned</button>
+              <button data-choice="2">Ordinary citizens actually agreeing to show up and serve when summoned</button>
+              <button data-choice="3">The President appointing jurors directly</button>
             </div>
           </div>
 
@@ -239,6 +239,12 @@
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0 0 10px 0;">The attack itself was devastating by any measure: more than 2,400 Americans killed in a single morning, eight battleships damaged or sunk, and nearly two hundred aircraft destroyed, many of them before they ever left the ground. Roosevelt's speech to Congress the next day lasted barely seven minutes, remarkably short for a request asking an entire nation to enter a world war, but Congress declared war on Japan within an hour of his finishing it, with only one dissenting vote across both chambers combined.</p>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 0;">The same attack that produced this speech also led the government, within months, to order the forced relocation and internment of Japanese Americans, a decision this course has already examined as a documented failure of civil liberties in wartime. Roosevelt's address itself asked only for a declaration of war against the nations responsible, not for anything resembling internment. Keep both facts in view together: a single moment in history can produce one decision future generations honor and another they condemn, sometimes within the very same administration.</p>
+    </div>
+
+    <!-- AI-AWARENESS CALLOUT -->
+    <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+        <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WORTH KNOWING &middot; SHOWING UP</div>
+        <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">AI tools can look up a law or explain a legal term for you instantly. It <em>cannot</em> show up for jury duty in your place: the Sixth Amendment's promise only works if real citizens actually appear and deliberate together.</div>
     </div>
 
     <!-- What You'll Do Next -->
@@ -297,6 +303,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

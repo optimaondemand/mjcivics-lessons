@@ -200,19 +200,19 @@
           <div class="widget-kicker">&#9889; TRY IT &middot; CHECK YOUR UNDERSTANDING</div>
           <div class="widget-question">For each claim below, decide whether the lesson supports it.</div>
 
-          <div class="widget-row" data-correct="1" data-fb="Right. The lesson states enforcement took years of further litigation and federal action; the ruling did not desegregate schools instantly." data-hint="Reread Part 2's opening callout box.">
+          <div class="widget-row" data-correct="0" data-fb="Right. The lesson states enforcement took years of further litigation and federal action; the ruling did not desegregate schools instantly." data-hint="Reread Part 2's opening callout box.">
             <div class="widget-row-prompt">1. Every segregated school in the country desegregated the day after the ruling</div>
             <div class="widget-options">
-              <button data-choice="0">Supported by the lesson</button>
-              <button data-choice="1">Not supported by the lesson</button>
+              <button data-choice="0">Not supported by the lesson</button>
+              <button data-choice="1">Supported by the lesson</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="0" data-fb="Right. The lesson states Chief Justice Warren's opinion was 'joined by all nine Justices.'" data-hint="Reread Part 1: how many Justices joined Warren's opinion?">
+          <div class="widget-row" data-correct="1" data-fb="Right. The lesson states Chief Justice Warren's opinion was 'joined by all nine Justices.'" data-hint="Reread Part 1: how many Justices joined Warren's opinion?">
             <div class="widget-row-prompt">2. All nine Justices joined the opinion striking down segregated schools</div>
             <div class="widget-options">
-              <button data-choice="0">Supported by the lesson</button>
-              <button data-choice="1">Not supported by the lesson</button>
+              <button data-choice="0">Not supported by the lesson</button>
+              <button data-choice="1">Supported by the lesson</button>
             </div>
           </div>
 
@@ -226,6 +226,12 @@
 
           <button class="widget-reset">Reset</button>
         </div>
+    </div>
+
+    <!-- AI-AWARENESS CALLOUT -->
+    <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+        <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; AI REALITY CHECK &middot; PERSUADING PEOPLE, ONE AT A TIME</div>
+        <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">AI tools can help you organize notes or draft talking points for an argument. It <em>cannot</em> do the slow, person-to-person work Chief Justice Warren did for months, meeting privately with each Justice to genuinely change minds, not just win the argument on paper.</div>
     </div>
 
     <!-- What You'll Do Next -->
@@ -284,6 +290,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

@@ -172,12 +172,14 @@
           <div class="widget-kicker">&#9889; FLIP THE CARD</div>
           <div class="ow-flip-front" style="font-size: 18px; color: #0E1C42;">What is "containment"?</div>
           <div class="ow-flip-back" style="font-size: 16px; line-height: 1.55;">Truman's 1947 policy of preventing the further spread of Soviet communism, without necessarily reversing it where it already existed. Distinct from "rolling back" communism by force.</div>
+          <button class="widget-reset">Reset</button>
         </div>
 
         <div class="optima-widget ow-flip">
           <div class="widget-kicker">&#9889; FLIP THE CARD</div>
           <div class="ow-flip-front" style="font-size: 18px; color: #0E1C42;">What is NATO's core promise?</div>
           <div class="ow-flip-back" style="font-size: 16px; line-height: 1.55;">Founded in 1949 by the United States and eleven other nations: an attack on any member is treated as an attack on all.</div>
+          <button class="widget-reset">Reset</button>
         </div>
     </div>
 
@@ -203,23 +205,23 @@
           <div class="widget-kicker">&#9889; TRY IT &middot; TEST YOUR RECALL</div>
           <div class="widget-question">Answer each question based on the lesson so far.</div>
 
-          <div class="widget-row" data-correct="1" data-fb="Right. Pressure on Greece and Turkey was the immediate occasion for Truman's speech." data-hint="Reread Part 1: which two countries were under pressure in March 1947?">
+          <div class="widget-row" data-correct="0" data-fb="Right. Pressure on Greece and Turkey was the immediate occasion for Truman's speech." data-hint="Reread Part 1: which two countries were under pressure in March 1947?">
             <div class="widget-row-prompt">1. In March 1947, pressure from Soviet-backed forces threatened:</div>
             <div class="widget-options">
-              <button data-choice="0">Vietnam</button>
-              <button data-choice="1">Greece and Turkey</button>
-              <button data-choice="2">West Germany</button>
-              <button data-choice="3">Cuba</button>
+              <button data-choice="0">Greece and Turkey</button>
+              <button data-choice="1">Vietnam</button>
+              <button data-choice="2">Cuba</button>
+              <button data-choice="3">West Germany</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="2" data-fb="Right. NATO was founded in 1949, two years after the Truman Doctrine speech." data-hint="Reread the second flip card above.">
+          <div class="widget-row" data-correct="3" data-fb="Right. NATO was founded in 1949, two years after the Truman Doctrine speech." data-hint="Reread the second flip card above.">
             <div class="widget-row-prompt">2. NATO was founded in:</div>
             <div class="widget-options">
-              <button data-choice="0">1947</button>
+              <button data-choice="0">1991</button>
               <button data-choice="1">1941</button>
-              <button data-choice="2">1949</button>
-              <button data-choice="3">1991</button>
+              <button data-choice="2">1947</button>
+              <button data-choice="3">1949</button>
             </div>
           </div>
 
@@ -283,6 +285,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

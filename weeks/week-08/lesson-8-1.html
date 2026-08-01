@@ -163,23 +163,23 @@
           <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE REJECTED METHOD TO ITS DANGER</div>
           <div class="widget-question">For each danger below, pick the method Hamilton says it belongs to.</div>
 
-          <div class="widget-row" data-correct="3" data-fb="Right. Hamilton worried direct popular election risked a charismatic demagogue sweeping an emotional majority without the qualifications for office." data-hint="This is the danger the lesson connects directly to last week's Sicilian Expedition.">
+          <div class="widget-row" data-correct="2" data-fb="Right. Hamilton worried direct popular election risked a charismatic demagogue sweeping an emotional majority without the qualifications for office." data-hint="This is the danger the lesson connects directly to last week's Sicilian Expedition.">
             <div class="widget-row-prompt">1. Risked a charismatic demagogue sweeping an emotional majority without real qualifications</div>
             <div class="widget-options">
               <button data-choice="0">Selection by the legislature</button>
-              <button data-choice="1">The elector system Hamilton favored</button>
-              <button data-choice="2">The Great Compromise</button>
-              <button data-choice="3">Direct popular election</button>
+              <button data-choice="1">The Great Compromise</button>
+              <button data-choice="2">Direct popular election</button>
+              <button data-choice="3">The elector system Hamilton favored</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="1" data-fb="Right. An executive chosen entirely by Congress would have every incentive to become its servant, undermining the separation of powers." data-hint="This method risked making the president dependent on, and answerable to, one branch alone.">
+          <div class="widget-row" data-correct="3" data-fb="Right. An executive chosen entirely by Congress would have every incentive to become its servant, undermining the separation of powers." data-hint="This method risked making the president dependent on, and answerable to, one branch alone.">
             <div class="widget-row-prompt">2. Risked an executive who owed his position entirely to Congress, undermining separation of powers</div>
             <div class="widget-options">
               <button data-choice="0">Direct popular election</button>
-              <button data-choice="1">Selection by the legislature</button>
+              <button data-choice="1">Ostracism</button>
               <button data-choice="2">The elector system Hamilton favored</button>
-              <button data-choice="3">Ostracism</button>
+              <button data-choice="3">Selection by the legislature</button>
             </div>
           </div>
 
@@ -197,13 +197,13 @@
           <div class="widget-kicker">&#9889; TRY IT &middot; WHAT MADE THE ELECTOR SYSTEM RESISTANT TO CORRUPTION?</div>
           <div class="widget-question">Pick the feature that actually did each job, according to the lesson.</div>
 
-          <div class="widget-row" data-correct="2" data-fb="Right. Because electors met only once and had no ongoing existence, there was no standing body left to corrupt over time." data-hint="Reread the sentence describing why there was 'no standing body to corrupt.'">
+          <div class="widget-row" data-correct="3" data-fb="Right. Because electors met only once and had no ongoing existence, there was no standing body left to corrupt over time." data-hint="Reread the sentence describing why there was 'no standing body to corrupt.'">
             <div class="widget-row-prompt">1. Made the electors resistant to manipulation or bribery over time</div>
             <div class="widget-options">
-              <button data-choice="0">Being chosen by the legislature</button>
-              <button data-choice="1">Being elected directly by the whole nation</button>
-              <button data-choice="2">Meeting only once, with no ongoing existence as a body</button>
-              <button data-choice="3">Serving for a fixed ten-year term</button>
+              <button data-choice="0">Being elected directly by the whole nation</button>
+              <button data-choice="1">Being chosen by the legislature</button>
+              <button data-choice="2">Serving for a fixed ten-year term</button>
+              <button data-choice="3">Meeting only once, with no ongoing existence as a body</button>
             </div>
           </div>
 
@@ -289,6 +289,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

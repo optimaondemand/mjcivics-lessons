@@ -201,22 +201,22 @@
           <div class="widget-kicker">&#9889; TRY IT &middot; WHO DID WHAT IN THE SICILIAN EXPEDITION?</div>
           <div class="widget-question">For each role below, pick the correct figure.</div>
 
-          <div class="widget-row" data-correct="2" data-fb="Right. Alcibiades persuaded the Assembly to approve the expedition over Nicias's objections." data-hint="This general's persuasive case for glory and wealth won out over the older statesman's caution.">
+          <div class="widget-row" data-correct="0" data-fb="Right. Alcibiades persuaded the Assembly to approve the expedition over Nicias's objections." data-hint="This general's persuasive case for glory and wealth won out over the older statesman's caution.">
             <div class="widget-row-prompt">1. Persuaded the Assembly to approve the expedition over cautious objections</div>
             <div class="widget-options">
-              <button data-choice="0">Nicias</button>
-              <button data-choice="1">Thucydides</button>
-              <button data-choice="2">Alcibiades</button>
-              <button data-choice="3">Madison</button>
+              <button data-choice="0">Alcibiades</button>
+              <button data-choice="1">Madison</button>
+              <button data-choice="2">Nicias</button>
+              <button data-choice="3">Thucydides</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="1" data-fb="Right. Nicias argued the campaign was reckless and poorly justified, but was overruled." data-hint="This is the older statesman whose warnings the Assembly rejected.">
+          <div class="widget-row" data-correct="0" data-fb="Right. Nicias argued the campaign was reckless and poorly justified, but was overruled." data-hint="This is the older statesman whose warnings the Assembly rejected.">
             <div class="widget-row-prompt">2. Warned that the campaign was reckless and poorly justified, and was overruled</div>
             <div class="widget-options">
-              <button data-choice="0">Alcibiades</button>
-              <button data-choice="1">Nicias</button>
-              <button data-choice="2">A Spartan general</button>
+              <button data-choice="0">Nicias</button>
+              <button data-choice="1">A Spartan general</button>
+              <button data-choice="2">Alcibiades</button>
               <button data-choice="3">Thucydides</button>
             </div>
           </div>
@@ -225,6 +225,12 @@
         </div>
 
         <p style="font-size: 17px; color: #1a2340; line-height: 1.65; margin: 14px 0 0 0;">This is also a good moment to notice something about how this course itself works. Ancient history is not being taught here as background trivia to memorize and forget. It is being taught because the American founders themselves treated it as living evidence, arguments they could actually cite, about how political communities succeed and fail. When you read Thucydides this week, you are reading exactly the kind of text Madison and his contemporaries had already absorbed by the time they sat down in Philadelphia.</p>
+    </div>
+
+    <!-- AI-AWARENESS CALLOUT -->
+    <div style="background: #FDECEC; border-left: 5px solid #C0392B; border-top: 3px solid #E74C3C; border-radius: 6px; padding: 14px 20px; margin: 14px 0;">
+        <div style="font-size: 11px; color: #8A1F16; margin-bottom: 8px;">&#9888;&#65039; WHERE AI HELPS AND WHERE IT DOESN'T &middot; PERSUASION</div>
+        <div style="font-size: 17px; color: #0E1C42; line-height: 1.6;">AI tools can summarize what a speaker said or list the claims in an argument. It <em>cannot</em> tell you whether a speaker like Alcibiades is reasoning honestly or simply exploiting the crowd's mood, the exact judgment call the Assembly itself failed to make.</div>
     </div>
 
     <!-- What You'll Do Next -->
@@ -292,6 +298,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

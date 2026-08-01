@@ -196,23 +196,23 @@
           <div class="widget-kicker">&#9889; TRY IT &middot; MILITIAS, TYRANNY, AND HELLER</div>
           <div class="widget-question">Answer each question based on the lesson.</div>
 
-          <div class="widget-row" data-correct="1" data-fb="Right. The 1689 English Bill of Rights listed an unaccountable standing army among its grievances against James II." data-hint="Reread Part 2: which older English document is named directly?">
+          <div class="widget-row" data-correct="2" data-fb="Right. The 1689 English Bill of Rights listed an unaccountable standing army among its grievances against James II." data-hint="Reread Part 2: which older English document is named directly?">
             <div class="widget-row-prompt">1. Which document explicitly listed a standing army kept "without Consent of Parlyament" as a grievance against a king?</div>
             <div class="widget-options">
-              <button data-choice="0">The U.S. Constitution</button>
-              <button data-choice="1">The 1689 English Bill of Rights</button>
-              <button data-choice="2">The Declaration of Independence</button>
-              <button data-choice="3">The Federalist Papers</button>
+              <button data-choice="0">The Federalist Papers</button>
+              <button data-choice="1">The Declaration of Independence</button>
+              <button data-choice="2">The 1689 English Bill of Rights</button>
+              <button data-choice="3">The U.S. Constitution</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="3" data-fb="Right. Heller (2008) held the Second Amendment protects an individual right unconnected to militia service." data-hint="Reread Part 3: which 2008 case is named as resolving this exact question?">
+          <div class="widget-row" data-correct="0" data-fb="Right. Heller (2008) held the Second Amendment protects an individual right unconnected to militia service." data-hint="Reread Part 3: which 2008 case is named as resolving this exact question?">
             <div class="widget-row-prompt">2. Which 2008 Supreme Court case held the Second Amendment protects an individual right to keep a firearm for self-defense, unconnected to militia service?</div>
             <div class="widget-options">
-              <button data-choice="0">Marbury v. Madison</button>
-              <button data-choice="1">McCulloch v. Maryland</button>
+              <button data-choice="0">District of Columbia v. Heller</button>
+              <button data-choice="1">Marbury v. Madison</button>
               <button data-choice="2">Miranda v. Arizona</button>
-              <button data-choice="3">District of Columbia v. Heller</button>
+              <button data-choice="3">McCulloch v. Maryland</button>
             </div>
           </div>
 
@@ -220,9 +220,9 @@
             <div class="widget-row-prompt">3. According to the lesson, what kind of force fought much of the American Revolution, shaping the framers' concern about disarmament?</div>
             <div class="widget-options">
               <button data-choice="0">Citizen militias</button>
-              <button data-choice="1">A large professional standing army</button>
+              <button data-choice="1">Naval forces exclusively</button>
               <button data-choice="2">Foreign mercenaries only</button>
-              <button data-choice="3">Naval forces exclusively</button>
+              <button data-choice="3">A large professional standing army</button>
             </div>
           </div>
 
@@ -279,6 +279,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

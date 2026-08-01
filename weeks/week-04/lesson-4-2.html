@@ -190,13 +190,13 @@
           <div class="widget-kicker">&#9889; TRY IT &middot; LOCKE OR ROUSSEAU?</div>
           <div class="widget-question">For each statement below, pick the philosopher it actually belongs to.</div>
 
-          <div class="widget-row" data-correct="2" data-fb="Right. Locke treats individual natural rights as a line no government, however popular, may cross." data-hint="Reread Part 3: this is the view the lesson explicitly credits to Locke, in contrast with Rousseau's confidence in the general will.">
+          <div class="widget-row" data-correct="1" data-fb="Right. Locke treats individual natural rights as a line no government, however popular, may cross." data-hint="Reread Part 3: this is the view the lesson explicitly credits to Locke, in contrast with Rousseau's confidence in the general will.">
             <div class="widget-row-prompt">1. Individual natural rights are a line no government, however popular, may cross.</div>
             <div class="widget-options">
-              <button data-choice="0">Hobbes</button>
-              <button data-choice="1">Montesquieu</button>
-              <button data-choice="2">Locke</button>
-              <button data-choice="3">Rousseau</button>
+              <button data-choice="0">Rousseau</button>
+              <button data-choice="1">Locke</button>
+              <button data-choice="2">Montesquieu</button>
+              <button data-choice="3">Hobbes</button>
             </div>
           </div>
 
@@ -205,18 +205,18 @@
             <div class="widget-options">
               <button data-choice="0">Rousseau</button>
               <button data-choice="1">Locke</button>
-              <button data-choice="2">Hobbes</button>
-              <button data-choice="3">Montesquieu</button>
+              <button data-choice="2">Montesquieu</button>
+              <button data-choice="3">Hobbes</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="3" data-fb="Right. Locke argues government exists to protect rights people already possessed before it existed." data-hint="Reread Lesson 3.1: this is the social contract as Locke, not Rousseau, describes it." >
+          <div class="widget-row" data-correct="1" data-fb="Right. Locke argues government exists to protect rights people already possessed before it existed." data-hint="Reread Lesson 3.1: this is the social contract as Locke, not Rousseau, describes it." >
             <div class="widget-row-prompt">3. Government exists to protect rights people already possessed before it existed.</div>
             <div class="widget-options">
               <button data-choice="0">Montesquieu</button>
-              <button data-choice="1">Rousseau</button>
+              <button data-choice="1">Locke</button>
               <button data-choice="2">Hobbes</button>
-              <button data-choice="3">Locke</button>
+              <button data-choice="3">Rousseau</button>
             </div>
           </div>
 
@@ -287,6 +287,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

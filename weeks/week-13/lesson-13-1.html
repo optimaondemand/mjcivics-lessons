@@ -202,33 +202,33 @@
           <div class="widget-kicker">&#9889; TRY IT &middot; MATCH THE SCENARIO TO THE LEMON PRONG</div>
           <div class="widget-question">For each scenario below, pick the Lemon test prong most directly at stake.</div>
 
-          <div class="widget-row" data-correct="2" data-fb="Right. A program that requires ongoing state monitoring of religious school staff risks exactly the excessive entanglement the third prong warns against." data-hint="Think about which prong is about ongoing government oversight of religious institutions, not the law's purpose or effect.">
+          <div class="widget-row" data-correct="3" data-fb="Right. A program that requires ongoing state monitoring of religious school staff risks exactly the excessive entanglement the third prong warns against." data-hint="Think about which prong is about ongoing government oversight of religious institutions, not the law's purpose or effect.">
             <div class="widget-row-prompt">1. A state agency must repeatedly inspect a religious school's classrooms to make sure teachers stay strictly secular</div>
             <div class="widget-options">
               <button data-choice="0">Secular purpose prong</button>
-              <button data-choice="1">Primary effect prong</button>
-              <button data-choice="2">Excessive entanglement prong</button>
-              <button data-choice="3">None of the three prongs</button>
+              <button data-choice="1">None of the three prongs</button>
+              <button data-choice="2">Primary effect prong</button>
+              <button data-choice="3">Excessive entanglement prong</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="0" data-fb="Right. A law passed only to promote a particular faith, with no civic purpose, fails the very first prong." data-hint="Reread the lesson's first requirement: what must a law have, regardless of its effect or entanglement?">
+          <div class="widget-row" data-correct="3" data-fb="Right. A law passed only to promote a particular faith, with no civic purpose, fails the very first prong." data-hint="Reread the lesson's first requirement: what must a law have, regardless of its effect or entanglement?">
             <div class="widget-row-prompt">2. A law is passed with the stated goal of promoting one specific religion, with no civic or educational purpose given</div>
             <div class="widget-options">
-              <button data-choice="0">Secular purpose prong</button>
+              <button data-choice="0">None of the three prongs</button>
               <button data-choice="1">Excessive entanglement prong</button>
               <button data-choice="2">Primary effect prong</button>
-              <button data-choice="3">None of the three prongs</button>
+              <button data-choice="3">Secular purpose prong</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="1" data-fb="Right. If a program's main real-world result is to advance one religion, it fails the second prong regardless of its stated purpose." data-hint="This prong looks at what the law actually does in practice, not what it merely claims to intend.">
+          <div class="widget-row" data-correct="3" data-fb="Right. If a program's main real-world result is to advance one religion, it fails the second prong regardless of its stated purpose." data-hint="This prong looks at what the law actually does in practice, not what it merely claims to intend.">
             <div class="widget-row-prompt">3. A program's real-world result is that it mainly advances the standing of one religion over others</div>
             <div class="widget-options">
               <button data-choice="0">Excessive entanglement prong</button>
-              <button data-choice="1">Primary effect prong</button>
-              <button data-choice="2">Secular purpose prong</button>
-              <button data-choice="3">None of the three prongs</button>
+              <button data-choice="1">Secular purpose prong</button>
+              <button data-choice="2">None of the three prongs</button>
+              <button data-choice="3">Primary effect prong</button>
             </div>
           </div>
 
@@ -292,6 +292,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');

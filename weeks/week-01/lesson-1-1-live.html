@@ -273,33 +273,33 @@
           <div class="widget-question">For each move below, pick the reformer who actually made it.</div>
           <div style="font-size: 14px; color: #6b7a99; margin-bottom: 14px;">Need a reminder who's who? See <a href="#bio-cleisthenes" title="Cleisthenes">Athens' First Democrat</a>, <a href="#bio-solon" title="Solon">The Sage of Athens</a>, <a href="#bio-pisistratus" title="Pisistratus">the Athenian Tyrant</a>, and <a href="#bio-draco" title="Draco">the Great Athenian Lawgiver</a> above.</div>
 
-          <div class="widget-row" data-correct="1" data-fb="Right. Solon's property classes, not tribal reform, are what first cracked the aristocracy's monopoly on office." data-hint="Think about who tied office to wealth rather than birth, back in 594 BC.">
+          <div class="widget-row" data-correct="3" data-fb="Right. Solon's property classes, not tribal reform, are what first cracked the aristocracy's monopoly on office." data-hint="Think about who tied office to wealth rather than birth, back in 594 BC.">
             <div class="widget-row-prompt">1. Broke the aristocracy's monopoly on political office by tying office to wealth rather than birth</div>
             <div class="widget-options">
               <button data-choice="0">Cleisthenes</button>
-              <button data-choice="1">Solon</button>
-              <button data-choice="2">Pisistratus</button>
-              <button data-choice="3">Draco</button>
+              <button data-choice="1">Pisistratus</button>
+              <button data-choice="2">Draco</button>
+              <button data-choice="3">Solon</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="3" data-fb="Right. Commoners already had the vote; Cleisthenes's real achievement was the right to speak, plus a path to citizenship for immigrants outside the four old tribes." data-hint="This lesson specifically warns against the 'extended the vote' shorthand. Reread Part 3.">
+          <div class="widget-row" data-correct="1" data-fb="Right. Commoners already had the vote; Cleisthenes's real achievement was the right to speak, plus a path to citizenship for immigrants outside the four old tribes." data-hint="This lesson specifically warns against the 'extended the vote' shorthand. Reread Part 3.">
             <div class="widget-row-prompt">2. Gave ordinary citizens the right to address the Assembly, and gave immigrants a path to citizenship</div>
             <div class="widget-options">
-              <button data-choice="0">Pisistratus</button>
-              <button data-choice="1">Draco</button>
-              <button data-choice="2">Solon</button>
-              <button data-choice="3">Cleisthenes</button>
+              <button data-choice="0">Draco</button>
+              <button data-choice="1">Cleisthenes</button>
+              <button data-choice="2">Pisistratus</button>
+              <button data-choice="3">Solon</button>
             </div>
           </div>
 
-          <div class="widget-row" data-correct="0" data-fb="Right. Pisistratus seized power by force but preserved Solon's property classes and offices rather than replacing them." data-hint="This is the tyrant who defended, rather than dismantled, the previous reforms.">
+          <div class="widget-row" data-correct="2" data-fb="Right. Pisistratus seized power by force but preserved Solon's property classes and offices rather than replacing them." data-hint="This is the tyrant who defended, rather than dismantled, the previous reforms.">
             <div class="widget-row-prompt">3. Seized power by force but kept Solon's property classes and offices intact</div>
             <div class="widget-options">
-              <button data-choice="0">Pisistratus</button>
-              <button data-choice="1">Cleisthenes</button>
-              <button data-choice="2">Solon</button>
-              <button data-choice="3">Draco</button>
+              <button data-choice="0">Solon</button>
+              <button data-choice="1">Draco</button>
+              <button data-choice="2">Pisistratus</button>
+              <button data-choice="3">Cleisthenes</button>
             </div>
           </div>
 
@@ -363,6 +363,7 @@ function speakGloss(e, text) {
       w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
       w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
       w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      if (w.classList.contains('ow-flip')) { w.classList.remove('flipped'); }
       return;
     }
     var rBtn = e.target.closest('.ow-reflect .widget-options button');
